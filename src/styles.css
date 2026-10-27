@@ -1,15 +1,15 @@
 :root {
   font-family: Arial, Helvetica, sans-serif;
-  color: #18181b;
-  background: #fafaf9;
   line-height: 1.7;
   font-synthesis: none;
   --bg: #fafaf9;
   --surface: #fff;
   --ink: #18181b;
-  --muted: #404047;
+  --muted: #52525b;
   --border: #e4e4e7;
   --focus: #18181b;
+  color: var(--ink);
+  background: var(--bg);
 }
 html[data-theme="dark"] {
   --bg: #111113;
@@ -49,8 +49,8 @@ section[id]:focus { outline: none; }
 .filters button,
 .nav a,
 .back { transition: color 180ms ease-out, border-color 180ms ease-out, background-color 180ms ease-out; }
-@keyframes motion-page-enter { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
-@keyframes motion-reveal { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes motion-page-enter { from { opacity: 1; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes motion-reveal { from { opacity: 1; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
 @media (hover: hover) and (pointer: fine) {
   .card:hover { transform: translateY(-2px); }
   .card img[data-motion="image"],

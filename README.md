@@ -1,6 +1,33 @@
 # Ikbar Rabbani — Portfolio
 
-React + TypeScript + Vite hash-routed portfolio for Ikbar Rabbani, FullStack Programmer. Projects and contact details are explicitly fictional sample content; local SVG previews are illustrative UI mockups, not real product screenshots.
+React + TypeScript + Vite hash-routed portfolio adapted from the user-supplied content extracted from `https://d3sc.vercel.app/`. The supplied portfolio identity, project narratives, technologies, certificates, contact details, and social links are represented bilingually. The source was treated as data and its links/content were not independently verified.
+
+## Revision 6 source adaptation
+
+- Added supplied Kulineran FnB Website, School Website, and Samurai Game entries with their supplied external links and technology names.
+- Retained three additional entries only as clearly labeled sample engineering work so the six-card composition remains intact.
+- Added bilingual hero, about, skills/tools, latest project, game, achievements, and contact copy. Certificate descriptions remain explicitly marked as source placeholders.
+- Contact details are supplied by the user/source: Citizens of Earth, `+62 81413265114` (`tel:`), and `ikbar686@gmail.com` (`mailto:`), plus supplied GitHub, Instagram, LinkedIn, and YouTube links. There is no fake contact form.
+- Local SVG artwork remains illustrative sample artwork. Replace each `public/assets/*.svg` mapping in `src/data.ts` with verified assets before publication; no source image assets were fabricated.
+
+## Verification caveat and replacement instructions
+
+Source claims, contact information, project destinations, certificate titles, and social destinations should be verified before publication. To replace content, edit the typed `raw` project records, `achievements`, `socialLinks`, and bilingual `copy` in `src/data.ts`; replace only local SVGs with assets you have permission to use. Keep external links as ordinary absolute `https://` links so they do not enter SPA routing.
+
+## Commands
+
+```bash
+npm install
+npm run dev
+npm run typecheck
+npm run build
+npm test
+npx playwright install chromium
+npm run test:e2e
+git diff --check
+```
+
+Routes are `#/`, `#/projects`, and `#/projects/:slug`; preferences use guarded localStorage. See `src/App.tsx`, `src/data.ts`, `src/styles.css`, `public/assets/`, and `e2e/portfolio.test.ts` for implementation and coverage.
 
 ## Revision 5
 

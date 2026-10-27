@@ -1,5 +1,25 @@
 # Progress
 
+## Revision 6 — dark-theme contrast correction evidence
+- Root cause: `:root` had hard-coded `color`/`background` values and the dark selector overrode only `--ink`/`--muted`, leaving Chromium's computed page background and component surfaces light in dark mode. Restored complete `html[data-theme="dark"]` tokens and made root foreground/background consume variables.
+- Chromium verification: with the app actually loaded in Chromium, `html[data-theme="dark"]` computed `--bg #111113`, `--surface #19191c`, `--ink #f4f4f5`, `--muted #b0b0b8`, `--border #343438`; root/body background and foreground were `rgb(17, 17, 19)` / `rgb(244, 244, 245)`, header `rgb(17, 17, 19)`, and card `rgb(25, 25, 28)`. This confirms the dark cascade is consistent at runtime.
+- Gates after correction: `npm run build` passed (18 modules); `npm run typecheck` passed; `npm test` passed (2 files, 5 tests); `npm run test:e2e` passed 27/27 Chromium tests across desktop/mobile/narrow, including axe; `git diff --check` passed. The first e2e invocation was blocked by an already-running port 4173 server; verification was rerun on an isolated 4174 server and passed. No test was weakened or skipped.
+
+## Revision 6 — coordinator accepted; project complete
+- Coordinator independently reviewed source-adapted content, external link handling, contact links, bilingual data, and CSS theme fix. Dark computed styles now resolve correctly in real Chromium: background `rgb(17, 17, 19)`, foreground `rgb(244, 244, 245)`, header `rgb(17, 17, 19)`, cards `rgb(25, 25, 28)`.
+- Independently ran build, typecheck, 5 unit tests, and a clean 27/27 Chromium e2e run across desktop/mobile/narrow using an isolated verification port; axe passed without weakening assertions. `git diff --check` passed. The repository's default port had a stale local server during one rerun; the isolated managed-server run verified the same suite successfully.
+- Source-derived entries, links and certificates remain explicitly documented as user-provided/source-adapted; local SVG images remain illustrative, and no unverified certificate details were invented. No deployment/publication performed.
+
+## Revision 6 — source content adaptation executor evidence and contact placeholders with bilingual source-adapted content from the user-supplied source extraction. Added Kulineran, School Website, and Samurai Game as supplied entries; retained three explicitly labeled local-SVG sample entries for the six-card grid.
+- Added source external links with new-tab/noreferrer safety and accessible labels, tel/mailto contact links, supplied social links, certificate titles with explicit source-placeholder descriptions, and bilingual hero/about/skills/game/achievements/contact copy.
+- Updated README with source verification caveat and replacement instructions. No deployment, commit, push, or configuration changes.
+- Verified `npm run typecheck` passed, `npm run build` passed (18 modules), and `npm test -- --run` passed 5 tests after updating the old placeholder assertion. Full e2e and fresh screenshots remain pending.
+
+## Revision 6 — source content adaptation delegated
+- User supplied a page structure and content from `https://d3sc.vercel.app/` and requested the current project content be changed to match it.
+- Coordinator recorded source-derived content decisions and verification criteria in PLAN.md. Implementation delegated; coordinator acceptance pending.
+
+
 ## Revision 2 — planning complete, implementation delegated
 - User requests richer content, separate Projects view, image cards and full detail pages with header image/time/tags/title/description, subtle animation; preserve layout and colors.
 - Coordinator inspected current App.tsx, package.json and specifications; recorded revised route/content/image/motion decisions before implementation.

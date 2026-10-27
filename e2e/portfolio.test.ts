@@ -26,7 +26,7 @@ for (const locale of ["id", "en"] as const) for (const theme of ["light", "dark"
     const t = copy[locale]; await start(page, locale, theme);
     await expect(page.locator(".hero-copy")).toHaveText(t.intro);
     await expect(page.locator(".preview .card")).toHaveCount(3);
-    await expect(page.locator(".section-heading .notice")).toHaveText(t.previewDisclaimer);
+    await expect(page.locator(".section-heading .notice").first()).toHaveText(t.previewDisclaimer);
     await expect(page.locator("nav a").filter({ hasText: t.home })).toHaveAttribute("aria-current", "page");
     await axe(page); await noOverflow(page);
     if (page.viewportSize()!.width < 800) await page.getByRole("button", { name: t.menu, exact: true }).click();
@@ -61,11 +61,11 @@ test("navigation focus, sections, language dates, history and not-found", async 
   if (page.viewportSize()!.width < 800) { await page.getByRole("button", { name: "Menu", exact: true }).click(); }
   await page.getByRole("link", { name: "Kontak", exact: true }).click(); await expect(page.locator("#contact")).toBeFocused();
   if (page.viewportSize()!.width < 800) { await page.getByRole("button", { name: "Menu", exact: true }).click(); }
-  await page.getByRole("link", { name: "Proyek", exact: true }).click(); await page.locator('.all-projects a[href="#/projects/ruang-kerja"]').click();
+  await page.getByRole("link", { name: "Proyek", exact: true }).click(); await page.locator('.all-projects a[href="#/projects/kulineran"]').click();
   const idDate = await page.locator("time").innerText();
   await page.getByRole("button", { name: "Ganti bahasa" }).click();
   await expect(page.locator("time")).not.toHaveText(idDate); await expect(page).toHaveTitle(/Project detail/);
-  await page.goBack(); await page.goForward(); await expect(page).toHaveURL(/ruang-kerja$/);
+  await page.goBack(); await page.goForward(); await expect(page).toHaveURL(/kulineran$/);
   await page.goto("/#/missing"); await expect(page.getByRole("heading", { name: /Page not found|Halaman tidak ditemukan/ })).toBeVisible();
 });
 
@@ -105,8 +105,8 @@ test("revision 5 projects use vertical editorial composition and card grid", asy
   await start(page, "en", "dark");
   await page.goto("/#/projects");
   await expect(page.locator(".featured-project")).toBeVisible();
-  await expect(page.locator(".featured-project img")).toHaveAttribute("alt", /Illustrative sample/);
-  await expect(page.locator(".current-work")).toContainText("A sample in progress");
+  await expect(page.locator(".featured-project img")).toHaveAttribute("alt", /Illustrative sample SVG mockup/);
+  await expect(page.locator(".current-work")).toContainText("Supplied portfolio project");
   await expect(page.locator(".current-work .status-dot")).toBeVisible();
   await expect(page.locator(".all-projects")).toBeVisible();
   await expect(page.locator(".all-projects .project-grid .card")).toHaveCount(6);
