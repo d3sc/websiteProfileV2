@@ -47,7 +47,18 @@ components:
     padding: 24px
 ---
 
-## Revision 5 Projects composition
+## Revision 7 editorial interaction direction
+Use the reference as a principle source: strong text-first hero, explicit professional positioning, technical capability grouping, tools vocabulary, selected work narrative, achievements and a confident contact close. Do not copy its name, employer data, exact copy, exact section composition, distinctive visuals or code. Ikbar's portfolio remains neutral monochrome with its own source-adapted projects.
+
+Hero: large left-aligned name/role and supplied “Learning, Evolving, Innovating” positioning, compact availability/context marker, scroll cue, and a restrained technical index. Add a thin fixed scroll progress line. Navigation gains active section state, but remains compact and mobile accessible.
+
+Sections: About uses supplied two-year web-development statement; capabilities are grouped in an asymmetric matrix; tools use a quiet text strip; selected work introduces Kulineran, School Website and Samurai Game with real supplied links and illustrative local previews; achievements use expandable details with explicit source-placeholder copy; contact includes supplied email/phone/social links and a copy-email action with translated feedback. The Projects route keeps its featured/current/archive card composition.
+
+Interaction: `IntersectionObserver` reveals sections/cards once with opacity/translate <=10px; active section updates the nav; project cards have pointer-aware but restrained spotlight/border treatment without a permanent glow; achievement details use native disclosure; contact copy uses Clipboard API with a visible fallback/status. Scroll progress is informational only. All controls >=44px, focus-visible immediate, and reduced motion disables transforms/spotlight/reveal while retaining active states and content.
+
+Palette, typography and layout remain neutral and high-contrast. Avoid gradients, blobs, fake statistics, infinite marquees, counters, parallax, glassmorphism and cloned reference styling.
+
+
 The Projects route is an Explore surface with a vertical editorial composition, not a carousel. Start with a featured hero project: 2-column split on desktop (large 16:9 preview, text/meta block), stacked on mobile. Follow with a Current work section: a compact bordered status panel for one fictional in-progress sample, with status marker, phase, and short note—no progress percentages or invented delivery claims. Finish with All projects: three-column desktop, two tablet, one mobile card grid. Keep the existing card radius, thin borders, neutral surfaces, image ratios and typography.
 
 Decoration is structural: section index labels, thin rules, offset frame/border on featured image, small status dot, corner markers, subtle background line texture using CSS only if it does not reduce contrast. Avoid gradients, giant stats, decorative blobs, and excessive badges. Use the existing monochrome palette. Translate all labels and aria text.

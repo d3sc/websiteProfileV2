@@ -40,8 +40,8 @@ function App() {
     addEventListener("keydown", onKeyDown);
     return () => removeEventListener("keydown", onKeyDown);
   }, [menuOpen]);
-  useEffect(() => {
-    document.documentElement.lang = locale;
+  useEffect(() => { const onScroll = () => { const max = document.documentElement.scrollHeight - window.innerHeight; document.documentElement.style.setProperty("--scroll-progress", `${max ? Math.round(window.scrollY / max * 100) : 0}`); }; addEventListener("scroll", onScroll, { passive: true }); onScroll(); return () => removeEventListener("scroll", onScroll); }, []);
+  useEffect(() => { document.documentElement.lang = locale;
     document.documentElement.dataset.theme = theme;
     try { localStorage.setItem("portfolio-locale", locale); localStorage.setItem("portfolio-theme", theme); } catch { /* optional storage */ }
   }, [locale, theme]);
@@ -62,6 +62,7 @@ function App() {
     { path: "/#contact", label: t.contact, active: route.kind === "home" && route.section === "contact" },
   ];
   return <>
+    <div className="scroll-progress" aria-hidden="true" />
     <a className="skip-link" href="#main" onClick={(event) => { event.preventDefault(); mainRef.current?.focus({ preventScroll: true }); }}> {t.skip}</a>
     <header className="site-header"><div className="container header-inner">
       <a className="brand" href={routeHref("/")} aria-label="Ikbar Rabbani">IR<span>;</span></a>
@@ -70,7 +71,7 @@ function App() {
       <div className="controls"><button className="control" onClick={() => setLocale((current) => current === "id" ? "en" : "id")} aria-label={t.language}>{locale.toUpperCase()}</button><button className="control" onClick={() => setTheme((current) => current === "light" ? "dark" : "light")} aria-label={theme === "light" ? t.darkTheme : t.lightTheme}>{theme === "light" ? "☾" : "☀"}</button></div>
     </div></header>
     <main id="main" ref={mainRef} tabIndex={-1} key={`${route.kind}:${route.kind === "detail" ? route.slug : ""}:${route.kind === "home" ? route.section ?? "" : ""}`} className="motion-page" data-motion-view={route.kind}>
-      {route.kind === "home" && <Home t={t} projects={localizedProjects} />}
+      {route.kind === "home" && <Home t={t} locale={locale} projects={localizedProjects} />}
       {route.kind === "projects" && <Projects t={t} locale={locale} projects={localizedProjects} />}
       {route.kind === "detail" && <Detail t={t} locale={locale} project={localizedProjects.find((project) => project.slug === route.slug)} />}
       {route.kind === "notfound" && <NotFound t={t} />}
@@ -79,16 +80,23 @@ function App() {
   </>;
 }
 
-function Home({ t, projects }: { t: Translation; projects: Project[] }) { return <>
-  <section data-motion="section" className="hero container"><p className="eyebrow">WEB DEVELOPER · 01</p><h1>Ikbar<br /><em>Rabbani.</em></h1><p className="hero-copy">{t.intro}</p><a className="button primary" href={routeHref("/projects")}>{t.cta} ↘</a></section>
-  <section data-motion="section" className="section container"><div className="section-heading"><div><p className="eyebrow">02 · {t.capTitle}</p><h2>{t.capTitle}</h2></div></div><div className="cap-grid">{[[t.capFrontend, t.capFrontendText], [t.capBackend, t.capBackendText], [t.capTools, t.capToolsText]].map(([title, text]) => <article className="cap" key={title}><h3>{title}</h3><p>{text}</p></article>)}</div></section>
-  <section className="section container split"><div><p className="eyebrow">03 · {t.processTitle}</p><h2>{t.processTitle}</h2></div><p className="large-copy">{t.processText}</p></section>
-  <section data-motion="section" className="section container"><div className="section-heading"><div><p className="eyebrow">04 · {t.explore}</p><h2>{t.work}</h2></div><p className="notice">{t.previewDisclaimer}</p></div><div className="project-grid preview">{projects.slice(0, PREVIEW_COUNT).map((project) => <Card key={project.id} project={project} t={t} />)}</div><a className="text-button" href={routeHref("/projects")}>{t.viewAll} ↗</a></section>
-  <section id="about" tabIndex={-1} className="section container split"><div><p className="eyebrow">05 · {t.about}</p><h2>{t.aboutTitle}</h2></div><p className="large-copy">{t.aboutText}</p></section>
-  <section data-motion="section" className="section container"><div className="section-heading"><div><p className="eyebrow">06 · {t.achievementsTitle}</p><h2>{t.achievementsTitle}</h2></div><p className="notice">{t.achievementsIntro}</p></div><div className="cap-grid">{achievements[localeFrom(t)].map((item)=><article className="cap" key={item.title}><h3>{item.title}</h3><p>{item.description}</p></article>)}</div></section>
-  <section id="contact" tabIndex={-1} className="contact container"><div><p className="eyebrow">07 · {t.contact}</p><h2>{t.contactTitle}</h2><p>{t.contactText}</p><p>{t.location}</p><p><a href={`tel:${t.phone}`}>{t.phone}</a></p><p><a href={`mailto:${t.email}`}>{t.email}</a></p><nav aria-label={t.socialLabel}>{socialLinks.map(link=><a key={link.label} href={link.href} target="_blank" rel="noreferrer" aria-label={`${link.label} (${t.external})`}>{link.label}</a>)}</nav></div></section>
-</>; }
-function localeFrom(t: Translation): Locale { return t === copy.en ? "en" : "id"; }
+function Home({ t, locale, projects }: { t: Translation; locale: Locale; projects: Project[] }) {
+  const [active, setActive] = useState("hero"); const [status, setStatus] = useState("");
+  const ids = ["hero", "about", "capabilities", "tools", "selected-projects", "game", "achievements", "contact"]; const l = locale === "en" ? { about:"About", capabilities:"Capabilities", tools:"Tools", selected:"Selected projects", game:"Game work", achievements:"Achievements", contact:"Contact", copy:"Copy email", copied:"Email copied", fallback:"Copy unavailable — select the email manually" } : { about:"Tentang", capabilities:"Kapabilitas", tools:"Alat", selected:"Proyek pilihan", game:"Karya game", achievements:"Pencapaian", contact:"Kontak", copy:"Salin email", copied:"Email tersalin", fallback:"Penyalinan tidak tersedia — pilih email secara manual" };
+  useEffect(() => { if (typeof IntersectionObserver === "undefined") return; const observer = new IntersectionObserver(entries => entries.forEach(entry => entry.isIntersecting && setActive(entry.target.id)), { rootMargin: "-25% 0px -60%" }); ids.map(id => document.getElementById(id)).filter(Boolean).forEach(node => observer.observe(node!)); return () => observer.disconnect(); }, []);
+  useEffect(() => { if (typeof IntersectionObserver === "undefined") { document.querySelectorAll("[data-reveal]").forEach(node => node.classList.add("is-visible")); return; } const observer = new IntersectionObserver(entries => entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add("is-visible"); observer.unobserve(entry.target); } }), { threshold: .08 }); document.querySelectorAll("[data-reveal]").forEach(node => observer.observe(node)); return () => observer.disconnect(); }, []);
+  const copyEmail = async () => { try { await navigator.clipboard.writeText(t.email); setStatus(l.copied); } catch { setStatus(l.fallback); } };
+  const nav = ids.map(id => ({ id, label: id === "hero" ? "01" : id === "selected-projects" ? l.selected : id === "about" ? l.about : id === "capabilities" ? l.capabilities : id === "tools" ? l.tools : id === "game" ? l.game : id === "achievements" ? l.achievements : l.contact }));
+  return <><nav className="section-nav" aria-label={locale === "en" ? "Home sections" : "Bagian beranda"}>{nav.map(item => <span key={item.id} className={active === item.id ? "active" : ""} aria-current={active === item.id ? "location" : undefined}>{item.label}</span>)}</nav>
+  <section id="hero" data-motion="section" data-reveal className="hero container"><p className="eyebrow">{locale === "en" ? "FullStack Programmer · Web Developer" : "Programmer FullStack · Pengembang Web"} · 01</p><h1>Ikbar<br /><em>Rabbani.</em></h1><p className="hero-copy">{t.intro}</p><p className="hero-positioning">Learning · Evolving · Innovating in Technology</p><a className="button primary" href={routeHref("/projects")}>{t.cta} ↘</a></section>
+  <section id="about" tabIndex={-1} data-motion="section" data-reveal className="section container split"><div><p className="eyebrow">02 · {l.about}</p><h2>{t.aboutTitle}</h2></div><p className="large-copy">{t.aboutText}</p></section>
+  <section id="capabilities" data-motion="section" data-reveal className="section container"><div className="section-heading"><div><p className="eyebrow">03 · {l.capabilities}</p><h2>{t.capTitle}</h2></div></div><div className="cap-grid">{[[t.capFrontend, t.capFrontendText], [t.capBackend, t.capBackendText], [t.capTools, t.capToolsText]].map(([title, text]) => <article className="cap" key={title}><h3>{title}</h3><p>{text}</p></article>)}</div></section>
+  <section id="tools" data-motion="section" data-reveal className="section container tools-section"><p className="eyebrow">04 · {l.tools}</p><div className="tools-list">JavaScript · React JS · json-web-server · CSS · HTML · Bootstrap 5 · Godot 3</div></section>
+  <section id="selected-projects" data-motion="section" data-reveal className="section container"><div className="section-heading"><div><p className="eyebrow">05 · {l.selected}</p><h2>{t.work}</h2></div><p className="notice">{t.previewDisclaimer}</p></div><div className="project-grid preview">{projects.slice(0, PREVIEW_COUNT).map(project => <Card key={project.id} project={project} t={t} />)}</div><a className="text-button" href={routeHref("/projects")}>{t.viewAll} ↗</a></section>
+  <section id="game" data-motion="section" data-reveal className="section container split"><div><p className="eyebrow">06 · {l.game}</p><h2>{t.currentTitle}</h2></div><p className="large-copy">{t.gameIntro}</p></section>
+  <section id="achievements" data-motion="section" data-reveal className="section container"><div className="section-heading"><div><p className="eyebrow">07 · {l.achievements}</p><h2>{t.achievementsTitle}</h2></div><p className="notice">{t.achievementsIntro}</p></div><div className="achievement-list">{achievements[locale].map(item => <details key={item.title}><summary>{item.title}</summary><p>{item.description}</p></details>)}</div></section>
+  <section id="contact" tabIndex={-1} data-motion="section" data-reveal className="contact container"><div><p className="eyebrow">08 · {l.contact}</p><h2>{t.contactTitle}</h2><p>{t.contactText}</p><p>{t.location}</p><p><a href={`tel:${t.phone}`}>{t.phone}</a></p><p><a className="email" href={`mailto:${t.email}`}>{t.email}</a> <button className="copy-button" onClick={copyEmail}>{l.copy}</button></p><p className="copy-status" role="status" aria-live="polite">{status}</p><nav aria-label={t.socialLabel}>{socialLinks.map(link => <a key={link.label} href={link.href} target="_blank" rel="noreferrer" aria-label={`${link.label} (${t.external})`}>{link.label}</a>)}</nav></div></section></>;
+}
 
 function Card({ project, t }: { project: Project; t: Translation }) { const locale: Locale = t === copy.en ? "en" : "id"; return <article data-motion="card" className="card"><img data-motion="image" src={project.image} alt={project.alt} width="640" height="360" /><div className="card-body"><div className="card-top"><span>/{project.id}</span><span>{categoryLabels[locale][project.category]}</span></div><h3>{project.title}</h3><p>{project.summary}</p><div className="tags">{project.stack.map((tag) => <span key={tag}>{tag}</span>)}</div><a className="text-button" href={routeHref(`/projects/${project.slug}`)}>{t.details} ↗</a>{project.externalUrl && <a className="text-button" href={project.externalUrl} target="_blank" rel="noreferrer" aria-label={`${project.externalLabel} (${t.external})`}>{project.externalLabel} ↗</a>}</div></article>; }
 

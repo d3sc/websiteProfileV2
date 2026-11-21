@@ -1,5 +1,17 @@
 # Progress
 
+## Revision 7 — coordinator accepted; project complete
+- Coordinator independently reran build, typecheck, 5 unit tests, and inspected the completed 33-test Chromium verification evidence: 33/33 passed across desktop/mobile/narrow with axe, runtime/network, routes, locale/theme, reduced-motion, keyboard interactions and no-overflow checks. `git diff --check` passed.
+- Reviewed actual App.tsx interaction code and Revision 7 screenshots for Home desktop/mobile/narrow. Home now has a visible scroll-progress bar, active section tracking, reveal fallback, project spotlight, native achievement disclosures and clipboard status. No visible clipping or overlap was found in the documented screenshots.
+- The result uses transferable editorial principles from the reference, not a clone of its identity, copy, employer claims, exact layout or implementation. Ikbar's source-adapted content, bilingual controls and theme switching remain intact. No deployment/publication performed.
+
+## Revision 7 — verification executor evidence
+- Added the missing rendered scroll-progress element at the application root; the existing scroll listener now has a visible progress bar in real Chromium.
+- Added focused Playwright assertions for Revision 7 Home interactions: progress changes after scrolling, active section location, IntersectionObserver reveal fallback, native `<details>` Enter/Space keyboard behavior, clipboard success and fallback status, Home screenshots, and no-overflow at 1440×1000, 390×844, and 320×844.
+- Full existing e2e suite was run first: 27/27 passed. After the focused coverage and root-cause progress-bar repair, the full suite passed 33/33 Chromium tests across desktop/mobile/narrow. Build passed (18 modules), typecheck passed, unit tests passed (2 files, 5 tests), and `git diff --check` passed.
+- Fresh screenshots are present and inspected at `docs/screenshots/revision-7/home-desktop.png`, `home-mobile.png`, and `home-narrow.png`. All requested Home sections are represented; no visible clipping or overlap was found. Automated axe/runtime/network/error, route, locale/theme persistence, reduced-motion and overflow coverage passed. No coordinator acceptance is claimed; no blockers remain in this verification run.
+
+
 ## Revision 6 — dark-theme contrast correction evidence
 - Root cause: `:root` had hard-coded `color`/`background` values and the dark selector overrode only `--ink`/`--muted`, leaving Chromium's computed page background and component surfaces light in dark mode. Restored complete `html[data-theme="dark"]` tokens and made root foreground/background consume variables.
 - Chromium verification: with the app actually loaded in Chromium, `html[data-theme="dark"]` computed `--bg #111113`, `--surface #19191c`, `--ink #f4f4f5`, `--muted #b0b0b8`, `--border #343438`; root/body background and foreground were `rgb(17, 17, 19)` / `rgb(244, 244, 245)`, header `rgb(17, 17, 19)`, and card `rgb(25, 25, 28)`. This confirms the dark cascade is consistent at runtime.

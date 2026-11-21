@@ -29,6 +29,10 @@ git diff --check
 
 Routes are `#/`, `#/projects`, and `#/projects/:slug`; preferences use guarded localStorage. See `src/App.tsx`, `src/data.ts`, `src/styles.css`, `public/assets/`, and `e2e/portfolio.test.ts` for implementation and coverage.
 
+## Revision 7 interaction boundary
+
+The editorial treatment takes transferable principles from `https://achmad-fakhri.web.id/`—text-led positioning, section indexing, capability grouping, and a project-story rhythm—without copying its identity, claims, exact copy, layout, visual assets, or code. Home now provides stable bilingual sections for hero, about, capabilities, tools, selected projects, game, achievements, and contact. Interaction is finite and accessible: scroll progress, IntersectionObserver active/reveal state, restrained card hover treatment, native achievement disclosure, and Clipboard API email copy with a visible fallback. Reduced motion keeps content visible and removes transforms/transitions. There are no fake metrics, counters, parallax, gradients, infinite loops, or cloned reference visuals.
+
 ## Revision 5
 
 - Replaced the Projects-only horizontal wheel showcase with normal vertical document scrolling. Removed its wheel hook/listeners, bounded track, instruction and progress cue; filters now sit above a responsive card grid.
@@ -36,7 +40,7 @@ Routes are `#/`, `#/projects`, and `#/projects/:slug`; preferences use guarded l
 - Added a thin offset image frame and corner marks while preserving the monochrome palette, 16:9 image ratios, finite motion and reduced-motion behavior. Responsive CSS keeps the root and cards within 1440px, 390px and 320px viewports.
 - Replaced obsolete wheel expectations with vertical-scroll/composition assertions and fresh screenshot capture under `docs/screenshots/revision-5/`.
 
-Verification: `npm run build`, `npm run typecheck`, `npm test` (2 files, 5 tests), `npm run test:e2e` (27 Chromium tests across desktop/mobile/narrow), and `git diff --check` passed. Fresh Projects evidence is stored at `docs/screenshots/revision-5/projects-desktop.png`, `projects-mobile.png`, and `projects-narrow.png`.
+Verification: `npm run build` passed (18 modules); `npm run typecheck` passed; `npm test` passed (2 files, 5 tests); `npm run test:e2e` passed 33/33 Chromium tests across desktop/mobile/narrow, including axe, runtime/network, locale/theme persistence, reduced motion, no-overflow, Revision 7 Home interactions (scroll progress, active section nav, reveal fallback, project spotlight coverage through Home cards, native achievement keyboard behavior, clipboard success/fallback) and fresh screenshot capture; `git diff --check` passed. Fresh Home evidence is stored at `docs/screenshots/revision-7/home-desktop.png`, `home-mobile.png`, and `home-narrow.png`. Screenshots were inspected: all expected Home sections are present; desktop, 390px mobile, and 320px narrow layouts show no visible clipping or overlap. The fixed section rail remains intentionally close to the right edge and automated no-overflow passed. No coordinator acceptance is claimed.
 
 ```bash
 npm install

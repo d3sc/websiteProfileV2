@@ -124,3 +124,41 @@ test("revision 5 captures Projects evidence at desktop, mobile, and narrow width
     await page.screenshot({ path: `docs/screenshots/revision-5/projects-${name}.png`, fullPage: true });
   }
 });
+
+test("revision 7 home interactions, fallback reveal, keyboard details and copy", async ({ page }, testInfo) => {
+  await start(page, "en", "light");
+  await expect(page.locator(".scroll-progress")).toBeAttached();
+  await expect(page.locator("#hero")).toHaveClass(/is-visible/);
+  await page.evaluate(() => { window.scrollTo(0, document.body.scrollHeight); });
+  await expect.poll(() => page.locator(".scroll-progress").evaluate((node) => getComputedStyle(node).transform)).not.toBe("matrix(0, 0, 0, 1, 0, 0)");
+  await expect(page.locator("#contact")).toHaveClass(/is-visible/);
+  await page.locator("#contact").scrollIntoViewIfNeeded();
+  await expect(page.locator(".section-nav span").filter({ hasText: "Contact" })).toHaveAttribute("aria-current", "location");
+  const achievement = page.locator(".achievement-list details").first();
+  await achievement.locator("summary").focus();
+  await page.keyboard.press("Enter");
+  await expect(achievement).toHaveAttribute("open", "");
+  await expect(achievement.locator("p")).toBeVisible();
+  await page.keyboard.press("Space");
+  await expect(achievement).not.toHaveAttribute("open", "");
+  await page.evaluate(() => Object.defineProperty(navigator, "clipboard", { configurable: true, value: { writeText: async () => undefined } }));
+  await page.getByRole("button", { name: "Copy email" }).click();
+  await expect(page.locator(".copy-status")).toHaveText("Email copied");
+  await page.evaluate(() => Object.defineProperty(navigator, "clipboard", { configurable: true, value: { writeText: async () => { throw new Error("denied"); } } }));
+  await page.getByRole("button", { name: "Copy email" }).click();
+  await expect(page.locator(".copy-status")).toContainText("select the email manually");
+  await page.addInitScript(() => { Object.defineProperty(window, "IntersectionObserver", { configurable: true, value: undefined }); });
+  await page.reload();
+  await expect(page.locator("[data-reveal]").first()).toHaveClass(/is-visible/);
+  await page.screenshot({ path: `docs/screenshots/revision-7/home-${testInfo.project.name}.png`, fullPage: true });
+});
+
+test("revision 7 captures Home evidence at desktop, mobile, and narrow widths", async ({ page }) => {
+  await start(page, "en", "dark");
+  for (const [name, width, height] of [["desktop", 1440, 1000], ["mobile", 390, 844], ["narrow", 320, 844]] as const) {
+    await page.setViewportSize({ width, height });
+    await page.goto("/#/");
+    await page.screenshot({ path: `docs/screenshots/revision-7/home-${name}.png`, fullPage: true });
+    await noOverflow(page);
+  }
+});

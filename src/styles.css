@@ -28,6 +28,19 @@ html {
 }
 main:focus,
 section[id]:focus { outline: none; }
+.scroll-progress { position: fixed; inset: 0 0 auto; height: 3px; background: var(--ink); transform: scaleX(calc(var(--scroll-progress, 0) / 100)); transform-origin: left; z-index: 30; pointer-events: none; }
+.section-nav { position: fixed; right: 18px; top: 50%; transform: translateY(-50%); z-index: 5; display: grid; gap: 8px; }
+.section-nav span { color: var(--muted); font: .68rem Consolas, monospace; padding: 6px; writing-mode: vertical-rl; }
+.section-nav span.active { color: var(--ink); font-weight: bold; }
+.hero-positioning,.tools-list { color: var(--muted); font: .85rem Consolas, monospace; letter-spacing: .04em; }
+.achievement-list { display: grid; gap: 10px; }
+.achievement-list details { border-top: 1px solid var(--border); padding: 16px 0; }
+.achievement-list summary { cursor: pointer; font-weight: bold; min-height: 44px; padding: 10px 0; }
+.achievement-list p { color: var(--muted); }
+.copy-button { min-height: 44px; border: 1px solid var(--border); background: var(--surface); color: var(--ink); cursor: pointer; padding: 8px 12px; border-radius: 6px; }
+.copy-status { min-height: 1.5em; }
+[data-reveal] { opacity: 0; transform: translateY(8px); transition: opacity 240ms ease-out, transform 240ms ease-out; }
+[data-reveal].is-visible { opacity: 1; transform: none; }
 /* Revision 3: a CSS-first, finite motion vocabulary. */
 .motion-page { animation: motion-page-enter 320ms ease-out both; }
 .motion-page .section,
@@ -456,10 +469,8 @@ dialog::backdrop {
   .cap-grid{grid-template-columns:1fr}
   .contact {
   }
-  .email {
-    display: inline-block;
-    margin-top: 20px;
-  }
+  .section-nav { display: none; }
+  .email { display: inline-block; margin-top: 20px; }
 }
 @media (max-width: 520px) {
   body { overflow-x: hidden; }
@@ -519,9 +530,6 @@ dialog::backdrop {
   }
   *,
   *::before,
-  *::after {
-    animation: none !important;
-    transition: none !important;
-    transform: none !important;
-  }
+  *::after { animation: none !important; transition: none !important; }
+  [data-reveal] { opacity: 1; transform: none; }
 }
