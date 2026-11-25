@@ -1,0 +1,77 @@
+2026-11-22T07:50:28.011Z pw:webserver HTTP GET: http://127.0.0.1:4173/
+2026-11-22T07:50:28.032Z pw:webserver Error while checking if http://127.0.0.1:4173/ is available: connect ECONNREFUSED 127.0.0.1:4173
+2026-11-22T07:50:28.033Z pw:webserver Starting WebServer process npx vite preview --host 127.0.0.1 --port 4173 --strictPort...
+2026-11-22T07:50:28.068Z pw:webserver Process started
+2026-11-22T07:50:28.071Z pw:webserver Waiting for availability...
+2026-11-22T07:50:28.073Z pw:webserver HTTP GET: http://127.0.0.1:4173/
+2026-11-22T07:50:28.092Z pw:webserver Error while checking if http://127.0.0.1:4173/ is available: connect ECONNREFUSED 127.0.0.1:4173
+2026-11-22T07:50:28.092Z pw:webserver Waiting 100ms
+2026-11-22T07:50:28.193Z pw:webserver HTTP GET: http://127.0.0.1:4173/
+2026-11-22T07:50:28.197Z pw:webserver Error while checking if http://127.0.0.1:4173/ is available: connect ECONNREFUSED 127.0.0.1:4173
+2026-11-22T07:50:28.197Z pw:webserver Waiting 250ms
+2026-11-22T07:50:28.447Z pw:webserver HTTP GET: http://127.0.0.1:4173/
+2026-11-22T07:50:28.452Z pw:webserver Error while checking if http://127.0.0.1:4173/ is available: connect ECONNREFUSED 127.0.0.1:4173
+2026-11-22T07:50:28.452Z pw:webserver Waiting 500ms
+2026-11-22T07:50:28.955Z pw:webserver HTTP GET: http://127.0.0.1:4173/
+2026-11-22T07:50:28.959Z pw:webserver Error while checking if http://127.0.0.1:4173/ is available: connect ECONNREFUSED 127.0.0.1:4173
+2026-11-22T07:50:28.959Z pw:webserver Waiting 1000ms
+[WebServer]   ➜  Local:   http://127.0.0.1:4173/
+2026-11-22T07:50:29.961Z pw:webserver HTTP GET: http://127.0.0.1:4173/
+2026-11-22T07:50:29.987Z pw:webserver HTTP Status: 200
+2026-11-22T07:50:29.993Z pw:webserver WebServer available
+
+Running 20 tests using 1 worker
+
+  ✓   1 [mobile] › e2e/portfolio.test.ts:76:1 › hero selection: click, keyboard, wrap, focus, links and no autoplay (6.1s)
+  ✓   2 [mobile] › e2e/portfolio.test.ts:113:5 › id/dark: home, archive, current details, accessibility (9.6s)
+  ✓   3 [mobile] › e2e/portfolio.test.ts:113:5 › id/light: home, archive, current details, accessibility (8.7s)
+  ✓   4 [mobile] › e2e/portfolio.test.ts:113:5 › en/dark: home, archive, current details, accessibility (1.4m)
+  ✓   5 [mobile] › e2e/portfolio.test.ts:113:5 › en/light: home, archive, current details, accessibility (13.1s)
+  ✓   6 [mobile] › e2e/portfolio.test.ts:168:1 › CTAs, mobile menu Escape, anchors, history, contact and clipboard (5.6s)
+  ✓   7 [mobile] › e2e/portfolio.test.ts:236:1 › preferences persist, reduced motion and observer/storage failure remain usable (4.0s)
+  ✓   8 [mobile] › e2e/portfolio.test.ts:270:1 › unknown, malformed and legacy sample URLs do not crash (2.1s)
+  ✓   9 [mobile] › e2e/portfolio.test.ts:287:1 › capture responsive production evidence (4.1s)
+  ✓  10 [mobile] › e2e/positioning.test.ts:4:1 › current positioning, linked skills, other work and honest verification copy (4.7s)
+  ✓  11 [narrow] › e2e/portfolio.test.ts:76:1 › hero selection: click, keyboard, wrap, focus, links and no autoplay (4.8s)
+  ✘  12 [narrow] › e2e/portfolio.test.ts:113:5 › id/dark: home, archive, current details, accessibility (3.7s)
+Testing stopped early after 1 maximum allowed failures.
+2026-11-22T07:53:14.403Z pw:webserver Terminating the WebServer
+2026-11-22T07:53:14.422Z pw:webserver Terminated the WebServer
+
+
+  1) [narrow] › e2e/portfolio.test.ts:113:5 › id/dark: home, archive, current details, accessibility 
+
+    Error: expect(received).toBeLessThanOrEqual(expected)
+
+    Expected: <= 320
+    Received:    323
+
+      23 |       Math.max(document.body.scrollWidth, document.documentElement.scrollWidth),
+      24 |     ),
+    > 25 |   ).toBeLessThanOrEqual(page.viewportSize()!.width);
+         |     ^
+      26 | }
+      27 | async function axe(page: Page) {
+      28 |   // This portfolio has no frames. The normal runPartial/finishRun pipeline
+        at noOverflow (/home/tpang/documents/websiteProfileV2/e2e/portfolio.test.ts:25:5)
+        at /home/tpang/documents/websiteProfileV2/e2e/portfolio.test.ts:121:7
+
+    attachment #2: screenshot (image/png) ──────────────────────────────────────────────────────────
+    docs/verification/playwright/matrix-resume/artifacts/portfolio-id-dark-home-archive-current-details-accessibility-narrow/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: docs/verification/playwright/matrix-resume/artifacts/portfolio-id-dark-home-archive-current-details-accessibility-narrow/error-context.md
+
+    attachment #5: trace (application/zip) ─────────────────────────────────────────────────────────
+    docs/verification/playwright/matrix-resume/artifacts/portfolio-id-dark-home-archive-current-details-accessibility-narrow/trace.zip
+    Usage:
+
+        npx playwright show-trace docs/verification/playwright/matrix-resume/artifacts/portfolio-id-dark-home-archive-current-details-accessibility-narrow/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  1 failed
+    [narrow] › e2e/portfolio.test.ts:113:5 › id/dark: home, archive, current details, accessibility 
+  8 did not run
+  11 passed (2.8m)
+  1 error was not a part of any test, see above for details

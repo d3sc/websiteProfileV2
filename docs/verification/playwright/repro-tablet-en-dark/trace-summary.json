@@ -1,0 +1,171 @@
+[
+  {
+    "file": "test.trace",
+    "longest": [
+      {
+        "seconds": 73.03,
+        "call": "Create page",
+        "params": "{}",
+        "error": ""
+      },
+      {
+        "seconds": 64.17,
+        "call": "After Hooks",
+        "params": "{}",
+        "error": ""
+      },
+      {
+        "seconds": 47.95,
+        "call": "Fixture \"context\"",
+        "params": "{}",
+        "error": ""
+      },
+      {
+        "seconds": 38.46,
+        "call": "Before Hooks",
+        "params": "{}",
+        "error": ""
+      },
+      {
+        "seconds": 23.22,
+        "call": "Fixture \"page\"",
+        "params": "{}",
+        "error": ""
+      },
+      {
+        "seconds": 23.21,
+        "call": "Create page",
+        "params": "{}",
+        "error": ""
+      },
+      {
+        "seconds": 20.54,
+        "call": "Evaluate",
+        "params": "{}",
+        "error": ""
+      },
+      {
+        "seconds": 17.9,
+        "call": "Evaluate",
+        "params": "{}",
+        "error": ""
+      },
+      {
+        "seconds": 14.91,
+        "call": "Navigate",
+        "params": "{'url': '/'}",
+        "error": ""
+      },
+      {
+        "seconds": 13.1,
+        "call": "Fixture \"browser\"",
+        "params": "{}",
+        "error": ""
+      },
+      {
+        "seconds": 13.1,
+        "call": "Launch browser",
+        "params": "{}",
+        "error": ""
+      },
+      {
+        "seconds": 7.91,
+        "call": "Worker Cleanup",
+        "params": "{}",
+        "error": ""
+      }
+    ],
+    "pending": [],
+    "console_errors": []
+  },
+  {
+    "file": "1-trace.trace",
+    "longest": [
+      {
+        "seconds": 72.98,
+        "call": "BrowserContext.newPage",
+        "params": "{}",
+        "error": ""
+      },
+      {
+        "seconds": 23.18,
+        "call": "BrowserContext.newPage",
+        "params": "{}",
+        "error": ""
+      },
+      {
+        "seconds": 18.12,
+        "call": "Frame.evaluateExpression",
+        "params": "{'expression': '({\\n  context,\\n  options\\n}) => {\\n  return window.axe.runPartial(context, options);\\n}', 'isFunction':",
+        "error": ""
+      },
+      {
+        "seconds": 10.18,
+        "call": "Frame.goto",
+        "params": "{'url': '/', 'waitUntil': 'load'}",
+        "error": ""
+      },
+      {
+        "seconds": 7.72,
+        "call": "BrowserContext.newPage",
+        "params": "{}",
+        "error": ""
+      },
+      {
+        "seconds": 3.75,
+        "call": "Expect \"toBeVisible\"",
+        "params": "{'selector': 'internal:role=tab >> nth=0', 'expression': 'to.be.visible', 'expectedValue': {'value': {'v': 'undefined'},",
+        "error": ""
+      },
+      {
+        "seconds": 2.7,
+        "call": "Frame.evaluateExpression",
+        "params": "{'expression': '(function axeFunction(window) {\\n  var global = window;\\n  var document = window.document;\\n  \\'use stri",
+        "error": ""
+      },
+      {
+        "seconds": 2.38,
+        "call": "Frame.evaluateExpression",
+        "params": "{'expression': '({\\n  context,\\n  options\\n}) => {\\n  return window.axe.runPartial(context, options);\\n}', 'isFunction':",
+        "error": ""
+      },
+      {
+        "seconds": 1.22,
+        "call": "Frame.goto",
+        "params": "{'url': '/#/projects/samurai-game', 'waitUntil': 'load'}",
+        "error": ""
+      },
+      {
+        "seconds": 1.13,
+        "call": "Frame.evaluateExpression",
+        "params": "{'expression': '(function axeFunction(window) {\\n  var global = window;\\n  var document = window.document;\\n  \\'use stri",
+        "error": ""
+      },
+      {
+        "seconds": 1.13,
+        "call": "Frame.click",
+        "params": "{'selector': 'internal:role=button[name=/^Menu/]', 'strict': True}",
+        "error": ""
+      },
+      {
+        "seconds": 1.09,
+        "call": "Expect \"toContainText\"",
+        "params": "{'selector': 'internal:role=heading[level=1]', 'expression': 'to.have.text', 'expectedText': [{'string': 'Proxmox Home L",
+        "error": ""
+      }
+    ],
+    "pending": [
+      {
+        "call": "evaluateExpression",
+        "params": "{'expression': '(function axeFunction(window) {\\n  var global = window;\\n  var document = window.document;\\n  \\'use strict\\';\\n  function _typeof(o) {\\n    \\'@babel/helpers - typeof\\';\\n    return _typeof = \\'function\\' "
+      }
+    ],
+    "console_errors": []
+  },
+  {
+    "file": "0-trace.trace",
+    "longest": [],
+    "pending": [],
+    "console_errors": []
+  }
+]

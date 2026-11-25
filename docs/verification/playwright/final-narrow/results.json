@@ -1,0 +1,803 @@
+{
+  "config": {
+    "argv": [
+      "/home/tpang/.nvm/versions/node/v24.12.0/bin/node",
+      "/home/tpang/documents/websiteProfileV2/node_modules/@playwright/test/cli.js",
+      "test",
+      "--config=playwright.diagnostic.config.ts",
+      "--workers=1",
+      "--project=narrow",
+      "--max-failures=1",
+      "--global-timeout=420000"
+    ],
+    "configFile": "/home/tpang/documents/websiteProfileV2/playwright.diagnostic.config.ts",
+    "rootDir": "/home/tpang/documents/websiteProfileV2/e2e",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": true,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 420000,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 1,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/home/tpang/documents/websiteProfileV2/docs/verification/playwright/final-narrow/artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "tablet",
+        "name": "tablet",
+        "testDir": "/home/tpang/documents/websiteProfileV2/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 120000
+      },
+      {
+        "outputDir": "/home/tpang/documents/websiteProfileV2/docs/verification/playwright/final-narrow/artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "desktop",
+        "name": "desktop",
+        "testDir": "/home/tpang/documents/websiteProfileV2/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 120000
+      },
+      {
+        "outputDir": "/home/tpang/documents/websiteProfileV2/docs/verification/playwright/final-narrow/artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "mobile",
+        "name": "mobile",
+        "testDir": "/home/tpang/documents/websiteProfileV2/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 120000
+      },
+      {
+        "outputDir": "/home/tpang/documents/websiteProfileV2/docs/verification/playwright/final-narrow/artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "narrow",
+        "name": "narrow",
+        "testDir": "/home/tpang/documents/websiteProfileV2/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 120000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "/home/tpang/documents/websiteProfileV2/docs/verification/playwright/final-narrow/artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "narrow",
+        "testDir": "/home/tpang/documents/websiteProfileV2/e2e",
+        "snapshotDir": "/home/tpang/documents/websiteProfileV2/e2e",
+        "testIgnore": [],
+        "testMatch": "**/*.@(spec|test).?(c|m)[jt]s?(x)",
+        "timeout": 120000,
+        "use": {
+          "baseURL": "http://127.0.0.1:4173",
+          "browserName": "chromium",
+          "colorScheme": "light",
+          "trace": "on",
+          "screenshot": "on",
+          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.8078.4 Safari/537.36",
+          "viewport": {
+            "width": 320,
+            "height": 844
+          },
+          "screen": {
+            "width": 1920,
+            "height": 1080
+          },
+          "deviceScaleFactor": 1,
+          "isMobile": false,
+          "hasTouch": false,
+          "defaultBrowserType": "chromium"
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": "narrow"
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "docs/verification/playwright/final-narrow/results.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.64.1",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "portfolio.test.ts",
+      "file": "portfolio.test.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "hero selection: click, keyboard, wrap, focus, links and no autoplay",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "narrow",
+              "projectName": "narrow",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4474,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-22T07:56:01.628Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/home/tpang/documents/websiteProfileV2/docs/verification/playwright/final-narrow/artifacts/portfolio-hero-selection-c-1c533-focus-links-and-no-autoplay-narrow/test-finished-1.png"
+                    },
+                    {
+                      "name": "browser-diagnostics",
+                      "contentType": "application/json",
+                      "body": "ewogICJicm93c2VyIjogImNocm9taXVtIiwKICAidmVyc2lvbiI6ICIxNTYuMC44MDc4LjQiLAogICJ2aWV3cG9ydCI6IHsKICAgICJ3aWR0aCI6IDMyMCwKICAgICJoZWlnaHQiOiA4NDQKICB9LAogICJoYXNUb3VjaCI6IGZhbHNlLAogICJpc01vYmlsZSI6IGZhbHNlLAogICJ1cmwiOiAiW3BvcnRmb2xpb10vIy9wcm9qZWN0cy9sbXMtdWppYW4tb25saW5lIiwKICAiZXJyb3JzIjogW10KfQ=="
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/home/tpang/documents/websiteProfileV2/docs/verification/playwright/final-narrow/artifacts/portfolio-hero-selection-c-1c533-focus-links-and-no-autoplay-narrow/trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "7f0db2630e7a384d876f-a215a19e1e0d8a0b01aa",
+          "file": "portfolio.test.ts",
+          "line": 76,
+          "column": 1
+        },
+        {
+          "title": "id/dark: home, archive, current details, accessibility",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "narrow",
+              "projectName": "narrow",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 8810,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "WCAG audit: home",
+                      "duration": 1940
+                    },
+                    {
+                      "title": "WCAG audit: #/projects",
+                      "duration": 1454
+                    },
+                    {
+                      "title": "WCAG audit: #/projects/samurai-game",
+                      "duration": 690
+                    }
+                  ],
+                  "startTime": "2026-11-22T07:56:06.812Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "axe-home",
+                      "contentType": "application/json",
+                      "body": "ewogICJ1cmwiOiAiaHR0cDovLzEyNy4wLjAuMTo0MTczLyIsCiAgIm1vZGUiOiAic2FtZS1wYWdlIGF4ZS5ydW4iLAogICJmcmFtZUNvdW50IjogMSwKICAicGFzc2VkUnVsZXMiOiAyNCwKICAidmlvbGF0aW9ucyI6IFtdLAogICJpbmNvbXBsZXRlIjogWwogICAgewogICAgICAiaWQiOiAiY29sb3ItY29udHJhc3QiLAogICAgICAiaW1wYWN0IjogInNlcmlvdXMiCiAgICB9CiAgXQp9"
+                    },
+                    {
+                      "name": "axe-#/projects",
+                      "contentType": "application/json",
+                      "body": "ewogICJ1cmwiOiAiaHR0cDovLzEyNy4wLjAuMTo0MTczLyMvcHJvamVjdHMiLAogICJtb2RlIjogInNhbWUtcGFnZSBheGUucnVuIiwKICAiZnJhbWVDb3VudCI6IDEsCiAgInBhc3NlZFJ1bGVzIjogMjMsCiAgInZpb2xhdGlvbnMiOiBbXSwKICAiaW5jb21wbGV0ZSI6IFsKICAgIHsKICAgICAgImlkIjogImNvbG9yLWNvbnRyYXN0IiwKICAgICAgImltcGFjdCI6ICJzZXJpb3VzIgogICAgfQogIF0KfQ=="
+                    },
+                    {
+                      "name": "axe-#/projects/samurai-game",
+                      "contentType": "application/json",
+                      "body": "ewogICJ1cmwiOiAiaHR0cDovLzEyNy4wLjAuMTo0MTczLyMvcHJvamVjdHMvc2FtdXJhaS1nYW1lIiwKICAibW9kZSI6ICJzYW1lLXBhZ2UgYXhlLnJ1biIsCiAgImZyYW1lQ291bnQiOiAxLAogICJwYXNzZWRSdWxlcyI6IDE5LAogICJ2aW9sYXRpb25zIjogW10sCiAgImluY29tcGxldGUiOiBbXQp9"
+                    },
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/home/tpang/documents/websiteProfileV2/docs/verification/playwright/final-narrow/artifacts/portfolio-id-dark-home-archive-current-details-accessibility-narrow/test-finished-1.png"
+                    },
+                    {
+                      "name": "browser-diagnostics",
+                      "contentType": "application/json",
+                      "body": "ewogICJicm93c2VyIjogImNocm9taXVtIiwKICAidmVyc2lvbiI6ICIxNTYuMC44MDc4LjQiLAogICJ2aWV3cG9ydCI6IHsKICAgICJ3aWR0aCI6IDMyMCwKICAgICJoZWlnaHQiOiA4NDQKICB9LAogICJoYXNUb3VjaCI6IGZhbHNlLAogICJpc01vYmlsZSI6IGZhbHNlLAogICJ1cmwiOiAiW3BvcnRmb2xpb10vIy9wcm9qZWN0cy9zYW11cmFpLWdhbWUiLAogICJlcnJvcnMiOiBbXQp9"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/home/tpang/documents/websiteProfileV2/docs/verification/playwright/final-narrow/artifacts/portfolio-id-dark-home-archive-current-details-accessibility-narrow/trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "7f0db2630e7a384d876f-376943b4ec8b63683455",
+          "file": "portfolio.test.ts",
+          "line": 115,
+          "column": 5
+        },
+        {
+          "title": "id/light: home, archive, current details, accessibility",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "narrow",
+              "projectName": "narrow",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 49860,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "WCAG audit: home",
+                      "duration": 2033
+                    },
+                    {
+                      "title": "WCAG audit: #/projects",
+                      "duration": 25323
+                    },
+                    {
+                      "title": "WCAG audit: #/projects/samurai-game",
+                      "duration": 1121
+                    }
+                  ],
+                  "startTime": "2026-11-22T07:56:16.871Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "axe-home",
+                      "contentType": "application/json",
+                      "body": "ewogICJ1cmwiOiAiaHR0cDovLzEyNy4wLjAuMTo0MTczLyIsCiAgIm1vZGUiOiAic2FtZS1wYWdlIGF4ZS5ydW4iLAogICJmcmFtZUNvdW50IjogMSwKICAicGFzc2VkUnVsZXMiOiAyNCwKICAidmlvbGF0aW9ucyI6IFtdLAogICJpbmNvbXBsZXRlIjogWwogICAgewogICAgICAiaWQiOiAiY29sb3ItY29udHJhc3QiLAogICAgICAiaW1wYWN0IjogInNlcmlvdXMiCiAgICB9CiAgXQp9"
+                    },
+                    {
+                      "name": "axe-#/projects",
+                      "contentType": "application/json",
+                      "body": "ewogICJ1cmwiOiAiaHR0cDovLzEyNy4wLjAuMTo0MTczLyMvcHJvamVjdHMiLAogICJtb2RlIjogInNhbWUtcGFnZSBheGUucnVuIiwKICAiZnJhbWVDb3VudCI6IDEsCiAgInBhc3NlZFJ1bGVzIjogMjMsCiAgInZpb2xhdGlvbnMiOiBbXSwKICAiaW5jb21wbGV0ZSI6IFsKICAgIHsKICAgICAgImlkIjogImNvbG9yLWNvbnRyYXN0IiwKICAgICAgImltcGFjdCI6ICJzZXJpb3VzIgogICAgfQogIF0KfQ=="
+                    },
+                    {
+                      "name": "axe-#/projects/samurai-game",
+                      "contentType": "application/json",
+                      "body": "ewogICJ1cmwiOiAiaHR0cDovLzEyNy4wLjAuMTo0MTczLyMvcHJvamVjdHMvc2FtdXJhaS1nYW1lIiwKICAibW9kZSI6ICJzYW1lLXBhZ2UgYXhlLnJ1biIsCiAgImZyYW1lQ291bnQiOiAxLAogICJwYXNzZWRSdWxlcyI6IDE5LAogICJ2aW9sYXRpb25zIjogW10sCiAgImluY29tcGxldGUiOiBbCiAgICB7CiAgICAgICJpZCI6ICJjb2xvci1jb250cmFzdCIsCiAgICAgICJpbXBhY3QiOiAic2VyaW91cyIKICAgIH0KICBdCn0="
+                    },
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/home/tpang/documents/websiteProfileV2/docs/verification/playwright/final-narrow/artifacts/portfolio-id-light-home-ar-108b3-rrent-details-accessibility-narrow/test-finished-1.png"
+                    },
+                    {
+                      "name": "browser-diagnostics",
+                      "contentType": "application/json",
+                      "body": "ewogICJicm93c2VyIjogImNocm9taXVtIiwKICAidmVyc2lvbiI6ICIxNTYuMC44MDc4LjQiLAogICJ2aWV3cG9ydCI6IHsKICAgICJ3aWR0aCI6IDMyMCwKICAgICJoZWlnaHQiOiA4NDQKICB9LAogICJoYXNUb3VjaCI6IGZhbHNlLAogICJpc01vYmlsZSI6IGZhbHNlLAogICJ1cmwiOiAiW3BvcnRmb2xpb10vIy9wcm9qZWN0cy9zYW11cmFpLWdhbWUiLAogICJlcnJvcnMiOiBbXQp9"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/home/tpang/documents/websiteProfileV2/docs/verification/playwright/final-narrow/artifacts/portfolio-id-light-home-ar-108b3-rrent-details-accessibility-narrow/trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "7f0db2630e7a384d876f-4a5ded21b24342cb425d",
+          "file": "portfolio.test.ts",
+          "line": 115,
+          "column": 5
+        },
+        {
+          "title": "en/dark: home, archive, current details, accessibility",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "narrow",
+              "projectName": "narrow",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 10713,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "WCAG audit: home",
+                      "duration": 2579
+                    },
+                    {
+                      "title": "WCAG audit: #/projects",
+                      "duration": 1346
+                    },
+                    {
+                      "title": "WCAG audit: #/projects/samurai-game",
+                      "duration": 697
+                    }
+                  ],
+                  "startTime": "2026-11-22T07:57:08.677Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "axe-home",
+                      "contentType": "application/json",
+                      "body": "ewogICJ1cmwiOiAiaHR0cDovLzEyNy4wLjAuMTo0MTczLyIsCiAgIm1vZGUiOiAic2FtZS1wYWdlIGF4ZS5ydW4iLAogICJmcmFtZUNvdW50IjogMSwKICAicGFzc2VkUnVsZXMiOiAyNCwKICAidmlvbGF0aW9ucyI6IFtdLAogICJpbmNvbXBsZXRlIjogWwogICAgewogICAgICAiaWQiOiAiY29sb3ItY29udHJhc3QiLAogICAgICAiaW1wYWN0IjogInNlcmlvdXMiCiAgICB9CiAgXQp9"
+                    },
+                    {
+                      "name": "axe-#/projects",
+                      "contentType": "application/json",
+                      "body": "ewogICJ1cmwiOiAiaHR0cDovLzEyNy4wLjAuMTo0MTczLyMvcHJvamVjdHMiLAogICJtb2RlIjogInNhbWUtcGFnZSBheGUucnVuIiwKICAiZnJhbWVDb3VudCI6IDEsCiAgInBhc3NlZFJ1bGVzIjogMjMsCiAgInZpb2xhdGlvbnMiOiBbXSwKICAiaW5jb21wbGV0ZSI6IFsKICAgIHsKICAgICAgImlkIjogImNvbG9yLWNvbnRyYXN0IiwKICAgICAgImltcGFjdCI6ICJzZXJpb3VzIgogICAgfQogIF0KfQ=="
+                    },
+                    {
+                      "name": "axe-#/projects/samurai-game",
+                      "contentType": "application/json",
+                      "body": "ewogICJ1cmwiOiAiaHR0cDovLzEyNy4wLjAuMTo0MTczLyMvcHJvamVjdHMvc2FtdXJhaS1nYW1lIiwKICAibW9kZSI6ICJzYW1lLXBhZ2UgYXhlLnJ1biIsCiAgImZyYW1lQ291bnQiOiAxLAogICJwYXNzZWRSdWxlcyI6IDE5LAogICJ2aW9sYXRpb25zIjogW10sCiAgImluY29tcGxldGUiOiBbXQp9"
+                    },
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/home/tpang/documents/websiteProfileV2/docs/verification/playwright/final-narrow/artifacts/portfolio-en-dark-home-archive-current-details-accessibility-narrow/test-finished-1.png"
+                    },
+                    {
+                      "name": "browser-diagnostics",
+                      "contentType": "application/json",
+                      "body": "ewogICJicm93c2VyIjogImNocm9taXVtIiwKICAidmVyc2lvbiI6ICIxNTYuMC44MDc4LjQiLAogICJ2aWV3cG9ydCI6IHsKICAgICJ3aWR0aCI6IDMyMCwKICAgICJoZWlnaHQiOiA4NDQKICB9LAogICJoYXNUb3VjaCI6IGZhbHNlLAogICJpc01vYmlsZSI6IGZhbHNlLAogICJ1cmwiOiAiW3BvcnRmb2xpb10vIy9wcm9qZWN0cy9zYW11cmFpLWdhbWUiLAogICJlcnJvcnMiOiBbXQp9"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/home/tpang/documents/websiteProfileV2/docs/verification/playwright/final-narrow/artifacts/portfolio-en-dark-home-archive-current-details-accessibility-narrow/trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "7f0db2630e7a384d876f-20e0cd4508c0feae220f",
+          "file": "portfolio.test.ts",
+          "line": 115,
+          "column": 5
+        },
+        {
+          "title": "en/light: home, archive, current details, accessibility",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "narrow",
+              "projectName": "narrow",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 8449,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "WCAG audit: home",
+                      "duration": 1971
+                    },
+                    {
+                      "title": "WCAG audit: #/projects",
+                      "duration": 1425
+                    },
+                    {
+                      "title": "WCAG audit: #/projects/samurai-game",
+                      "duration": 687
+                    }
+                  ],
+                  "startTime": "2026-11-22T07:57:20.319Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "axe-home",
+                      "contentType": "application/json",
+                      "body": "ewogICJ1cmwiOiAiaHR0cDovLzEyNy4wLjAuMTo0MTczLyIsCiAgIm1vZGUiOiAic2FtZS1wYWdlIGF4ZS5ydW4iLAogICJmcmFtZUNvdW50IjogMSwKICAicGFzc2VkUnVsZXMiOiAyNCwKICAidmlvbGF0aW9ucyI6IFtdLAogICJpbmNvbXBsZXRlIjogWwogICAgewogICAgICAiaWQiOiAiY29sb3ItY29udHJhc3QiLAogICAgICAiaW1wYWN0IjogInNlcmlvdXMiCiAgICB9CiAgXQp9"
+                    },
+                    {
+                      "name": "axe-#/projects",
+                      "contentType": "application/json",
+                      "body": "ewogICJ1cmwiOiAiaHR0cDovLzEyNy4wLjAuMTo0MTczLyMvcHJvamVjdHMiLAogICJtb2RlIjogInNhbWUtcGFnZSBheGUucnVuIiwKICAiZnJhbWVDb3VudCI6IDEsCiAgInBhc3NlZFJ1bGVzIjogMjMsCiAgInZpb2xhdGlvbnMiOiBbXSwKICAiaW5jb21wbGV0ZSI6IFsKICAgIHsKICAgICAgImlkIjogImNvbG9yLWNvbnRyYXN0IiwKICAgICAgImltcGFjdCI6ICJzZXJpb3VzIgogICAgfQogIF0KfQ=="
+                    },
+                    {
+                      "name": "axe-#/projects/samurai-game",
+                      "contentType": "application/json",
+                      "body": "ewogICJ1cmwiOiAiaHR0cDovLzEyNy4wLjAuMTo0MTczLyMvcHJvamVjdHMvc2FtdXJhaS1nYW1lIiwKICAibW9kZSI6ICJzYW1lLXBhZ2UgYXhlLnJ1biIsCiAgImZyYW1lQ291bnQiOiAxLAogICJwYXNzZWRSdWxlcyI6IDE5LAogICJ2aW9sYXRpb25zIjogW10sCiAgImluY29tcGxldGUiOiBbCiAgICB7CiAgICAgICJpZCI6ICJjb2xvci1jb250cmFzdCIsCiAgICAgICJpbXBhY3QiOiAic2VyaW91cyIKICAgIH0KICBdCn0="
+                    },
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/home/tpang/documents/websiteProfileV2/docs/verification/playwright/final-narrow/artifacts/portfolio-en-light-home-ar-13ee7-rrent-details-accessibility-narrow/test-finished-1.png"
+                    },
+                    {
+                      "name": "browser-diagnostics",
+                      "contentType": "application/json",
+                      "body": "ewogICJicm93c2VyIjogImNocm9taXVtIiwKICAidmVyc2lvbiI6ICIxNTYuMC44MDc4LjQiLAogICJ2aWV3cG9ydCI6IHsKICAgICJ3aWR0aCI6IDMyMCwKICAgICJoZWlnaHQiOiA4NDQKICB9LAogICJoYXNUb3VjaCI6IGZhbHNlLAogICJpc01vYmlsZSI6IGZhbHNlLAogICJ1cmwiOiAiW3BvcnRmb2xpb10vIy9wcm9qZWN0cy9zYW11cmFpLWdhbWUiLAogICJlcnJvcnMiOiBbXQp9"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/home/tpang/documents/websiteProfileV2/docs/verification/playwright/final-narrow/artifacts/portfolio-en-light-home-ar-13ee7-rrent-details-accessibility-narrow/trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "7f0db2630e7a384d876f-320ed4abd5cb4a2095fc",
+          "file": "portfolio.test.ts",
+          "line": 115,
+          "column": 5
+        },
+        {
+          "title": "CTAs, mobile menu Escape, anchors, history, contact and clipboard",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "narrow",
+              "projectName": "narrow",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 6251,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-22T07:57:29.703Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/home/tpang/documents/websiteProfileV2/docs/verification/playwright/final-narrow/artifacts/portfolio-CTAs-mobile-menu-3f869-story-contact-and-clipboard-narrow/test-finished-1.png"
+                    },
+                    {
+                      "name": "browser-diagnostics",
+                      "contentType": "application/json",
+                      "body": "ewogICJicm93c2VyIjogImNocm9taXVtIiwKICAidmVyc2lvbiI6ICIxNTYuMC44MDc4LjQiLAogICJ2aWV3cG9ydCI6IHsKICAgICJ3aWR0aCI6IDMyMCwKICAgICJoZWlnaHQiOiA4NDQKICB9LAogICJoYXNUb3VjaCI6IGZhbHNlLAogICJpc01vYmlsZSI6IGZhbHNlLAogICJ1cmwiOiAiW3BvcnRmb2xpb10vIy8jYWJvdXQiLAogICJlcnJvcnMiOiBbXQp9"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/home/tpang/documents/websiteProfileV2/docs/verification/playwright/final-narrow/artifacts/portfolio-CTAs-mobile-menu-3f869-story-contact-and-clipboard-narrow/trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "7f0db2630e7a384d876f-fb1fb3ac6d918a022a99",
+          "file": "portfolio.test.ts",
+          "line": 170,
+          "column": 1
+        },
+        {
+          "title": "preferences persist, reduced motion and observer/storage failure remain usable",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "narrow",
+              "projectName": "narrow",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3073,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-22T07:57:36.710Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/home/tpang/documents/websiteProfileV2/docs/verification/playwright/final-narrow/artifacts/portfolio-preferences-pers-582fe-orage-failure-remain-usable-narrow/test-finished-1.png"
+                    },
+                    {
+                      "name": "browser-diagnostics",
+                      "contentType": "application/json",
+                      "body": "ewogICJicm93c2VyIjogImNocm9taXVtIiwKICAidmVyc2lvbiI6ICIxNTYuMC44MDc4LjQiLAogICJ2aWV3cG9ydCI6IHsKICAgICJ3aWR0aCI6IDMyMCwKICAgICJoZWlnaHQiOiA4NDQKICB9LAogICJoYXNUb3VjaCI6IGZhbHNlLAogICJpc01vYmlsZSI6IGZhbHNlLAogICJ1cmwiOiAiW3BvcnRmb2xpb10vIiwKICAiZXJyb3JzIjogW10KfQ=="
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/home/tpang/documents/websiteProfileV2/docs/verification/playwright/final-narrow/artifacts/portfolio-preferences-pers-582fe-orage-failure-remain-usable-narrow/trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "7f0db2630e7a384d876f-36089f3f4044921153dc",
+          "file": "portfolio.test.ts",
+          "line": 238,
+          "column": 1
+        },
+        {
+          "title": "unknown, malformed and legacy sample URLs do not crash",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "narrow",
+              "projectName": "narrow",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1653,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-22T07:57:40.167Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/home/tpang/documents/websiteProfileV2/docs/verification/playwright/final-narrow/artifacts/portfolio-unknown-malforme-71263-cy-sample-URLs-do-not-crash-narrow/test-finished-1.png"
+                    },
+                    {
+                      "name": "browser-diagnostics",
+                      "contentType": "application/json",
+                      "body": "ewogICJicm93c2VyIjogImNocm9taXVtIiwKICAidmVyc2lvbiI6ICIxNTYuMC44MDc4LjQiLAogICJ2aWV3cG9ydCI6IHsKICAgICJ3aWR0aCI6IDMyMCwKICAgICJoZWlnaHQiOiA4NDQKICB9LAogICJoYXNUb3VjaCI6IGZhbHNlLAogICJpc01vYmlsZSI6IGZhbHNlLAogICJ1cmwiOiAiW3BvcnRmb2xpb10vIy9wcm9qZWN0cy9zYW1wbGUtdG9vbGluZyIsCiAgImVycm9ycyI6IFtdCn0="
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/home/tpang/documents/websiteProfileV2/docs/verification/playwright/final-narrow/artifacts/portfolio-unknown-malforme-71263-cy-sample-URLs-do-not-crash-narrow/trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "7f0db2630e7a384d876f-996471e943baf8314d40",
+          "file": "portfolio.test.ts",
+          "line": 272,
+          "column": 1
+        },
+        {
+          "title": "capture responsive production evidence",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "narrow",
+              "projectName": "narrow",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4110,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-22T07:57:41.962Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/home/tpang/documents/websiteProfileV2/docs/verification/playwright/final-narrow/artifacts/portfolio-capture-responsive-production-evidence-narrow/test-finished-1.png"
+                    },
+                    {
+                      "name": "browser-diagnostics",
+                      "contentType": "application/json",
+                      "body": "ewogICJicm93c2VyIjogImNocm9taXVtIiwKICAidmVyc2lvbiI6ICIxNTYuMC44MDc4LjQiLAogICJ2aWV3cG9ydCI6IHsKICAgICJ3aWR0aCI6IDMyMCwKICAgICJoZWlnaHQiOiA4NDQKICB9LAogICJoYXNUb3VjaCI6IGZhbHNlLAogICJpc01vYmlsZSI6IGZhbHNlLAogICJ1cmwiOiAiW3BvcnRmb2xpb10vIy9wcm9qZWN0cy92cHMtbWFuYWdlciIsCiAgImVycm9ycyI6IFtdCn0="
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/home/tpang/documents/websiteProfileV2/docs/verification/playwright/final-narrow/artifacts/portfolio-capture-responsive-production-evidence-narrow/trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "7f0db2630e7a384d876f-9502be8ec91115c0cc72",
+          "file": "portfolio.test.ts",
+          "line": 289,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "positioning.test.ts",
+      "file": "positioning.test.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "current positioning, linked skills, other work and honest verification copy",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "narrow",
+              "projectName": "narrow",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4139,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-22T07:57:46.312Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/home/tpang/documents/websiteProfileV2/docs/verification/playwright/final-narrow/artifacts/positioning-current-positi-7587e-nd-honest-verification-copy-narrow/test-finished-1.png"
+                    },
+                    {
+                      "name": "browser-diagnostics",
+                      "contentType": "application/json",
+                      "body": "ewogICJicm93c2VyIjogImNocm9taXVtIiwKICAidmVyc2lvbiI6ICIxNTYuMC44MDc4LjQiLAogICJ2aWV3cG9ydCI6IHsKICAgICJ3aWR0aCI6IDMyMCwKICAgICJoZWlnaHQiOiA4NDQKICB9LAogICJoYXNUb3VjaCI6IGZhbHNlLAogICJpc01vYmlsZSI6IGZhbHNlLAogICJ1cmwiOiAiW3BvcnRmb2xpb10vIiwKICAiZXJyb3JzIjogW10KfQ=="
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/home/tpang/documents/websiteProfileV2/docs/verification/playwright/final-narrow/artifacts/positioning-current-positi-7587e-nd-honest-verification-copy-narrow/trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "82793b4176591ac580d7-f51d83e0b2f1c912d5a3",
+          "file": "positioning.test.ts",
+          "line": 4,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-11-22T07:55:57.095Z",
+    "duration": 114216.399,
+    "expected": 10,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

@@ -1,117 +1,760 @@
-import { useEffect, useRef, useState } from "react";
-import { achievements, categories, categoryLabels, copy, projects, socialLinks, type Category, type Locale, type Project } from "./data";
+import {
+  useEffect,
+  useLayoutEffect,
+  useRef,
+  useState,
+  type KeyboardEvent,
+  type ReactNode,
+} from "react";
+import {
+  achievements,
+  allProjects,
+  archivedProjects,
+  profileName,
+  categories,
+  categoryLabels,
+  copy,
+  email,
+  projects,
+  skills,
+  socialLinks,
+  type Category,
+  type Locale,
+  type Project,
+} from "./data";
 import { readRoute, routeHref, type Route } from "./router";
 import "./styles.css";
 
 type Theme = "light" | "dark";
-type Translation = (typeof copy)[Locale];
-const PREVIEW_COUNT = 3;
-
-function preference<T extends string>(key: string, values: readonly T[], fallback: T): T {
+type Text = (typeof copy)[Locale];
+function preference<T extends string>(
+  key: string,
+  values: readonly T[],
+  fallback: T,
+): T {
   try {
-    const value = localStorage.getItem(key);
-    return value && values.includes(value as T) ? (value as T) : fallback;
-  } catch { return fallback; }
+    const v = localStorage.getItem(key);
+    return values.includes(v as T) ? (v as T) : fallback;
+  } catch {
+    return fallback;
+  }
 }
-function systemTheme(): Theme { return typeof matchMedia !== "undefined" && matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light"; }
-
-function App() {
-  const [locale, setLocale] = useState<Locale>(() => preference("portfolio-locale", ["id", "en"], "id"));
-  const [theme, setTheme] = useState<Theme>(() => preference("portfolio-theme", ["light", "dark"], systemTheme()));
+function External({
+  href,
+  children,
+  t,
+  className = "text-link",
+}: {
+  href: string;
+  children: ReactNode;
+  t: Text;
+  className?: string;
+}) {
+  return (
+    <a className={className} href={href} target="_blank" rel="noreferrer">
+      {children} <span aria-hidden="true">↗</span>
+      <span className="sr-only"> ({t.external})</span>
+    </a>
+  );
+}
+function Tags({ project }: { project: Project }) {
+  return (
+    <ul className="tags" aria-label="Stack">
+      {project.stack.map((tag) => (
+        <li key={tag}>{tag}</li>
+      ))}
+    </ul>
+  );
+}
+function Visual({
+  project,
+  t,
+  eager = false,
+}: {
+  project: Project;
+  t: Text;
+  eager?: boolean;
+}) {
+  return project.image ? (
+    <img
+      src={project.image}
+      alt={`${project.title} — ${t.source}`}
+      width="1366"
+      height="768"
+      loading={eager ? "eager" : "lazy"}
+      decoding="async"
+    />
+  ) : (
+    <div className="project-note">
+      <span className="mono">FIELD NOTE / {project.id}</span>
+      <span className="note-index" aria-hidden="true">
+        {project.id}
+      </span>
+      <p>{project.visual?.[0] ?? project.title}</p>
+      <small>{project.visual?.[1] ?? project.stack.join(" / ")}</small>
+    </div>
+  );
+}
+export default function App() {
+  const [locale, setLocale] = useState<Locale>(() =>
+    preference("portfolio-locale", ["id", "en"], "id"),
+  );
+  const [theme, setTheme] = useState<Theme>(() =>
+    preference("portfolio-theme", ["dark", "light"], "dark"),
+  );
   const [route, setRoute] = useState<Route>(() => readRoute());
-  const [menuOpen, setMenuOpen] = useState(false);
-  const mainRef = useRef<HTMLElement>(null);
+  const [menu, setMenu] = useState(false);
+  const main = useRef<HTMLElement>(null);
   const t = copy[locale];
-  const localizedProjects = projects[locale];
-
   useEffect(() => {
-    const onHashChange = () => { setRoute(readRoute()); setMenuOpen(false); };
-    addEventListener("hashchange", onHashChange);
-    return () => removeEventListener("hashchange", onHashChange);
+    const handler = () => {
+      setRoute((current) => {
+        const next = readRoute();
+        return JSON.stringify(current) === JSON.stringify(next)
+          ? current
+          : next;
+      });
+      setMenu(false);
+    };
+    addEventListener("hashchange", handler);
+    return () => removeEventListener("hashchange", handler);
   }, []);
   useEffect(() => {
-    if (!menuOpen) return;
-    const onKeyDown = (event: KeyboardEvent) => {
-      if (event.key === "Escape") {
-        setMenuOpen(false);
+    if (!menu) return;
+    const handler = (e: globalThis.KeyboardEvent) => {
+      if (e.key === "Escape") {
+        setMenu(false);
         document.querySelector<HTMLButtonElement>(".menu-toggle")?.focus();
       }
     };
-    addEventListener("keydown", onKeyDown);
-    return () => removeEventListener("keydown", onKeyDown);
-  }, [menuOpen]);
-  useEffect(() => { const onScroll = () => { const max = document.documentElement.scrollHeight - window.innerHeight; document.documentElement.style.setProperty("--scroll-progress", `${max ? Math.round(window.scrollY / max * 100) : 0}`); }; addEventListener("scroll", onScroll, { passive: true }); onScroll(); return () => removeEventListener("scroll", onScroll); }, []);
-  useEffect(() => { document.documentElement.lang = locale;
-    document.documentElement.dataset.theme = theme;
-    try { localStorage.setItem("portfolio-locale", locale); localStorage.setItem("portfolio-theme", theme); } catch { /* optional storage */ }
-  }, [locale, theme]);
+    addEventListener("keydown", handler);
+    return () => removeEventListener("keydown", handler);
+  }, [menu]);
   useEffect(() => {
-    const title = route.kind === "projects" ? t.pageTitles.projects : route.kind === "detail" ? t.pageTitles.detail : route.kind === "notfound" ? t.pageTitles.notFound : t.pageTitles.home;
-    document.title = `${title} — Ikbar Rabbani`;
-    const target = route.kind === "home" && route.section ? document.getElementById(route.section) : null;
-    requestAnimationFrame(() => {
-      if (target) { target.scrollIntoView({ behavior: "smooth", block: "start" }); target.focus({ preventScroll: true }); }
-      else { if (!navigator.userAgent.toLowerCase().includes("jsdom")) window.scrollTo({ top: 0, behavior: "smooth" }); mainRef.current?.focus({ preventScroll: true }); }
-    });
-  }, [route, locale, t.pageTitles]);
-
-  const navItems = [
-    { path: "/", label: t.home, active: route.kind === "home" && !route.section },
-    { path: "/projects", label: t.work, active: route.kind === "projects" || route.kind === "detail" },
-    { path: "/#about", label: t.about, active: route.kind === "home" && route.section === "about" },
-    { path: "/#contact", label: t.contact, active: route.kind === "home" && route.section === "contact" },
-  ];
-  return <>
-    <div className="scroll-progress" aria-hidden="true" />
-    <a className="skip-link" href="#main" onClick={(event) => { event.preventDefault(); mainRef.current?.focus({ preventScroll: true }); }}> {t.skip}</a>
-    <header className="site-header"><div className="container header-inner">
-      <a className="brand" href={routeHref("/")} aria-label="Ikbar Rabbani">IR<span>;</span></a>
-      <button className="menu-toggle" aria-expanded={menuOpen} aria-controls="primary-nav" onClick={() => setMenuOpen((open) => !open)}>{t.menu}</button>
-      <nav id="primary-nav" className={menuOpen ? "nav open" : "nav"} aria-label={t.nav}>{navItems.map((item) => <a key={item.path} href={routeHref(item.path)} aria-current={item.active ? "page" : undefined} onClick={() => setMenuOpen(false)}>{item.label}</a>)}</nav>
-      <div className="controls"><button className="control" onClick={() => setLocale((current) => current === "id" ? "en" : "id")} aria-label={t.language}>{locale.toUpperCase()}</button><button className="control" onClick={() => setTheme((current) => current === "light" ? "dark" : "light")} aria-label={theme === "light" ? t.darkTheme : t.lightTheme}>{theme === "light" ? "☾" : "☀"}</button></div>
-    </div></header>
-    <main id="main" ref={mainRef} tabIndex={-1} key={`${route.kind}:${route.kind === "detail" ? route.slug : ""}:${route.kind === "home" ? route.section ?? "" : ""}`} className="motion-page" data-motion-view={route.kind}>
-      {route.kind === "home" && <Home t={t} locale={locale} projects={localizedProjects} />}
-      {route.kind === "projects" && <Projects t={t} locale={locale} projects={localizedProjects} />}
-      {route.kind === "detail" && <Detail t={t} locale={locale} project={localizedProjects.find((project) => project.slug === route.slug)} />}
-      {route.kind === "notfound" && <NotFound t={t} />}
-    </main>
-    <footer className="container footer">© {new Date().getFullYear()} Ikbar Rabbani · {t.fictionalLabel}</footer>
-  </>;
+    document.documentElement.lang = locale;
+    document.documentElement.dataset.theme = theme;
+    try {
+      localStorage.setItem("portfolio-locale", locale);
+      localStorage.setItem("portfolio-theme", theme);
+    } catch {
+      /* storage is optional */
+    }
+  }, [locale, theme]);
+  useLayoutEffect(() => {
+    const project =
+      route.kind === "detail"
+        ? allProjects[locale].find((p) => p.slug === route.slug)
+        : undefined;
+    document.title = `${project?.title ?? (route.kind === "projects" ? t.work : route.kind === "notfound" ? t.notFoundTitle : t.home)} — ${profileName}`;
+    const id = route.kind === "home" ? route.section : undefined;
+    {
+      const target = id ? document.getElementById(id) : main.current;
+      if (!navigator.userAgent.includes("jsdom")) {
+        if (id) target?.scrollIntoView({ behavior: "instant", block: "start" });
+        else window.scrollTo({ top: 0, behavior: "instant" });
+      }
+      target?.focus({ preventScroll: true });
+    }
+  }, [route, locale, t]);
+  const nav = [
+    ["/", t.home, route.kind === "home" && !route.section],
+    ["/projects", t.work, route.kind === "projects" || route.kind === "detail"],
+    ["/#about", t.about, route.kind === "home" && route.section === "about"],
+    [
+      "/#contact",
+      t.contact,
+      route.kind === "home" && route.section === "contact",
+    ],
+  ] as const;
+  return (
+    <>
+      <a
+        className="skip-link"
+        href="#main"
+        onClick={(e) => {
+          e.preventDefault();
+          main.current?.focus();
+        }}
+      >
+        {t.skip}
+      </a>
+      <header className="site-header">
+        <div className="container header-inner">
+          <a className="brand" href={routeHref("/")} aria-label={profileName}>
+            ir<span className="brand-mark">/</span>
+            <span className="brand-note">
+              developer
+              <br />
+              field notes
+            </span>
+          </a>
+          <button
+            className="menu-toggle control"
+            aria-controls="primary-nav"
+            aria-expanded={menu}
+            onClick={() => setMenu(!menu)}
+          >
+            {t.menu} <span aria-hidden="true">{menu ? "−" : "+"}</span>
+          </button>
+          <nav
+            id="primary-nav"
+            className={`nav ${menu ? "open" : ""}`}
+            aria-label={t.nav}
+          >
+            {nav.map(([path, label, active], i) => (
+              <a
+                key={path}
+                href={routeHref(path)}
+                aria-current={active ? "page" : undefined}
+                onClick={() => setMenu(false)}
+              >
+                <span className="nav-number" aria-hidden="true">
+                  0{i + 1}
+                </span>
+                {label}
+              </a>
+            ))}
+          </nav>
+          <div className="controls">
+            <button
+              className="control"
+              aria-label={t.language}
+              onClick={() => setLocale(locale === "id" ? "en" : "id")}
+            >
+              {locale.toUpperCase()}
+            </button>
+            <button
+              className="control theme-control"
+              aria-label={theme === "dark" ? t.lightTheme : t.darkTheme}
+              onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+            >
+              {theme === "dark" ? "☀" : "☾"}
+            </button>
+          </div>
+        </div>
+      </header>
+      <main id="main" ref={main} tabIndex={-1}>
+        {route.kind === "home" && <Home t={t} locale={locale} />}
+        {route.kind === "projects" && <ProjectArchive t={t} locale={locale} />}
+        {route.kind === "detail" && (
+          <Detail
+            t={t}
+            project={allProjects[locale].find((p) => p.slug === route.slug)}
+            legacy={route.slug.startsWith("sample-")}
+          />
+        )}
+        {route.kind === "notfound" && <NotFound t={t} />}
+      </main>
+      <footer className="container footer">
+        <span>
+          © {new Date().getFullYear()} {profileName}
+        </span>
+        <span>{t.footer}</span>
+        <a href={routeHref("/")}>↑ {t.home}</a>
+      </footer>
+    </>
+  );
 }
-
-function Home({ t, locale, projects }: { t: Translation; locale: Locale; projects: Project[] }) {
-  const [active, setActive] = useState("hero"); const [status, setStatus] = useState("");
-  const ids = ["hero", "about", "capabilities", "tools", "selected-projects", "game", "achievements", "contact"]; const l = locale === "en" ? { about:"About", capabilities:"Capabilities", tools:"Tools", selected:"Selected projects", game:"Game work", achievements:"Achievements", contact:"Contact", copy:"Copy email", copied:"Email copied", fallback:"Copy unavailable — select the email manually" } : { about:"Tentang", capabilities:"Kapabilitas", tools:"Alat", selected:"Proyek pilihan", game:"Karya game", achievements:"Pencapaian", contact:"Kontak", copy:"Salin email", copied:"Email tersalin", fallback:"Penyalinan tidak tersedia — pilih email secara manual" };
-  useEffect(() => { if (typeof IntersectionObserver === "undefined") return; const observer = new IntersectionObserver(entries => entries.forEach(entry => entry.isIntersecting && setActive(entry.target.id)), { rootMargin: "-25% 0px -60%" }); ids.map(id => document.getElementById(id)).filter(Boolean).forEach(node => observer.observe(node!)); return () => observer.disconnect(); }, []);
-  useEffect(() => { if (typeof IntersectionObserver === "undefined") { document.querySelectorAll("[data-reveal]").forEach(node => node.classList.add("is-visible")); return; } const observer = new IntersectionObserver(entries => entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add("is-visible"); observer.unobserve(entry.target); } }), { threshold: .08 }); document.querySelectorAll("[data-reveal]").forEach(node => observer.observe(node)); return () => observer.disconnect(); }, []);
-  const copyEmail = async () => { try { await navigator.clipboard.writeText(t.email); setStatus(l.copied); } catch { setStatus(l.fallback); } };
-  const nav = ids.map(id => ({ id, label: id === "hero" ? "01" : id === "selected-projects" ? l.selected : id === "about" ? l.about : id === "capabilities" ? l.capabilities : id === "tools" ? l.tools : id === "game" ? l.game : id === "achievements" ? l.achievements : l.contact }));
-  return <><nav className="section-nav" aria-label={locale === "en" ? "Home sections" : "Bagian beranda"}>{nav.map(item => <span key={item.id} className={active === item.id ? "active" : ""} aria-current={active === item.id ? "location" : undefined}>{item.label}</span>)}</nav>
-  <section id="hero" data-motion="section" data-reveal className="hero container"><p className="eyebrow">{locale === "en" ? "FullStack Programmer · Web Developer" : "Programmer FullStack · Pengembang Web"} · 01</p><h1>Ikbar<br /><em>Rabbani.</em></h1><p className="hero-copy">{t.intro}</p><p className="hero-positioning">Learning · Evolving · Innovating in Technology</p><a className="button primary" href={routeHref("/projects")}>{t.cta} ↘</a></section>
-  <section id="about" tabIndex={-1} data-motion="section" data-reveal className="section container split"><div><p className="eyebrow">02 · {l.about}</p><h2>{t.aboutTitle}</h2></div><p className="large-copy">{t.aboutText}</p></section>
-  <section id="capabilities" data-motion="section" data-reveal className="section container"><div className="section-heading"><div><p className="eyebrow">03 · {l.capabilities}</p><h2>{t.capTitle}</h2></div></div><div className="cap-grid">{[[t.capFrontend, t.capFrontendText], [t.capBackend, t.capBackendText], [t.capTools, t.capToolsText]].map(([title, text]) => <article className="cap" key={title}><h3>{title}</h3><p>{text}</p></article>)}</div></section>
-  <section id="tools" data-motion="section" data-reveal className="section container tools-section"><p className="eyebrow">04 · {l.tools}</p><div className="tools-list">JavaScript · React JS · json-web-server · CSS · HTML · Bootstrap 5 · Godot 3</div></section>
-  <section id="selected-projects" data-motion="section" data-reveal className="section container"><div className="section-heading"><div><p className="eyebrow">05 · {l.selected}</p><h2>{t.work}</h2></div><p className="notice">{t.previewDisclaimer}</p></div><div className="project-grid preview">{projects.slice(0, PREVIEW_COUNT).map(project => <Card key={project.id} project={project} t={t} />)}</div><a className="text-button" href={routeHref("/projects")}>{t.viewAll} ↗</a></section>
-  <section id="game" data-motion="section" data-reveal className="section container split"><div><p className="eyebrow">06 · {l.game}</p><h2>{t.currentTitle}</h2></div><p className="large-copy">{t.gameIntro}</p></section>
-  <section id="achievements" data-motion="section" data-reveal className="section container"><div className="section-heading"><div><p className="eyebrow">07 · {l.achievements}</p><h2>{t.achievementsTitle}</h2></div><p className="notice">{t.achievementsIntro}</p></div><div className="achievement-list">{achievements[locale].map(item => <details key={item.title}><summary>{item.title}</summary><p>{item.description}</p></details>)}</div></section>
-  <section id="contact" tabIndex={-1} data-motion="section" data-reveal className="contact container"><div><p className="eyebrow">08 · {l.contact}</p><h2>{t.contactTitle}</h2><p>{t.contactText}</p><p>{t.location}</p><p><a href={`tel:${t.phone}`}>{t.phone}</a></p><p><a className="email" href={`mailto:${t.email}`}>{t.email}</a> <button className="copy-button" onClick={copyEmail}>{l.copy}</button></p><p className="copy-status" role="status" aria-live="polite">{status}</p><nav aria-label={t.socialLabel}>{socialLinks.map(link => <a key={link.label} href={link.href} target="_blank" rel="noreferrer" aria-label={`${link.label} (${t.external})`}>{link.label}</a>)}</nav></div></section></>;
+function HeroProjects({ t, locale }: { t: Text; locale: Locale }) {
+  const [active, setActive] = useState(0);
+  const featured = projects[locale].slice(0, 3);
+  const refs = useRef<(HTMLButtonElement | null)[]>([]);
+  function keydown(event: KeyboardEvent<HTMLButtonElement>, index: number) {
+    let next = index;
+    if (event.key === "ArrowRight" || event.key === "ArrowDown")
+      next = (index + 1) % featured.length;
+    else if (event.key === "ArrowLeft" || event.key === "ArrowUp")
+      next = (index + featured.length - 1) % featured.length;
+    else if (event.key === "Home") next = 0;
+    else if (event.key === "End") next = featured.length - 1;
+    else return;
+    event.preventDefault();
+    setActive(next);
+    refs.current[next]?.focus();
+  }
+  return (
+    <div className="project-selector">
+      <div className="preview-top mono">
+        <span>
+          <span className="status-dot" /> {t.selected}
+        </span>
+        <span>INDEX / 0{active + 1}</span>
+      </div>
+      <div className="preview-stage">
+        {featured.map((p, i) => (
+          <div
+            className={`hero-panel ${active === i ? "is-active" : ""}`}
+            id={`project-panel-${i}`}
+            key={p.id}
+            role="tabpanel"
+            aria-labelledby={`project-tab-${i}`}
+            aria-hidden={active !== i}
+            inert={active !== i}
+          >
+            <div className="preview-image">
+              <Visual project={p} t={t} eager />
+            </div>
+            <div className="preview-caption">
+              <span className="mono">
+                {categoryLabels[locale][p.category]} / {p.stack[0]}
+              </span>
+              <h2>{p.title}</h2>
+              <p>{p.summary}</p>
+              <a className="text-link" href={routeHref(`/projects/${p.slug}`)}>
+                {t.details} <span aria-hidden="true">↗</span>
+              </a>
+            </div>
+          </div>
+        ))}
+      </div>
+      <div className="project-tabs" role="tablist" aria-label={t.select}>
+        {featured.map((p, i) => (
+          <button
+            role="tab"
+            id={`project-tab-${i}`}
+            aria-selected={active === i}
+            aria-controls={`project-panel-${i}`}
+            tabIndex={active === i ? 0 : -1}
+            key={p.id}
+            ref={(node) => {
+              refs.current[i] = node;
+            }}
+            onKeyDown={(e) => keydown(e, i)}
+            onClick={() => setActive(i)}
+          >
+            <span className="mono">{p.id}</span>
+            <span>{p.title}</span>
+            <span aria-hidden="true">↗</span>
+          </button>
+        ))}
+      </div>
+    </div>
+  );
 }
-
-function Card({ project, t }: { project: Project; t: Translation }) { const locale: Locale = t === copy.en ? "en" : "id"; return <article data-motion="card" className="card"><img data-motion="image" src={project.image} alt={project.alt} width="640" height="360" /><div className="card-body"><div className="card-top"><span>/{project.id}</span><span>{categoryLabels[locale][project.category]}</span></div><h3>{project.title}</h3><p>{project.summary}</p><div className="tags">{project.stack.map((tag) => <span key={tag}>{tag}</span>)}</div><a className="text-button" href={routeHref(`/projects/${project.slug}`)}>{t.details} ↗</a>{project.externalUrl && <a className="text-button" href={project.externalUrl} target="_blank" rel="noreferrer" aria-label={`${project.externalLabel} (${t.external})`}>{project.externalLabel} ↗</a>}</div></article>; }
-
-function Projects({ t, locale, projects }: { t: Translation; locale: Locale; projects: Project[] }) {
+function Home({ t, locale }: { t: Text; locale: Locale }) {
+  const root = useRef<HTMLDivElement>(null);
+  const [status, setStatus] = useState("");
+  useEffect(() => {
+    if (typeof IntersectionObserver === "undefined") return;
+    const observer = new IntersectionObserver(
+      (entries) =>
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("revealed");
+            observer.unobserve(entry.target);
+          }
+        }),
+      { threshold: 0.08 },
+    );
+    root.current
+      ?.querySelectorAll("[data-reveal]")
+      .forEach((node) => observer.observe(node));
+    return () => observer.disconnect();
+  }, []);
+  async function copyEmail() {
+    try {
+      await navigator.clipboard.writeText(email);
+      setStatus(t.copied);
+    } catch {
+      setStatus(t.copyFailed);
+    }
+  }
+  return (
+    <div ref={root}>
+      <section className="hero container" id="hero">
+        <div className="hero-identity">
+          <p className="eyebrow">
+            <span className="cross" aria-hidden="true">
+              +
+            </span>{" "}
+            {t.role}
+          </p>
+          <h1>
+            Ikbar
+            <br />
+            <span>Rabbani</span>
+            <br />
+            <span>Purwanto</span>
+            <span className="name-period">.</span>
+          </h1>
+          <p className="hero-copy">{t.intro}</p>
+          <div className="hero-actions">
+            <a className="button primary" href={routeHref("/projects")}>
+              {t.cta}
+              <span aria-hidden="true">↗</span>
+            </a>
+            <a className="button secondary" href={routeHref("/#contact")}>
+              {t.contactCta}
+              <span aria-hidden="true">↘</span>
+            </a>
+          </div>
+          <div className="hero-footnote mono">
+            <span>01 — PERSONAL PORTFOLIO</span>
+            <span>BACKEND / LINUX / AUTOMATION</span>
+          </div>
+        </div>
+        <HeroProjects t={t} locale={locale} />
+      </section>
+      <div className="container">
+        <div className="chapter-bar mono">
+          <span>DEVELOPER FIELD NOTES</span>
+          <span>Learning → Evolving → Innovating</span>
+          <span aria-hidden="true">SCROLL TO EXPLORE ↓</span>
+        </div>
+      </div>
+      <section
+        className="section container selected-section"
+        id="selected-projects"
+        data-reveal
+      >
+        <div className="section-heading">
+          <div>
+            <p className="eyebrow">01 / {t.selected}</p>
+            <h2>
+              {locale === "id" ? "Dibuat untuk" : "Built to"}
+              <br />
+              <span className="muted">
+                {locale === "id" ? "digunakan." : "be used."}
+              </span>
+            </h2>
+          </div>
+          <p>{t.projectIntro}</p>
+        </div>
+        <div className="selected-grid">
+          {projects[locale].slice(0, 3).map((p, i) => (
+            <ProjectCard project={p} t={t} key={p.id} featured={i === 0} />
+          ))}
+        </div>
+        <a className="archive-link" href={routeHref("/projects")}>
+          <span>{t.viewAll}</span>
+          <span className="mono">
+            {String(projects[locale].length).padStart(2, "0")} {t.count}{" "}
+            <span aria-hidden="true">↗</span>
+          </span>
+        </a>
+      </section>
+      <section
+        id="other-projects"
+        className="container other-projects"
+        data-reveal
+      >
+        <div className="section-heading">
+          <div>
+            <p className="eyebrow">↳ {t.other}</p>
+            <h2>{t.other}</h2>
+          </div>
+        </div>
+        <div className="selected-grid">
+          {projects[locale].slice(3).map((project) => (
+            <ProjectCard key={project.id} project={project} t={t} />
+          ))}
+        </div>
+      </section>
+      <section
+        className="section container about-section"
+        id="about"
+        tabIndex={-1}
+        data-reveal
+      >
+        <div className="about-heading">
+          <p className="eyebrow">02 / {t.about}</p>
+          <h2 className="linebreak">{t.aboutTitle}</h2>
+          <p className="mono about-signature">
+            {profileName.toUpperCase()}
+            <br />
+            {t.role}
+          </p>
+        </div>
+        <div className="about-body">
+          <p className="large-copy">{t.aboutText}</p>
+          <div className="practice-note">
+            <span className="mono">↳ {t.experience}</span>
+            <p>{t.experienceText}</p>
+          </div>
+          <h3 className="eyebrow toolkit-label">{t.skills}</h3>
+          <div className="skills-list">
+            {skills.map((s, i) => (
+              <div key={s.title.en}>
+                <span className="mono">0{i + 1}</span>
+                <h3>{s.title[locale]}</h3>
+                <p>{s.tools}</p>
+                <div className="skill-projects">
+                  <span className="mono">{t.applied}</span>
+                  {s.projects.map((slug) => {
+                    const project = allProjects[locale].find(
+                      (p) => p.slug === slug,
+                    );
+                    return project ? (
+                      <a key={slug} href={routeHref(`/projects/${slug}`)}>
+                        {project.title} ↗
+                      </a>
+                    ) : null;
+                  })}
+                </div>
+                {s.note && <p className="skill-note">{s.note[locale]}</p>}
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+      <section className="container learning-section">
+        <p className="eyebrow">↳ {t.learning}</p>
+        <div>
+          {achievements.map((a) => (
+            <External key={a.href} href={a.href} t={t}>
+              {a.title}
+            </External>
+          ))}
+          <span className="learning-note mono">Laravel & Nuxt.js</span>
+        </div>
+      </section>
+      <section
+        id="contact"
+        className="section container contact"
+        tabIndex={-1}
+        data-reveal
+      >
+        <p className="eyebrow">03 / {t.contact}</p>
+        <div className="contact-layout">
+          <h2 className="linebreak">{t.contactTitle}</h2>
+          <div>
+            <p>{t.contactText}</p>
+            <a className="button primary" href={`mailto:${email}`}>
+              {t.send} <span aria-hidden="true">↗</span>
+            </a>
+          </div>
+        </div>
+        <div className="contact-bottom">
+          <div>
+            <a className="email" href={`mailto:${email}`}>
+              {email}
+            </a>
+            <button className="copy-button" onClick={copyEmail}>
+              {t.copy} <span aria-hidden="true">⧉</span>
+            </button>
+            <p className="copy-status" role="status">
+              {status}
+            </p>
+          </div>
+          <div className="contact-options">
+            <External href="https://wa.me/6281413265114" t={t}>
+              WhatsApp
+            </External>
+            <a className="text-link" href={"tel:+" + "6281413265114"}>
+              +62 81413265114
+            </a>
+          </div>
+        </div>
+        <nav className="social-links" aria-label={t.socialLabel}>
+          {socialLinks.map((link) => (
+            <External href={link.href} t={t} key={link.label}>
+              {link.label}
+            </External>
+          ))}
+        </nav>
+      </section>
+    </div>
+  );
+}
+function ProjectCard({
+  project: p,
+  t,
+  featured = false,
+}: {
+  project: Project;
+  t: Text;
+  featured?: boolean;
+}) {
+  return (
+    <article className={`project-card ${featured ? "featured-card" : ""}`}>
+      <a
+        className="project-visual"
+        href={routeHref(`/projects/${p.slug}`)}
+        aria-label={`${t.details}: ${p.title}`}
+      >
+        <Visual project={p} t={t} />
+        <span className="visual-arrow" aria-hidden="true">
+          ↗
+        </span>
+      </a>
+      <div className="card-body">
+        <p className="eyebrow">
+          /{p.id} — {p.category}
+        </p>
+        <h3>
+          <a href={routeHref(`/projects/${p.slug}`)}>{p.title}</a>
+        </h3>
+        <p>{p.summary}</p>
+        {p.statusLabel && (
+          <p className="project-status mono">{p.statusLabel}</p>
+        )}
+        {featured && (
+          <p className="contribution">
+            <strong>{t.contribution}</strong>
+            <br />
+            {p.contribution}
+          </p>
+        )}
+        <Tags project={p} />
+        <div className="card-links">
+          <a className="text-link" href={routeHref(`/projects/${p.slug}`)}>
+            {t.details} ↗
+          </a>
+          {p.externalUrl && (
+            <External href={p.externalUrl} t={t}>
+              {p.externalLabel}
+              {p.note ? " · " + (t === copy.id ? "arsip" : "archive") : ""}
+            </External>
+          )}
+        </div>
+        {p.note && <p className="link-note">{p.note}</p>}
+      </div>
+    </article>
+  );
+}
+function ProjectArchive({ t, locale }: { t: Text; locale: Locale }) {
   const [category, setCategory] = useState<Category | "all">("all");
-  const featured = projects[0];
-  const visible = projects.filter((project) => category === "all" || project.category === category);
-  return <section data-motion="section" id="projects" className="section container projects-page">
-    <div className="section-heading"><div><p className="eyebrow">02 · {t.explore}</p><h1>{t.work}</h1></div><p className="notice">{t.fictional}</p></div>
-    <section className="featured-project" aria-labelledby="featured-heading"><div className="featured-image-wrap"><img src={featured.image} alt={featured.alt} width="1280" height="720" /><span className="corner corner-top" aria-hidden="true" /><span className="corner corner-bottom" aria-hidden="true" /></div><div className="featured-copy"><p className="eyebrow">{t.featuredLabel} · /{featured.id}</p><h2 id="featured-heading">{featured.title}</h2><p>{featured.summary}</p><div className="tags">{featured.stack.map((tag) => <span key={tag}>{tag}</span>)}</div><a className="button primary" href={routeHref(`/projects/${featured.slug}`)}>{t.details} ↗</a>{featured.externalUrl && <a className="button" href={featured.externalUrl} target="_blank" rel="noreferrer" aria-label={`${featured.externalLabel} (${t.external})`}>{featured.externalLabel} ↗</a>}</div></section>
-    <section className="current-work" aria-labelledby="current-heading"><div><p className="eyebrow">03 · {t.currentLabel}</p><h2 id="current-heading">{t.currentTitle}</h2></div><div className="current-panel"><span className="status-dot" aria-hidden="true" /><div><p className="current-status">{t.currentStatus}</p><h3>{t.currentProject}</h3><p>{t.currentNote}</p><p className="current-phase"><strong>{t.currentPhaseLabel}:</strong> {t.currentPhase}</p><a className="text-button" href={routeHref(`/projects/${projects[3].slug}`)}>{t.currentLink} ↗</a></div></div></section>
-    <section className="all-projects" aria-labelledby="all-heading"><div className="section-heading"><div><p className="eyebrow">04 · {t.allProjectsLabel}</p><h2 id="all-heading">{t.allProjectsTitle}</h2></div></div><div className="filters" role="group" aria-label={t.filter}><button className={category === "all" ? "selected" : ""} aria-pressed={category === "all"} onClick={() => setCategory("all")}>{t.all}</button>{categories.map((item) => <button key={item} className={category === item ? "selected" : ""} aria-pressed={category === item} onClick={() => setCategory(item)}>{categoryLabels[locale][item]}</button>)}</div><p className="result-count">{visible.length} {t.count}</p><div className="project-grid">{visible.map((project) => <Card key={project.id} project={project} t={t} />)}</div></section>
-  </section>;
+  const visible = projects[locale].filter(
+    (p) => category === "all" || p.category === category,
+  );
+  const earlier = archivedProjects[locale].filter(
+    (p) => category === "all" || p.category === category,
+  );
+  return (
+    <section className="container section projects-page">
+      <p className="eyebrow">INDEX / {t.archive}</p>
+      <div className="section-heading">
+        <h1>
+          {t.work}
+          <span className="name-period">.</span>
+        </h1>
+        <p>{t.projectIntro}</p>
+      </div>
+      <div className="filters" role="group" aria-label={t.filter}>
+        {(["all", ...categories] as const).map((c) => (
+          <button
+            aria-pressed={category === c}
+            key={c}
+            onClick={() => setCategory(c)}
+          >
+            {c === "all" ? t.all : categoryLabels[locale][c]}
+          </button>
+        ))}
+        <span className="mono result-count" role="status">
+          {visible.length + earlier.length} {t.count}
+        </span>
+      </div>
+      <div className="archive-grid">
+        {visible.map((p, i) => (
+          <ProjectCard
+            key={p.id}
+            project={p}
+            t={t}
+            featured={category === "all" && i === 0}
+          />
+        ))}
+      </div>
+      {earlier.length > 0 && (
+        <section className="legacy-projects">
+          <h2>{t.older}</h2>
+          <div className="archive-grid">
+            {earlier.map((project) => (
+              <ProjectCard key={project.slug} project={project} t={t} />
+            ))}
+          </div>
+        </section>
+      )}
+    </section>
+  );
 }
-
-function Detail({ t, locale, project }: { t: Translation; locale: Locale; project?: Project }) { if (!project) return <NotFound t={t} />; const date = new Intl.DateTimeFormat(locale === "id" ? "id-ID" : "en-US", { dateStyle: "long" }).format(new Date(`${project.date}T12:00:00`)); const sections = [[t.detailOverview, project.overview], [t.detailChallenge, project.challenge], [t.detailApproach, project.approach], [t.detailOutcome, project.outcome]]; return <article data-motion="section" className="detail container"><a className="back" href={routeHref("/projects")}>← {t.back}</a><img data-motion="detail-image" className="detail-image" src={project.image} alt={project.alt} width="1280" height="720" /><p className="eyebrow">{t.sample} · {categoryLabels[locale][project.category]}</p><h1>{project.title}</h1><div className="meta"><time dateTime={project.date}>{t.date}: {date}</time><span>{t.duration}: {project.duration}</span></div><div className="tags">{project.stack.map((tag) => <span key={tag}>{tag}</span>)}</div><p className="notice">{t.fictional}</p>{project.externalUrl && <p><a className="button primary" href={project.externalUrl} target="_blank" rel="noreferrer" aria-label={`${project.externalLabel} (${t.external})`}>{project.externalLabel} ↗</a></p>}{sections.map(([heading, text]) => <section className="detail-section" key={heading}><h2>{heading}</h2><p>{text}</p></section>)}</article>; }
-function NotFound({ t }: { t: Translation }) { return <section data-motion="section" className="section container not-found"><p className="eyebrow">404</p><h1>{t.notFoundTitle}</h1><p>{t.notFoundText}</p><a className="button primary" href={routeHref("/")}>{t.notFoundAction}</a></section>; }
-export default App;
+function Detail({
+  project: p,
+  t,
+  legacy,
+}: {
+  project?: Project;
+  t: Text;
+  legacy: boolean;
+}) {
+  if (!p)
+    return legacy ? (
+      <section className="container section legacy">
+        <p className="eyebrow">ARCHIVE / SAMPLE</p>
+        <h1>Sample</h1>
+        <p>{t.legacy}</p>
+        <a className="button primary" href={routeHref("/projects")}>
+          {t.back} ↗
+        </a>
+      </section>
+    ) : (
+      <NotFound t={t} />
+    );
+  return (
+    <article className="container section detail">
+      <a className="text-link back" href={routeHref("/projects")}>
+        ← {t.back}
+      </a>
+      <p className="eyebrow">
+        FIELD NOTE / {p.id} / {p.category}
+      </p>
+      <h1>
+        {p.title}
+        <span className="name-period">.</span>
+      </h1>
+      <p className="detail-intro">{p.summary}</p>
+      <Tags project={p} />
+      <div className="detail-visual">
+        <Visual project={p} t={t} eager />
+      </div>
+      <p className="image-credit mono">{p.image ? t.source : t.noImage}</p>
+      {p.problem && (
+        <section className="project-problem">
+          <p className="eyebrow">{t.problem}</p>
+          <p>{p.problem}</p>
+        </section>
+      )}
+      {p.status && (
+        <section className="project-verification">
+          <h2>{t.verification}</h2>
+          <p className="project-status mono">{p.statusLabel}</p>
+          <p>{p.status}</p>
+        </section>
+      )}
+      <div className="detail-body">
+        <section>
+          <p className="eyebrow">01 / {t.contribution}</p>
+          <h2>{p.title}</h2>
+          <p>{p.contribution}</p>
+        </section>
+        <section>
+          <p className="eyebrow">02 / {t.stack}</p>
+          <Tags project={p} />
+          {p.externalUrl && (
+            <External
+              href={p.externalUrl}
+              t={t}
+              className={p.note ? "button secondary" : "button primary"}
+            >
+              {p.externalLabel}
+              {p.note ? " · " + (t === copy.id ? "arsip" : "archive") : ""}
+            </External>
+          )}
+          {p.note && <p className="link-note">{p.note}</p>}
+        </section>
+      </div>
+      <p className="source-note">{t.detailNote}</p>
+    </article>
+  );
+}
+function NotFound({ t }: { t: Text }) {
+  return (
+    <section className="container section not-found">
+      <p className="eyebrow">ERROR / 404</p>
+      <h1>{t.notFoundTitle}</h1>
+      <p>{t.notFoundText}</p>
+      <a className="button primary" href={routeHref("/")}>
+        {t.notFoundAction} ↗
+      </a>
+    </section>
+  );
+}

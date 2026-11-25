@@ -1,0 +1,38 @@
+2026-11-22T07:55:57.115Z pw:webserver HTTP GET: http://127.0.0.1:4173/
+2026-11-22T07:55:57.186Z pw:webserver Error while checking if http://127.0.0.1:4173/ is available: connect ECONNREFUSED 127.0.0.1:4173
+2026-11-22T07:55:57.187Z pw:webserver Starting WebServer process npx vite preview --host 127.0.0.1 --port 4173 --strictPort...
+2026-11-22T07:55:57.202Z pw:webserver Process started
+2026-11-22T07:55:57.204Z pw:webserver Waiting for availability...
+2026-11-22T07:55:57.204Z pw:webserver HTTP GET: http://127.0.0.1:4173/
+2026-11-22T07:55:57.254Z pw:webserver Error while checking if http://127.0.0.1:4173/ is available: connect ECONNREFUSED 127.0.0.1:4173
+2026-11-22T07:55:57.256Z pw:webserver Waiting 100ms
+2026-11-22T07:55:57.359Z pw:webserver HTTP GET: http://127.0.0.1:4173/
+2026-11-22T07:55:57.362Z pw:webserver Error while checking if http://127.0.0.1:4173/ is available: connect ECONNREFUSED 127.0.0.1:4173
+2026-11-22T07:55:57.362Z pw:webserver Waiting 250ms
+2026-11-22T07:55:57.612Z pw:webserver HTTP GET: http://127.0.0.1:4173/
+2026-11-22T07:55:57.614Z pw:webserver Error while checking if http://127.0.0.1:4173/ is available: connect ECONNREFUSED 127.0.0.1:4173
+2026-11-22T07:55:57.615Z pw:webserver Waiting 500ms
+2026-11-22T07:55:58.116Z pw:webserver HTTP GET: http://127.0.0.1:4173/
+2026-11-22T07:55:58.119Z pw:webserver Error while checking if http://127.0.0.1:4173/ is available: connect ECONNREFUSED 127.0.0.1:4173
+2026-11-22T07:55:58.119Z pw:webserver Waiting 1000ms
+[WebServer]   ➜  Local:   http://127.0.0.1:4173/
+2026-11-22T07:55:59.121Z pw:webserver HTTP GET: http://127.0.0.1:4173/
+2026-11-22T07:55:59.147Z pw:webserver HTTP Status: 200
+2026-11-22T07:55:59.153Z pw:webserver WebServer available
+
+Running 10 tests using 1 worker
+
+  ✓   1 [narrow] › e2e/portfolio.test.ts:76:1 › hero selection: click, keyboard, wrap, focus, links and no autoplay (4.5s)
+  ✓   2 [narrow] › e2e/portfolio.test.ts:115:5 › id/dark: home, archive, current details, accessibility (8.8s)
+  ✓   3 [narrow] › e2e/portfolio.test.ts:115:5 › id/light: home, archive, current details, accessibility (49.9s)
+  ✓   4 [narrow] › e2e/portfolio.test.ts:115:5 › en/dark: home, archive, current details, accessibility (10.7s)
+  ✓   5 [narrow] › e2e/portfolio.test.ts:115:5 › en/light: home, archive, current details, accessibility (8.4s)
+  ✓   6 [narrow] › e2e/portfolio.test.ts:170:1 › CTAs, mobile menu Escape, anchors, history, contact and clipboard (6.3s)
+  ✓   7 [narrow] › e2e/portfolio.test.ts:238:1 › preferences persist, reduced motion and observer/storage failure remain usable (3.1s)
+  ✓   8 [narrow] › e2e/portfolio.test.ts:272:1 › unknown, malformed and legacy sample URLs do not crash (1.7s)
+  ✓   9 [narrow] › e2e/portfolio.test.ts:289:1 › capture responsive production evidence (4.1s)
+  ✓  10 [narrow] › e2e/positioning.test.ts:4:1 › current positioning, linked skills, other work and honest verification copy (4.1s)
+2026-11-22T07:57:51.290Z pw:webserver Terminating the WebServer
+2026-11-22T07:57:51.309Z pw:webserver Terminated the WebServer
+
+  10 passed (1.9m)

@@ -1,0 +1,149 @@
+{
+  "command": [
+    "node",
+    "node_modules/@playwright/test/cli.js",
+    "test",
+    "--config=playwright.diagnostic.config.ts",
+    "--workers=1",
+    "--project=mobile",
+    "--grep=capture responsive",
+    "--max-failures=1",
+    "--global-timeout=240000"
+  ],
+  "exit_code": 0,
+  "duration_s": 20.03,
+  "samples": [
+    {
+      "elapsed_s": 0.0,
+      "time": "2026-11-22T14:48:39.648745+07:00",
+      "MemTotal_KiB": 3906976,
+      "MemAvailable_KiB": 1621152,
+      "SwapTotal_KiB": 3904508,
+      "SwapFree_KiB": 180972,
+      "pgmajfault": 789083,
+      "pswpin": 1025802,
+      "pswpout": 2550580,
+      "memory_pressure": "some avg10=1.89 avg60=3.74 avg300=19.16 total=3651226750\nfull avg10=0.40 avg60=2.39 avg300=12.66 total=2413815252"
+    },
+    {
+      "elapsed_s": 2.0,
+      "time": "2026-11-22T14:48:41.651049+07:00",
+      "MemTotal_KiB": 3906976,
+      "MemAvailable_KiB": 1545388,
+      "SwapTotal_KiB": 3904508,
+      "SwapFree_KiB": 180972,
+      "pgmajfault": 789094,
+      "pswpin": 1025815,
+      "pswpout": 2550580,
+      "memory_pressure": "some avg10=2.45 avg60=3.78 avg300=19.06 total=3651555522\nfull avg10=1.05 avg60=2.44 avg300=12.60 total=2414108930"
+    },
+    {
+      "elapsed_s": 4.01,
+      "time": "2026-11-22T14:48:43.653458+07:00",
+      "MemTotal_KiB": 3906976,
+      "MemAvailable_KiB": 1482012,
+      "SwapTotal_KiB": 3904508,
+      "SwapFree_KiB": 180972,
+      "pgmajfault": 789095,
+      "pswpin": 1025819,
+      "pswpout": 2550580,
+      "memory_pressure": "some avg10=4.91 avg60=4.18 avg300=19.04 total=3651568061\nfull avg10=3.58 avg60=2.85 avg300=12.61 total=2414121055"
+    },
+    {
+      "elapsed_s": 6.01,
+      "time": "2026-11-22T14:48:45.654919+07:00",
+      "MemTotal_KiB": 3906976,
+      "MemAvailable_KiB": 1438144,
+      "SwapTotal_KiB": 3904508,
+      "SwapFree_KiB": 181228,
+      "pgmajfault": 789104,
+      "pswpin": 1025824,
+      "pswpout": 2550580,
+      "memory_pressure": "some avg10=4.02 avg60=4.05 avg300=18.91 total=3651620817\nfull avg10=2.93 avg60=2.76 avg300=12.53 total=2414161080"
+    },
+    {
+      "elapsed_s": 8.01,
+      "time": "2026-11-22T14:48:47.656000+07:00",
+      "MemTotal_KiB": 3906976,
+      "MemAvailable_KiB": 1418512,
+      "SwapTotal_KiB": 3904508,
+      "SwapFree_KiB": 181228,
+      "pgmajfault": 789107,
+      "pswpin": 1025831,
+      "pswpout": 2550580,
+      "memory_pressure": "some avg10=3.65 avg60=3.98 avg300=18.79 total=3651656068\nfull avg10=2.58 avg60=2.70 avg300=12.45 total=2414161213"
+    },
+    {
+      "elapsed_s": 10.01,
+      "time": "2026-11-22T14:48:49.656996+07:00",
+      "MemTotal_KiB": 3906976,
+      "MemAvailable_KiB": 1289816,
+      "SwapTotal_KiB": 3904508,
+      "SwapFree_KiB": 181228,
+      "pgmajfault": 789123,
+      "pswpin": 1025858,
+      "pswpout": 2550580,
+      "memory_pressure": "some avg10=3.17 avg60=3.88 avg300=18.67 total=3651656071\nfull avg10=2.11 avg60=2.61 avg300=12.36 total=2414161216"
+    },
+    {
+      "elapsed_s": 12.01,
+      "time": "2026-11-22T14:48:51.660338+07:00",
+      "MemTotal_KiB": 3906976,
+      "MemAvailable_KiB": 1239416,
+      "SwapTotal_KiB": 3904508,
+      "SwapFree_KiB": 181228,
+      "pgmajfault": 789154,
+      "pswpin": 1025865,
+      "pswpout": 2550580,
+      "memory_pressure": "some avg10=2.59 avg60=3.75 avg300=18.54 total=3651816797\nfull avg10=1.73 avg60=2.52 avg300=12.28 total=2414298080"
+    },
+    {
+      "elapsed_s": 14.02,
+      "time": "2026-11-22T14:48:53.666995+07:00",
+      "MemTotal_KiB": 3906976,
+      "MemAvailable_KiB": 1169056,
+      "SwapTotal_KiB": 3904508,
+      "SwapFree_KiB": 181228,
+      "pgmajfault": 789192,
+      "pswpin": 1025893,
+      "pswpout": 2550580,
+      "memory_pressure": "some avg10=3.93 avg60=3.96 avg300=18.48 total=3651956334\nfull avg10=2.86 avg60=2.70 avg300=12.25 total=2414344364"
+    },
+    {
+      "elapsed_s": 16.02,
+      "time": "2026-11-22T14:48:55.668472+07:00",
+      "MemTotal_KiB": 3906976,
+      "MemAvailable_KiB": 1086056,
+      "SwapTotal_KiB": 3904508,
+      "SwapFree_KiB": 181484,
+      "pgmajfault": 789249,
+      "pswpin": 1025929,
+      "pswpout": 2550580,
+      "memory_pressure": "some avg10=4.67 avg60=4.09 avg300=18.41 total=3652294491\nfull avg10=2.34 avg60=2.62 avg300=12.16 total=2414344653"
+    },
+    {
+      "elapsed_s": 18.03,
+      "time": "2026-11-22T14:48:57.673858+07:00",
+      "MemTotal_KiB": 3906976,
+      "MemAvailable_KiB": 1092708,
+      "SwapTotal_KiB": 3904508,
+      "SwapFree_KiB": 181484,
+      "pgmajfault": 789327,
+      "pswpin": 1025945,
+      "pswpout": 2550580,
+      "memory_pressure": "some avg10=6.18 avg60=4.38 avg300=18.37 total=3652361648\nfull avg10=1.92 avg60=2.53 avg300=12.08 total=2414350216"
+    },
+    {
+      "elapsed_s": 20.03,
+      "time": "2026-11-22T14:48:59.674945+07:00",
+      "MemTotal_KiB": 3906976,
+      "MemAvailable_KiB": 1619272,
+      "SwapTotal_KiB": 3904508,
+      "SwapFree_KiB": 181484,
+      "pgmajfault": 789359,
+      "pswpin": 1025982,
+      "pswpout": 2550580,
+      "memory_pressure": "some avg10=5.78 avg60=4.37 avg300=18.27 total=3652403688\nfull avg10=1.75 avg60=2.48 avg300=12.01 total=2414365696"
+    }
+  ]
+}

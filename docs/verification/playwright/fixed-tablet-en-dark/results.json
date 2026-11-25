@@ -1,0 +1,247 @@
+{
+  "config": {
+    "argv": [
+      "/home/tpang/.nvm/versions/node/v24.12.0/bin/node",
+      "/home/tpang/documents/websiteProfileV2/node_modules/@playwright/test/cli.js",
+      "test",
+      "--config=playwright.diagnostic.config.ts",
+      "--workers=1",
+      "--project=tablet",
+      "--grep=en/dark: home"
+    ],
+    "configFile": "/home/tpang/documents/websiteProfileV2/playwright.diagnostic.config.ts",
+    "rootDir": "/home/tpang/documents/websiteProfileV2/e2e",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": true,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/home/tpang/documents/websiteProfileV2/docs/verification/playwright/fixed-tablet-en-dark/artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "tablet",
+        "name": "tablet",
+        "testDir": "/home/tpang/documents/websiteProfileV2/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 120000
+      },
+      {
+        "outputDir": "/home/tpang/documents/websiteProfileV2/docs/verification/playwright/fixed-tablet-en-dark/artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "desktop",
+        "name": "desktop",
+        "testDir": "/home/tpang/documents/websiteProfileV2/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 120000
+      },
+      {
+        "outputDir": "/home/tpang/documents/websiteProfileV2/docs/verification/playwright/fixed-tablet-en-dark/artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "mobile",
+        "name": "mobile",
+        "testDir": "/home/tpang/documents/websiteProfileV2/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 120000
+      },
+      {
+        "outputDir": "/home/tpang/documents/websiteProfileV2/docs/verification/playwright/fixed-tablet-en-dark/artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "narrow",
+        "name": "narrow",
+        "testDir": "/home/tpang/documents/websiteProfileV2/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 120000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "/home/tpang/documents/websiteProfileV2/docs/verification/playwright/fixed-tablet-en-dark/artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "tablet",
+        "testDir": "/home/tpang/documents/websiteProfileV2/e2e",
+        "snapshotDir": "/home/tpang/documents/websiteProfileV2/e2e",
+        "testIgnore": [],
+        "testMatch": "**/*.@(spec|test).?(c|m)[jt]s?(x)",
+        "timeout": 120000,
+        "use": {
+          "baseURL": "http://127.0.0.1:4173",
+          "browserName": "chromium",
+          "colorScheme": "light",
+          "trace": "on",
+          "screenshot": "on",
+          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.8078.4 Safari/537.36",
+          "viewport": {
+            "width": 768,
+            "height": 1024
+          },
+          "screen": {
+            "width": 1920,
+            "height": 1080
+          },
+          "deviceScaleFactor": 1,
+          "isMobile": false,
+          "hasTouch": false,
+          "defaultBrowserType": "chromium"
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": "tablet"
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "docs/verification/playwright/fixed-tablet-en-dark/results.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.64.1",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "portfolio.test.ts",
+      "file": "portfolio.test.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "en/dark: home, archive, current details, accessibility",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "tablet",
+              "projectName": "tablet",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 119916,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "WCAG audit: home",
+                      "duration": 11476
+                    },
+                    {
+                      "title": "WCAG audit: #/projects",
+                      "duration": 41645
+                    },
+                    {
+                      "title": "WCAG audit: #/projects/samurai-game",
+                      "duration": 13927
+                    }
+                  ],
+                  "startTime": "2026-11-22T07:31:14.117Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "axe-home",
+                      "contentType": "application/json",
+                      "body": "ewogICJ1cmwiOiAiaHR0cDovLzEyNy4wLjAuMTo0MTczLyIsCiAgIm1vZGUiOiAic2FtZS1wYWdlIGF4ZS5ydW4iLAogICJmcmFtZUNvdW50IjogMSwKICAicGFzc2VkUnVsZXMiOiAyNCwKICAidmlvbGF0aW9ucyI6IFtdLAogICJpbmNvbXBsZXRlIjogW10KfQ=="
+                    },
+                    {
+                      "name": "axe-#/projects",
+                      "contentType": "application/json",
+                      "body": "ewogICJ1cmwiOiAiaHR0cDovLzEyNy4wLjAuMTo0MTczLyMvcHJvamVjdHMiLAogICJtb2RlIjogInNhbWUtcGFnZSBheGUucnVuIiwKICAiZnJhbWVDb3VudCI6IDEsCiAgInBhc3NlZFJ1bGVzIjogMjMsCiAgInZpb2xhdGlvbnMiOiBbXSwKICAiaW5jb21wbGV0ZSI6IFtdCn0="
+                    },
+                    {
+                      "name": "axe-#/projects/samurai-game",
+                      "contentType": "application/json",
+                      "body": "ewogICJ1cmwiOiAiaHR0cDovLzEyNy4wLjAuMTo0MTczLyMvcHJvamVjdHMvc2FtdXJhaS1nYW1lIiwKICAibW9kZSI6ICJzYW1lLXBhZ2UgYXhlLnJ1biIsCiAgImZyYW1lQ291bnQiOiAxLAogICJwYXNzZWRSdWxlcyI6IDE5LAogICJ2aW9sYXRpb25zIjogW10sCiAgImluY29tcGxldGUiOiBbXQp9"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/home/tpang/documents/websiteProfileV2/docs/verification/playwright/fixed-tablet-en-dark/artifacts/portfolio-en-dark-home-archive-current-details-accessibility-tablet/trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "7f0db2630e7a384d876f-f11c64b01cfeba34806b",
+          "file": "portfolio.test.ts",
+          "line": 130,
+          "column": 5
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-11-22T07:30:55.844Z",
+    "duration": 232696.886,
+    "expected": 1,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

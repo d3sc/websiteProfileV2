@@ -1,0 +1,57 @@
+2026-11-22T07:23:39.927Z pw:webserver HTTP GET: http://127.0.0.1:4173/
+2026-11-22T07:23:40.020Z pw:webserver Error while checking if http://127.0.0.1:4173/ is available: connect ECONNREFUSED 127.0.0.1:4173
+2026-11-22T07:23:40.021Z pw:webserver Starting WebServer process npx vite preview --host 127.0.0.1 --port 4173 --strictPort...
+2026-11-22T07:23:40.033Z pw:webserver Process started
+2026-11-22T07:23:40.034Z pw:webserver Waiting for availability...
+2026-11-22T07:23:40.034Z pw:webserver HTTP GET: http://127.0.0.1:4173/
+2026-11-22T07:23:40.040Z pw:webserver Error while checking if http://127.0.0.1:4173/ is available: connect ECONNREFUSED 127.0.0.1:4173
+2026-11-22T07:23:40.041Z pw:webserver Waiting 100ms
+2026-11-22T07:23:40.141Z pw:webserver HTTP GET: http://127.0.0.1:4173/
+2026-11-22T07:23:40.144Z pw:webserver Error while checking if http://127.0.0.1:4173/ is available: connect ECONNREFUSED 127.0.0.1:4173
+2026-11-22T07:23:40.145Z pw:webserver Waiting 250ms
+2026-11-22T07:23:40.396Z pw:webserver HTTP GET: http://127.0.0.1:4173/
+2026-11-22T07:23:40.398Z pw:webserver Error while checking if http://127.0.0.1:4173/ is available: connect ECONNREFUSED 127.0.0.1:4173
+2026-11-22T07:23:40.398Z pw:webserver Waiting 500ms
+2026-11-22T07:23:40.898Z pw:webserver HTTP GET: http://127.0.0.1:4173/
+2026-11-22T07:23:40.906Z pw:webserver Error while checking if http://127.0.0.1:4173/ is available: connect ECONNREFUSED 127.0.0.1:4173
+2026-11-22T07:23:40.906Z pw:webserver Waiting 1000ms
+2026-11-22T07:23:41.908Z pw:webserver HTTP GET: http://127.0.0.1:4173/
+2026-11-22T07:23:41.911Z pw:webserver Error while checking if http://127.0.0.1:4173/ is available: connect ECONNREFUSED 127.0.0.1:4173
+2026-11-22T07:23:41.912Z pw:webserver Waiting 1000ms
+2026-11-22T07:23:42.913Z pw:webserver HTTP GET: http://127.0.0.1:4173/
+2026-11-22T07:23:42.916Z pw:webserver Error while checking if http://127.0.0.1:4173/ is available: connect ECONNREFUSED 127.0.0.1:4173
+2026-11-22T07:23:42.917Z pw:webserver Waiting 1000ms
+2026-11-22T07:23:43.919Z pw:webserver HTTP GET: http://127.0.0.1:4173/
+2026-11-22T07:23:43.932Z pw:webserver Error while checking if http://127.0.0.1:4173/ is available: connect ECONNREFUSED 127.0.0.1:4173
+2026-11-22T07:23:43.932Z pw:webserver Waiting 1000ms
+2026-11-22T07:23:44.937Z pw:webserver HTTP GET: http://127.0.0.1:4173/
+2026-11-22T07:23:44.953Z pw:webserver Error while checking if http://127.0.0.1:4173/ is available: connect ECONNREFUSED 127.0.0.1:4173
+2026-11-22T07:23:44.954Z pw:webserver Waiting 1000ms
+[WebServer]   ➜  Local:   http://127.0.0.1:4173/
+2026-11-22T07:23:45.954Z pw:webserver HTTP GET: http://127.0.0.1:4173/
+2026-11-22T07:23:45.984Z pw:webserver HTTP Status: 200
+2026-11-22T07:23:45.993Z pw:webserver WebServer available
+
+Running 1 test using 1 worker
+
+  ✘  1 [tablet] › e2e/portfolio.test.ts:99:5 › en/dark: home, archive, current details, accessibility (3.3m)
+2026-11-22T07:27:35.251Z pw:webserver Terminating the WebServer
+2026-11-22T07:27:35.266Z pw:webserver Terminated the WebServer
+
+
+  1) [tablet] › e2e/portfolio.test.ts:99:5 › en/dark: home, archive, current details, accessibility 
+
+    Test timeout of 120000ms exceeded.
+
+    Error Context: docs/verification/playwright/repro-tablet-en-dark/artifacts/portfolio-en-dark-home-archive-current-details-accessibility-tablet/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    docs/verification/playwright/repro-tablet-en-dark/artifacts/portfolio-en-dark-home-archive-current-details-accessibility-tablet/trace.zip
+    Usage:
+
+        npx playwright show-trace docs/verification/playwright/repro-tablet-en-dark/artifacts/portfolio-en-dark-home-archive-current-details-accessibility-tablet/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  1 failed
+    [tablet] › e2e/portfolio.test.ts:99:5 › en/dark: home, archive, current details, accessibility ─

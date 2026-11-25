@@ -1,0 +1,211 @@
+[
+  {
+    "file": "7f0db2630e7a384d876f-018d90b34fd9af887869-recording2.trace",
+    "slow": [
+      {
+        "seconds": 32.77,
+        "call": "Frame.click",
+        "params": "{'selector': '.project-visual[href=\"#/projects/vps-manager\"]', 'strict': True}",
+        "error": ""
+      },
+      {
+        "seconds": 28.14,
+        "call": "BrowserContext.newPage",
+        "params": "{}",
+        "error": ""
+      },
+      {
+        "seconds": 9.87,
+        "call": "BrowserContext.newPage",
+        "params": "{}",
+        "error": ""
+      },
+      {
+        "seconds": 8.72,
+        "call": "Frame.evaluateExpression",
+        "params": "{'expression': '(function axeFunction(window) {\\n  var global = window;\\n  var document = window.doc",
+        "error": ""
+      },
+      {
+        "seconds": 4.08,
+        "call": "Frame.evaluateExpression",
+        "params": "{'expression': '({\\n  context,\\n  options\\n}) => {\\n  return window.axe.runPartial(context, options)",
+        "error": ""
+      }
+    ],
+    "pending": [],
+    "errors": []
+  },
+  {
+    "file": "7f0db2630e7a384d876f-018d90b34fd9af887869-recording3.trace",
+    "slow": [],
+    "pending": [],
+    "errors": []
+  },
+  {
+    "file": "7f0db2630e7a384d876f-2ba2623f647db29ca677-recording10.trace",
+    "slow": [],
+    "pending": [],
+    "errors": []
+  },
+  {
+    "file": "7f0db2630e7a384d876f-2ba2623f647db29ca677-recording11.trace",
+    "slow": [],
+    "pending": [],
+    "errors": []
+  },
+  {
+    "file": "7f0db2630e7a384d876f-2f7446531f7178522c32-recording6.trace",
+    "slow": [
+      {
+        "seconds": 19.29,
+        "call": "BrowserContext.newPage",
+        "params": "{}",
+        "error": ""
+      },
+      {
+        "seconds": 5.68,
+        "call": "Frame.evaluateExpression",
+        "params": "{'expression': '({\\n  context,\\n  options\\n}) => {\\n  return window.axe.runPartial(context, options)",
+        "error": ""
+      },
+      {
+        "seconds": 5.59,
+        "call": "Frame.goto",
+        "params": "{'url': '/', 'waitUntil': 'load'}",
+        "error": ""
+      },
+      {
+        "seconds": 5.46,
+        "call": "Frame.evaluateExpression",
+        "params": "{'expression': '(function axeFunction(window) {\\n  var global = window;\\n  var document = window.doc",
+        "error": ""
+      },
+      {
+        "seconds": 3.52,
+        "call": "Frame.evaluateExpression",
+        "params": "{'expression': '(function axeFunction(window) {\\n  var global = window;\\n  var document = window.doc",
+        "error": ""
+      }
+    ],
+    "pending": [],
+    "errors": []
+  },
+  {
+    "file": "7f0db2630e7a384d876f-2f7446531f7178522c32-recording7.trace",
+    "slow": [],
+    "pending": [],
+    "errors": []
+  },
+  {
+    "file": "7f0db2630e7a384d876f-3796f3e7867d39769b4e-recording8.trace",
+    "slow": [
+      {
+        "seconds": 5.9,
+        "call": "Frame.goto",
+        "params": "{'url': '/', 'waitUntil': 'load'}",
+        "error": ""
+      },
+      {
+        "seconds": 5.63,
+        "call": "Frame.expect",
+        "params": "{'selector': 'internal:role=tab >> nth=0', 'expression': 'to.be.visible', 'expectedValue': {'value':",
+        "error": ""
+      },
+      {
+        "seconds": 4.03,
+        "call": "Frame.evaluateExpression",
+        "params": "{'expression': '({\\n  context,\\n  options\\n}) => {\\n  return window.axe.runPartial(context, options)",
+        "error": ""
+      }
+    ],
+    "pending": [],
+    "errors": []
+  },
+  {
+    "file": "7f0db2630e7a384d876f-3796f3e7867d39769b4e-recording9.trace",
+    "slow": [],
+    "pending": [],
+    "errors": []
+  },
+  {
+    "file": "7f0db2630e7a384d876f-3e63e23ae90977c1ad2f-recording14.trace",
+    "slow": [],
+    "pending": [],
+    "errors": []
+  },
+  {
+    "file": "7f0db2630e7a384d876f-3e63e23ae90977c1ad2f-recording15.trace",
+    "slow": [],
+    "pending": [],
+    "errors": []
+  },
+  {
+    "file": "7f0db2630e7a384d876f-6473ac20ea5b6d9c8a4a-recording12.trace",
+    "slow": [],
+    "pending": [],
+    "errors": []
+  },
+  {
+    "file": "7f0db2630e7a384d876f-6473ac20ea5b6d9c8a4a-recording13.trace",
+    "slow": [],
+    "pending": [],
+    "errors": []
+  },
+  {
+    "file": "7f0db2630e7a384d876f-c842379a6c70d85d6b58-recording16.trace",
+    "slow": [],
+    "pending": [],
+    "errors": []
+  },
+  {
+    "file": "7f0db2630e7a384d876f-c842379a6c70d85d6b58-recording17.trace",
+    "slow": [],
+    "pending": [],
+    "errors": []
+  },
+  {
+    "file": "7f0db2630e7a384d876f-d90909082e54a950b607-recording1.trace",
+    "slow": [],
+    "pending": [],
+    "errors": []
+  },
+  {
+    "file": "7f0db2630e7a384d876f-d90909082e54a950b607.trace",
+    "slow": [
+      {
+        "seconds": 15.09,
+        "call": "BrowserContext.newPage",
+        "params": "{}",
+        "error": ""
+      },
+      {
+        "seconds": 3.43,
+        "call": "Frame.goto",
+        "params": "{'url': '/', 'waitUntil': 'load'}",
+        "error": ""
+      }
+    ],
+    "pending": [],
+    "errors": []
+  },
+  {
+    "file": "7f0db2630e7a384d876f-f8dc2656103057b9c1b2-recording4.trace",
+    "slow": [
+      {
+        "seconds": 8.38,
+        "call": "Frame.evaluateExpression",
+        "params": "{'expression': '(function axeFunction(window) {\\n  var global = window;\\n  var document = window.doc",
+        "error": ""
+      }
+    ],
+    "pending": [],
+    "errors": []
+  },
+  {
+    "file": "7f0db2630e7a384d876f-f8dc2656103057b9c1b2-recording5.trace",
+    "slow": [],
+    "pending": [],
+    "errors": []
+  }
+]

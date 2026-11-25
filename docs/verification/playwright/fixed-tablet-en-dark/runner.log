@@ -1,0 +1,68 @@
+2026-11-22T07:30:55.881Z pw:webserver HTTP GET: http://127.0.0.1:4173/
+2026-11-22T07:30:55.947Z pw:webserver Error while checking if http://127.0.0.1:4173/ is available: connect ECONNREFUSED 127.0.0.1:4173
+2026-11-22T07:30:55.948Z pw:webserver Starting WebServer process npx vite preview --host 127.0.0.1 --port 4173 --strictPort...
+2026-11-22T07:30:55.990Z pw:webserver Process started
+2026-11-22T07:30:55.995Z pw:webserver Waiting for availability...
+2026-11-22T07:30:55.995Z pw:webserver HTTP GET: http://127.0.0.1:4173/
+2026-11-22T07:30:56.004Z pw:webserver Error while checking if http://127.0.0.1:4173/ is available: connect ECONNREFUSED 127.0.0.1:4173
+2026-11-22T07:30:56.005Z pw:webserver Waiting 100ms
+2026-11-22T07:30:56.106Z pw:webserver HTTP GET: http://127.0.0.1:4173/
+2026-11-22T07:30:56.110Z pw:webserver Error while checking if http://127.0.0.1:4173/ is available: connect ECONNREFUSED 127.0.0.1:4173
+2026-11-22T07:30:56.110Z pw:webserver Waiting 250ms
+2026-11-22T07:30:56.361Z pw:webserver HTTP GET: http://127.0.0.1:4173/
+2026-11-22T07:30:56.365Z pw:webserver Error while checking if http://127.0.0.1:4173/ is available: connect ECONNREFUSED 127.0.0.1:4173
+2026-11-22T07:30:56.366Z pw:webserver Waiting 500ms
+2026-11-22T07:30:56.866Z pw:webserver HTTP GET: http://127.0.0.1:4173/
+2026-11-22T07:30:56.876Z pw:webserver Error while checking if http://127.0.0.1:4173/ is available: connect ECONNREFUSED 127.0.0.1:4173
+2026-11-22T07:30:56.877Z pw:webserver Waiting 1000ms
+2026-11-22T07:30:57.879Z pw:webserver HTTP GET: http://127.0.0.1:4173/
+2026-11-22T07:30:57.882Z pw:webserver Error while checking if http://127.0.0.1:4173/ is available: connect ECONNREFUSED 127.0.0.1:4173
+2026-11-22T07:30:57.882Z pw:webserver Waiting 1000ms
+2026-11-22T07:30:58.883Z pw:webserver HTTP GET: http://127.0.0.1:4173/
+2026-11-22T07:30:58.889Z pw:webserver Error while checking if http://127.0.0.1:4173/ is available: connect ECONNREFUSED 127.0.0.1:4173
+2026-11-22T07:30:58.889Z pw:webserver Waiting 1000ms
+2026-11-22T07:30:59.890Z pw:webserver HTTP GET: http://127.0.0.1:4173/
+2026-11-22T07:30:59.897Z pw:webserver Error while checking if http://127.0.0.1:4173/ is available: connect ECONNREFUSED 127.0.0.1:4173
+2026-11-22T07:30:59.898Z pw:webserver Waiting 1000ms
+2026-11-22T07:31:00.900Z pw:webserver HTTP GET: http://127.0.0.1:4173/
+2026-11-22T07:31:00.906Z pw:webserver Error while checking if http://127.0.0.1:4173/ is available: connect ECONNREFUSED 127.0.0.1:4173
+2026-11-22T07:31:00.906Z pw:webserver Waiting 1000ms
+2026-11-22T07:31:01.907Z pw:webserver HTTP GET: http://127.0.0.1:4173/
+2026-11-22T07:31:01.912Z pw:webserver Error while checking if http://127.0.0.1:4173/ is available: connect ECONNREFUSED 127.0.0.1:4173
+2026-11-22T07:31:01.913Z pw:webserver Waiting 1000ms
+2026-11-22T07:31:02.914Z pw:webserver HTTP GET: http://127.0.0.1:4173/
+2026-11-22T07:31:02.916Z pw:webserver Error while checking if http://127.0.0.1:4173/ is available: connect ECONNREFUSED 127.0.0.1:4173
+2026-11-22T07:31:02.917Z pw:webserver Waiting 1000ms
+2026-11-22T07:31:03.918Z pw:webserver HTTP GET: http://127.0.0.1:4173/
+2026-11-22T07:31:03.919Z pw:webserver Error while checking if http://127.0.0.1:4173/ is available: connect ECONNREFUSED 127.0.0.1:4173
+2026-11-22T07:31:03.919Z pw:webserver Waiting 1000ms
+2026-11-22T07:31:04.920Z pw:webserver HTTP GET: http://127.0.0.1:4173/
+2026-11-22T07:31:04.924Z pw:webserver Error while checking if http://127.0.0.1:4173/ is available: connect ECONNREFUSED 127.0.0.1:4173
+2026-11-22T07:31:04.924Z pw:webserver Waiting 1000ms
+2026-11-22T07:31:05.925Z pw:webserver HTTP GET: http://127.0.0.1:4173/
+2026-11-22T07:31:05.928Z pw:webserver Error while checking if http://127.0.0.1:4173/ is available: connect ECONNREFUSED 127.0.0.1:4173
+2026-11-22T07:31:05.928Z pw:webserver Waiting 1000ms
+2026-11-22T07:31:06.928Z pw:webserver HTTP GET: http://127.0.0.1:4173/
+2026-11-22T07:31:06.930Z pw:webserver Error while checking if http://127.0.0.1:4173/ is available: connect ECONNREFUSED 127.0.0.1:4173
+2026-11-22T07:31:06.930Z pw:webserver Waiting 1000ms
+2026-11-22T07:31:07.931Z pw:webserver HTTP GET: http://127.0.0.1:4173/
+2026-11-22T07:31:07.935Z pw:webserver Error while checking if http://127.0.0.1:4173/ is available: connect ECONNREFUSED 127.0.0.1:4173
+2026-11-22T07:31:07.935Z pw:webserver Waiting 1000ms
+2026-11-22T07:31:08.936Z pw:webserver HTTP GET: http://127.0.0.1:4173/
+2026-11-22T07:31:08.939Z pw:webserver Error while checking if http://127.0.0.1:4173/ is available: connect ECONNREFUSED 127.0.0.1:4173
+2026-11-22T07:31:08.939Z pw:webserver Waiting 1000ms
+2026-11-22T07:31:09.941Z pw:webserver HTTP GET: http://127.0.0.1:4173/
+2026-11-22T07:31:09.942Z pw:webserver Error while checking if http://127.0.0.1:4173/ is available: connect ECONNREFUSED 127.0.0.1:4173
+2026-11-22T07:31:09.942Z pw:webserver Waiting 1000ms
+[WebServer]   ➜  Local:   http://127.0.0.1:4173/
+2026-11-22T07:31:10.946Z pw:webserver HTTP GET: http://127.0.0.1:4173/
+2026-11-22T07:31:11.023Z pw:webserver HTTP Status: 200
+2026-11-22T07:31:11.040Z pw:webserver WebServer available
+
+Running 1 test using 1 worker
+
+  ✓  1 [tablet] › e2e/portfolio.test.ts:130:5 › en/dark: home, archive, current details, accessibility (2.0m)
+2026-11-22T07:34:48.522Z pw:webserver Terminating the WebServer
+2026-11-22T07:34:48.539Z pw:webserver Terminated the WebServer
+
+  1 passed (3.9m)

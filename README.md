@@ -1,67 +1,69 @@
-# Ikbar Rabbani — Portfolio
+# Ikbar Rabbani Purwanto — Developer Field Notes
 
-React + TypeScript + Vite hash-routed portfolio adapted from the user-supplied content extracted from `https://d3sc.vercel.app/`. The supplied portfolio identity, project narratives, technologies, certificates, contact details, and social links are represented bilingually. The source was treated as data and its links/content were not independently verified.
+React 19 + TypeScript + Vite portfolio. Positioning: **Full-Stack Developer · Linux & Self-Hosting**. Indonesian by default, optional English; charcoal/off-white/electric-lime editorial design and an optional light theme. No added runtime dependencies.
 
-## Revision 6 source adaptation
+## Current content
 
-- Added supplied Kulineran FnB Website, School Website, and Samurai Game entries with their supplied external links and technology names.
-- Retained three additional entries only as clearly labeled sample engineering work so the six-card composition remains intact.
-- Added bilingual hero, about, skills/tools, latest project, game, achievements, and contact copy. Certificate descriptions remain explicitly marked as source placeholders.
-- Contact details are supplied by the user/source: Citizens of Earth, `+62 81413265114` (`tel:`), and `ikbar686@gmail.com` (`mailto:`), plus supplied GitHub, Instagram, LinkedIn, and YouTube links. There is no fake contact form.
-- Local SVG artwork remains illustrative sample artwork. Replace each `public/assets/*.svg` mapping in `src/data.ts` with verified assets before publication; no source image assets were fabricated.
+Hero tabs and selected work: VPS Manager → Proxmox Home Lab → LMS Ujian Online. Other work: Helpdesk Ticketing and Trading Analysis Dashboard. Seven earlier projects remain in the archive with their existing detail URLs.
 
-## Verification caveat and replacement instructions
+Bio, education and four skill groups follow the latest owner brief. Skills link to the projects that use them. Current cards have concise summaries and scoped status; details explain problem, contribution, stack and verification limits. The manual hero supports click/touch, arrows, Home/End and reduced motion, without autoplay.
 
-Source claims, contact information, project destinations, certificate titles, and social destinations should be verified before publication. To replace content, edit the typed `raw` project records, `achievements`, `socialLinks`, and bilingual `copy` in `src/data.ts`; replace only local SVGs with assets you have permission to use. Keep external links as ordinary absolute `https://` links so they do not enter SPA routing.
+## Preview
 
-## Commands
+```sh
+npm ci
+npm run dev -- --host 0.0.0.0 --port 4174 --strictPort
+# Or preview the production build:
+npm run build
+npm run preview -- --host 0.0.0.0 --port 4174 --strictPort
+```
 
-```bash
-npm install
-npm run dev
+Use one server at a time on the port. Binding to all interfaces permits access from the server's Tailscale address when network policy permits. These commands do not push or deploy.
+
+## Checks
+
+```sh
+npm test -- --maxWorkers=1
 npm run typecheck
 npm run build
-npm test
 npx playwright install chromium
 npm run test:e2e
+# Low-memory smoke acceptance of the built artifact:
+node scripts/verify-current-content.mjs
+npx prettier --check src/App.tsx src/current-projects.ts src/styles.css src/data.ts src/router.ts src/App.test.tsx src/data.test.ts src/field-notes.test.tsx src/positioning.test.tsx e2e/portfolio.test.ts e2e/positioning.test.ts playwright.config.ts index.html package.json README.md docs/FIELD_NOTES_REVIEW.md
 git diff --check
 ```
 
-Routes are `#/`, `#/projects`, and `#/projects/:slug`; preferences use guarded localStorage. See `src/App.tsx`, `src/data.ts`, `src/styles.css`, `public/assets/`, and `e2e/portfolio.test.ts` for implementation and coverage.
+The repo has no lint script/ESLint configuration. Prettier is a formatting check, not a semantic lint result. `test:e2e` first builds, then starts production preview on port 4173. Chromium tests cover 1440/768/360/320 px, locale/theme variants, all five current details and archived link wiring, hero interaction, linked skills, mobile menu, history, contact wiring, clipboard success/failure, storage/observer fallback, reduced motion, axe accessibility and horizontal overflow. Current evidence screenshots: `docs/screenshots/field-notes/positioning/`.
 
-## Revision 7 interaction boundary
+## Content integrity
 
-The editorial treatment takes transferable principles from `https://achmad-fakhri.web.id/`—text-led positioning, section indexing, capability grouping, and a project-story rhythm—without copying its identity, claims, exact copy, layout, visual assets, or code. Home now provides stable bilingual sections for hero, about, capabilities, tools, selected projects, game, achievements, and contact. Interaction is finite and accessible: scroll progress, IntersectionObserver active/reveal state, restrained card hover treatment, native achievement disclosure, and Clipboard API email copy with a visible fallback. Reduced motion keeps content visible and removes transforms/transitions. There are no fake metrics, counters, parallax, gradients, infinite loops, or cloned reference visuals.
+- The five current projects come from the owner brief and recorded project evidence. No public URL or safe project screenshot was found for them on the old profile; demo/source buttons are therefore omitted. Typographic previews are explicitly not screenshots.
+- The six real WebP screenshots recovered from the original site remain assigned only to their older projects. No unrelated asset is relabeled as a current project.
+- Mock acceptance, feature tests, provider submission, recipient delivery and active deployment status are kept distinct. Reminder support remains in development. No unverified isolation or complete student-flow claim is made.
+- No private IPs, credentials, chat IDs, raw server configuration, invented impact numbers, dates, employers or proficiency percentages are published.
+- Old sample URLs still show explicit legacy notices. No CV file/URL was available, so there is no invented download action.
+- Fonts are self-hosted WOFF2 with bundled OFL licenses.
 
-## Revision 5
+See `docs/FIELD_NOTES_REVIEW.md` for content evidence boundaries and `docs/PLAYWRIGHT_VERIFICATION.md` for the completed four-viewport verification, timeout diagnosis, scoped fixes and manual contrast-review gap.
 
-- Replaced the Projects-only horizontal wheel showcase with normal vertical document scrolling. Removed its wheel hook/listeners, bounded track, instruction and progress cue; filters now sit above a responsive card grid.
-- Composed Projects as a featured hero (Ruang Kerja), a clearly fictional in-progress current-work panel without percentages or fabricated metrics, and an all-project archive containing all six local illustrative cards. Added bilingual labels, category names, accessible section structure and sample disclaimers.
-- Added a thin offset image frame and corner marks while preserving the monochrome palette, 16:9 image ratios, finite motion and reduced-motion behavior. Responsive CSS keeps the root and cards within 1440px, 390px and 320px viewports.
-- Replaced obsolete wheel expectations with vertical-scroll/composition assertions and fresh screenshot capture under `docs/screenshots/revision-5/`.
+For an instrumented one-worker rerun (use a fresh run name to retain older evidence):
 
-Verification: `npm run build` passed (18 modules); `npm run typecheck` passed; `npm test` passed (2 files, 5 tests); `npm run test:e2e` passed 33/33 Chromium tests across desktop/mobile/narrow, including axe, runtime/network, locale/theme persistence, reduced motion, no-overflow, Revision 7 Home interactions (scroll progress, active section nav, reveal fallback, project spotlight coverage through Home cards, native achievement keyboard behavior, clipboard success/fallback) and fresh screenshot capture; `git diff --check` passed. Fresh Home evidence is stored at `docs/screenshots/revision-7/home-desktop.png`, `home-mobile.png`, and `home-narrow.png`. Screenshots were inspected: all expected Home sections are present; desktop, 390px mobile, and 320px narrow layouts show no visible clipping or overlap. The fixed section rail remains intentionally close to the right edge and automated no-overflow passed. No coordinator acceptance is claimed.
-
-```bash
-npm install
-npm run dev
-npm run typecheck
+```sh
 npm run build
-npm test
-npx playwright install chromium
-npm run test:e2e
-git diff --check
+python3 scripts/run-playwright-qa.py recheck --max-failures=1 --global-timeout=900000
+python3 scripts/summarize-playwright-qa.py recheck
 ```
 
-Routes are `#/`, `#/projects`, and `#/projects/:slug`; they support direct hash links, reload, browser history, localized titles, and a not-found view. Preferences use guarded localStorage (`portfolio-locale`, `portfolio-theme`) and default to Indonesian plus the system theme. Replace the six SVGs in `public/assets/` and the typed content in `src/data.ts` only with verified work before publication.
+The diagnostic config writes traces/screenshots, JSON results, console/page/network errors and host resource samples under `docs/verification/playwright/<run>/`. Axe runs in the same page with a no-iframe guard and unchanged WCAG tags. Full-page screenshots use CSS-pixel scale without changing device emulation. Earlier revision docs and screenshots are historical records, not current acceptance.
 
-## Structure
+## Main files
 
-- `src/App.tsx`: modular hash route shell, navigation, home/projects/detail/not-found views.
-- `src/data.ts`: bilingual project and interface content.
-- `public/assets/*.svg`: six distinct local 16:9 illustrative sample UI mockups.
-- `src/styles.css`: neutral theme tokens, responsive grid, visible focus and reduced-motion handling.
-- `src/*.test.*`: Vitest route/content checks.
-- `npm run test:e2e`: 27 Playwright tests across desktop 1440px, mobile 390px, narrow 320px; all six routed details, vertical Projects composition, axe, locale/theme matrix, focus/navigation/persistence/runtime checks.
+- `src/current-projects.ts`: five current project narratives and verification limits.
+- `src/data.ts`: profile, bilingual copy, linked skill groups, archived work and contact data.
+- `src/App.tsx`: shared shell, hero selector, current/other work, archive and detail views.
+- `src/styles.css`: responsive editorial styling and motion/focus handling.
+- `src/router.ts`: existing hash routes and malformed-URL protection.
+- `src/*.test.*`, `e2e/*.test.ts`: unit/content and browser regressions.
 
-The `.invalid` sample address is plain text and cannot receive messages. No employment, clients, delivery metrics, credentials or live project URLs are claimed. No remote runtime assets or external services are used.
+Routes: `#/`, `#/projects`, `#/projects/:slug`, `#/#about`, `#/#contact`. Preference keys remain `portfolio-locale` and `portfolio-theme`.

@@ -1,164 +1,314 @@
-import { test as base, expect, type Page } from "@playwright/test";
+import type { Page } from "@playwright/test";
+import { test, expect } from "./fixtures";
 import AxeBuilder from "@axe-core/playwright";
-import { copy, projects, categoryLabels, categories, type Locale } from "../src/data";
-
-const test = base.extend<{ healthy: void }>({ healthy: [async ({ page }, use) => {
-  const errors: string[] = [];
-  page.on("pageerror", (error) => errors.push(error.message));
-  page.on("console", (message) => { if (message.type() === "error") errors.push(message.text()); });
-  page.on("requestfailed", (request) => errors.push(`failed: ${request.url()}`));
-  page.on("response", (response) => { if (response.url().includes("127.0.0.1:4173") && response.status() >= 400) errors.push(`HTTP ${response.status()}`); });
-  await use();
-  expect(errors).toEqual([]);
-}, { auto: true }] });
-
-async function start(page: Page, locale: Locale = "id", theme: "light" | "dark" = "light") {
-  await page.addInitScript(({ locale, theme }) => { localStorage.setItem("portfolio-locale", locale); localStorage.setItem("portfolio-theme", theme); }, { locale, theme });
+import { projects, copy, categoryLabels, type Locale } from "../src/data";
+async function start(
+  page: Page,
+  locale: Locale = "id",
+  theme: "dark" | "light" = "dark",
+) {
+  await page.addInitScript(
+    ({ locale, theme }) => {
+      localStorage.setItem("portfolio-locale", locale);
+      localStorage.setItem("portfolio-theme", theme);
+    },
+    { locale, theme },
+  );
   await page.goto("/");
-  await expect(page.locator("html")).toHaveAttribute("lang", locale);
-  await expect(page.locator("html")).toHaveAttribute("data-theme", theme);
+  await expect(page.getByRole("tab").first()).toBeVisible();
 }
-async function axe(page: Page) { await page.waitForTimeout(450); expect((await new AxeBuilder({ page }).withTags(["wcag2a", "wcag2aa", "wcag21aa"]).analyze()).violations).toEqual([]); }
-async function noOverflow(page: Page) { const [root, body] = await page.evaluate(() => [document.documentElement.scrollWidth, document.body.scrollWidth]); expect(root).toBeLessThanOrEqual(page.viewportSize()!.width + 4); expect(body).toBeLessThanOrEqual(page.viewportSize()!.width + 4); }
-
-for (const locale of ["id", "en"] as const) for (const theme of ["light", "dark"] as const) {
-  test(`${locale}/${theme}: home, project routes, details, accessibility`, async ({ page }) => {
-    const t = copy[locale]; await start(page, locale, theme);
-    await expect(page.locator(".hero-copy")).toHaveText(t.intro);
-    await expect(page.locator(".preview .card")).toHaveCount(3);
-    await expect(page.locator(".section-heading .notice").first()).toHaveText(t.previewDisclaimer);
-    await expect(page.locator("nav a").filter({ hasText: t.home })).toHaveAttribute("aria-current", "page");
-    await axe(page); await noOverflow(page);
-    if (page.viewportSize()!.width < 800) await page.getByRole("button", { name: t.menu, exact: true }).click();
-    await page.getByRole("link", { name: t.work, exact: true }).click();
-    await expect(page).toHaveURL(/#\/projects$/); await expect(page.locator("main")).toBeFocused();
-    await expect(page.locator(".project-grid .card")).toHaveCount(6);
-    for (const category of categories) {
-      const button = page.getByRole("button", { name: categoryLabels[locale][category], exact: true });
-      await button.click(); await expect(button).toHaveAttribute("aria-pressed", "true");
-      await expect(page.locator(".project-grid .card")).toHaveCount(projects[locale].filter((p) => p.category === category).length);
-    }
-    await page.getByRole("button", { name: t.all, exact: true }).click();
-    for (const project of projects[locale]) {
-      await page.locator(`.all-projects a[href="#/projects/${project.slug}"]`).click();
-      await expect(page).toHaveURL(new RegExp(`/projects/${project.slug}$`));
-      await expect(page.locator(".detail > h1")).toHaveText(project.title);
-      await expect(page.locator(".detail-image")).toHaveAttribute("src", project.image);
-      await expect(page.locator("time")).toHaveAttribute("datetime", project.date);
-      await expect(page.locator(".detail .tags span")).toHaveText(project.stack);
-      await expect(page.locator(".detail-section")).toHaveCount(4);
-      await page.goBack(); await expect(page).toHaveURL(/#\/projects$/);
-    }
-    await axe(page); await noOverflow(page);
+async function noOverflow(page: Page) {
+  expect(
+    await page.evaluate(() =>
+      Math.max(document.body.scrollWidth, document.documentElement.scrollWidth),
+    ),
+  ).toBeLessThanOrEqual(page.viewportSize()!.width);
+}
+async function axe(page: Page) {
+  // This portfolio has no frames. The normal runPartial/finishRun pipeline
+  // creates a second renderer, which exhausted this host's memory in the trace.
+  // Guard the assumption so a future embedded frame cannot silently lose coverage.
+  expect(
+    page.frames(),
+    "single-page audit requires a frame-free document",
+  ).toHaveLength(1);
+  const context = page.context();
+  const pageCount = context.pages().length;
+  await test.step(`WCAG audit: ${new URL(page.url()).hash || "home"}`, async () => {
+    const result = await new AxeBuilder({ page })
+      .setLegacyMode(true)
+      .withTags(["wcag2a", "wcag2aa", "wcag21aa"])
+      .analyze();
+    await test.info().attach(`axe-${new URL(page.url()).hash || "home"}`, {
+      body: JSON.stringify(
+        {
+          url: page.url(),
+          mode: "same-page axe.run",
+          frameCount: page.frames().length,
+          passedRules: result.passes.length,
+          violations: result.violations,
+          incomplete: result.incomplete.map((rule) => ({
+            id: rule.id,
+            impact: rule.impact,
+          })),
+        },
+        null,
+        2,
+      ),
+      contentType: "application/json",
+    });
+    expect(result.violations).toEqual([]);
+    expect(
+      context.pages(),
+      "audit must not allocate an auxiliary page",
+    ).toHaveLength(pageCount);
   });
 }
+async function navigate(page: Page, label: string) {
+  if (page.viewportSize()!.width <= 800)
+    await page.getByRole("button", { name: /^Menu/ }).click();
+  await page
+    .locator("#primary-nav")
+    .getByRole("link", { name: label, exact: true })
+    .click();
+}
 
-test("navigation focus, sections, language dates, history and not-found", async ({ page }) => {
+test("hero selection: click, keyboard, wrap, focus, links and no autoplay", async ({
+  page,
+}) => {
   await start(page);
-  if (page.viewportSize()!.width < 800) { await page.getByRole("button", { name: "Menu", exact: true }).click(); }
-  await page.getByRole("link", { name: "Tentang", exact: true }).click();
-  await expect(page).toHaveURL(/#\/#about$/); await expect(page.locator("#about")).toBeFocused();
-  if (page.viewportSize()!.width < 800) { await page.getByRole("button", { name: "Menu", exact: true }).click(); }
-  await page.getByRole("link", { name: "Kontak", exact: true }).click(); await expect(page.locator("#contact")).toBeFocused();
-  if (page.viewportSize()!.width < 800) { await page.getByRole("button", { name: "Menu", exact: true }).click(); }
-  await page.getByRole("link", { name: "Proyek", exact: true }).click(); await page.locator('.all-projects a[href="#/projects/kulineran"]').click();
-  const idDate = await page.locator("time").innerText();
-  await page.getByRole("button", { name: "Ganti bahasa" }).click();
-  await expect(page.locator("time")).not.toHaveText(idDate); await expect(page).toHaveTitle(/Project detail/);
-  await page.goBack(); await page.goForward(); await expect(page).toHaveURL(/kulineran$/);
-  await page.goto("/#/missing"); await expect(page.getByRole("heading", { name: /Page not found|Halaman tidak ditemukan/ })).toBeVisible();
-});
-
-test("revision 3 motion system covers every view and reduced motion", async ({ page }) => {
-  await start(page);
-  for (const path of ["/#/", "/#/projects", "/#/projects/ruang-kerja", "/#/missing"]) {
-    await page.goto(path);
-    await expect(page.locator("main.motion-page")).toHaveAttribute("data-motion-view");
-    await expect(page.locator("main.motion-page [data-motion='section'], main.motion-page [data-motion='card']").first()).toBeVisible();
-  }
-  const motion = await page.locator("main.motion-page").evaluate((element) => ({ animation: getComputedStyle(element).animationName, duration: getComputedStyle(element).animationDuration, section: getComputedStyle(element.querySelector("[data-motion='section']")!).animationDuration }));
-  expect(motion.animation).toBe("motion-page-enter");
-  expect(motion.duration).toBe("0.32s");
-  expect(motion.section).toBe("0.24s");
-  await page.goto("/#/projects");
-  await page.emulateMedia({ reducedMotion: "reduce" });
-  await expect(page.locator("html")).toHaveCSS("scroll-behavior", "auto");
-  const reduced = await page.locator(".motion-page").evaluate((element) => ({ animation: getComputedStyle(element).animationName, transform: getComputedStyle(element).transform }));
-  expect(reduced.animation).toBe("none");
-  expect(reduced.transform).toBe("none");
-});
-
-test("mobile menu escape, skip link, persistence, storage denial and reduced motion", async ({ page }) => {
-  await page.setViewportSize({ width: 390, height: 844 }); await start(page);
-  const menu = page.getByRole("button", { name: "Menu", exact: true }); await menu.click();
-  await page.locator("#primary-nav a").first().focus(); await page.keyboard.press("Escape");
-  await expect(menu).toBeFocused(); await expect(menu).toHaveAttribute("aria-expanded", "false");
-  await page.keyboard.press("Tab"); await page.keyboard.press("Shift+Tab"); await page.getByRole("link", { name: "Lewati ke konten" }).focus();
-  await page.keyboard.press("Enter"); await expect(page.locator("main")).toBeFocused();
-  await page.getByRole("button", { name: "Ganti bahasa" }).click(); await page.getByRole("button", { name: "Switch to dark theme" }).click();
-  await expect(page.locator("html")).toHaveAttribute("lang", "en"); await expect(page.locator("html")).toHaveAttribute("data-theme", "dark"); await noOverflow(page);
-  await page.emulateMedia({ reducedMotion: "reduce" }); await expect(page.locator("html")).toHaveCSS("scroll-behavior", "auto");
-  await page.addInitScript(() => Object.defineProperty(window, "localStorage", { get() { throw new DOMException("denied", "SecurityError"); } })); await page.reload(); await expect(page.locator("main")).toBeVisible();
-});
-
-test("revision 5 projects use vertical editorial composition and card grid", async ({ page }) => {
-  await start(page, "en", "dark");
-  await page.goto("/#/projects");
-  await expect(page.locator(".featured-project")).toBeVisible();
-  await expect(page.locator(".featured-project img")).toHaveAttribute("alt", /Illustrative sample SVG mockup/);
-  await expect(page.locator(".current-work")).toContainText("Supplied portfolio project");
-  await expect(page.locator(".current-work .status-dot")).toBeVisible();
-  await expect(page.locator(".all-projects")).toBeVisible();
-  await expect(page.locator(".all-projects .project-grid .card")).toHaveCount(6);
-  await expect(page.locator(".all-projects .filters button")).toHaveCount(4);
-  await page.mouse.wheel(0, 500);
-  await expect.poll(() => page.evaluate(() => window.scrollY)).toBeGreaterThan(0);
+  await page.evaluate(() => document.fonts.ready);
+  await noOverflow(page);
+  const tabs = page.getByRole("tab");
+  await expect(tabs.first()).toHaveAttribute("aria-selected", "true");
+  await expect(page.getByRole("tabpanel")).toContainText("VPS Manager");
+  if (test.info().project.use.hasTouch) await tabs.nth(1).tap();
+  else await tabs.nth(1).click();
+  await expect(page.getByRole("tabpanel")).toContainText("Proxmox Home Lab");
+  await expect(page.getByRole("tabpanel").getByRole("link")).toHaveAttribute(
+    "href",
+    "#/projects/proxmox-home-lab",
+  );
+  await page.keyboard.press("ArrowRight");
+  await expect(tabs.nth(2)).toBeFocused();
+  await expect(tabs.nth(2)).toHaveAttribute("aria-selected", "true");
+  await page.keyboard.press("ArrowRight");
+  await expect(tabs.first()).toBeFocused();
+  await page.keyboard.press("End");
+  await expect(tabs.nth(2)).toBeFocused();
+  await page.keyboard.press("Home");
+  await expect(tabs.first()).toBeFocused();
+  await page.keyboard.press("ArrowLeft");
+  await expect(tabs.nth(2)).toBeFocused();
+  await page.waitForTimeout(900);
+  await expect(tabs.nth(2)).toHaveAttribute("aria-selected", "true");
+  await page.getByRole("tabpanel").getByRole("link").click();
+  await expect(page).toHaveURL(/lms-ujian-online$/);
+  await expect(page.locator("main")).toBeFocused();
+  await expect(page.getByRole("heading", { level: 1 })).toContainText(
+    "LMS Ujian Online",
+  );
   await noOverflow(page);
 });
-
-test("revision 5 captures Projects evidence at desktop, mobile, and narrow widths", async ({ page }, testInfo) => {
-  await start(page, "en", "dark");
-  for (const [name, width, height] of [["desktop", 1440, 1000], ["mobile", 390, 844], ["narrow", 320, 844]] as const) {
-    await page.setViewportSize({ width, height });
-    await page.goto("/#/projects");
-    await page.screenshot({ path: `docs/screenshots/revision-5/projects-${name}.png`, fullPage: true });
+for (const locale of ["id", "en"] as const)
+  for (const theme of ["dark", "light"] as const) {
+    test(`${locale}/${theme}: home, archive, current details, accessibility`, async ({
+      page,
+    }) => {
+      const t = copy[locale];
+      await start(page, locale, theme);
+      await expect(page.locator("html")).toHaveAttribute("lang", locale);
+      await expect(page.locator("html")).toHaveAttribute("data-theme", theme);
+      await axe(page);
+      await noOverflow(page);
+      await navigate(page, t.work);
+      await expect(page).toHaveURL(/#\/projects$/);
+      await expect(page.locator(".project-card")).toHaveCount(12);
+      await expect(page.locator("#primary-nav a[aria-current]")).toContainText(
+        t.work,
+      );
+      await page
+        .getByRole("button", { name: categoryLabels[locale].Game, exact: true })
+        .click();
+      await expect(page.locator(".project-card")).toHaveCount(1);
+      await expect(page.locator(".project-card")).toContainText("Samurai Game");
+      await page.getByRole("button", { name: t.all, exact: true }).click();
+      await axe(page);
+      await noOverflow(page);
+      for (const p of projects[locale]) {
+        await page
+          .locator(`.project-visual[href="#/projects/${p.slug}"]`)
+          .click();
+        await expect(page.getByRole("heading", { level: 1 })).toContainText(
+          p.title,
+        );
+        await expect(page.locator(".detail-body")).toContainText(
+          p.contribution,
+        );
+        const external = page.locator('.detail-body a[target="_blank"]');
+        if (p.externalUrl)
+          await expect(external).toHaveAttribute("href", p.externalUrl);
+        else await expect(external).toHaveCount(0);
+        if (p.image) {
+          const img = page.locator(".detail-visual img");
+          await expect(img).toHaveAttribute("src", p.image);
+          await expect
+            .poll(() =>
+              img.evaluate(
+                (el: HTMLImageElement) => el.complete && el.naturalWidth > 0,
+              ),
+            )
+            .toBe(true);
+        }
+        await noOverflow(page);
+        await page.goBack();
+      }
+      await page.goto("/#/projects/samurai-game");
+      await axe(page);
+    });
+  }
+test("CTAs, mobile menu Escape, anchors, history, contact and clipboard", async ({
+  page,
+}) => {
+  await start(page);
+  if (page.viewportSize()!.width <= 800) {
+    const menu = page.getByRole("button", { name: /^Menu/ });
+    await menu.click();
+    await page.locator("#primary-nav a").first().focus();
+    await page.keyboard.press("Escape");
+    await expect(menu).toBeFocused();
+    await expect(menu).toHaveAttribute("aria-expanded", "false");
+  }
+  await page.getByRole("link", { name: "Lewati ke konten" }).focus();
+  await page.keyboard.press("Enter");
+  await expect(page.locator("main")).toBeFocused();
+  await page
+    .locator(".hero-actions")
+    .getByRole("link", { name: "Lihat Proyek" })
+    .click();
+  await expect(page).toHaveURL(/#\/projects$/);
+  await page.goBack();
+  await expect(page.getByRole("tab").first()).toBeVisible();
+  await page
+    .locator(".hero-actions")
+    .getByRole("link", { name: "Hubungi Saya" })
+    .click();
+  await expect(page.locator("#contact")).toBeFocused();
+  await expect(page.locator("#primary-nav a[aria-current]")).toContainText(
+    "Kontak",
+  );
+  await expect(page.getByRole("link", { name: "Tulis email" })).toHaveAttribute(
+    "href",
+    "mailto:ikbar686@gmail.com",
+  );
+  await expect(page.getByRole("link", { name: /WhatsApp/ })).toHaveAttribute(
+    "href",
+    "https://wa.me/6281413265114",
+  );
+  await expect(page.locator('a[href^="tel:"]')).toHaveAttribute(
+    "href",
+    "tel:+" + "6281413265114",
+  );
+  await page.evaluate(() =>
+    Object.defineProperty(navigator, "clipboard", {
+      configurable: true,
+      value: { writeText: async () => undefined },
+    }),
+  );
+  await page.getByRole("button", { name: "Salin email" }).click();
+  await expect(page.locator(".copy-status")).toHaveText("Email tersalin");
+  await page.evaluate(() =>
+    Object.defineProperty(navigator, "clipboard", {
+      configurable: true,
+      value: {
+        writeText: async () => {
+          throw Error("denied");
+        },
+      },
+    }),
+  );
+  await page.getByRole("button", { name: "Salin email" }).click();
+  await expect(page.locator(".copy-status")).toContainText("manual");
+  await navigate(page, "Tentang");
+  await expect(page.locator("#about")).toBeFocused();
+  await page.reload();
+  await expect(page.locator("#about")).toBeFocused();
+  await noOverflow(page);
+});
+test("preferences persist, reduced motion and observer/storage failure remain usable", async ({
+  page,
+}) => {
+  await page.goto("/");
+  await page.getByRole("button", { name: "Ganti bahasa" }).click();
+  await page.getByRole("button", { name: "Switch to light theme" }).click();
+  await page.reload();
+  await expect(page.locator("html")).toHaveAttribute("lang", "en");
+  await expect(page.locator("html")).toHaveAttribute("data-theme", "light");
+  await page.emulateMedia({ reducedMotion: "reduce" });
+  await expect(page.locator("html")).toHaveCSS("scroll-behavior", "auto");
+  await expect(page.locator(".hero-identity")).toHaveCSS(
+    "animation-name",
+    "none",
+  );
+  await expect(page.locator(".hero-panel").first()).toHaveCSS(
+    "transition-duration",
+    "0s",
+  );
+  await page.addInitScript(() => {
+    Object.defineProperty(window, "IntersectionObserver", { value: undefined });
+    Object.defineProperty(window, "localStorage", {
+      get() {
+        throw new DOMException("denied", "SecurityError");
+      },
+    });
+  });
+  await page.reload();
+  await expect(page.getByRole("tab").first()).toBeVisible();
+  await expect(page.locator("#selected-projects")).toHaveCSS("opacity", "1");
+  await page.getByRole("tab").nth(1).click();
+  await expect(page.getByRole("tabpanel")).toContainText("Proxmox Home Lab");
+  await noOverflow(page);
+});
+test("unknown, malformed and legacy sample URLs do not crash", async ({
+  page,
+}) => {
+  await start(page);
+  for (const path of ["missing", "projects/%E0%A4%A", "projects/unknown"]) {
+    await page.goto(`/#/${path}`);
+    await expect(page.getByRole("heading", { level: 1 })).toHaveText(
+      "Halaman tidak ditemukan",
+    );
+  }
+  for (const slug of ["sample-notes", "sample-api", "sample-tooling"]) {
+    await page.goto(`/#/projects/${slug}`);
+    await expect(page.locator("main")).toContainText(
+      "Ini bukan proyek portfolio terverifikasi",
+    );
   }
 });
-
-test("revision 7 home interactions, fallback reveal, keyboard details and copy", async ({ page }, testInfo) => {
-  await start(page, "en", "light");
-  await expect(page.locator(".scroll-progress")).toBeAttached();
-  await expect(page.locator("#hero")).toHaveClass(/is-visible/);
-  await page.evaluate(() => { window.scrollTo(0, document.body.scrollHeight); });
-  await expect.poll(() => page.locator(".scroll-progress").evaluate((node) => getComputedStyle(node).transform)).not.toBe("matrix(0, 0, 0, 1, 0, 0)");
-  await expect(page.locator("#contact")).toHaveClass(/is-visible/);
-  await page.locator("#contact").scrollIntoViewIfNeeded();
-  await expect(page.locator(".section-nav span").filter({ hasText: "Contact" })).toHaveAttribute("aria-current", "location");
-  const achievement = page.locator(".achievement-list details").first();
-  await achievement.locator("summary").focus();
-  await page.keyboard.press("Enter");
-  await expect(achievement).toHaveAttribute("open", "");
-  await expect(achievement.locator("p")).toBeVisible();
-  await page.keyboard.press("Space");
-  await expect(achievement).not.toHaveAttribute("open", "");
-  await page.evaluate(() => Object.defineProperty(navigator, "clipboard", { configurable: true, value: { writeText: async () => undefined } }));
-  await page.getByRole("button", { name: "Copy email" }).click();
-  await expect(page.locator(".copy-status")).toHaveText("Email copied");
-  await page.evaluate(() => Object.defineProperty(navigator, "clipboard", { configurable: true, value: { writeText: async () => { throw new Error("denied"); } } }));
-  await page.getByRole("button", { name: "Copy email" }).click();
-  await expect(page.locator(".copy-status")).toContainText("select the email manually");
-  await page.addInitScript(() => { Object.defineProperty(window, "IntersectionObserver", { configurable: true, value: undefined }); });
-  await page.reload();
-  await expect(page.locator("[data-reveal]").first()).toHaveClass(/is-visible/);
-  await page.screenshot({ path: `docs/screenshots/revision-7/home-${testInfo.project.name}.png`, fullPage: true });
-});
-
-test("revision 7 captures Home evidence at desktop, mobile, and narrow widths", async ({ page }) => {
-  await start(page, "en", "dark");
-  for (const [name, width, height] of [["desktop", 1440, 1000], ["mobile", 390, 844], ["narrow", 320, 844]] as const) {
-    await page.setViewportSize({ width, height });
-    await page.goto("/#/");
-    await page.screenshot({ path: `docs/screenshots/revision-7/home-${name}.png`, fullPage: true });
+test("capture responsive production evidence", async ({ page }, info) => {
+  await start(page);
+  await page.emulateMedia({ reducedMotion: "reduce" });
+  for (const [name, path] of [
+    ["home", "/"],
+    ["projects", "/projects"],
+    ["detail", "/projects/vps-manager"],
+  ]) {
+    await page.goto(`/#${path}`);
+    await page.evaluate(async () => {
+      await document.fonts.ready;
+      for (const img of document.images) {
+        img.loading = "eager";
+        await img.decode().catch(() => {});
+      }
+    });
     await noOverflow(page);
+    await page.screenshot({
+      path: `docs/screenshots/field-notes/positioning/${name}-${info.project.name}.png`,
+      fullPage: true,
+      scale: "css",
+      animations: "disabled",
+      timeout: 60000,
+    });
   }
 });

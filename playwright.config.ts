@@ -3,8 +3,8 @@ import { defineConfig, devices } from "@playwright/test";
 export default defineConfig({
   testDir: "./e2e",
   fullyParallel: true,
-  workers: 2,
-  timeout: 60_000,
+  workers: 1,
+  timeout: 120_000,
   forbidOnly: !!process.env.CI,
   reporter: "list",
   use: {
@@ -15,12 +15,19 @@ export default defineConfig({
     screenshot: "only-on-failure",
   },
   webServer: {
-    command: "npm run dev -- --host 127.0.0.1 --port 4173 --strictPort",
+    command: "npx vite preview --host 127.0.0.1 --port 4173 --strictPort",
     url: "http://127.0.0.1:4173",
     reuseExistingServer: false,
     timeout: 120_000,
   },
   projects: [
+    {
+      name: "tablet",
+      use: {
+        ...devices["Desktop Chrome"],
+        viewport: { width: 768, height: 1024 },
+      },
+    },
     {
       name: "desktop",
       use: {
@@ -32,7 +39,7 @@ export default defineConfig({
       name: "mobile",
       use: {
         ...devices["iPhone 12"],
-        viewport: { width: 390, height: 844 },
+        viewport: { width: 360, height: 800 },
         isMobile: false,
       },
     },

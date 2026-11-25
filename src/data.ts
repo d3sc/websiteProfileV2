@@ -1,17 +1,364 @@
+import { currentProjects } from "./current-projects";
+
+export const profileName = "Ikbar Rabbani Purwanto";
 export type Locale = "id" | "en";
-export type Category = "Web App" | "Game" | "Sample";
-export interface Project { id:string; slug:string; category:Category; title:string; summary:string; detail:string; image:string; alt:string; stack:string[]; date:string; duration:string; overview:string; challenge:string; approach:string; outcome:string; externalUrl?:string; externalLabel?:string; }
-export const categoryLabels:Record<Locale,Record<Category,string>>={id:{"Web App":"Aplikasi web",Game:"Game",Sample:"Contoh"},en:{"Web App":"Web apps",Game:"Games",Sample:"Sample"}};
-export const categories:Category[]=["Web App","Game","Sample"];
-type Raw=Omit<Project,"summary"|"detail"|"alt"|"overview"|"challenge"|"approach"|"outcome">&{summary:Record<Locale,string>;detail:Record<Locale,string>};
-const raw:Raw[]=[
-{id:"01",slug:"kulineran",category:"Web App",title:"FnB Website",summary:{en:"Kulineran is an FnB website for seeing recommendations for food from Indonesia, with an admin who can operate CRUD on the website.",id:"Kulineran adalah website FnB untuk melihat rekomendasi makanan dari Indonesia, dengan admin yang dapat mengoperasikan CRUD di website."},detail:{en:"Supplied portfolio project: a food-and-beverage recommendation website with an admin CRUD workflow.",id:"Proyek portofolio yang disuplai: website rekomendasi makanan dan minuman dengan alur CRUD admin."},image:"/assets/ruang-kerja.svg",stack:["JavaScript","React JS","json-web-server","CSS"],date:"2024-01-12",duration:"Source date not supplied",externalUrl:"https://github.com/d3sc/kulineran/",externalLabel:"GitHub repository"},
-{id:"02",slug:"school-website",category:"Web App",title:"School Website",summary:{en:"A school-themed website made with simple technology and available on a school domain.",id:"Website bertema sekolah yang dibuat dengan teknologi sederhana dan tersedia di domain sekolah."},detail:{en:"Supplied portfolio project: a school-themed website using HTML, CSS, and Bootstrap 5.",id:"Proyek portofolio yang disuplai: website bertema sekolah menggunakan HTML, CSS, dan Bootstrap 5."},image:"/assets/arsip-kota.svg",stack:["HTML","CSS","Bootstrap 5"],date:"2024-02-12",duration:"Source date not supplied",externalUrl:"https://schl.smkletris2pamulang.sch.id/index.html",externalLabel:"School Website"},
-{id:"03",slug:"samurai-game",category:"Game",title:"Samurai Game",summary:{en:"A beginner Godot 3 game with a samurai theme: attack, jump, run, and shoot shuriken against enemies.",id:"Game pemula Godot 3 bertema samurai: menyerang, melompat, berlari, dan menembakkan shuriken ke musuh."},detail:{en:"Supplied portfolio project: a beginner samurai-themed game made with Godot 3.",id:"Proyek portofolio yang disuplai: game bertema samurai yang dibuat sebagai pemula dengan Godot 3."},image:"/assets/lint-sederhana.svg",stack:["Godot 3"],date:"2024-03-12",duration:"Source date not supplied",externalUrl:"https://www.youtube.com/watch?v=9pyZO3N_ltE",externalLabel:"YouTube video"},
-...([['04','sample-notes','Sample Notes Interface','/assets/catatan-saku.svg',['Sample · React','Sample · CSS']],['05','sample-api','Sample API','/assets/jalur-terbuka.svg',['Sample · TypeScript','Sample · API']],['06','sample-tooling','Sample Tooling','/assets/papan-status.svg',['Sample · CLI','Sample · Markdown']]] as const).map(([id,slug,title,image,stack])=>({id,slug,category:'Sample' as Category,title,summary:{en:'Clearly labeled illustrative sample engineering entry retained for the six-card grid.',id:'Entri engineering ilustratif yang diberi label jelas dan dipertahankan untuk grid enam kartu.'},detail:{en:'Source placeholder: illustrative local SVG mockup only; replace with verified project content before publication.',id:'Placeholder sumber: hanya mockup SVG lokal ilustratif; ganti dengan konten proyek terverifikasi sebelum publikasi.'},image,stack:[...stack],date:'2024-04-12',duration:'Source placeholder'}))];
-const make=(locale:Locale):Project[]=>raw.map(p=>({...p,summary:p.summary[locale],detail:p.detail[locale],alt:locale==='en'?`Illustrative sample SVG mockup for ${p.title}`:`Mockup SVG ilustratif untuk ${p.title}`,overview:p.detail[locale],challenge:locale==='en'?'Source challenge details were not supplied.':'Detail tantangan dari sumber tidak disuplai.',approach:locale==='en'?'This page preserves supplied technology names and links without adding claims.':'Halaman ini mempertahankan nama teknologi dan tautan yang disuplai tanpa menambahkan klaim.',outcome:locale==='en'?'Source outcome details were not supplied; local artwork remains illustrative.':'Detail hasil dari sumber tidak disuplai; karya lokal tetap ilustratif.'}));
-export const projects={id:make('id'),en:make('en')} satisfies Record<Locale,Project[]>;
-export const achievements:Record<Locale,{title:string;description:string}[]>={en:['Basic Javascript Programming','Creating a backend app for beginners','Basic Python for beginners','Laravel and Nuxt js'].map(title=>({title,description:'Source placeholder: certificate description was not supplied.'})),id:['Basic Javascript Programming','Creating a backend app for beginners','Basic Python for beginners','Laravel and Nuxt js'].map(title=>({title,description:'Placeholder sumber: deskripsi sertifikat tidak disuplai.'}))};
-const common={skip:'Skip to content',nav:'Primary navigation',menu:'Menu',home:'Home',work:'Projects',about:'About',contact:'Contact',darkTheme:'Switch to dark theme',lightTheme:'Switch to light theme',language:'Switch language',cta:'View projects',explore:'Latest project',fictional:'Local SVG mockups are illustrative samples; supplied source content is not independently verified.',previewDisclaimer:'Preview uses local illustrative SVG artwork; replace it with verified assets before publication.',viewAll:'View all projects',filter:'Filter by category',all:'All',details:'View details',back:'Back to projects',aboutTitle:"Let's find out more about me!",capTitle:'Skills & tools',capFrontend:'Frontend',capFrontendText:'Web development, functional and attractive websites.',capBackend:'Backend',capBackendText:'Backend and CRUD work are represented only where supplied by the source.',capTools:'Tools',capToolsText:'JavaScript, React JS, json-web-server, CSS, HTML, Bootstrap 5, Godot 3.',processTitle:'Latest project',processText:"I've been busy lately working on the following project.",contactTitle:'Contact Me',contactText:'If you have any questions or want to work together, please contact me via email or WhatsApp.',email:'ikbar686@gmail.com',location:'Citizens of Earth',phone:'+62 81413265114',fictionalLabel:'Source-adapted content',count:'projects',detailOverview:'Overview',detailChallenge:'Challenge',detailApproach:'Approach',detailOutcome:'Outcome / learning',sample:'Source / sample',date:'Date',duration:'Duration',notFoundTitle:'Page not found',notFoundText:'This route does not have a page in this portfolio.',notFoundAction:'Return home',pageTitles:{home:'Home',projects:'Projects',detail:'Project detail',notFound:'Not found'},featuredLabel:'Featured project',currentLabel:'Game project',currentTitle:'Make own Game',currentStatus:'Supplied portfolio project',currentProject:'Samurai Game',currentNote:'A beginner samurai-themed game made with Godot 3.',currentPhaseLabel:'Technology',currentPhase:'Godot 3',currentLink:'View project',allProjectsLabel:'All projects',allProjectsTitle:'Project archive',achievementsTitle:'My Achievements',achievementsIntro:'Certificates listed from the supplied source. Descriptions remain explicit source placeholders.',socialLabel:'Social links',external:'Open supplied external link'};
-export const copy={en:{...common,intro:'Only someone who is Learning, Evolving, and Innovating in Technology. I am a Web Developer / FullStack Programmer.',aboutText:'I am a web developer with 2 years of experience in this profession. I have an understanding of web development and have the necessary expertise to create functional and attractive websites.',gameIntro:'I am a beginner game maker; recently I made a samurai themed game, in this game we can attack, jump, run, and shoot shuriken. In the game there are enemies that we can attack and kill. I make this game with Godot 3.'},id:{...common,skip:'Lewati ke konten',nav:'Navigasi utama',home:'Beranda',work:'Proyek',about:'Tentang',contact:'Kontak',darkTheme:'Ganti ke tema gelap',lightTheme:'Ganti ke tema terang',language:'Ganti bahasa',cta:'Lihat proyek',explore:'Proyek terbaru',fictional:'Mockup SVG lokal adalah contoh ilustratif; konten sumber belum diverifikasi secara independen.',previewDisclaimer:'Pratinjau memakai karya SVG lokal ilustratif; ganti dengan aset terverifikasi sebelum publikasi.',viewAll:'Lihat semua proyek',filter:'Saring berdasarkan kategori',all:'Semua',details:'Lihat detail',back:'Kembali ke proyek',aboutTitle:'Mari mengenal saya lebih jauh!',capTitle:'Keahlian & alat',capFrontend:'Frontend',capFrontendText:'Pengembangan web, website yang fungsional dan menarik.',capBackend:'Backend',capBackendText:'Pekerjaan backend dan CRUD hanya ditampilkan jika disuplai sumber.',capTools:'Alat',capToolsText:'JavaScript, React JS, json-web-server, CSS, HTML, Bootstrap 5, Godot 3.',processTitle:'Proyek terbaru',processText:'Akhir-akhir ini saya sibuk mengerjakan proyek berikut.',contactTitle:'Hubungi Saya',contactText:'Jika memiliki pertanyaan atau ingin bekerja sama, silakan hubungi saya melalui email atau WhatsApp.',fictionalLabel:'Konten adaptasi sumber',count:'proyek',detailOverview:'Gambaran',detailChallenge:'Tantangan',detailApproach:'Pendekatan',detailOutcome:'Hasil / pelajaran',sample:'Sumber / contoh',date:'Tanggal',duration:'Durasi',notFoundTitle:'Halaman tidak ditemukan',notFoundText:'Rute ini tidak memiliki halaman di portofolio ini.',notFoundAction:'Kembali ke beranda',pageTitles:{home:'Beranda',projects:'Proyek',detail:'Detail proyek',notFound:'Tidak ditemukan'},featuredLabel:'Proyek unggulan',currentLabel:'Proyek game',currentTitle:'Membuat Game',currentStatus:'Proyek portofolio yang disuplai',currentProject:'Samurai Game',currentNote:'Game pemula bertema samurai yang dibuat dengan Godot 3.',currentPhaseLabel:'Teknologi',currentPhase:'Godot 3',currentLink:'Lihat proyek',allProjectsLabel:'Semua proyek',allProjectsTitle:'Arsip proyek',achievementsTitle:'Pencapaian Saya',achievementsIntro:'Sertifikat dicantumkan dari sumber yang disuplai. Deskripsinya tetap ditandai sebagai placeholder sumber.',socialLabel:'Tautan sosial',external:'Buka tautan eksternal yang disuplai',intro:'Hanya seseorang yang Learning, Evolving, dan Innovating in Technology. Saya seorang Web Developer / FullStack Programmer.',aboutText:'Saya adalah web developer dengan pengalaman 2 tahun di profesi ini. Saya memahami pengembangan web dan memiliki keahlian yang diperlukan untuk membuat website yang fungsional dan menarik.',gameIntro:'Saya seorang pembuat game pemula; baru-baru ini saya membuat game bertema samurai. Di game ini kita dapat menyerang, melompat, berlari, dan menembakkan shuriken. Ada musuh yang dapat diserang dan dikalahkan. Saya membuat game ini dengan Godot 3.'}};
-export const socialLinks=[{label:'GitHub',href:'https://github.com/d3sc'},{label:'Instagram',href:'https://www.instagram.com/ikrabni_09/'},{label:'LinkedIn',href:'https://www.linkedin.com/in/ikbar-rabbani-b93096285/'},{label:'YouTube',href:'https://www.youtube.com/watch?v=9pyZO3N_ltE'}];
+export type Category = "Web App" | "Infrastructure" | "Game";
+export interface Project {
+  id: string;
+  slug: string;
+  category: Category;
+  title: string;
+  summary: string;
+  contribution: string;
+  stack: string[];
+  image?: string;
+  externalUrl?: string;
+  externalLabel?: string;
+  problem?: string;
+  statusLabel?: string;
+  status?: string;
+  visual?: string[];
+  note?: string;
+}
+export const categories: Category[] = ["Web App", "Infrastructure", "Game"];
+export const categoryLabels = {
+  id: {
+    "Web App": "Aplikasi web",
+    Infrastructure: "Infrastruktur",
+    Game: "Game",
+  },
+  en: {
+    "Web App": "Web apps",
+    Infrastructure: "Infrastructure",
+    Game: "Games",
+  },
+};
+// Facts and screenshots recovered from the original portfolio bundle, not invented case studies.
+const entries = [
+  {
+    slug: "kulineran",
+    title: "FnB Website",
+    stack: ["React JS", "JavaScript", "json-web-server", "CSS"],
+    image: "kulineran",
+    externalUrl: "https://github.com/d3sc/kulineran/",
+    externalLabel: "GitHub",
+    summary: [
+      "Menemukan rekomendasi makanan Indonesia, dengan pengelolaan konten melalui admin CRUD.",
+      "Indonesian food recommendations, with an admin CRUD workflow to manage the content.",
+    ],
+    contribution: [
+      "Membangun website rekomendasi FnB dan alur pengelolaan konten admin.",
+      "Built the FnB recommendation website and its admin content workflow.",
+    ],
+  },
+  {
+    slug: "school-website",
+    title: "School Website",
+    stack: ["HTML", "CSS", "Bootstrap 5"],
+    image: "school-website",
+    externalUrl: "https://schl.smkletris2pamulang.sch.id/index.html",
+    externalLabel: "Website",
+    summary: [
+      "Website bertema sekolah dengan teknologi sederhana, dipublikasikan di domain sekolah.",
+      "A school-themed website built with simple technology and published on a school domain.",
+    ],
+    contribution: [
+      "Mengembangkan antarmuka website sekolah dengan HTML, CSS, dan Bootstrap.",
+      "Developed the school website interface with HTML, CSS, and Bootstrap.",
+    ],
+  },
+  {
+    slug: "cashier-application",
+    title: "Cashier Application Demo",
+    stack: ["PHP", "Laravel", "Livewire", "MySQL", "Bootstrap 5"],
+    image: "cashier-application",
+    externalUrl: "https://github.com/d3sc/cashier-application-demo",
+    externalLabel: "GitHub",
+    summary: [
+      "Eksplorasi aplikasi kasir berbasis Laravel dengan penyimpanan data MySQL.",
+      "A Laravel cashier application exploration, backed by a MySQL database.",
+    ],
+    contribution: [
+      "Membuat demo aplikasi kasir. Fitur pada versi sumber belum lengkap.",
+      "Built a cashier application demo. The source version has incomplete features.",
+    ],
+  },
+  {
+    slug: "laravel-blog",
+    title: "Blog Website",
+    stack: ["Laravel", "Bootstrap 4"],
+    image: "laravel-blog",
+    externalUrl: "https://github.com/d3sc/laravel-blog",
+    externalLabel: "GitHub",
+    summary: [
+      "Ruang untuk menulis blog sendiri, dengan pengelolaan oleh admin.",
+      "A place for users to write their own blogs, with admin management.",
+    ],
+    contribution: [
+      "Membangun website blog untuk penulis dan admin menggunakan Laravel.",
+      "Built the Laravel blog website for authors and admins.",
+    ],
+  },
+  {
+    slug: "chat-app",
+    title: "Chat APP",
+    stack: ["React JS", "JavaScript", "Sass", "Firebase"],
+    image: "chat-app",
+    externalUrl: "https://github.com/d3sc/chat-app",
+    externalLabel: "GitHub",
+    summary: [
+      "Aplikasi chat sederhana untuk komunikasi privat dengan data kontak di Firebase.",
+      "A simple private chat application with contact data stored in Firebase.",
+    ],
+    contribution: [
+      "Mengembangkan antarmuka chat React dan penyimpanan data kontak Firebase.",
+      "Developed the React chat interface and Firebase contact data storage.",
+    ],
+  },
+  {
+    slug: "anime-scraping",
+    title: "Scraping Anime Website",
+    stack: ["React JS", "JavaScript", "Puppeteer", "Express"],
+    image: "anime-scraping",
+    externalUrl: "https://github.com/d3sc/anime-scraping/",
+    externalLabel: "GitHub",
+    summary: [
+      "Eksplorasi pengambilan data Otakudesu untuk daftar anime terbaru dan website streaming.",
+      "An exploration of scraping Otakudesu data for anime listings and a streaming website.",
+    ],
+    contribution: [
+      "Membuat pengambilan data dengan Puppeteer dan website berbasis React.",
+      "Built Puppeteer data scraping and a React-based website.",
+    ],
+  },
+  {
+    slug: "samurai-game",
+    title: "Samurai Game",
+    stack: ["Godot 3"],
+    externalUrl: "https://www.youtube.com/watch?v=9pyZO3N_ltE",
+    externalLabel: "YouTube",
+    summary: [
+      "Game samurai: menyerang, melompat, berlari, dan melempar shuriken untuk melawan musuh.",
+      "A samurai game: attack, jump, run, and throw shuriken to fight enemies.",
+    ],
+    contribution: [
+      "Membuat game bertema samurai sebagai eksplorasi awal pengembangan game di Godot 3.",
+      "Made a samurai-themed game as an early exploration of game development in Godot 3.",
+    ],
+  },
+];
+const make = (locale: Locale): Project[] =>
+  entries.map((p, i) => ({
+    ...p,
+    id: String(i + 1).padStart(2, "0"),
+    category: p.slug === "samurai-game" ? "Game" : "Web App",
+    summary: p.summary[locale === "id" ? 0 : 1],
+    contribution: p.contribution[locale === "id" ? 0 : 1],
+    image: p.image ? `/assets/projects/${p.image}.webp` : undefined,
+    note:
+      p.slug === "kulineran"
+        ? locale === "id"
+          ? "Tautan arsip: repository saat diperiksa tidak tersedia publik (404)."
+          : "Archive link: the repository is not publicly available at verification (404)."
+        : p.slug === "school-website"
+          ? locale === "id"
+            ? "Tautan arsip: domain demo tidak dapat diakses saat diperiksa."
+            : "Archive link: the demo domain could not be reached at verification."
+          : undefined,
+  }));
+export const archivedProjects = { id: make("id"), en: make("en") };
+export const projects = {
+  id: currentProjects("id"),
+  en: currentProjects("en"),
+};
+export const allProjects = {
+  id: [...projects.id, ...archivedProjects.id],
+  en: [...projects.en, ...archivedProjects.en],
+};
+export const email = "ikbar686@gmail.com";
+export const socialLinks = [
+  { label: "GitHub", href: "https://github.com/d3sc" },
+  { label: "Instagram", href: "https://www.instagram.com/ikrabni_09/" },
+  {
+    label: "LinkedIn",
+    href: "https://www.linkedin.com/in/ikbar-rabbani-b93096285/",
+  },
+  { label: "YouTube", href: "https://www.youtube.com/watch?v=9pyZO3N_ltE" },
+];
+export const achievements = [
+  {
+    title: "Basic Javascript Programming",
+    href: "https://www.dicoding.com/certificates/MEPJE400WX3V",
+  },
+  {
+    title: "Creating a backend app for beginners",
+    href: "https://www.dicoding.com/certificates/JLX1L4Y8NX72",
+  },
+  {
+    title: "Basic Python for beginners",
+    href: "https://www.dicoding.com/certificates/81P27JWGNZOY",
+  },
+];
+export const skills = [
+  {
+    title: { id: "Backend & Database", en: "Backend & Database" },
+    tools: "Laravel / PHP · Python · Bun / Elysia · PostgreSQL · MySQL",
+    projects: [
+      "vps-manager",
+      "lms-ujian-online",
+      "helpdesk-ticketing",
+      "trading-analysis-dashboard",
+    ],
+  },
+  {
+    title: { id: "Frontend", en: "Frontend" },
+    tools:
+      "JavaScript / TypeScript · Astro · React / Next.js · Blade · Tailwind CSS",
+    projects: ["vps-manager", "lms-ujian-online", "chat-app"],
+    note: {
+      id: "Astro pada VPS Manager; React pada Chat APP di arsip. Next.js termasuk toolkit saya; proyek unggulan yang memakainya belum dicantumkan.",
+      en: "Astro in VPS Manager; React in the archived Chat APP. Next.js is part of my toolkit; no featured project using it is listed yet.",
+    },
+  },
+  {
+    title: { id: "Infrastruktur", en: "Infrastructure" },
+    tools: "Linux · Docker Compose · Proxmox · VM · NAT / Firewall · Tailscale",
+    projects: ["proxmox-home-lab", "vps-manager"],
+  },
+  {
+    title: { id: "Otomasi & Integrasi", en: "Automation & Integrations" },
+    tools:
+      "Python · Scheduler · Telegram Bot API · HTTP API · Retry / Deduplikasi",
+    projects: [
+      "vps-manager",
+      "helpdesk-ticketing",
+      "trading-analysis-dashboard",
+    ],
+  },
+];
+export const copy = {
+  id: {
+    home: "Beranda",
+    work: "Proyek",
+    about: "Tentang",
+    contact: "Kontak",
+    skip: "Lewati ke konten",
+    nav: "Navigasi utama",
+    menu: "Menu",
+    language: "Ganti bahasa",
+    darkTheme: "Ganti ke tema gelap",
+    lightTheme: "Ganti ke tema terang",
+    cta: "Lihat Proyek",
+    contactCta: "Hubungi Saya",
+    intro:
+      "Saya membangun aplikasi web untuk kebutuhan operasional: layanan VPS, ujian online, dan ticketing. Fokus saya backend, otomasi, dan aplikasi di server Linux.",
+    role: "Full-Stack Developer · Linux & Self-Hosting",
+    select: "Pilih proyek",
+    selected: "Proyek pilihan",
+    details: "Lihat detail",
+    viewAll: "Jelajahi semua proyek",
+    back: "Kembali ke proyek",
+    all: "Semua",
+    filter: "Saring berdasarkan kategori",
+    count: "proyek",
+    contribution: "Yang saya kerjakan",
+    stack: "Teknologi",
+    source: "Screenshot dari portfolio asli",
+    noImage: "Catatan proyek · bukan screenshot",
+    aboutTitle: "Dari aplikasi,\nke server sendiri.",
+    aboutText:
+      "Saya Ikbar Rabbani Purwanto, seorang IT Programmer dan mahasiswa S1 Manajemen Informatika. Saya membangun aplikasi web untuk pengelolaan layanan VPS, ujian online, dan ticketing.",
+    experience: "Linux & Self-Hosting",
+    experienceText:
+      "Saya mengelola lab Proxmox pribadi untuk deployment, pemisahan jaringan VM, dan akses jarak jauh. Minat utama saya adalah backend, otomasi, dan pengelolaan aplikasi di server Linux.",
+    skills: "Perangkat kerja",
+    learning: "Catatan belajar",
+    contactTitle: "Punya ide?\nMari kita bicarakan.",
+    contactText:
+      "Untuk pertanyaan, kolaborasi, atau sekadar menyapa. Mulai dari satu email.",
+    send: "Tulis email",
+    copy: "Salin email",
+    copied: "Email tersalin",
+    copyFailed: "Pilih dan salin email secara manual.",
+    socialLabel: "Tautan sosial",
+    external: "tab baru",
+    notFoundTitle: "Halaman tidak ditemukan",
+    notFoundText: "Alamat ini tidak memiliki halaman portfolio.",
+    notFoundAction: "Kembali ke beranda",
+    archive: "Arsip proyek",
+    other: "Karya lainnya",
+    older: "Proyek terdahulu",
+    problem: "Masalah yang diselesaikan",
+    verification: "Status & batas verifikasi",
+    applied: "Dipakai pada",
+    projectIntro:
+      "Aplikasi operasional, backend, dan infrastruktur yang saya kelola sendiri.",
+    detailNote:
+      "Status merangkum bukti pengujian yang tercatat, bukan jaminan kondisi deployment saat ini. Pengujian mock tidak membuktikan pengiriman aktual.",
+    footer: "Belajar. Berkembang. Membuat.",
+    legacy:
+      "Entri ilustratif dari versi sebelumnya. Ini bukan proyek portfolio terverifikasi.",
+  },
+  en: {
+    home: "Home",
+    work: "Projects",
+    about: "About",
+    contact: "Contact",
+    skip: "Skip to content",
+    nav: "Primary navigation",
+    menu: "Menu",
+    language: "Switch language",
+    darkTheme: "Switch to dark theme",
+    lightTheme: "Switch to light theme",
+    cta: "View Projects",
+    contactCta: "Contact Me",
+    intro:
+      "I build web applications for everyday operations: VPS services, online exams, and ticketing. My focus is backend development, automation, and applications on Linux servers.",
+    role: "Full-Stack Developer · Linux & Self-Hosting",
+    select: "Choose a project",
+    selected: "Selected work",
+    details: "View details",
+    viewAll: "Explore all projects",
+    back: "Back to projects",
+    all: "All",
+    filter: "Filter by category",
+    count: "projects",
+    contribution: "What I built",
+    stack: "Technology",
+    source: "Screenshot from the original portfolio",
+    noImage: "Project notes · not a screenshot",
+    aboutTitle: "From applications,\nto my own servers.",
+    aboutText:
+      "I’m Ikbar Rabbani Purwanto, an IT Programmer and an undergraduate student in Information Management. I build web applications for VPS service management, online exams, and ticketing.",
+    experience: "Linux & Self-Hosting",
+    experienceText:
+      "I manage a personal Proxmox lab for deployment, VM network separation, and remote access. My main interests are backend development, automation, and running applications on Linux servers.",
+    skills: "My working toolkit",
+    learning: "Learning notes",
+    contactTitle: "Have an idea?\nLet’s talk it through.",
+    contactText:
+      "For a question, a collaboration, or just a hello. It starts with one email.",
+    send: "Write an email",
+    copy: "Copy email",
+    copied: "Email copied",
+    copyFailed: "Select and copy the email manually.",
+    socialLabel: "Social links",
+    external: "new tab",
+    notFoundTitle: "Page not found",
+    notFoundText: "This address has no portfolio page.",
+    notFoundAction: "Return home",
+    archive: "Project archive",
+    other: "Other work",
+    older: "Earlier projects",
+    problem: "The problem",
+    verification: "Status & verification limits",
+    applied: "Applied in",
+    projectIntro:
+      "Operational applications, backends, and infrastructure I manage myself.",
+    detailNote:
+      "Status summarizes recorded test evidence, not the current health of a deployment. Mock tests do not prove actual message delivery.",
+    footer: "Learn. Evolve. Make.",
+    legacy:
+      "An illustrative entry from an earlier version. This is not a verified portfolio project.",
+  },
+};

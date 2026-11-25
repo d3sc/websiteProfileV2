@@ -1,0 +1,31 @@
+2026-11-22T07:58:15.731Z pw:webserver HTTP GET: http://127.0.0.1:4173/
+2026-11-22T07:58:15.795Z pw:webserver Error while checking if http://127.0.0.1:4173/ is available: connect ECONNREFUSED 127.0.0.1:4173
+2026-11-22T07:58:15.797Z pw:webserver Starting WebServer process npx vite preview --host 127.0.0.1 --port 4173 --strictPort...
+2026-11-22T07:58:15.810Z pw:webserver Process started
+2026-11-22T07:58:15.810Z pw:webserver Waiting for availability...
+2026-11-22T07:58:15.811Z pw:webserver HTTP GET: http://127.0.0.1:4173/
+2026-11-22T07:58:15.818Z pw:webserver Error while checking if http://127.0.0.1:4173/ is available: connect ECONNREFUSED 127.0.0.1:4173
+2026-11-22T07:58:15.819Z pw:webserver Waiting 100ms
+2026-11-22T07:58:15.920Z pw:webserver HTTP GET: http://127.0.0.1:4173/
+2026-11-22T07:58:15.933Z pw:webserver Error while checking if http://127.0.0.1:4173/ is available: connect ECONNREFUSED 127.0.0.1:4173
+2026-11-22T07:58:15.933Z pw:webserver Waiting 250ms
+2026-11-22T07:58:16.184Z pw:webserver HTTP GET: http://127.0.0.1:4173/
+2026-11-22T07:58:16.188Z pw:webserver Error while checking if http://127.0.0.1:4173/ is available: connect ECONNREFUSED 127.0.0.1:4173
+2026-11-22T07:58:16.189Z pw:webserver Waiting 500ms
+2026-11-22T07:58:16.690Z pw:webserver HTTP GET: http://127.0.0.1:4173/
+2026-11-22T07:58:16.697Z pw:webserver Error while checking if http://127.0.0.1:4173/ is available: connect ECONNREFUSED 127.0.0.1:4173
+2026-11-22T07:58:16.697Z pw:webserver Waiting 1000ms
+[WebServer]   ➜  Local:   http://127.0.0.1:4173/
+2026-11-22T07:58:17.698Z pw:webserver HTTP GET: http://127.0.0.1:4173/
+2026-11-22T07:58:17.737Z pw:webserver HTTP Status: 200
+2026-11-22T07:58:17.746Z pw:webserver WebServer available
+
+Running 3 tests using 1 worker
+
+  ✓  1 [tablet] › e2e/portfolio.test.ts:76:1 › hero selection: click, keyboard, wrap, focus, links and no autoplay (4.4s)
+  ✓  2 [desktop] › e2e/portfolio.test.ts:76:1 › hero selection: click, keyboard, wrap, focus, links and no autoplay (4.8s)
+  ✓  3 [mobile] › e2e/portfolio.test.ts:76:1 › hero selection: click, keyboard, wrap, focus, links and no autoplay (5.6s)
+2026-11-22T07:58:41.329Z pw:webserver Terminating the WebServer
+2026-11-22T07:58:41.351Z pw:webserver Terminated the WebServer
+
+  3 passed (25.7s)

@@ -1,0 +1,17 @@
+{
+  "width": 320,
+  "scroll": 323,
+  "elements": [
+    {
+      "tag": "SPAN",
+      "class": "name-period",
+      "text": ".",
+      "left": 308.8125,
+      "right": 323.421875,
+      "width": 14.609375,
+      "fontSize": "72px",
+      "whiteSpace": "normal",
+      "overflowWrap": "normal"
+    }
+  ]
+}

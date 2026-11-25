@@ -1,0 +1,410 @@
+{
+  "config": {
+    "argv": [
+      "/home/tpang/.nvm/versions/node/v24.12.0/bin/node",
+      "/home/tpang/documents/websiteProfileV2/node_modules/@playwright/test/cli.js",
+      "test",
+      "--config=playwright.diagnostic.config.ts",
+      "--workers=1",
+      "--project=tablet",
+      "--project=desktop",
+      "--project=mobile",
+      "--grep=hero selection",
+      "--max-failures=1",
+      "--global-timeout=240000"
+    ],
+    "configFile": "/home/tpang/documents/websiteProfileV2/playwright.diagnostic.config.ts",
+    "rootDir": "/home/tpang/documents/websiteProfileV2/e2e",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": true,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 240000,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 1,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/home/tpang/documents/websiteProfileV2/docs/verification/playwright/final-hero/artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "tablet",
+        "name": "tablet",
+        "testDir": "/home/tpang/documents/websiteProfileV2/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 120000
+      },
+      {
+        "outputDir": "/home/tpang/documents/websiteProfileV2/docs/verification/playwright/final-hero/artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "desktop",
+        "name": "desktop",
+        "testDir": "/home/tpang/documents/websiteProfileV2/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 120000
+      },
+      {
+        "outputDir": "/home/tpang/documents/websiteProfileV2/docs/verification/playwright/final-hero/artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "mobile",
+        "name": "mobile",
+        "testDir": "/home/tpang/documents/websiteProfileV2/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 120000
+      },
+      {
+        "outputDir": "/home/tpang/documents/websiteProfileV2/docs/verification/playwright/final-hero/artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "narrow",
+        "name": "narrow",
+        "testDir": "/home/tpang/documents/websiteProfileV2/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 120000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "/home/tpang/documents/websiteProfileV2/docs/verification/playwright/final-hero/artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "tablet",
+        "testDir": "/home/tpang/documents/websiteProfileV2/e2e",
+        "snapshotDir": "/home/tpang/documents/websiteProfileV2/e2e",
+        "testIgnore": [],
+        "testMatch": "**/*.@(spec|test).?(c|m)[jt]s?(x)",
+        "timeout": 120000,
+        "use": {
+          "baseURL": "http://127.0.0.1:4173",
+          "browserName": "chromium",
+          "colorScheme": "light",
+          "trace": "on",
+          "screenshot": "on",
+          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.8078.4 Safari/537.36",
+          "viewport": {
+            "width": 768,
+            "height": 1024
+          },
+          "screen": {
+            "width": 1920,
+            "height": 1080
+          },
+          "deviceScaleFactor": 1,
+          "isMobile": false,
+          "hasTouch": false,
+          "defaultBrowserType": "chromium"
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": "tablet"
+      },
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "/home/tpang/documents/websiteProfileV2/docs/verification/playwright/final-hero/artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "desktop",
+        "testDir": "/home/tpang/documents/websiteProfileV2/e2e",
+        "snapshotDir": "/home/tpang/documents/websiteProfileV2/e2e",
+        "testIgnore": [],
+        "testMatch": "**/*.@(spec|test).?(c|m)[jt]s?(x)",
+        "timeout": 120000,
+        "use": {
+          "baseURL": "http://127.0.0.1:4173",
+          "browserName": "chromium",
+          "colorScheme": "light",
+          "trace": "on",
+          "screenshot": "on",
+          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.8078.4 Safari/537.36",
+          "viewport": {
+            "width": 1440,
+            "height": 1000
+          },
+          "screen": {
+            "width": 1920,
+            "height": 1080
+          },
+          "deviceScaleFactor": 1,
+          "isMobile": false,
+          "hasTouch": false,
+          "defaultBrowserType": "chromium"
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": "desktop"
+      },
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "/home/tpang/documents/websiteProfileV2/docs/verification/playwright/final-hero/artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "mobile",
+        "testDir": "/home/tpang/documents/websiteProfileV2/e2e",
+        "snapshotDir": "/home/tpang/documents/websiteProfileV2/e2e",
+        "testIgnore": [],
+        "testMatch": "**/*.@(spec|test).?(c|m)[jt]s?(x)",
+        "timeout": 120000,
+        "use": {
+          "baseURL": "http://127.0.0.1:4173",
+          "browserName": "chromium",
+          "colorScheme": "light",
+          "trace": "on",
+          "screenshot": "on",
+          "userAgent": "Mozilla/5.0 (iPhone; CPU iPhone OS 14_4 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/27.2 Mobile/15E148 Safari/604.1",
+          "viewport": {
+            "width": 360,
+            "height": 800
+          },
+          "screen": {
+            "width": 390,
+            "height": 844
+          },
+          "deviceScaleFactor": 3,
+          "isMobile": false,
+          "hasTouch": true,
+          "defaultBrowserType": "webkit"
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": "mobile"
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "docs/verification/playwright/final-hero/results.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.64.1",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "portfolio.test.ts",
+      "file": "portfolio.test.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "hero selection: click, keyboard, wrap, focus, links and no autoplay",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "tablet",
+              "projectName": "tablet",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4405,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-22T07:58:20.052Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/home/tpang/documents/websiteProfileV2/docs/verification/playwright/final-hero/artifacts/portfolio-hero-selection-c-1c533-focus-links-and-no-autoplay-tablet/test-finished-1.png"
+                    },
+                    {
+                      "name": "browser-diagnostics",
+                      "contentType": "application/json",
+                      "body": "ewogICJicm93c2VyIjogImNocm9taXVtIiwKICAidmVyc2lvbiI6ICIxNTYuMC44MDc4LjQiLAogICJ2aWV3cG9ydCI6IHsKICAgICJ3aWR0aCI6IDc2OCwKICAgICJoZWlnaHQiOiAxMDI0CiAgfSwKICAiaGFzVG91Y2giOiBmYWxzZSwKICAiaXNNb2JpbGUiOiBmYWxzZSwKICAidXJsIjogIltwb3J0Zm9saW9dLyMvcHJvamVjdHMvbG1zLXVqaWFuLW9ubGluZSIsCiAgImVycm9ycyI6IFtdCn0="
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/home/tpang/documents/websiteProfileV2/docs/verification/playwright/final-hero/artifacts/portfolio-hero-selection-c-1c533-focus-links-and-no-autoplay-tablet/trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "7f0db2630e7a384d876f-06862410cbc729b61293",
+          "file": "portfolio.test.ts",
+          "line": 76,
+          "column": 1
+        },
+        {
+          "title": "hero selection: click, keyboard, wrap, focus, links and no autoplay",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4816,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-22T07:58:27.489Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/home/tpang/documents/websiteProfileV2/docs/verification/playwright/final-hero/artifacts/portfolio-hero-selection-c-1c533-focus-links-and-no-autoplay-desktop/test-finished-1.png"
+                    },
+                    {
+                      "name": "browser-diagnostics",
+                      "contentType": "application/json",
+                      "body": "ewogICJicm93c2VyIjogImNocm9taXVtIiwKICAidmVyc2lvbiI6ICIxNTYuMC44MDc4LjQiLAogICJ2aWV3cG9ydCI6IHsKICAgICJ3aWR0aCI6IDE0NDAsCiAgICAiaGVpZ2h0IjogMTAwMAogIH0sCiAgImhhc1RvdWNoIjogZmFsc2UsCiAgImlzTW9iaWxlIjogZmFsc2UsCiAgInVybCI6ICJbcG9ydGZvbGlvXS8jL3Byb2plY3RzL2xtcy11amlhbi1vbmxpbmUiLAogICJlcnJvcnMiOiBbXQp9"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/home/tpang/documents/websiteProfileV2/docs/verification/playwright/final-hero/artifacts/portfolio-hero-selection-c-1c533-focus-links-and-no-autoplay-desktop/trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "7f0db2630e7a384d876f-d90909082e54a950b607",
+          "file": "portfolio.test.ts",
+          "line": 76,
+          "column": 1
+        },
+        {
+          "title": "hero selection: click, keyboard, wrap, focus, links and no autoplay",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 5648,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-22T07:58:34.688Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/home/tpang/documents/websiteProfileV2/docs/verification/playwright/final-hero/artifacts/portfolio-hero-selection-c-1c533-focus-links-and-no-autoplay-mobile/test-finished-1.png"
+                    },
+                    {
+                      "name": "browser-diagnostics",
+                      "contentType": "application/json",
+                      "body": "ewogICJicm93c2VyIjogImNocm9taXVtIiwKICAidmVyc2lvbiI6ICIxNTYuMC44MDc4LjQiLAogICJ2aWV3cG9ydCI6IHsKICAgICJ3aWR0aCI6IDM2MCwKICAgICJoZWlnaHQiOiA4MDAKICB9LAogICJoYXNUb3VjaCI6IHRydWUsCiAgImlzTW9iaWxlIjogZmFsc2UsCiAgInVybCI6ICJbcG9ydGZvbGlvXS8jL3Byb2plY3RzL2xtcy11amlhbi1vbmxpbmUiLAogICJlcnJvcnMiOiBbXQp9"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/home/tpang/documents/websiteProfileV2/docs/verification/playwright/final-hero/artifacts/portfolio-hero-selection-c-1c533-focus-links-and-no-autoplay-mobile/trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "7f0db2630e7a384d876f-fabc0fc3e48fd46fdd03",
+          "file": "portfolio.test.ts",
+          "line": 76,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-11-22T07:58:15.700Z",
+    "duration": 25652.806,
+    "expected": 3,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

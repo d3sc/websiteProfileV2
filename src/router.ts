@@ -15,7 +15,13 @@ export function readRoute(hash = window.location.hash): Route {
   }
   if (value === "/projects") return { kind: "projects" };
   const detail = value.match(/^\/projects\/([^/]+)$/);
-  if (detail) return { kind: "detail", slug: decodeURIComponent(detail[1]) };
+  if (detail) {
+    try {
+      return { kind: "detail", slug: decodeURIComponent(detail[1]) };
+    } catch {
+      return { kind: "notfound" };
+    }
+  }
   return { kind: "notfound" };
 }
 

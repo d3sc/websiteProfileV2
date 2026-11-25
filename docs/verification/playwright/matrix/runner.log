@@ -1,0 +1,95 @@
+2026-11-22T07:37:10.754Z pw:webserver HTTP GET: http://127.0.0.1:4173/
+2026-11-22T07:37:10.830Z pw:webserver Error while checking if http://127.0.0.1:4173/ is available: connect ECONNREFUSED 127.0.0.1:4173
+2026-11-22T07:37:10.832Z pw:webserver Starting WebServer process npx vite preview --host 127.0.0.1 --port 4173 --strictPort...
+2026-11-22T07:37:10.845Z pw:webserver Process started
+2026-11-22T07:37:10.846Z pw:webserver Waiting for availability...
+2026-11-22T07:37:10.846Z pw:webserver HTTP GET: http://127.0.0.1:4173/
+2026-11-22T07:37:10.854Z pw:webserver Error while checking if http://127.0.0.1:4173/ is available: connect ECONNREFUSED 127.0.0.1:4173
+2026-11-22T07:37:10.855Z pw:webserver Waiting 100ms
+2026-11-22T07:37:10.955Z pw:webserver HTTP GET: http://127.0.0.1:4173/
+2026-11-22T07:37:10.958Z pw:webserver Error while checking if http://127.0.0.1:4173/ is available: connect ECONNREFUSED 127.0.0.1:4173
+2026-11-22T07:37:10.959Z pw:webserver Waiting 250ms
+2026-11-22T07:37:11.209Z pw:webserver HTTP GET: http://127.0.0.1:4173/
+2026-11-22T07:37:11.213Z pw:webserver Error while checking if http://127.0.0.1:4173/ is available: connect ECONNREFUSED 127.0.0.1:4173
+2026-11-22T07:37:11.214Z pw:webserver Waiting 500ms
+2026-11-22T07:37:11.714Z pw:webserver HTTP GET: http://127.0.0.1:4173/
+2026-11-22T07:37:11.717Z pw:webserver Error while checking if http://127.0.0.1:4173/ is available: connect ECONNREFUSED 127.0.0.1:4173
+2026-11-22T07:37:11.717Z pw:webserver Waiting 1000ms
+2026-11-22T07:37:12.718Z pw:webserver HTTP GET: http://127.0.0.1:4173/
+2026-11-22T07:37:12.721Z pw:webserver Error while checking if http://127.0.0.1:4173/ is available: connect ECONNREFUSED 127.0.0.1:4173
+2026-11-22T07:37:12.722Z pw:webserver Waiting 1000ms
+[WebServer]   ➜  Local:   http://127.0.0.1:4173/
+2026-11-22T07:37:13.723Z pw:webserver HTTP GET: http://127.0.0.1:4173/
+2026-11-22T07:37:13.771Z pw:webserver HTTP Status: 200
+2026-11-22T07:37:13.777Z pw:webserver WebServer available
+
+Running 40 tests using 1 worker
+
+  ✓   1 [tablet] › e2e/portfolio.test.ts:76:1 › hero selection: click, keyboard, wrap, focus, links and no autoplay (7.3s)
+  ✓   2 [tablet] › e2e/portfolio.test.ts:113:5 › id/dark: home, archive, current details, accessibility (9.3s)
+  ✓   3 [tablet] › e2e/portfolio.test.ts:113:5 › id/light: home, archive, current details, accessibility (9.3s)
+  ✓   4 [tablet] › e2e/portfolio.test.ts:113:5 › en/dark: home, archive, current details, accessibility (9.1s)
+  ✓   5 [tablet] › e2e/portfolio.test.ts:113:5 › en/light: home, archive, current details, accessibility (21.8s)
+  ✓   6 [tablet] › e2e/portfolio.test.ts:168:1 › CTAs, mobile menu Escape, anchors, history, contact and clipboard (1.2m)
+  ✓   7 [tablet] › e2e/portfolio.test.ts:236:1 › preferences persist, reduced motion and observer/storage failure remain usable (5.1s)
+  ✓   8 [tablet] › e2e/portfolio.test.ts:270:1 › unknown, malformed and legacy sample URLs do not crash (1.6s)
+  ✓   9 [tablet] › e2e/portfolio.test.ts:287:1 › capture responsive production evidence (4.7s)
+  ✓  10 [tablet] › e2e/positioning.test.ts:4:1 › current positioning, linked skills, other work and honest verification copy (4.5s)
+  ✓  11 [desktop] › e2e/portfolio.test.ts:76:1 › hero selection: click, keyboard, wrap, focus, links and no autoplay (4.8s)
+  ✓  12 [desktop] › e2e/portfolio.test.ts:113:5 › id/dark: home, archive, current details, accessibility (9.8s)
+  ✓  13 [desktop] › e2e/portfolio.test.ts:113:5 › id/light: home, archive, current details, accessibility (9.9s)
+  ✓  14 [desktop] › e2e/portfolio.test.ts:113:5 › en/dark: home, archive, current details, accessibility (10.0s)
+  ✓  15 [desktop] › e2e/portfolio.test.ts:113:5 › en/light: home, archive, current details, accessibility (9.8s)
+  ✓  16 [desktop] › e2e/portfolio.test.ts:168:1 › CTAs, mobile menu Escape, anchors, history, contact and clipboard (4.9s)
+  ✓  17 [desktop] › e2e/portfolio.test.ts:236:1 › preferences persist, reduced motion and observer/storage failure remain usable (3.6s)
+  ✓  18 [desktop] › e2e/portfolio.test.ts:270:1 › unknown, malformed and legacy sample URLs do not crash (1.7s)
+  ✓  19 [desktop] › e2e/portfolio.test.ts:287:1 › capture responsive production evidence (6.1s)
+  ✓  20 [desktop] › e2e/positioning.test.ts:4:1 › current positioning, linked skills, other work and honest verification copy (5.6s)
+  ✓  21 [mobile] › e2e/portfolio.test.ts:76:1 › hero selection: click, keyboard, wrap, focus, links and no autoplay (6.9s)
+  ✓  22 [mobile] › e2e/portfolio.test.ts:113:5 › id/dark: home, archive, current details, accessibility (9.5s)
+  ✓  23 [mobile] › e2e/portfolio.test.ts:113:5 › id/light: home, archive, current details, accessibility (12.4s)
+  ✓  24 [mobile] › e2e/portfolio.test.ts:113:5 › en/dark: home, archive, current details, accessibility (13.1s)
+  ✓  25 [mobile] › e2e/portfolio.test.ts:113:5 › en/light: home, archive, current details, accessibility (12.9s)
+  ✓  26 [mobile] › e2e/portfolio.test.ts:168:1 › CTAs, mobile menu Escape, anchors, history, contact and clipboard (7.8s)
+  ✓  27 [mobile] › e2e/portfolio.test.ts:236:1 › preferences persist, reduced motion and observer/storage failure remain usable (5.7s)
+  ✓  28 [mobile] › e2e/portfolio.test.ts:270:1 › unknown, malformed and legacy sample URLs do not crash (2.6s)
+  ✘  29 [mobile] › e2e/portfolio.test.ts:287:1 › capture responsive production evidence (1.1m)
+Testing stopped early after 1 maximum allowed failures.
+2026-11-22T07:43:43.916Z pw:webserver Terminating the WebServer
+2026-11-22T07:43:43.939Z pw:webserver Terminated the WebServer
+
+
+  1) [mobile] › e2e/portfolio.test.ts:287:1 › capture responsive production evidence ───────────────
+
+    TimeoutError: page.screenshot: Timeout 60000ms exceeded.
+    Call log:
+      - taking page screenshot
+        - disabled all CSS animations
+      - waiting for fonts to load...
+      - fonts loaded
+
+
+      302 |     });
+      303 |     await noOverflow(page);
+    > 304 |     await page.screenshot({
+          |                ^
+      305 |       path: `docs/screenshots/field-notes/positioning/${name}-${info.project.name}.png`,
+      306 |       fullPage: true,
+      307 |       animations: "disabled",
+        at /home/tpang/documents/websiteProfileV2/e2e/portfolio.test.ts:304:16
+
+    Error Context: docs/verification/playwright/matrix/artifacts/portfolio-capture-responsive-production-evidence-mobile/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    docs/verification/playwright/matrix/artifacts/portfolio-capture-responsive-production-evidence-mobile/trace.zip
+    Usage:
+
+        npx playwright show-trace docs/verification/playwright/matrix/artifacts/portfolio-capture-responsive-production-evidence-mobile/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  1 failed
+    [mobile] › e2e/portfolio.test.ts:287:1 › capture responsive production evidence ────────────────
+  11 did not run
+  28 passed (6.6m)
+  1 error was not a part of any test, see above for details

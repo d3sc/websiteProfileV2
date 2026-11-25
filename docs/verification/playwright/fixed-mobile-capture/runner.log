@@ -1,0 +1,35 @@
+2026-11-22T07:48:42.448Z pw:webserver HTTP GET: http://127.0.0.1:4173/
+2026-11-22T07:48:42.517Z pw:webserver Error while checking if http://127.0.0.1:4173/ is available: connect ECONNREFUSED 127.0.0.1:4173
+2026-11-22T07:48:42.518Z pw:webserver Starting WebServer process npx vite preview --host 127.0.0.1 --port 4173 --strictPort...
+2026-11-22T07:48:42.536Z pw:webserver Process started
+2026-11-22T07:48:42.537Z pw:webserver Waiting for availability...
+2026-11-22T07:48:42.541Z pw:webserver HTTP GET: http://127.0.0.1:4173/
+2026-11-22T07:48:42.554Z pw:webserver Error while checking if http://127.0.0.1:4173/ is available: connect ECONNREFUSED 127.0.0.1:4173
+2026-11-22T07:48:42.558Z pw:webserver Waiting 100ms
+2026-11-22T07:48:42.664Z pw:webserver HTTP GET: http://127.0.0.1:4173/
+2026-11-22T07:48:42.669Z pw:webserver Error while checking if http://127.0.0.1:4173/ is available: connect ECONNREFUSED 127.0.0.1:4173
+2026-11-22T07:48:42.672Z pw:webserver Waiting 250ms
+2026-11-22T07:48:42.923Z pw:webserver HTTP GET: http://127.0.0.1:4173/
+2026-11-22T07:48:42.945Z pw:webserver Error while checking if http://127.0.0.1:4173/ is available: connect ECONNREFUSED 127.0.0.1:4173
+2026-11-22T07:48:42.958Z pw:webserver Waiting 500ms
+2026-11-22T07:48:43.459Z pw:webserver HTTP GET: http://127.0.0.1:4173/
+2026-11-22T07:48:43.486Z pw:webserver Error while checking if http://127.0.0.1:4173/ is available: connect ECONNREFUSED 127.0.0.1:4173
+2026-11-22T07:48:43.493Z pw:webserver Waiting 1000ms
+2026-11-22T07:48:44.496Z pw:webserver HTTP GET: http://127.0.0.1:4173/
+2026-11-22T07:48:44.499Z pw:webserver Error while checking if http://127.0.0.1:4173/ is available: connect ECONNREFUSED 127.0.0.1:4173
+2026-11-22T07:48:44.500Z pw:webserver Waiting 1000ms
+2026-11-22T07:48:45.501Z pw:webserver HTTP GET: http://127.0.0.1:4173/
+2026-11-22T07:48:45.505Z pw:webserver Error while checking if http://127.0.0.1:4173/ is available: connect ECONNREFUSED 127.0.0.1:4173
+2026-11-22T07:48:45.505Z pw:webserver Waiting 1000ms
+[WebServer]   ➜  Local:   http://127.0.0.1:4173/
+2026-11-22T07:48:46.506Z pw:webserver HTTP GET: http://127.0.0.1:4173/
+2026-11-22T07:48:46.579Z pw:webserver HTTP Status: 200
+2026-11-22T07:48:46.590Z pw:webserver WebServer available
+
+Running 1 test using 1 worker
+
+  ✓  1 [mobile] › e2e/portfolio.test.ts:287:1 › capture responsive production evidence (5.6s)
+2026-11-22T07:48:57.896Z pw:webserver Terminating the WebServer
+2026-11-22T07:48:57.918Z pw:webserver Terminated the WebServer
+
+  1 passed (15.5s)

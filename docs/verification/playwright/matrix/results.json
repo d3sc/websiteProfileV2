@@ -1,0 +1,2349 @@
+{
+  "config": {
+    "argv": [
+      "/home/tpang/.nvm/versions/node/v24.12.0/bin/node",
+      "/home/tpang/documents/websiteProfileV2/node_modules/@playwright/test/cli.js",
+      "test",
+      "--config=playwright.diagnostic.config.ts",
+      "--workers=1",
+      "--max-failures=1",
+      "--global-timeout=900000"
+    ],
+    "configFile": "/home/tpang/documents/websiteProfileV2/playwright.diagnostic.config.ts",
+    "rootDir": "/home/tpang/documents/websiteProfileV2/e2e",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": true,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 900000,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 1,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/home/tpang/documents/websiteProfileV2/docs/verification/playwright/matrix/artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "tablet",
+        "name": "tablet",
+        "testDir": "/home/tpang/documents/websiteProfileV2/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 120000
+      },
+      {
+        "outputDir": "/home/tpang/documents/websiteProfileV2/docs/verification/playwright/matrix/artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "desktop",
+        "name": "desktop",
+        "testDir": "/home/tpang/documents/websiteProfileV2/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 120000
+      },
+      {
+        "outputDir": "/home/tpang/documents/websiteProfileV2/docs/verification/playwright/matrix/artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "mobile",
+        "name": "mobile",
+        "testDir": "/home/tpang/documents/websiteProfileV2/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 120000
+      },
+      {
+        "outputDir": "/home/tpang/documents/websiteProfileV2/docs/verification/playwright/matrix/artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "narrow",
+        "name": "narrow",
+        "testDir": "/home/tpang/documents/websiteProfileV2/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 120000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "/home/tpang/documents/websiteProfileV2/docs/verification/playwright/matrix/artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "tablet",
+        "testDir": "/home/tpang/documents/websiteProfileV2/e2e",
+        "snapshotDir": "/home/tpang/documents/websiteProfileV2/e2e",
+        "testIgnore": [],
+        "testMatch": "**/*.@(spec|test).?(c|m)[jt]s?(x)",
+        "timeout": 120000,
+        "use": {
+          "baseURL": "http://127.0.0.1:4173",
+          "browserName": "chromium",
+          "colorScheme": "light",
+          "trace": "on",
+          "screenshot": "on",
+          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.8078.4 Safari/537.36",
+          "viewport": {
+            "width": 768,
+            "height": 1024
+          },
+          "screen": {
+            "width": 1920,
+            "height": 1080
+          },
+          "deviceScaleFactor": 1,
+          "isMobile": false,
+          "hasTouch": false,
+          "defaultBrowserType": "chromium"
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": "tablet"
+      },
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "/home/tpang/documents/websiteProfileV2/docs/verification/playwright/matrix/artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "desktop",
+        "testDir": "/home/tpang/documents/websiteProfileV2/e2e",
+        "snapshotDir": "/home/tpang/documents/websiteProfileV2/e2e",
+        "testIgnore": [],
+        "testMatch": "**/*.@(spec|test).?(c|m)[jt]s?(x)",
+        "timeout": 120000,
+        "use": {
+          "baseURL": "http://127.0.0.1:4173",
+          "browserName": "chromium",
+          "colorScheme": "light",
+          "trace": "on",
+          "screenshot": "on",
+          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.8078.4 Safari/537.36",
+          "viewport": {
+            "width": 1440,
+            "height": 1000
+          },
+          "screen": {
+            "width": 1920,
+            "height": 1080
+          },
+          "deviceScaleFactor": 1,
+          "isMobile": false,
+          "hasTouch": false,
+          "defaultBrowserType": "chromium"
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": "desktop"
+      },
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "/home/tpang/documents/websiteProfileV2/docs/verification/playwright/matrix/artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "mobile",
+        "testDir": "/home/tpang/documents/websiteProfileV2/e2e",
+        "snapshotDir": "/home/tpang/documents/websiteProfileV2/e2e",
+        "testIgnore": [],
+        "testMatch": "**/*.@(spec|test).?(c|m)[jt]s?(x)",
+        "timeout": 120000,
+        "use": {
+          "baseURL": "http://127.0.0.1:4173",
+          "browserName": "chromium",
+          "colorScheme": "light",
+          "trace": "on",
+          "screenshot": "on",
+          "userAgent": "Mozilla/5.0 (iPhone; CPU iPhone OS 14_4 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/27.2 Mobile/15E148 Safari/604.1",
+          "viewport": {
+            "width": 360,
+            "height": 800
+          },
+          "screen": {
+            "width": 390,
+            "height": 844
+          },
+          "deviceScaleFactor": 3,
+          "isMobile": false,
+          "hasTouch": true,
+          "defaultBrowserType": "webkit"
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": "mobile"
+      },
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "/home/tpang/documents/websiteProfileV2/docs/verification/playwright/matrix/artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "narrow",
+        "testDir": "/home/tpang/documents/websiteProfileV2/e2e",
+        "snapshotDir": "/home/tpang/documents/websiteProfileV2/e2e",
+        "testIgnore": [],
+        "testMatch": "**/*.@(spec|test).?(c|m)[jt]s?(x)",
+        "timeout": 120000,
+        "use": {
+          "baseURL": "http://127.0.0.1:4173",
+          "browserName": "chromium",
+          "colorScheme": "light",
+          "trace": "on",
+          "screenshot": "on",
+          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.8078.4 Safari/537.36",
+          "viewport": {
+            "width": 320,
+            "height": 844
+          },
+          "screen": {
+            "width": 1920,
+            "height": 1080
+          },
+          "deviceScaleFactor": 1,
+          "isMobile": false,
+          "hasTouch": false,
+          "defaultBrowserType": "chromium"
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": "narrow"
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "docs/verification/playwright/matrix/results.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.64.1",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "portfolio.test.ts",
+      "file": "portfolio.test.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "hero selection: click, keyboard, wrap, focus, links and no autoplay",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "tablet",
+              "projectName": "tablet",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 7290,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-22T07:37:16.732Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/home/tpang/documents/websiteProfileV2/docs/verification/playwright/matrix/artifacts/portfolio-hero-selection-c-1c533-focus-links-and-no-autoplay-tablet/test-finished-1.png"
+                    },
+                    {
+                      "name": "browser-diagnostics",
+                      "contentType": "application/json",
+                      "body": "ewogICJicm93c2VyIjogImNocm9taXVtIiwKICAidmVyc2lvbiI6ICIxNTYuMC44MDc4LjQiLAogICJ2aWV3cG9ydCI6IHsKICAgICJ3aWR0aCI6IDc2OCwKICAgICJoZWlnaHQiOiAxMDI0CiAgfSwKICAiaGFzVG91Y2giOiBmYWxzZSwKICAiaXNNb2JpbGUiOiBmYWxzZSwKICAidXJsIjogIltwb3J0Zm9saW9dLyMvcHJvamVjdHMvbG1zLXVqaWFuLW9ubGluZSIsCiAgImVycm9ycyI6IFtdCn0="
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/home/tpang/documents/websiteProfileV2/docs/verification/playwright/matrix/artifacts/portfolio-hero-selection-c-1c533-focus-links-and-no-autoplay-tablet/trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "7f0db2630e7a384d876f-06862410cbc729b61293",
+          "file": "portfolio.test.ts",
+          "line": 76,
+          "column": 1
+        },
+        {
+          "title": "id/dark: home, archive, current details, accessibility",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "tablet",
+              "projectName": "tablet",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 9344,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "WCAG audit: home",
+                      "duration": 1907
+                    },
+                    {
+                      "title": "WCAG audit: #/projects",
+                      "duration": 1719
+                    },
+                    {
+                      "title": "WCAG audit: #/projects/samurai-game",
+                      "duration": 715
+                    }
+                  ],
+                  "startTime": "2026-11-22T07:37:25.425Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "axe-home",
+                      "contentType": "application/json",
+                      "body": "ewogICJ1cmwiOiAiaHR0cDovLzEyNy4wLjAuMTo0MTczLyIsCiAgIm1vZGUiOiAic2FtZS1wYWdlIGF4ZS5ydW4iLAogICJmcmFtZUNvdW50IjogMSwKICAicGFzc2VkUnVsZXMiOiAyNCwKICAidmlvbGF0aW9ucyI6IFtdLAogICJpbmNvbXBsZXRlIjogW10KfQ=="
+                    },
+                    {
+                      "name": "axe-#/projects",
+                      "contentType": "application/json",
+                      "body": "ewogICJ1cmwiOiAiaHR0cDovLzEyNy4wLjAuMTo0MTczLyMvcHJvamVjdHMiLAogICJtb2RlIjogInNhbWUtcGFnZSBheGUucnVuIiwKICAiZnJhbWVDb3VudCI6IDEsCiAgInBhc3NlZFJ1bGVzIjogMjMsCiAgInZpb2xhdGlvbnMiOiBbXSwKICAiaW5jb21wbGV0ZSI6IFtdCn0="
+                    },
+                    {
+                      "name": "axe-#/projects/samurai-game",
+                      "contentType": "application/json",
+                      "body": "ewogICJ1cmwiOiAiaHR0cDovLzEyNy4wLjAuMTo0MTczLyMvcHJvamVjdHMvc2FtdXJhaS1nYW1lIiwKICAibW9kZSI6ICJzYW1lLXBhZ2UgYXhlLnJ1biIsCiAgImZyYW1lQ291bnQiOiAxLAogICJwYXNzZWRSdWxlcyI6IDE5LAogICJ2aW9sYXRpb25zIjogW10sCiAgImluY29tcGxldGUiOiBbXQp9"
+                    },
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/home/tpang/documents/websiteProfileV2/docs/verification/playwright/matrix/artifacts/portfolio-id-dark-home-archive-current-details-accessibility-tablet/test-finished-1.png"
+                    },
+                    {
+                      "name": "browser-diagnostics",
+                      "contentType": "application/json",
+                      "body": "ewogICJicm93c2VyIjogImNocm9taXVtIiwKICAidmVyc2lvbiI6ICIxNTYuMC44MDc4LjQiLAogICJ2aWV3cG9ydCI6IHsKICAgICJ3aWR0aCI6IDc2OCwKICAgICJoZWlnaHQiOiAxMDI0CiAgfSwKICAiaGFzVG91Y2giOiBmYWxzZSwKICAiaXNNb2JpbGUiOiBmYWxzZSwKICAidXJsIjogIltwb3J0Zm9saW9dLyMvcHJvamVjdHMvc2FtdXJhaS1nYW1lIiwKICAiZXJyb3JzIjogW10KfQ=="
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/home/tpang/documents/websiteProfileV2/docs/verification/playwright/matrix/artifacts/portfolio-id-dark-home-archive-current-details-accessibility-tablet/trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "7f0db2630e7a384d876f-0e6c363956bf13662a54",
+          "file": "portfolio.test.ts",
+          "line": 113,
+          "column": 5
+        },
+        {
+          "title": "id/light: home, archive, current details, accessibility",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "tablet",
+              "projectName": "tablet",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 9265,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "WCAG audit: home",
+                      "duration": 1857
+                    },
+                    {
+                      "title": "WCAG audit: #/projects",
+                      "duration": 1480
+                    },
+                    {
+                      "title": "WCAG audit: #/projects/samurai-game",
+                      "duration": 785
+                    }
+                  ],
+                  "startTime": "2026-11-22T07:37:35.755Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "axe-home",
+                      "contentType": "application/json",
+                      "body": "ewogICJ1cmwiOiAiaHR0cDovLzEyNy4wLjAuMTo0MTczLyIsCiAgIm1vZGUiOiAic2FtZS1wYWdlIGF4ZS5ydW4iLAogICJmcmFtZUNvdW50IjogMSwKICAicGFzc2VkUnVsZXMiOiAyNCwKICAidmlvbGF0aW9ucyI6IFtdLAogICJpbmNvbXBsZXRlIjogWwogICAgewogICAgICAiaWQiOiAiY29sb3ItY29udHJhc3QiLAogICAgICAiaW1wYWN0IjogInNlcmlvdXMiCiAgICB9CiAgXQp9"
+                    },
+                    {
+                      "name": "axe-#/projects",
+                      "contentType": "application/json",
+                      "body": "ewogICJ1cmwiOiAiaHR0cDovLzEyNy4wLjAuMTo0MTczLyMvcHJvamVjdHMiLAogICJtb2RlIjogInNhbWUtcGFnZSBheGUucnVuIiwKICAiZnJhbWVDb3VudCI6IDEsCiAgInBhc3NlZFJ1bGVzIjogMjMsCiAgInZpb2xhdGlvbnMiOiBbXSwKICAiaW5jb21wbGV0ZSI6IFsKICAgIHsKICAgICAgImlkIjogImNvbG9yLWNvbnRyYXN0IiwKICAgICAgImltcGFjdCI6ICJzZXJpb3VzIgogICAgfQogIF0KfQ=="
+                    },
+                    {
+                      "name": "axe-#/projects/samurai-game",
+                      "contentType": "application/json",
+                      "body": "ewogICJ1cmwiOiAiaHR0cDovLzEyNy4wLjAuMTo0MTczLyMvcHJvamVjdHMvc2FtdXJhaS1nYW1lIiwKICAibW9kZSI6ICJzYW1lLXBhZ2UgYXhlLnJ1biIsCiAgImZyYW1lQ291bnQiOiAxLAogICJwYXNzZWRSdWxlcyI6IDE5LAogICJ2aW9sYXRpb25zIjogW10sCiAgImluY29tcGxldGUiOiBbCiAgICB7CiAgICAgICJpZCI6ICJjb2xvci1jb250cmFzdCIsCiAgICAgICJpbXBhY3QiOiAic2VyaW91cyIKICAgIH0KICBdCn0="
+                    },
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/home/tpang/documents/websiteProfileV2/docs/verification/playwright/matrix/artifacts/portfolio-id-light-home-ar-108b3-rrent-details-accessibility-tablet/test-finished-1.png"
+                    },
+                    {
+                      "name": "browser-diagnostics",
+                      "contentType": "application/json",
+                      "body": "ewogICJicm93c2VyIjogImNocm9taXVtIiwKICAidmVyc2lvbiI6ICIxNTYuMC44MDc4LjQiLAogICJ2aWV3cG9ydCI6IHsKICAgICJ3aWR0aCI6IDc2OCwKICAgICJoZWlnaHQiOiAxMDI0CiAgfSwKICAiaGFzVG91Y2giOiBmYWxzZSwKICAiaXNNb2JpbGUiOiBmYWxzZSwKICAidXJsIjogIltwb3J0Zm9saW9dLyMvcHJvamVjdHMvc2FtdXJhaS1nYW1lIiwKICAiZXJyb3JzIjogW10KfQ=="
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/home/tpang/documents/websiteProfileV2/docs/verification/playwright/matrix/artifacts/portfolio-id-light-home-ar-108b3-rrent-details-accessibility-tablet/trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "7f0db2630e7a384d876f-1c58dcbc0e904046ac99",
+          "file": "portfolio.test.ts",
+          "line": 113,
+          "column": 5
+        },
+        {
+          "title": "en/dark: home, archive, current details, accessibility",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "tablet",
+              "projectName": "tablet",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 9086,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "WCAG audit: home",
+                      "duration": 2210
+                    },
+                    {
+                      "title": "WCAG audit: #/projects",
+                      "duration": 1308
+                    },
+                    {
+                      "title": "WCAG audit: #/projects/samurai-game",
+                      "duration": 926
+                    }
+                  ],
+                  "startTime": "2026-11-22T07:37:45.987Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "axe-home",
+                      "contentType": "application/json",
+                      "body": "ewogICJ1cmwiOiAiaHR0cDovLzEyNy4wLjAuMTo0MTczLyIsCiAgIm1vZGUiOiAic2FtZS1wYWdlIGF4ZS5ydW4iLAogICJmcmFtZUNvdW50IjogMSwKICAicGFzc2VkUnVsZXMiOiAyNCwKICAidmlvbGF0aW9ucyI6IFtdLAogICJpbmNvbXBsZXRlIjogW10KfQ=="
+                    },
+                    {
+                      "name": "axe-#/projects",
+                      "contentType": "application/json",
+                      "body": "ewogICJ1cmwiOiAiaHR0cDovLzEyNy4wLjAuMTo0MTczLyMvcHJvamVjdHMiLAogICJtb2RlIjogInNhbWUtcGFnZSBheGUucnVuIiwKICAiZnJhbWVDb3VudCI6IDEsCiAgInBhc3NlZFJ1bGVzIjogMjMsCiAgInZpb2xhdGlvbnMiOiBbXSwKICAiaW5jb21wbGV0ZSI6IFtdCn0="
+                    },
+                    {
+                      "name": "axe-#/projects/samurai-game",
+                      "contentType": "application/json",
+                      "body": "ewogICJ1cmwiOiAiaHR0cDovLzEyNy4wLjAuMTo0MTczLyMvcHJvamVjdHMvc2FtdXJhaS1nYW1lIiwKICAibW9kZSI6ICJzYW1lLXBhZ2UgYXhlLnJ1biIsCiAgImZyYW1lQ291bnQiOiAxLAogICJwYXNzZWRSdWxlcyI6IDE5LAogICJ2aW9sYXRpb25zIjogW10sCiAgImluY29tcGxldGUiOiBbXQp9"
+                    },
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/home/tpang/documents/websiteProfileV2/docs/verification/playwright/matrix/artifacts/portfolio-en-dark-home-archive-current-details-accessibility-tablet/test-finished-1.png"
+                    },
+                    {
+                      "name": "browser-diagnostics",
+                      "contentType": "application/json",
+                      "body": "ewogICJicm93c2VyIjogImNocm9taXVtIiwKICAidmVyc2lvbiI6ICIxNTYuMC44MDc4LjQiLAogICJ2aWV3cG9ydCI6IHsKICAgICJ3aWR0aCI6IDc2OCwKICAgICJoZWlnaHQiOiAxMDI0CiAgfSwKICAiaGFzVG91Y2giOiBmYWxzZSwKICAiaXNNb2JpbGUiOiBmYWxzZSwKICAidXJsIjogIltwb3J0Zm9saW9dLyMvcHJvamVjdHMvc2FtdXJhaS1nYW1lIiwKICAiZXJyb3JzIjogW10KfQ=="
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/home/tpang/documents/websiteProfileV2/docs/verification/playwright/matrix/artifacts/portfolio-en-dark-home-archive-current-details-accessibility-tablet/trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "7f0db2630e7a384d876f-f11c64b01cfeba34806b",
+          "file": "portfolio.test.ts",
+          "line": 113,
+          "column": 5
+        },
+        {
+          "title": "en/light: home, archive, current details, accessibility",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "tablet",
+              "projectName": "tablet",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 21808,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "WCAG audit: home",
+                      "duration": 1779
+                    },
+                    {
+                      "title": "WCAG audit: #/projects",
+                      "duration": 1364
+                    },
+                    {
+                      "title": "WCAG audit: #/projects/samurai-game",
+                      "duration": 12796
+                    }
+                  ],
+                  "startTime": "2026-11-22T07:37:56.605Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "axe-home",
+                      "contentType": "application/json",
+                      "body": "ewogICJ1cmwiOiAiaHR0cDovLzEyNy4wLjAuMTo0MTczLyIsCiAgIm1vZGUiOiAic2FtZS1wYWdlIGF4ZS5ydW4iLAogICJmcmFtZUNvdW50IjogMSwKICAicGFzc2VkUnVsZXMiOiAyNCwKICAidmlvbGF0aW9ucyI6IFtdLAogICJpbmNvbXBsZXRlIjogWwogICAgewogICAgICAiaWQiOiAiY29sb3ItY29udHJhc3QiLAogICAgICAiaW1wYWN0IjogInNlcmlvdXMiCiAgICB9CiAgXQp9"
+                    },
+                    {
+                      "name": "axe-#/projects",
+                      "contentType": "application/json",
+                      "body": "ewogICJ1cmwiOiAiaHR0cDovLzEyNy4wLjAuMTo0MTczLyMvcHJvamVjdHMiLAogICJtb2RlIjogInNhbWUtcGFnZSBheGUucnVuIiwKICAiZnJhbWVDb3VudCI6IDEsCiAgInBhc3NlZFJ1bGVzIjogMjMsCiAgInZpb2xhdGlvbnMiOiBbXSwKICAiaW5jb21wbGV0ZSI6IFsKICAgIHsKICAgICAgImlkIjogImNvbG9yLWNvbnRyYXN0IiwKICAgICAgImltcGFjdCI6ICJzZXJpb3VzIgogICAgfQogIF0KfQ=="
+                    },
+                    {
+                      "name": "axe-#/projects/samurai-game",
+                      "contentType": "application/json",
+                      "body": "ewogICJ1cmwiOiAiaHR0cDovLzEyNy4wLjAuMTo0MTczLyMvcHJvamVjdHMvc2FtdXJhaS1nYW1lIiwKICAibW9kZSI6ICJzYW1lLXBhZ2UgYXhlLnJ1biIsCiAgImZyYW1lQ291bnQiOiAxLAogICJwYXNzZWRSdWxlcyI6IDE5LAogICJ2aW9sYXRpb25zIjogW10sCiAgImluY29tcGxldGUiOiBbCiAgICB7CiAgICAgICJpZCI6ICJjb2xvci1jb250cmFzdCIsCiAgICAgICJpbXBhY3QiOiAic2VyaW91cyIKICAgIH0KICBdCn0="
+                    },
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/home/tpang/documents/websiteProfileV2/docs/verification/playwright/matrix/artifacts/portfolio-en-light-home-ar-13ee7-rrent-details-accessibility-tablet/test-finished-1.png"
+                    },
+                    {
+                      "name": "browser-diagnostics",
+                      "contentType": "application/json",
+                      "body": "ewogICJicm93c2VyIjogImNocm9taXVtIiwKICAidmVyc2lvbiI6ICIxNTYuMC44MDc4LjQiLAogICJ2aWV3cG9ydCI6IHsKICAgICJ3aWR0aCI6IDc2OCwKICAgICJoZWlnaHQiOiAxMDI0CiAgfSwKICAiaGFzVG91Y2giOiBmYWxzZSwKICAiaXNNb2JpbGUiOiBmYWxzZSwKICAidXJsIjogIltwb3J0Zm9saW9dLyMvcHJvamVjdHMvc2FtdXJhaS1nYW1lIiwKICAiZXJyb3JzIjogW10KfQ=="
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/home/tpang/documents/websiteProfileV2/docs/verification/playwright/matrix/artifacts/portfolio-en-light-home-ar-13ee7-rrent-details-accessibility-tablet/trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "7f0db2630e7a384d876f-516571cf45c18c024c34",
+          "file": "portfolio.test.ts",
+          "line": 113,
+          "column": 5
+        },
+        {
+          "title": "CTAs, mobile menu Escape, anchors, history, contact and clipboard",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "tablet",
+              "projectName": "tablet",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 72494,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-22T07:38:20.008Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/home/tpang/documents/websiteProfileV2/docs/verification/playwright/matrix/artifacts/portfolio-CTAs-mobile-menu-3f869-story-contact-and-clipboard-tablet/test-finished-1.png"
+                    },
+                    {
+                      "name": "browser-diagnostics",
+                      "contentType": "application/json",
+                      "body": "ewogICJicm93c2VyIjogImNocm9taXVtIiwKICAidmVyc2lvbiI6ICIxNTYuMC44MDc4LjQiLAogICJ2aWV3cG9ydCI6IHsKICAgICJ3aWR0aCI6IDc2OCwKICAgICJoZWlnaHQiOiAxMDI0CiAgfSwKICAiaGFzVG91Y2giOiBmYWxzZSwKICAiaXNNb2JpbGUiOiBmYWxzZSwKICAidXJsIjogIltwb3J0Zm9saW9dLyMvI2Fib3V0IiwKICAiZXJyb3JzIjogW10KfQ=="
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/home/tpang/documents/websiteProfileV2/docs/verification/playwright/matrix/artifacts/portfolio-CTAs-mobile-menu-3f869-story-contact-and-clipboard-tablet/trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "7f0db2630e7a384d876f-02e7a4241ad9f57257f4",
+          "file": "portfolio.test.ts",
+          "line": 168,
+          "column": 1
+        },
+        {
+          "title": "preferences persist, reduced motion and observer/storage failure remain usable",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "tablet",
+              "projectName": "tablet",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 5069,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-22T07:39:33.545Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/home/tpang/documents/websiteProfileV2/docs/verification/playwright/matrix/artifacts/portfolio-preferences-pers-582fe-orage-failure-remain-usable-tablet/test-finished-1.png"
+                    },
+                    {
+                      "name": "browser-diagnostics",
+                      "contentType": "application/json",
+                      "body": "ewogICJicm93c2VyIjogImNocm9taXVtIiwKICAidmVyc2lvbiI6ICIxNTYuMC44MDc4LjQiLAogICJ2aWV3cG9ydCI6IHsKICAgICJ3aWR0aCI6IDc2OCwKICAgICJoZWlnaHQiOiAxMDI0CiAgfSwKICAiaGFzVG91Y2giOiBmYWxzZSwKICAiaXNNb2JpbGUiOiBmYWxzZSwKICAidXJsIjogIltwb3J0Zm9saW9dLyIsCiAgImVycm9ycyI6IFtdCn0="
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/home/tpang/documents/websiteProfileV2/docs/verification/playwright/matrix/artifacts/portfolio-preferences-pers-582fe-orage-failure-remain-usable-tablet/trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "7f0db2630e7a384d876f-8d37d5ec2dacc6559e9c",
+          "file": "portfolio.test.ts",
+          "line": 236,
+          "column": 1
+        },
+        {
+          "title": "unknown, malformed and legacy sample URLs do not crash",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "tablet",
+              "projectName": "tablet",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1598,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-22T07:39:38.853Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/home/tpang/documents/websiteProfileV2/docs/verification/playwright/matrix/artifacts/portfolio-unknown-malforme-71263-cy-sample-URLs-do-not-crash-tablet/test-finished-1.png"
+                    },
+                    {
+                      "name": "browser-diagnostics",
+                      "contentType": "application/json",
+                      "body": "ewogICJicm93c2VyIjogImNocm9taXVtIiwKICAidmVyc2lvbiI6ICIxNTYuMC44MDc4LjQiLAogICJ2aWV3cG9ydCI6IHsKICAgICJ3aWR0aCI6IDc2OCwKICAgICJoZWlnaHQiOiAxMDI0CiAgfSwKICAiaGFzVG91Y2giOiBmYWxzZSwKICAiaXNNb2JpbGUiOiBmYWxzZSwKICAidXJsIjogIltwb3J0Zm9saW9dLyMvcHJvamVjdHMvc2FtcGxlLXRvb2xpbmciLAogICJlcnJvcnMiOiBbXQp9"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/home/tpang/documents/websiteProfileV2/docs/verification/playwright/matrix/artifacts/portfolio-unknown-malforme-71263-cy-sample-URLs-do-not-crash-tablet/trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "7f0db2630e7a384d876f-6bd7bce503db4465f2b2",
+          "file": "portfolio.test.ts",
+          "line": 270,
+          "column": 1
+        },
+        {
+          "title": "capture responsive production evidence",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "tablet",
+              "projectName": "tablet",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4676,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-22T07:39:40.585Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/home/tpang/documents/websiteProfileV2/docs/verification/playwright/matrix/artifacts/portfolio-capture-responsive-production-evidence-tablet/test-finished-1.png"
+                    },
+                    {
+                      "name": "browser-diagnostics",
+                      "contentType": "application/json",
+                      "body": "ewogICJicm93c2VyIjogImNocm9taXVtIiwKICAidmVyc2lvbiI6ICIxNTYuMC44MDc4LjQiLAogICJ2aWV3cG9ydCI6IHsKICAgICJ3aWR0aCI6IDc2OCwKICAgICJoZWlnaHQiOiAxMDI0CiAgfSwKICAiaGFzVG91Y2giOiBmYWxzZSwKICAiaXNNb2JpbGUiOiBmYWxzZSwKICAidXJsIjogIltwb3J0Zm9saW9dLyMvcHJvamVjdHMvdnBzLW1hbmFnZXIiLAogICJlcnJvcnMiOiBbXQp9"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/home/tpang/documents/websiteProfileV2/docs/verification/playwright/matrix/artifacts/portfolio-capture-responsive-production-evidence-tablet/trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "7f0db2630e7a384d876f-6614015d1733c37ac7d2",
+          "file": "portfolio.test.ts",
+          "line": 287,
+          "column": 1
+        },
+        {
+          "title": "hero selection: click, keyboard, wrap, focus, links and no autoplay",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4785,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-22T07:39:52.387Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/home/tpang/documents/websiteProfileV2/docs/verification/playwright/matrix/artifacts/portfolio-hero-selection-c-1c533-focus-links-and-no-autoplay-desktop/test-finished-1.png"
+                    },
+                    {
+                      "name": "browser-diagnostics",
+                      "contentType": "application/json",
+                      "body": "ewogICJicm93c2VyIjogImNocm9taXVtIiwKICAidmVyc2lvbiI6ICIxNTYuMC44MDc4LjQiLAogICJ2aWV3cG9ydCI6IHsKICAgICJ3aWR0aCI6IDE0NDAsCiAgICAiaGVpZ2h0IjogMTAwMAogIH0sCiAgImhhc1RvdWNoIjogZmFsc2UsCiAgImlzTW9iaWxlIjogZmFsc2UsCiAgInVybCI6ICJbcG9ydGZvbGlvXS8jL3Byb2plY3RzL2xtcy11amlhbi1vbmxpbmUiLAogICJlcnJvcnMiOiBbXQp9"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/home/tpang/documents/websiteProfileV2/docs/verification/playwright/matrix/artifacts/portfolio-hero-selection-c-1c533-focus-links-and-no-autoplay-desktop/trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "7f0db2630e7a384d876f-d90909082e54a950b607",
+          "file": "portfolio.test.ts",
+          "line": 76,
+          "column": 1
+        },
+        {
+          "title": "id/dark: home, archive, current details, accessibility",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 9823,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "WCAG audit: home",
+                      "duration": 2117
+                    },
+                    {
+                      "title": "WCAG audit: #/projects",
+                      "duration": 1761
+                    },
+                    {
+                      "title": "WCAG audit: #/projects/samurai-game",
+                      "duration": 795
+                    }
+                  ],
+                  "startTime": "2026-11-22T07:39:57.938Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "axe-home",
+                      "contentType": "application/json",
+                      "body": "ewogICJ1cmwiOiAiaHR0cDovLzEyNy4wLjAuMTo0MTczLyIsCiAgIm1vZGUiOiAic2FtZS1wYWdlIGF4ZS5ydW4iLAogICJmcmFtZUNvdW50IjogMSwKICAicGFzc2VkUnVsZXMiOiAyNCwKICAidmlvbGF0aW9ucyI6IFtdLAogICJpbmNvbXBsZXRlIjogWwogICAgewogICAgICAiaWQiOiAiY29sb3ItY29udHJhc3QiLAogICAgICAiaW1wYWN0IjogInNlcmlvdXMiCiAgICB9CiAgXQp9"
+                    },
+                    {
+                      "name": "axe-#/projects",
+                      "contentType": "application/json",
+                      "body": "ewogICJ1cmwiOiAiaHR0cDovLzEyNy4wLjAuMTo0MTczLyMvcHJvamVjdHMiLAogICJtb2RlIjogInNhbWUtcGFnZSBheGUucnVuIiwKICAiZnJhbWVDb3VudCI6IDEsCiAgInBhc3NlZFJ1bGVzIjogMjMsCiAgInZpb2xhdGlvbnMiOiBbXSwKICAiaW5jb21wbGV0ZSI6IFsKICAgIHsKICAgICAgImlkIjogImNvbG9yLWNvbnRyYXN0IiwKICAgICAgImltcGFjdCI6ICJzZXJpb3VzIgogICAgfQogIF0KfQ=="
+                    },
+                    {
+                      "name": "axe-#/projects/samurai-game",
+                      "contentType": "application/json",
+                      "body": "ewogICJ1cmwiOiAiaHR0cDovLzEyNy4wLjAuMTo0MTczLyMvcHJvamVjdHMvc2FtdXJhaS1nYW1lIiwKICAibW9kZSI6ICJzYW1lLXBhZ2UgYXhlLnJ1biIsCiAgImZyYW1lQ291bnQiOiAxLAogICJwYXNzZWRSdWxlcyI6IDE5LAogICJ2aW9sYXRpb25zIjogW10sCiAgImluY29tcGxldGUiOiBbCiAgICB7CiAgICAgICJpZCI6ICJjb2xvci1jb250cmFzdCIsCiAgICAgICJpbXBhY3QiOiAic2VyaW91cyIKICAgIH0KICBdCn0="
+                    },
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/home/tpang/documents/websiteProfileV2/docs/verification/playwright/matrix/artifacts/portfolio-id-dark-home-archive-current-details-accessibility-desktop/test-finished-1.png"
+                    },
+                    {
+                      "name": "browser-diagnostics",
+                      "contentType": "application/json",
+                      "body": "ewogICJicm93c2VyIjogImNocm9taXVtIiwKICAidmVyc2lvbiI6ICIxNTYuMC44MDc4LjQiLAogICJ2aWV3cG9ydCI6IHsKICAgICJ3aWR0aCI6IDE0NDAsCiAgICAiaGVpZ2h0IjogMTAwMAogIH0sCiAgImhhc1RvdWNoIjogZmFsc2UsCiAgImlzTW9iaWxlIjogZmFsc2UsCiAgInVybCI6ICJbcG9ydGZvbGlvXS8jL3Byb2plY3RzL3NhbXVyYWktZ2FtZSIsCiAgImVycm9ycyI6IFtdCn0="
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/home/tpang/documents/websiteProfileV2/docs/verification/playwright/matrix/artifacts/portfolio-id-dark-home-archive-current-details-accessibility-desktop/trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "7f0db2630e7a384d876f-018d90b34fd9af887869",
+          "file": "portfolio.test.ts",
+          "line": 113,
+          "column": 5
+        },
+        {
+          "title": "id/light: home, archive, current details, accessibility",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 9916,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "WCAG audit: home",
+                      "duration": 2067
+                    },
+                    {
+                      "title": "WCAG audit: #/projects",
+                      "duration": 1474
+                    },
+                    {
+                      "title": "WCAG audit: #/projects/samurai-game",
+                      "duration": 872
+                    }
+                  ],
+                  "startTime": "2026-11-22T07:40:08.758Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "axe-home",
+                      "contentType": "application/json",
+                      "body": "ewogICJ1cmwiOiAiaHR0cDovLzEyNy4wLjAuMTo0MTczLyIsCiAgIm1vZGUiOiAic2FtZS1wYWdlIGF4ZS5ydW4iLAogICJmcmFtZUNvdW50IjogMSwKICAicGFzc2VkUnVsZXMiOiAyNCwKICAidmlvbGF0aW9ucyI6IFtdLAogICJpbmNvbXBsZXRlIjogWwogICAgewogICAgICAiaWQiOiAiY29sb3ItY29udHJhc3QiLAogICAgICAiaW1wYWN0IjogInNlcmlvdXMiCiAgICB9CiAgXQp9"
+                    },
+                    {
+                      "name": "axe-#/projects",
+                      "contentType": "application/json",
+                      "body": "ewogICJ1cmwiOiAiaHR0cDovLzEyNy4wLjAuMTo0MTczLyMvcHJvamVjdHMiLAogICJtb2RlIjogInNhbWUtcGFnZSBheGUucnVuIiwKICAiZnJhbWVDb3VudCI6IDEsCiAgInBhc3NlZFJ1bGVzIjogMjMsCiAgInZpb2xhdGlvbnMiOiBbXSwKICAiaW5jb21wbGV0ZSI6IFsKICAgIHsKICAgICAgImlkIjogImNvbG9yLWNvbnRyYXN0IiwKICAgICAgImltcGFjdCI6ICJzZXJpb3VzIgogICAgfQogIF0KfQ=="
+                    },
+                    {
+                      "name": "axe-#/projects/samurai-game",
+                      "contentType": "application/json",
+                      "body": "ewogICJ1cmwiOiAiaHR0cDovLzEyNy4wLjAuMTo0MTczLyMvcHJvamVjdHMvc2FtdXJhaS1nYW1lIiwKICAibW9kZSI6ICJzYW1lLXBhZ2UgYXhlLnJ1biIsCiAgImZyYW1lQ291bnQiOiAxLAogICJwYXNzZWRSdWxlcyI6IDE5LAogICJ2aW9sYXRpb25zIjogW10sCiAgImluY29tcGxldGUiOiBbCiAgICB7CiAgICAgICJpZCI6ICJjb2xvci1jb250cmFzdCIsCiAgICAgICJpbXBhY3QiOiAic2VyaW91cyIKICAgIH0KICBdCn0="
+                    },
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/home/tpang/documents/websiteProfileV2/docs/verification/playwright/matrix/artifacts/portfolio-id-light-home-ar-108b3-rrent-details-accessibility-desktop/test-finished-1.png"
+                    },
+                    {
+                      "name": "browser-diagnostics",
+                      "contentType": "application/json",
+                      "body": "ewogICJicm93c2VyIjogImNocm9taXVtIiwKICAidmVyc2lvbiI6ICIxNTYuMC44MDc4LjQiLAogICJ2aWV3cG9ydCI6IHsKICAgICJ3aWR0aCI6IDE0NDAsCiAgICAiaGVpZ2h0IjogMTAwMAogIH0sCiAgImhhc1RvdWNoIjogZmFsc2UsCiAgImlzTW9iaWxlIjogZmFsc2UsCiAgInVybCI6ICJbcG9ydGZvbGlvXS8jL3Byb2plY3RzL3NhbXVyYWktZ2FtZSIsCiAgImVycm9ycyI6IFtdCn0="
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/home/tpang/documents/websiteProfileV2/docs/verification/playwright/matrix/artifacts/portfolio-id-light-home-ar-108b3-rrent-details-accessibility-desktop/trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "7f0db2630e7a384d876f-f8dc2656103057b9c1b2",
+          "file": "portfolio.test.ts",
+          "line": 113,
+          "column": 5
+        },
+        {
+          "title": "en/dark: home, archive, current details, accessibility",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 9986,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "WCAG audit: home",
+                      "duration": 1910
+                    },
+                    {
+                      "title": "WCAG audit: #/projects",
+                      "duration": 1464
+                    },
+                    {
+                      "title": "WCAG audit: #/projects/samurai-game",
+                      "duration": 758
+                    }
+                  ],
+                  "startTime": "2026-11-22T07:40:19.684Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "axe-home",
+                      "contentType": "application/json",
+                      "body": "ewogICJ1cmwiOiAiaHR0cDovLzEyNy4wLjAuMTo0MTczLyIsCiAgIm1vZGUiOiAic2FtZS1wYWdlIGF4ZS5ydW4iLAogICJmcmFtZUNvdW50IjogMSwKICAicGFzc2VkUnVsZXMiOiAyNCwKICAidmlvbGF0aW9ucyI6IFtdLAogICJpbmNvbXBsZXRlIjogWwogICAgewogICAgICAiaWQiOiAiY29sb3ItY29udHJhc3QiLAogICAgICAiaW1wYWN0IjogInNlcmlvdXMiCiAgICB9CiAgXQp9"
+                    },
+                    {
+                      "name": "axe-#/projects",
+                      "contentType": "application/json",
+                      "body": "ewogICJ1cmwiOiAiaHR0cDovLzEyNy4wLjAuMTo0MTczLyMvcHJvamVjdHMiLAogICJtb2RlIjogInNhbWUtcGFnZSBheGUucnVuIiwKICAiZnJhbWVDb3VudCI6IDEsCiAgInBhc3NlZFJ1bGVzIjogMjMsCiAgInZpb2xhdGlvbnMiOiBbXSwKICAiaW5jb21wbGV0ZSI6IFsKICAgIHsKICAgICAgImlkIjogImNvbG9yLWNvbnRyYXN0IiwKICAgICAgImltcGFjdCI6ICJzZXJpb3VzIgogICAgfQogIF0KfQ=="
+                    },
+                    {
+                      "name": "axe-#/projects/samurai-game",
+                      "contentType": "application/json",
+                      "body": "ewogICJ1cmwiOiAiaHR0cDovLzEyNy4wLjAuMTo0MTczLyMvcHJvamVjdHMvc2FtdXJhaS1nYW1lIiwKICAibW9kZSI6ICJzYW1lLXBhZ2UgYXhlLnJ1biIsCiAgImZyYW1lQ291bnQiOiAxLAogICJwYXNzZWRSdWxlcyI6IDE5LAogICJ2aW9sYXRpb25zIjogW10sCiAgImluY29tcGxldGUiOiBbCiAgICB7CiAgICAgICJpZCI6ICJjb2xvci1jb250cmFzdCIsCiAgICAgICJpbXBhY3QiOiAic2VyaW91cyIKICAgIH0KICBdCn0="
+                    },
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/home/tpang/documents/websiteProfileV2/docs/verification/playwright/matrix/artifacts/portfolio-en-dark-home-archive-current-details-accessibility-desktop/test-finished-1.png"
+                    },
+                    {
+                      "name": "browser-diagnostics",
+                      "contentType": "application/json",
+                      "body": "ewogICJicm93c2VyIjogImNocm9taXVtIiwKICAidmVyc2lvbiI6ICIxNTYuMC44MDc4LjQiLAogICJ2aWV3cG9ydCI6IHsKICAgICJ3aWR0aCI6IDE0NDAsCiAgICAiaGVpZ2h0IjogMTAwMAogIH0sCiAgImhhc1RvdWNoIjogZmFsc2UsCiAgImlzTW9iaWxlIjogZmFsc2UsCiAgInVybCI6ICJbcG9ydGZvbGlvXS8jL3Byb2plY3RzL3NhbXVyYWktZ2FtZSIsCiAgImVycm9ycyI6IFtdCn0="
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/home/tpang/documents/websiteProfileV2/docs/verification/playwright/matrix/artifacts/portfolio-en-dark-home-archive-current-details-accessibility-desktop/trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "7f0db2630e7a384d876f-2f7446531f7178522c32",
+          "file": "portfolio.test.ts",
+          "line": 113,
+          "column": 5
+        },
+        {
+          "title": "en/light: home, archive, current details, accessibility",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 9785,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "WCAG audit: home",
+                      "duration": 2396
+                    },
+                    {
+                      "title": "WCAG audit: #/projects",
+                      "duration": 1494
+                    },
+                    {
+                      "title": "WCAG audit: #/projects/samurai-game",
+                      "duration": 733
+                    }
+                  ],
+                  "startTime": "2026-11-22T07:40:30.863Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "axe-home",
+                      "contentType": "application/json",
+                      "body": "ewogICJ1cmwiOiAiaHR0cDovLzEyNy4wLjAuMTo0MTczLyIsCiAgIm1vZGUiOiAic2FtZS1wYWdlIGF4ZS5ydW4iLAogICJmcmFtZUNvdW50IjogMSwKICAicGFzc2VkUnVsZXMiOiAyNCwKICAidmlvbGF0aW9ucyI6IFtdLAogICJpbmNvbXBsZXRlIjogWwogICAgewogICAgICAiaWQiOiAiY29sb3ItY29udHJhc3QiLAogICAgICAiaW1wYWN0IjogInNlcmlvdXMiCiAgICB9CiAgXQp9"
+                    },
+                    {
+                      "name": "axe-#/projects",
+                      "contentType": "application/json",
+                      "body": "ewogICJ1cmwiOiAiaHR0cDovLzEyNy4wLjAuMTo0MTczLyMvcHJvamVjdHMiLAogICJtb2RlIjogInNhbWUtcGFnZSBheGUucnVuIiwKICAiZnJhbWVDb3VudCI6IDEsCiAgInBhc3NlZFJ1bGVzIjogMjMsCiAgInZpb2xhdGlvbnMiOiBbXSwKICAiaW5jb21wbGV0ZSI6IFsKICAgIHsKICAgICAgImlkIjogImNvbG9yLWNvbnRyYXN0IiwKICAgICAgImltcGFjdCI6ICJzZXJpb3VzIgogICAgfQogIF0KfQ=="
+                    },
+                    {
+                      "name": "axe-#/projects/samurai-game",
+                      "contentType": "application/json",
+                      "body": "ewogICJ1cmwiOiAiaHR0cDovLzEyNy4wLjAuMTo0MTczLyMvcHJvamVjdHMvc2FtdXJhaS1nYW1lIiwKICAibW9kZSI6ICJzYW1lLXBhZ2UgYXhlLnJ1biIsCiAgImZyYW1lQ291bnQiOiAxLAogICJwYXNzZWRSdWxlcyI6IDE5LAogICJ2aW9sYXRpb25zIjogW10sCiAgImluY29tcGxldGUiOiBbCiAgICB7CiAgICAgICJpZCI6ICJjb2xvci1jb250cmFzdCIsCiAgICAgICJpbXBhY3QiOiAic2VyaW91cyIKICAgIH0KICBdCn0="
+                    },
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/home/tpang/documents/websiteProfileV2/docs/verification/playwright/matrix/artifacts/portfolio-en-light-home-ar-13ee7-rrent-details-accessibility-desktop/test-finished-1.png"
+                    },
+                    {
+                      "name": "browser-diagnostics",
+                      "contentType": "application/json",
+                      "body": "ewogICJicm93c2VyIjogImNocm9taXVtIiwKICAidmVyc2lvbiI6ICIxNTYuMC44MDc4LjQiLAogICJ2aWV3cG9ydCI6IHsKICAgICJ3aWR0aCI6IDE0NDAsCiAgICAiaGVpZ2h0IjogMTAwMAogIH0sCiAgImhhc1RvdWNoIjogZmFsc2UsCiAgImlzTW9iaWxlIjogZmFsc2UsCiAgInVybCI6ICJbcG9ydGZvbGlvXS8jL3Byb2plY3RzL3NhbXVyYWktZ2FtZSIsCiAgImVycm9ycyI6IFtdCn0="
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/home/tpang/documents/websiteProfileV2/docs/verification/playwright/matrix/artifacts/portfolio-en-light-home-ar-13ee7-rrent-details-accessibility-desktop/trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "7f0db2630e7a384d876f-3796f3e7867d39769b4e",
+          "file": "portfolio.test.ts",
+          "line": 113,
+          "column": 5
+        },
+        {
+          "title": "CTAs, mobile menu Escape, anchors, history, contact and clipboard",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4911,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-22T07:40:41.829Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/home/tpang/documents/websiteProfileV2/docs/verification/playwright/matrix/artifacts/portfolio-CTAs-mobile-menu-3f869-story-contact-and-clipboard-desktop/test-finished-1.png"
+                    },
+                    {
+                      "name": "browser-diagnostics",
+                      "contentType": "application/json",
+                      "body": "ewogICJicm93c2VyIjogImNocm9taXVtIiwKICAidmVyc2lvbiI6ICIxNTYuMC44MDc4LjQiLAogICJ2aWV3cG9ydCI6IHsKICAgICJ3aWR0aCI6IDE0NDAsCiAgICAiaGVpZ2h0IjogMTAwMAogIH0sCiAgImhhc1RvdWNoIjogZmFsc2UsCiAgImlzTW9iaWxlIjogZmFsc2UsCiAgInVybCI6ICJbcG9ydGZvbGlvXS8jLyNhYm91dCIsCiAgImVycm9ycyI6IFtdCn0="
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/home/tpang/documents/websiteProfileV2/docs/verification/playwright/matrix/artifacts/portfolio-CTAs-mobile-menu-3f869-story-contact-and-clipboard-desktop/trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "7f0db2630e7a384d876f-2ba2623f647db29ca677",
+          "file": "portfolio.test.ts",
+          "line": 168,
+          "column": 1
+        },
+        {
+          "title": "preferences persist, reduced motion and observer/storage failure remain usable",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3625,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-22T07:40:47.116Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/home/tpang/documents/websiteProfileV2/docs/verification/playwright/matrix/artifacts/portfolio-preferences-pers-582fe-orage-failure-remain-usable-desktop/test-finished-1.png"
+                    },
+                    {
+                      "name": "browser-diagnostics",
+                      "contentType": "application/json",
+                      "body": "ewogICJicm93c2VyIjogImNocm9taXVtIiwKICAidmVyc2lvbiI6ICIxNTYuMC44MDc4LjQiLAogICJ2aWV3cG9ydCI6IHsKICAgICJ3aWR0aCI6IDE0NDAsCiAgICAiaGVpZ2h0IjogMTAwMAogIH0sCiAgImhhc1RvdWNoIjogZmFsc2UsCiAgImlzTW9iaWxlIjogZmFsc2UsCiAgInVybCI6ICJbcG9ydGZvbGlvXS8iLAogICJlcnJvcnMiOiBbXQp9"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/home/tpang/documents/websiteProfileV2/docs/verification/playwright/matrix/artifacts/portfolio-preferences-pers-582fe-orage-failure-remain-usable-desktop/trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "7f0db2630e7a384d876f-6473ac20ea5b6d9c8a4a",
+          "file": "portfolio.test.ts",
+          "line": 236,
+          "column": 1
+        },
+        {
+          "title": "unknown, malformed and legacy sample URLs do not crash",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1675,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-22T07:40:50.933Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/home/tpang/documents/websiteProfileV2/docs/verification/playwright/matrix/artifacts/portfolio-unknown-malforme-71263-cy-sample-URLs-do-not-crash-desktop/test-finished-1.png"
+                    },
+                    {
+                      "name": "browser-diagnostics",
+                      "contentType": "application/json",
+                      "body": "ewogICJicm93c2VyIjogImNocm9taXVtIiwKICAidmVyc2lvbiI6ICIxNTYuMC44MDc4LjQiLAogICJ2aWV3cG9ydCI6IHsKICAgICJ3aWR0aCI6IDE0NDAsCiAgICAiaGVpZ2h0IjogMTAwMAogIH0sCiAgImhhc1RvdWNoIjogZmFsc2UsCiAgImlzTW9iaWxlIjogZmFsc2UsCiAgInVybCI6ICJbcG9ydGZvbGlvXS8jL3Byb2plY3RzL3NhbXBsZS10b29saW5nIiwKICAiZXJyb3JzIjogW10KfQ=="
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/home/tpang/documents/websiteProfileV2/docs/verification/playwright/matrix/artifacts/portfolio-unknown-malforme-71263-cy-sample-URLs-do-not-crash-desktop/trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "7f0db2630e7a384d876f-3e63e23ae90977c1ad2f",
+          "file": "portfolio.test.ts",
+          "line": 270,
+          "column": 1
+        },
+        {
+          "title": "capture responsive production evidence",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 6110,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-22T07:40:52.742Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/home/tpang/documents/websiteProfileV2/docs/verification/playwright/matrix/artifacts/portfolio-capture-responsive-production-evidence-desktop/test-finished-1.png"
+                    },
+                    {
+                      "name": "browser-diagnostics",
+                      "contentType": "application/json",
+                      "body": "ewogICJicm93c2VyIjogImNocm9taXVtIiwKICAidmVyc2lvbiI6ICIxNTYuMC44MDc4LjQiLAogICJ2aWV3cG9ydCI6IHsKICAgICJ3aWR0aCI6IDE0NDAsCiAgICAiaGVpZ2h0IjogMTAwMAogIH0sCiAgImhhc1RvdWNoIjogZmFsc2UsCiAgImlzTW9iaWxlIjogZmFsc2UsCiAgInVybCI6ICJbcG9ydGZvbGlvXS8jL3Byb2plY3RzL3Zwcy1tYW5hZ2VyIiwKICAiZXJyb3JzIjogW10KfQ=="
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/home/tpang/documents/websiteProfileV2/docs/verification/playwright/matrix/artifacts/portfolio-capture-responsive-production-evidence-desktop/trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "7f0db2630e7a384d876f-c842379a6c70d85d6b58",
+          "file": "portfolio.test.ts",
+          "line": 287,
+          "column": 1
+        },
+        {
+          "title": "hero selection: click, keyboard, wrap, focus, links and no autoplay",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 6945,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-22T07:41:07.214Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/home/tpang/documents/websiteProfileV2/docs/verification/playwright/matrix/artifacts/portfolio-hero-selection-c-1c533-focus-links-and-no-autoplay-mobile/test-finished-1.png"
+                    },
+                    {
+                      "name": "browser-diagnostics",
+                      "contentType": "application/json",
+                      "body": "ewogICJicm93c2VyIjogImNocm9taXVtIiwKICAidmVyc2lvbiI6ICIxNTYuMC44MDc4LjQiLAogICJ2aWV3cG9ydCI6IHsKICAgICJ3aWR0aCI6IDM2MCwKICAgICJoZWlnaHQiOiA4MDAKICB9LAogICJoYXNUb3VjaCI6IHRydWUsCiAgImlzTW9iaWxlIjogZmFsc2UsCiAgInVybCI6ICJbcG9ydGZvbGlvXS8jL3Byb2plY3RzL2xtcy11amlhbi1vbmxpbmUiLAogICJlcnJvcnMiOiBbXQp9"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/home/tpang/documents/websiteProfileV2/docs/verification/playwright/matrix/artifacts/portfolio-hero-selection-c-1c533-focus-links-and-no-autoplay-mobile/trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "7f0db2630e7a384d876f-fabc0fc3e48fd46fdd03",
+          "file": "portfolio.test.ts",
+          "line": 76,
+          "column": 1
+        },
+        {
+          "title": "id/dark: home, archive, current details, accessibility",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 9489,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "WCAG audit: home",
+                      "duration": 1803
+                    },
+                    {
+                      "title": "WCAG audit: #/projects",
+                      "duration": 1373
+                    },
+                    {
+                      "title": "WCAG audit: #/projects/samurai-game",
+                      "duration": 779
+                    }
+                  ],
+                  "startTime": "2026-11-22T07:41:15.137Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "axe-home",
+                      "contentType": "application/json",
+                      "body": "ewogICJ1cmwiOiAiaHR0cDovLzEyNy4wLjAuMTo0MTczLyIsCiAgIm1vZGUiOiAic2FtZS1wYWdlIGF4ZS5ydW4iLAogICJmcmFtZUNvdW50IjogMSwKICAicGFzc2VkUnVsZXMiOiAyNCwKICAidmlvbGF0aW9ucyI6IFtdLAogICJpbmNvbXBsZXRlIjogW10KfQ=="
+                    },
+                    {
+                      "name": "axe-#/projects",
+                      "contentType": "application/json",
+                      "body": "ewogICJ1cmwiOiAiaHR0cDovLzEyNy4wLjAuMTo0MTczLyMvcHJvamVjdHMiLAogICJtb2RlIjogInNhbWUtcGFnZSBheGUucnVuIiwKICAiZnJhbWVDb3VudCI6IDEsCiAgInBhc3NlZFJ1bGVzIjogMjMsCiAgInZpb2xhdGlvbnMiOiBbXSwKICAiaW5jb21wbGV0ZSI6IFtdCn0="
+                    },
+                    {
+                      "name": "axe-#/projects/samurai-game",
+                      "contentType": "application/json",
+                      "body": "ewogICJ1cmwiOiAiaHR0cDovLzEyNy4wLjAuMTo0MTczLyMvcHJvamVjdHMvc2FtdXJhaS1nYW1lIiwKICAibW9kZSI6ICJzYW1lLXBhZ2UgYXhlLnJ1biIsCiAgImZyYW1lQ291bnQiOiAxLAogICJwYXNzZWRSdWxlcyI6IDE5LAogICJ2aW9sYXRpb25zIjogW10sCiAgImluY29tcGxldGUiOiBbXQp9"
+                    },
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/home/tpang/documents/websiteProfileV2/docs/verification/playwright/matrix/artifacts/portfolio-id-dark-home-archive-current-details-accessibility-mobile/test-finished-1.png"
+                    },
+                    {
+                      "name": "browser-diagnostics",
+                      "contentType": "application/json",
+                      "body": "ewogICJicm93c2VyIjogImNocm9taXVtIiwKICAidmVyc2lvbiI6ICIxNTYuMC44MDc4LjQiLAogICJ2aWV3cG9ydCI6IHsKICAgICJ3aWR0aCI6IDM2MCwKICAgICJoZWlnaHQiOiA4MDAKICB9LAogICJoYXNUb3VjaCI6IHRydWUsCiAgImlzTW9iaWxlIjogZmFsc2UsCiAgInVybCI6ICJbcG9ydGZvbGlvXS8jL3Byb2plY3RzL3NhbXVyYWktZ2FtZSIsCiAgImVycm9ycyI6IFtdCn0="
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/home/tpang/documents/websiteProfileV2/docs/verification/playwright/matrix/artifacts/portfolio-id-dark-home-archive-current-details-accessibility-mobile/trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "7f0db2630e7a384d876f-851c196736ad577fc90d",
+          "file": "portfolio.test.ts",
+          "line": 113,
+          "column": 5
+        },
+        {
+          "title": "id/light: home, archive, current details, accessibility",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 12351,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "WCAG audit: home",
+                      "duration": 2526
+                    },
+                    {
+                      "title": "WCAG audit: #/projects",
+                      "duration": 1944
+                    },
+                    {
+                      "title": "WCAG audit: #/projects/samurai-game",
+                      "duration": 1090
+                    }
+                  ],
+                  "startTime": "2026-11-22T07:41:25.978Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "axe-home",
+                      "contentType": "application/json",
+                      "body": "ewogICJ1cmwiOiAiaHR0cDovLzEyNy4wLjAuMTo0MTczLyIsCiAgIm1vZGUiOiAic2FtZS1wYWdlIGF4ZS5ydW4iLAogICJmcmFtZUNvdW50IjogMSwKICAicGFzc2VkUnVsZXMiOiAyNCwKICAidmlvbGF0aW9ucyI6IFtdLAogICJpbmNvbXBsZXRlIjogWwogICAgewogICAgICAiaWQiOiAiY29sb3ItY29udHJhc3QiLAogICAgICAiaW1wYWN0IjogInNlcmlvdXMiCiAgICB9CiAgXQp9"
+                    },
+                    {
+                      "name": "axe-#/projects",
+                      "contentType": "application/json",
+                      "body": "ewogICJ1cmwiOiAiaHR0cDovLzEyNy4wLjAuMTo0MTczLyMvcHJvamVjdHMiLAogICJtb2RlIjogInNhbWUtcGFnZSBheGUucnVuIiwKICAiZnJhbWVDb3VudCI6IDEsCiAgInBhc3NlZFJ1bGVzIjogMjMsCiAgInZpb2xhdGlvbnMiOiBbXSwKICAiaW5jb21wbGV0ZSI6IFsKICAgIHsKICAgICAgImlkIjogImNvbG9yLWNvbnRyYXN0IiwKICAgICAgImltcGFjdCI6ICJzZXJpb3VzIgogICAgfQogIF0KfQ=="
+                    },
+                    {
+                      "name": "axe-#/projects/samurai-game",
+                      "contentType": "application/json",
+                      "body": "ewogICJ1cmwiOiAiaHR0cDovLzEyNy4wLjAuMTo0MTczLyMvcHJvamVjdHMvc2FtdXJhaS1nYW1lIiwKICAibW9kZSI6ICJzYW1lLXBhZ2UgYXhlLnJ1biIsCiAgImZyYW1lQ291bnQiOiAxLAogICJwYXNzZWRSdWxlcyI6IDE5LAogICJ2aW9sYXRpb25zIjogW10sCiAgImluY29tcGxldGUiOiBbCiAgICB7CiAgICAgICJpZCI6ICJjb2xvci1jb250cmFzdCIsCiAgICAgICJpbXBhY3QiOiAic2VyaW91cyIKICAgIH0KICBdCn0="
+                    },
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/home/tpang/documents/websiteProfileV2/docs/verification/playwright/matrix/artifacts/portfolio-id-light-home-ar-108b3-rrent-details-accessibility-mobile/test-finished-1.png"
+                    },
+                    {
+                      "name": "browser-diagnostics",
+                      "contentType": "application/json",
+                      "body": "ewogICJicm93c2VyIjogImNocm9taXVtIiwKICAidmVyc2lvbiI6ICIxNTYuMC44MDc4LjQiLAogICJ2aWV3cG9ydCI6IHsKICAgICJ3aWR0aCI6IDM2MCwKICAgICJoZWlnaHQiOiA4MDAKICB9LAogICJoYXNUb3VjaCI6IHRydWUsCiAgImlzTW9iaWxlIjogZmFsc2UsCiAgInVybCI6ICJbcG9ydGZvbGlvXS8jL3Byb2plY3RzL3NhbXVyYWktZ2FtZSIsCiAgImVycm9ycyI6IFtdCn0="
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/home/tpang/documents/websiteProfileV2/docs/verification/playwright/matrix/artifacts/portfolio-id-light-home-ar-108b3-rrent-details-accessibility-mobile/trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "7f0db2630e7a384d876f-b24a33a8203dcbf0db19",
+          "file": "portfolio.test.ts",
+          "line": 113,
+          "column": 5
+        },
+        {
+          "title": "en/dark: home, archive, current details, accessibility",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 13084,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "WCAG audit: home",
+                      "duration": 2390
+                    },
+                    {
+                      "title": "WCAG audit: #/projects",
+                      "duration": 1788
+                    },
+                    {
+                      "title": "WCAG audit: #/projects/samurai-game",
+                      "duration": 835
+                    }
+                  ],
+                  "startTime": "2026-11-22T07:41:39.958Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "axe-home",
+                      "contentType": "application/json",
+                      "body": "ewogICJ1cmwiOiAiaHR0cDovLzEyNy4wLjAuMTo0MTczLyIsCiAgIm1vZGUiOiAic2FtZS1wYWdlIGF4ZS5ydW4iLAogICJmcmFtZUNvdW50IjogMSwKICAicGFzc2VkUnVsZXMiOiAyNCwKICAidmlvbGF0aW9ucyI6IFtdLAogICJpbmNvbXBsZXRlIjogW10KfQ=="
+                    },
+                    {
+                      "name": "axe-#/projects",
+                      "contentType": "application/json",
+                      "body": "ewogICJ1cmwiOiAiaHR0cDovLzEyNy4wLjAuMTo0MTczLyMvcHJvamVjdHMiLAogICJtb2RlIjogInNhbWUtcGFnZSBheGUucnVuIiwKICAiZnJhbWVDb3VudCI6IDEsCiAgInBhc3NlZFJ1bGVzIjogMjMsCiAgInZpb2xhdGlvbnMiOiBbXSwKICAiaW5jb21wbGV0ZSI6IFtdCn0="
+                    },
+                    {
+                      "name": "axe-#/projects/samurai-game",
+                      "contentType": "application/json",
+                      "body": "ewogICJ1cmwiOiAiaHR0cDovLzEyNy4wLjAuMTo0MTczLyMvcHJvamVjdHMvc2FtdXJhaS1nYW1lIiwKICAibW9kZSI6ICJzYW1lLXBhZ2UgYXhlLnJ1biIsCiAgImZyYW1lQ291bnQiOiAxLAogICJwYXNzZWRSdWxlcyI6IDE5LAogICJ2aW9sYXRpb25zIjogW10sCiAgImluY29tcGxldGUiOiBbXQp9"
+                    },
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/home/tpang/documents/websiteProfileV2/docs/verification/playwright/matrix/artifacts/portfolio-en-dark-home-archive-current-details-accessibility-mobile/test-finished-1.png"
+                    },
+                    {
+                      "name": "browser-diagnostics",
+                      "contentType": "application/json",
+                      "body": "ewogICJicm93c2VyIjogImNocm9taXVtIiwKICAidmVyc2lvbiI6ICIxNTYuMC44MDc4LjQiLAogICJ2aWV3cG9ydCI6IHsKICAgICJ3aWR0aCI6IDM2MCwKICAgICJoZWlnaHQiOiA4MDAKICB9LAogICJoYXNUb3VjaCI6IHRydWUsCiAgImlzTW9iaWxlIjogZmFsc2UsCiAgInVybCI6ICJbcG9ydGZvbGlvXS8jL3Byb2plY3RzL3NhbXVyYWktZ2FtZSIsCiAgImVycm9ycyI6IFtdCn0="
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/home/tpang/documents/websiteProfileV2/docs/verification/playwright/matrix/artifacts/portfolio-en-dark-home-archive-current-details-accessibility-mobile/trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "7f0db2630e7a384d876f-53f0461d001c4447615f",
+          "file": "portfolio.test.ts",
+          "line": 113,
+          "column": 5
+        },
+        {
+          "title": "en/light: home, archive, current details, accessibility",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 12905,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "WCAG audit: home",
+                      "duration": 2505
+                    },
+                    {
+                      "title": "WCAG audit: #/projects",
+                      "duration": 1707
+                    },
+                    {
+                      "title": "WCAG audit: #/projects/samurai-game",
+                      "duration": 1090
+                    }
+                  ],
+                  "startTime": "2026-11-22T07:41:54.730Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "axe-home",
+                      "contentType": "application/json",
+                      "body": "ewogICJ1cmwiOiAiaHR0cDovLzEyNy4wLjAuMTo0MTczLyIsCiAgIm1vZGUiOiAic2FtZS1wYWdlIGF4ZS5ydW4iLAogICJmcmFtZUNvdW50IjogMSwKICAicGFzc2VkUnVsZXMiOiAyNCwKICAidmlvbGF0aW9ucyI6IFtdLAogICJpbmNvbXBsZXRlIjogWwogICAgewogICAgICAiaWQiOiAiY29sb3ItY29udHJhc3QiLAogICAgICAiaW1wYWN0IjogInNlcmlvdXMiCiAgICB9CiAgXQp9"
+                    },
+                    {
+                      "name": "axe-#/projects",
+                      "contentType": "application/json",
+                      "body": "ewogICJ1cmwiOiAiaHR0cDovLzEyNy4wLjAuMTo0MTczLyMvcHJvamVjdHMiLAogICJtb2RlIjogInNhbWUtcGFnZSBheGUucnVuIiwKICAiZnJhbWVDb3VudCI6IDEsCiAgInBhc3NlZFJ1bGVzIjogMjMsCiAgInZpb2xhdGlvbnMiOiBbXSwKICAiaW5jb21wbGV0ZSI6IFsKICAgIHsKICAgICAgImlkIjogImNvbG9yLWNvbnRyYXN0IiwKICAgICAgImltcGFjdCI6ICJzZXJpb3VzIgogICAgfQogIF0KfQ=="
+                    },
+                    {
+                      "name": "axe-#/projects/samurai-game",
+                      "contentType": "application/json",
+                      "body": "ewogICJ1cmwiOiAiaHR0cDovLzEyNy4wLjAuMTo0MTczLyMvcHJvamVjdHMvc2FtdXJhaS1nYW1lIiwKICAibW9kZSI6ICJzYW1lLXBhZ2UgYXhlLnJ1biIsCiAgImZyYW1lQ291bnQiOiAxLAogICJwYXNzZWRSdWxlcyI6IDE5LAogICJ2aW9sYXRpb25zIjogW10sCiAgImluY29tcGxldGUiOiBbCiAgICB7CiAgICAgICJpZCI6ICJjb2xvci1jb250cmFzdCIsCiAgICAgICJpbXBhY3QiOiAic2VyaW91cyIKICAgIH0KICBdCn0="
+                    },
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/home/tpang/documents/websiteProfileV2/docs/verification/playwright/matrix/artifacts/portfolio-en-light-home-ar-13ee7-rrent-details-accessibility-mobile/test-finished-1.png"
+                    },
+                    {
+                      "name": "browser-diagnostics",
+                      "contentType": "application/json",
+                      "body": "ewogICJicm93c2VyIjogImNocm9taXVtIiwKICAidmVyc2lvbiI6ICIxNTYuMC44MDc4LjQiLAogICJ2aWV3cG9ydCI6IHsKICAgICJ3aWR0aCI6IDM2MCwKICAgICJoZWlnaHQiOiA4MDAKICB9LAogICJoYXNUb3VjaCI6IHRydWUsCiAgImlzTW9iaWxlIjogZmFsc2UsCiAgInVybCI6ICJbcG9ydGZvbGlvXS8jL3Byb2plY3RzL3NhbXVyYWktZ2FtZSIsCiAgImVycm9ycyI6IFtdCn0="
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/home/tpang/documents/websiteProfileV2/docs/verification/playwright/matrix/artifacts/portfolio-en-light-home-ar-13ee7-rrent-details-accessibility-mobile/trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "7f0db2630e7a384d876f-7ae2681870cdfa2b294d",
+          "file": "portfolio.test.ts",
+          "line": 113,
+          "column": 5
+        },
+        {
+          "title": "CTAs, mobile menu Escape, anchors, history, contact and clipboard",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 7769,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-22T07:42:09.275Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/home/tpang/documents/websiteProfileV2/docs/verification/playwright/matrix/artifacts/portfolio-CTAs-mobile-menu-3f869-story-contact-and-clipboard-mobile/test-finished-1.png"
+                    },
+                    {
+                      "name": "browser-diagnostics",
+                      "contentType": "application/json",
+                      "body": "ewogICJicm93c2VyIjogImNocm9taXVtIiwKICAidmVyc2lvbiI6ICIxNTYuMC44MDc4LjQiLAogICJ2aWV3cG9ydCI6IHsKICAgICJ3aWR0aCI6IDM2MCwKICAgICJoZWlnaHQiOiA4MDAKICB9LAogICJoYXNUb3VjaCI6IHRydWUsCiAgImlzTW9iaWxlIjogZmFsc2UsCiAgInVybCI6ICJbcG9ydGZvbGlvXS8jLyNhYm91dCIsCiAgImVycm9ycyI6IFtdCn0="
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/home/tpang/documents/websiteProfileV2/docs/verification/playwright/matrix/artifacts/portfolio-CTAs-mobile-menu-3f869-story-contact-and-clipboard-mobile/trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "7f0db2630e7a384d876f-45ec147f02c9814666d1",
+          "file": "portfolio.test.ts",
+          "line": 168,
+          "column": 1
+        },
+        {
+          "title": "preferences persist, reduced motion and observer/storage failure remain usable",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 5653,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-22T07:42:17.953Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/home/tpang/documents/websiteProfileV2/docs/verification/playwright/matrix/artifacts/portfolio-preferences-pers-582fe-orage-failure-remain-usable-mobile/test-finished-1.png"
+                    },
+                    {
+                      "name": "browser-diagnostics",
+                      "contentType": "application/json",
+                      "body": "ewogICJicm93c2VyIjogImNocm9taXVtIiwKICAidmVyc2lvbiI6ICIxNTYuMC44MDc4LjQiLAogICJ2aWV3cG9ydCI6IHsKICAgICJ3aWR0aCI6IDM2MCwKICAgICJoZWlnaHQiOiA4MDAKICB9LAogICJoYXNUb3VjaCI6IHRydWUsCiAgImlzTW9iaWxlIjogZmFsc2UsCiAgInVybCI6ICJbcG9ydGZvbGlvXS8iLAogICJlcnJvcnMiOiBbXQp9"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/home/tpang/documents/websiteProfileV2/docs/verification/playwright/matrix/artifacts/portfolio-preferences-pers-582fe-orage-failure-remain-usable-mobile/trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "7f0db2630e7a384d876f-f00c7678dd9cefe58e05",
+          "file": "portfolio.test.ts",
+          "line": 236,
+          "column": 1
+        },
+        {
+          "title": "unknown, malformed and legacy sample URLs do not crash",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2633,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-22T07:42:24.086Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/home/tpang/documents/websiteProfileV2/docs/verification/playwright/matrix/artifacts/portfolio-unknown-malforme-71263-cy-sample-URLs-do-not-crash-mobile/test-finished-1.png"
+                    },
+                    {
+                      "name": "browser-diagnostics",
+                      "contentType": "application/json",
+                      "body": "ewogICJicm93c2VyIjogImNocm9taXVtIiwKICAidmVyc2lvbiI6ICIxNTYuMC44MDc4LjQiLAogICJ2aWV3cG9ydCI6IHsKICAgICJ3aWR0aCI6IDM2MCwKICAgICJoZWlnaHQiOiA4MDAKICB9LAogICJoYXNUb3VjaCI6IHRydWUsCiAgImlzTW9iaWxlIjogZmFsc2UsCiAgInVybCI6ICJbcG9ydGZvbGlvXS8jL3Byb2plY3RzL3NhbXBsZS10b29saW5nIiwKICAiZXJyb3JzIjogW10KfQ=="
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/home/tpang/documents/websiteProfileV2/docs/verification/playwright/matrix/artifacts/portfolio-unknown-malforme-71263-cy-sample-URLs-do-not-crash-mobile/trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "7f0db2630e7a384d876f-abbdfcc1523d91c3a168",
+          "file": "portfolio.test.ts",
+          "line": 270,
+          "column": 1
+        },
+        {
+          "title": "capture responsive production evidence",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 67121,
+                  "error": {
+                    "message": "TimeoutError: page.screenshot: Timeout 60000ms exceeded.\nCall log:\n\u001b[2m  - taking page screenshot\u001b[22m\n\u001b[2m    - disabled all CSS animations\u001b[22m\n\u001b[2m  - waiting for fonts to load...\u001b[22m\n\u001b[2m  - fonts loaded\u001b[22m\n",
+                    "stack": "TimeoutError: page.screenshot: Timeout 60000ms exceeded.\nCall log:\n\u001b[2m  - taking page screenshot\u001b[22m\n\u001b[2m    - disabled all CSS animations\u001b[22m\n\u001b[2m  - waiting for fonts to load...\u001b[22m\n\u001b[2m  - fonts loaded\u001b[22m\n\n    at /home/tpang/documents/websiteProfileV2/e2e/portfolio.test.ts:304:16",
+                    "location": {
+                      "file": "/home/tpang/documents/websiteProfileV2/e2e/portfolio.test.ts",
+                      "column": 16,
+                      "line": 304
+                    },
+                    "snippet": "  302 |     });\n  303 |     await noOverflow(page);\n> 304 |     await page.screenshot({\n      |                ^\n  305 |       path: `docs/screenshots/field-notes/positioning/${name}-${info.project.name}.png`,\n  306 |       fullPage: true,\n  307 |       animations: \"disabled\","
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/home/tpang/documents/websiteProfileV2/e2e/portfolio.test.ts",
+                        "column": 16,
+                        "line": 304
+                      },
+                      "message": "TimeoutError: page.screenshot: Timeout 60000ms exceeded.\nCall log:\n\u001b[2m  - taking page screenshot\u001b[22m\n\u001b[2m    - disabled all CSS animations\u001b[22m\n\u001b[2m  - waiting for fonts to load...\u001b[22m\n\u001b[2m  - fonts loaded\u001b[22m\n\n\n  302 |     });\n  303 |     await noOverflow(page);\n> 304 |     await page.screenshot({\n      |                ^\n  305 |       path: `docs/screenshots/field-notes/positioning/${name}-${info.project.name}.png`,\n  306 |       fullPage: true,\n  307 |       animations: \"disabled\",\n    at /home/tpang/documents/websiteProfileV2/e2e/portfolio.test.ts:304:16"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-22T07:42:27.031Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "browser-diagnostics",
+                      "contentType": "application/json",
+                      "body": "ewogICJicm93c2VyIjogImNocm9taXVtIiwKICAidmVyc2lvbiI6ICIxNTYuMC44MDc4LjQiLAogICJ2aWV3cG9ydCI6IHsKICAgICJ3aWR0aCI6IDM2MCwKICAgICJoZWlnaHQiOiA4MDAKICB9LAogICJoYXNUb3VjaCI6IHRydWUsCiAgImlzTW9iaWxlIjogZmFsc2UsCiAgInVybCI6ICJbcG9ydGZvbGlvXS8jLyIsCiAgImVycm9ycyI6IFtdCn0="
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/home/tpang/documents/websiteProfileV2/docs/verification/playwright/matrix/artifacts/portfolio-capture-responsive-production-evidence-mobile/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/home/tpang/documents/websiteProfileV2/docs/verification/playwright/matrix/artifacts/portfolio-capture-responsive-production-evidence-mobile/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/home/tpang/documents/websiteProfileV2/e2e/portfolio.test.ts",
+                    "column": 16,
+                    "line": 304
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "7f0db2630e7a384d876f-fb8871707b954a5802b2",
+          "file": "portfolio.test.ts",
+          "line": 287,
+          "column": 1
+        },
+        {
+          "title": "hero selection: click, keyboard, wrap, focus, links and no autoplay",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "narrow",
+              "projectName": "narrow",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "7f0db2630e7a384d876f-a215a19e1e0d8a0b01aa",
+          "file": "portfolio.test.ts",
+          "line": 76,
+          "column": 1
+        },
+        {
+          "title": "id/dark: home, archive, current details, accessibility",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "narrow",
+              "projectName": "narrow",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "7f0db2630e7a384d876f-376943b4ec8b63683455",
+          "file": "portfolio.test.ts",
+          "line": 113,
+          "column": 5
+        },
+        {
+          "title": "id/light: home, archive, current details, accessibility",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "narrow",
+              "projectName": "narrow",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "7f0db2630e7a384d876f-4a5ded21b24342cb425d",
+          "file": "portfolio.test.ts",
+          "line": 113,
+          "column": 5
+        },
+        {
+          "title": "en/dark: home, archive, current details, accessibility",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "narrow",
+              "projectName": "narrow",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "7f0db2630e7a384d876f-20e0cd4508c0feae220f",
+          "file": "portfolio.test.ts",
+          "line": 113,
+          "column": 5
+        },
+        {
+          "title": "en/light: home, archive, current details, accessibility",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "narrow",
+              "projectName": "narrow",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "7f0db2630e7a384d876f-320ed4abd5cb4a2095fc",
+          "file": "portfolio.test.ts",
+          "line": 113,
+          "column": 5
+        },
+        {
+          "title": "CTAs, mobile menu Escape, anchors, history, contact and clipboard",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "narrow",
+              "projectName": "narrow",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "7f0db2630e7a384d876f-fb1fb3ac6d918a022a99",
+          "file": "portfolio.test.ts",
+          "line": 168,
+          "column": 1
+        },
+        {
+          "title": "preferences persist, reduced motion and observer/storage failure remain usable",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "narrow",
+              "projectName": "narrow",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "7f0db2630e7a384d876f-36089f3f4044921153dc",
+          "file": "portfolio.test.ts",
+          "line": 236,
+          "column": 1
+        },
+        {
+          "title": "unknown, malformed and legacy sample URLs do not crash",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "narrow",
+              "projectName": "narrow",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "7f0db2630e7a384d876f-996471e943baf8314d40",
+          "file": "portfolio.test.ts",
+          "line": 270,
+          "column": 1
+        },
+        {
+          "title": "capture responsive production evidence",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "narrow",
+              "projectName": "narrow",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "7f0db2630e7a384d876f-9502be8ec91115c0cc72",
+          "file": "portfolio.test.ts",
+          "line": 287,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "positioning.test.ts",
+      "file": "positioning.test.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "current positioning, linked skills, other work and honest verification copy",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "tablet",
+              "projectName": "tablet",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4525,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-22T07:39:45.514Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/home/tpang/documents/websiteProfileV2/docs/verification/playwright/matrix/artifacts/positioning-current-positi-7587e-nd-honest-verification-copy-tablet/test-finished-1.png"
+                    },
+                    {
+                      "name": "browser-diagnostics",
+                      "contentType": "application/json",
+                      "body": "ewogICJicm93c2VyIjogImNocm9taXVtIiwKICAidmVyc2lvbiI6ICIxNTYuMC44MDc4LjQiLAogICJ2aWV3cG9ydCI6IHsKICAgICJ3aWR0aCI6IDc2OCwKICAgICJoZWlnaHQiOiAxMDI0CiAgfSwKICAiaGFzVG91Y2giOiBmYWxzZSwKICAiaXNNb2JpbGUiOiBmYWxzZSwKICAidXJsIjogIltwb3J0Zm9saW9dLyIsCiAgImVycm9ycyI6IFtdCn0="
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/home/tpang/documents/websiteProfileV2/docs/verification/playwright/matrix/artifacts/positioning-current-positi-7587e-nd-honest-verification-copy-tablet/trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "82793b4176591ac580d7-0e527fada3a8d88d2a64",
+          "file": "positioning.test.ts",
+          "line": 4,
+          "column": 1
+        },
+        {
+          "title": "current positioning, linked skills, other work and honest verification copy",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 5637,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-22T07:40:59.075Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/home/tpang/documents/websiteProfileV2/docs/verification/playwright/matrix/artifacts/positioning-current-positi-7587e-nd-honest-verification-copy-desktop/test-finished-1.png"
+                    },
+                    {
+                      "name": "browser-diagnostics",
+                      "contentType": "application/json",
+                      "body": "ewogICJicm93c2VyIjogImNocm9taXVtIiwKICAidmVyc2lvbiI6ICIxNTYuMC44MDc4LjQiLAogICJ2aWV3cG9ydCI6IHsKICAgICJ3aWR0aCI6IDE0NDAsCiAgICAiaGVpZ2h0IjogMTAwMAogIH0sCiAgImhhc1RvdWNoIjogZmFsc2UsCiAgImlzTW9iaWxlIjogZmFsc2UsCiAgInVybCI6ICJbcG9ydGZvbGlvXS8iLAogICJlcnJvcnMiOiBbXQp9"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/home/tpang/documents/websiteProfileV2/docs/verification/playwright/matrix/artifacts/positioning-current-positi-7587e-nd-honest-verification-copy-desktop/trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "82793b4176591ac580d7-c66ff0cd5a7899d6968e",
+          "file": "positioning.test.ts",
+          "line": 4,
+          "column": 1
+        },
+        {
+          "title": "current positioning, linked skills, other work and honest verification copy",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "82793b4176591ac580d7-2b6a9bd399c233138fc8",
+          "file": "positioning.test.ts",
+          "line": 4,
+          "column": 1
+        },
+        {
+          "title": "current positioning, linked skills, other work and honest verification copy",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "narrow",
+              "projectName": "narrow",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "82793b4176591ac580d7-f51d83e0b2f1c912d5a3",
+          "file": "positioning.test.ts",
+          "line": 4,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [
+    {
+      "message": "\u001b[31mTesting stopped early after 1 maximum allowed failures.\u001b[39m"
+    }
+  ],
+  "stats": {
+    "startTime": "2026-11-22T07:37:10.734Z",
+    "duration": 393207.54099999997,
+    "expected": 28,
+    "skipped": 11,
+    "unexpected": 1,
+    "flaky": 0
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "artifact": "production build",
+  "browser": "Chromium",
+  "scope": "Current-content smoke acceptance; not the full Playwright/axe matrix",
+  "results": [
+    {
+      "viewport": "desktop",
+      "width": 1440,
+      "height": 1000,
+      "result": "pass",
+      "checks": [
+        "name/bio/skills",
+        "current project order",
+        "hero click and keyboard",
+        "all five details and scoped evidence",
+        "no fabricated source/demo controls",
+        "archive navigation",
+        "desktop keyboard focus",
+        "skill links",
+        "contact CTA",
+        "English/light theme",
+        "reduced motion",
+        "no overflow",
+        "no console/page/network errors"
+      ],
+      "screenshot": "docs/screenshots/field-notes/positioning/verified-home-desktop.png"
+    },
+    {
+      "viewport": "mobile",
+      "width": 360,
+      "height": 800,
+      "result": "pass",
+      "checks": [
+        "name/bio/skills",
+        "current project order",
+        "hero click and keyboard",
+        "all five details and scoped evidence",
+        "no fabricated source/demo controls",
+        "archive navigation",
+        "mobile menu and focus",
+        "skill links",
+        "contact CTA",
+        "English/light theme",
+        "reduced motion",
+        "no overflow",
+        "no console/page/network errors"
+      ],
+      "screenshot": "docs/screenshots/field-notes/positioning/verified-home-mobile.png"
+    }
+  ]
+}
