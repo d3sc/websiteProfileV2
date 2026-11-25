@@ -116,22 +116,6 @@ const entries = [
     ],
   },
   {
-    slug: "anime-scraping",
-    title: "Scraping Anime Website",
-    stack: ["React JS", "JavaScript", "Puppeteer", "Express"],
-    image: "anime-scraping",
-    externalUrl: "https://github.com/d3sc/anime-scraping/",
-    externalLabel: "GitHub",
-    summary: [
-      "Eksplorasi pengambilan data Otakudesu untuk daftar anime terbaru dan website streaming.",
-      "An exploration of scraping Otakudesu data for anime listings and a streaming website.",
-    ],
-    contribution: [
-      "Membuat pengambilan data dengan Puppeteer dan website berbasis React.",
-      "Built Puppeteer data scraping and a React-based website.",
-    ],
-  },
-  {
     slug: "samurai-game",
     title: "Samurai Game",
     stack: ["Godot 3"],

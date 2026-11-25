@@ -14,6 +14,7 @@ interface Entry {
   statusLabel: Localized;
   status: Localized;
   visual: string[];
+  image: string;
 }
 const entries: Entry[] = [
   {
@@ -50,6 +51,7 @@ const entries: Entry[] = [
       "The latest-request-wins frontend regression has a recorded pass. Notification settings were tested with mocks; integration and browser records use isolated PostgreSQL and mocked provider HTTP. Actual provider submission or recipient delivery is not established by this audit.",
     ],
     visual: ["CUSTOMERS / SERVICES", "PAYMENTS / REMINDERS"],
+    image: "vps-manager.webp",
   },
   {
     slug: "proxmox-home-lab",
@@ -77,6 +79,7 @@ const entries: Entry[] = [
       "The personal lab is used for deployment and VM administration. The audit did not locate test evidence for VM internet access, VM-to-LAN restrictions, or cross-network access; isolation is not claimed as verified.",
     ],
     visual: ["LAN / HOST PROXMOX", "JARINGAN VM / REMOTE ACCESS"],
+    image: "proxmox-home-lab.webp",
   },
   {
     slug: "lms-ujian-online",
@@ -112,6 +115,7 @@ const entries: Entry[] = [
       "The grading fix has a recorded PostgreSQL feature-test pass covering scores of 0 and 1, feedback, multiple essays and attempts, and maximum-score rejection. Start/resume and attempt snapshots have historical passing feature tests. Browser verification of the reported start-exam case remains incomplete; the full student journey is not claimed as end-to-end verified.",
     ],
     visual: ["ADMIN / STUDENT", "EXAMS / ESSAYS / GRADING"],
+    image: "lms-ujian-online.webp",
   },
   {
     slug: "helpdesk-ticketing",
@@ -139,6 +143,7 @@ const entries: Entry[] = [
       "Recorded browser tests use a Telegram mock, including simulated provider failure. A separate record shows Telegram API acceptance in a real-send test environment; it does not establish recipient read status or verification of the primary deployment.",
     ],
     visual: ["TICKETS / ROLES", "OUTBOX / TELEGRAM"],
+    image: "helpdesk-ticketing.webp",
   },
   {
     slug: "trading-analysis-dashboard",
@@ -173,6 +178,7 @@ const entries: Entry[] = [
       "Backend reminder regressions and isolated browser checks have recorded passes. Verification of the active deployment remains incomplete, and actual Telegram delivery is unverified. Support reminders remain in development until regressions on the target deployment and real delivery are confirmed.",
     ],
     visual: ["IDX / US / GOLD", "WATCHLIST / CHARTS / SCORING"],
+    image: "trading-analysis-dashboard.webp",
   },
 ];
 export const currentProjects = (locale: Locale): Project[] =>

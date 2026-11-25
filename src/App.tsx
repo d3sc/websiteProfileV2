@@ -76,8 +76,9 @@ function Visual({
   eager?: boolean;
 }) {
   return project.image ? (
+    
     <img
-      src={project.image}
+      src={`assets/projects/${project.image}`}
       alt={`${project.title} — ${t.source}`}
       width="1366"
       height="768"
