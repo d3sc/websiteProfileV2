@@ -4,7 +4,7 @@ React 19 + TypeScript + Vite portfolio. Positioning: **Full-Stack Developer · L
 
 ## Current content
 
-Hero tabs and selected work: VPS Manager → Proxmox Home Lab → LMS Ujian Online. Other work: Helpdesk Ticketing and Trading Analysis Dashboard. Seven earlier projects remain in the archive with their existing detail URLs.
+Hero tabs and selected work: VPS Manager → Proxmox Home Lab → LMS Ujian Online. Other work: Helpdesk Ticketing and Trading Analysis Dashboard. Six earlier projects remain in the archive with their existing detail URLs (the actual source inventory; the previous seven-entry documentation was stale).
 
 Bio, education and four skill groups follow the latest owner brief. Skills link to the projects that use them. Current cards have concise summaries and scoped status; details explain problem, contribution, stack and verification limits. The manual hero supports click/touch, arrows, Home/End and reduced motion, without autoplay.
 
@@ -38,14 +38,14 @@ The repo has no lint script/ESLint configuration. Prettier is a formatting check
 
 ## Content integrity
 
-- The five current projects come from the owner brief and recorded project evidence. No public URL or safe project screenshot was found for them on the old profile; demo/source buttons are therefore omitted. Typographic previews are explicitly not screenshots.
-- The six real WebP screenshots recovered from the original site remain assigned only to their older projects. No unrelated asset is relabeled as a current project.
+- Four current-project screenshots supplied in the repository are now displayed after privacy review. VPS customer identities and Proxmox host/account/VM/task details are permanently redacted in the public files and all responsive derivatives. No public demo/source URL is invented.
+- VPS, LMS, and Helpdesk galleries contain one overview plus a labelled close-up crop of that same screenshot, not additional screens. Proxmox and five archived projects use a single-image viewer without carousel controls. Trading and Samurai remain text-led because screenshots are missing. The unassigned anime asset is not repurposed.
 - Mock acceptance, feature tests, provider submission, recipient delivery and active deployment status are kept distinct. Reminder support remains in development. No unverified isolation or complete student-flow claim is made.
 - No private IPs, credentials, chat IDs, raw server configuration, invented impact numbers, dates, employers or proficiency percentages are published.
 - Old sample URLs still show explicit legacy notices. No CV file/URL was available, so there is no invented download action.
 - Fonts are self-hosted WOFF2 with bundled OFL licenses.
 
-See `docs/FIELD_NOTES_REVIEW.md` for content evidence boundaries and `docs/PLAYWRIGHT_VERIFICATION.md` for the completed four-viewport verification, timeout diagnosis, scoped fixes and manual contrast-review gap.
+See `docs/GALLERY_REVIEW.md` for the screenshot/gallery upgrade, privacy review, current verification and per-project missing assets. `docs/FIELD_NOTES_REVIEW.md` and `docs/PLAYWRIGHT_VERIFICATION.md` preserve earlier evidence and are historical rather than acceptance of this upgrade.
 
 For an instrumented one-worker rerun (use a fresh run name to retain older evidence):
 
@@ -62,8 +62,12 @@ The diagnostic config writes traces/screenshots, JSON results, console/page/netw
 - `src/current-projects.ts`: five current project narratives and verification limits.
 - `src/data.ts`: profile, bilingual copy, linked skill groups, archived work and contact data.
 - `src/App.tsx`: shared shell, hero selector, current/other work, archive and detail views.
-- `src/styles.css`: responsive editorial styling and motion/focus handling.
+- `src/styles.css`: existing editorial design tokens and responsive base.
+- `src/gallery.css`: image-led covers, responsive gallery, lightbox and reduced-motion styles.
+- `src/ProjectGallery.tsx`: reusable manual gallery, touch/keyboard controls and accessible native-dialog lightbox.
+- `src/project-media.ts`, `src/asset-dimensions.json`: bilingual captions, honest asset mapping and responsive dimensions.
+- `scripts/prepare-gallery-assets.py`: reproducible redactions, labelled detail crops and responsive WebP generation (Pillow required).
 - `src/router.ts`: existing hash routes and malformed-URL protection.
 - `src/*.test.*`, `e2e/*.test.ts`: unit/content and browser regressions.
 
-Routes: `#/`, `#/projects`, `#/projects/:slug`, `#/#about`, `#/#contact`. Preference keys remain `portfolio-locale` and `portfolio-theme`.
+Routes: `#/`, `#/projects`, `#/projects/:slug`, `#/#about`, `#/#contact`, plus the additive `#/#selected-projects` showcase anchor. Preference keys remain `portfolio-locale` and `portfolio-theme`.

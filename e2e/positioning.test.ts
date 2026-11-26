@@ -15,7 +15,7 @@ test("current positioning, linked skills, other work and honest verification cop
     "IT Programmer dan mahasiswa S1 Manajemen Informatika",
   );
   await expect(page).toHaveTitle(new RegExp(profileName));
-  await expect(page.locator(".preview-stage img")).toHaveCount(0);
+  await expect(page.locator(".preview-stage img")).toHaveCount(3);
   await expect(page.getByRole("tab")).toHaveText([
     "01VPS Manager↗",
     "02Proxmox Home Lab↗",
@@ -62,7 +62,7 @@ test("current positioning, linked skills, other work and honest verification cop
   await page.emulateMedia({ reducedMotion: "reduce" });
   await page.evaluate(() => document.fonts.ready);
   await page.screenshot({
-    path: `docs/screenshots/field-notes/positioning/home-en-${info.project.name}.png`,
+    path: `docs/verification/gallery/regression-home-en-${info.project.name}.png`,
     fullPage: true,
     scale: "css",
     animations: "disabled",

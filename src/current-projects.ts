@@ -178,7 +178,7 @@ const entries: Entry[] = [
       "Backend reminder regressions and isolated browser checks have recorded passes. Verification of the active deployment remains incomplete, and actual Telegram delivery is unverified. Support reminders remain in development until regressions on the target deployment and real delivery are confirmed.",
     ],
     visual: ["IDX / US / GOLD", "WATCHLIST / CHARTS / SCORING"],
-    image: "trading-analysis-dashboard.webp",
+    image: "",
   },
 ];
 export const currentProjects = (locale: Locale): Project[] =>
@@ -192,5 +192,6 @@ export const currentProjects = (locale: Locale): Project[] =>
       contribution: entry.contribution[i],
       statusLabel: entry.statusLabel[i],
       status: entry.status[i],
+      image: entry.image ? `/assets/projects/${entry.image}` : undefined,
     };
   });

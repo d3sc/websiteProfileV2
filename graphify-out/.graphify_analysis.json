@@ -1,0 +1,355 @@
+{
+  "communities": {
+    "0": [
+      "package",
+      "package_devdependencies",
+      "package_devdependencies_axe_core_playwright",
+      "package_devdependencies_jsdom",
+      "package_devdependencies_prettier",
+      "package_devdependencies_testing_library_react",
+      "package_devdependencies_testing_library_user_event",
+      "package_devdependencies_types_react",
+      "package_devdependencies_types_react_dom",
+      "package_devdependencies_typescript",
+      "package_devdependencies_vite",
+      "package_devdependencies_vitejs_plugin_react",
+      "package_devdependencies_vitest",
+      "package_name",
+      "package_private",
+      "package_type",
+      "package_version",
+      "ref_axe_core_playwright",
+      "ref_jsdom",
+      "ref_prettier",
+      "ref_testing_library_react",
+      "ref_testing_library_user_event",
+      "ref_types_react",
+      "ref_types_react_dom",
+      "ref_typescript",
+      "ref_vite",
+      "ref_vitejs_plugin_react",
+      "ref_vitest",
+      "src_app_test",
+      "src_field_notes_test",
+      "vite_config",
+      "vitest_config"
+    ],
+    "1": [
+      "src_app",
+      "src_app_text",
+      "src_app_theme",
+      "src_current_projects",
+      "src_current_projects_currentprojects",
+      "src_current_projects_entries",
+      "src_current_projects_entry",
+      "src_current_projects_localized",
+      "src_data",
+      "src_data_achievements",
+      "src_data_allprojects",
+      "src_data_archivedprojects",
+      "src_data_categories",
+      "src_data_category",
+      "src_data_categorylabels",
+      "src_data_copy",
+      "src_data_email",
+      "src_data_entries",
+      "src_data_locale",
+      "src_data_make",
+      "src_data_profilename",
+      "src_data_project",
+      "src_data_projects",
+      "src_data_skills",
+      "src_data_sociallinks",
+      "src_data_test",
+      "src_positioning_test",
+      "src_router",
+      "src_router_readroute",
+      "src_router_route",
+      "src_styles"
+    ],
+    "2": [
+      "tsconfig_app",
+      "tsconfig_app_compileroptions",
+      "tsconfig_app_compileroptions_allowjs",
+      "tsconfig_app_compileroptions_allowsyntheticdefaultimports",
+      "tsconfig_app_compileroptions_esmoduleinterop",
+      "tsconfig_app_compileroptions_forceconsistentcasinginfilenames",
+      "tsconfig_app_compileroptions_isolatedmodules",
+      "tsconfig_app_compileroptions_jsx",
+      "tsconfig_app_compileroptions_lib",
+      "tsconfig_app_compileroptions_module",
+      "tsconfig_app_compileroptions_moduleresolution",
+      "tsconfig_app_compileroptions_noemit",
+      "tsconfig_app_compileroptions_resolvejsonmodule",
+      "tsconfig_app_compileroptions_skiplibcheck",
+      "tsconfig_app_compileroptions_strict",
+      "tsconfig_app_compileroptions_target",
+      "tsconfig_app_compileroptions_tsbuildinfofile",
+      "tsconfig_app_compileroptions_usedefineforclassfields",
+      "tsconfig_app_include"
+    ],
+    "3": [
+      "base64",
+      "collections",
+      "datetime",
+      "json",
+      "os",
+      "pathlib",
+      "scripts_run_playwright_qa",
+      "scripts_run_playwright_qa_rationale_1",
+      "scripts_summarize_playwright_qa",
+      "scripts_summarize_playwright_qa_rationale_1",
+      "scripts_summarize_playwright_qa_specs",
+      "subprocess",
+      "sys",
+      "time"
+    ],
+    "4": [
+      "e2e_fixtures",
+      "e2e_fixtures_expect",
+      "e2e_fixtures_test",
+      "e2e_portfolio_test",
+      "e2e_portfolio_test_axe",
+      "e2e_portfolio_test_get",
+      "e2e_portfolio_test_navigate",
+      "e2e_portfolio_test_nooverflow",
+      "e2e_portfolio_test_start",
+      "e2e_positioning_test",
+      "package_devdependencies_playwright_test",
+      "playwright_config",
+      "playwright_diagnostic_config",
+      "ref_playwright_test"
+    ],
+    "5": [
+      "src_app_app",
+      "src_app_detail",
+      "src_app_external",
+      "src_app_heroprojects",
+      "src_app_heroprojects_keydown",
+      "src_app_home",
+      "src_app_home_copyemail",
+      "src_app_notfound",
+      "src_app_preference",
+      "src_app_projectarchive",
+      "src_app_projectcard",
+      "src_app_tags",
+      "src_app_visual",
+      "src_router_routehref"
+    ],
+    "6": [
+      "tsconfig_node",
+      "tsconfig_node_compileroptions",
+      "tsconfig_node_compileroptions_allowimportingtsextensions",
+      "tsconfig_node_compileroptions_lib",
+      "tsconfig_node_compileroptions_module",
+      "tsconfig_node_compileroptions_moduledetection",
+      "tsconfig_node_compileroptions_moduleresolution",
+      "tsconfig_node_compileroptions_noemit",
+      "tsconfig_node_compileroptions_skiplibcheck",
+      "tsconfig_node_compileroptions_strict",
+      "tsconfig_node_compileroptions_target",
+      "tsconfig_node_compileroptions_tsbuildinfofile",
+      "tsconfig_node_compileroptions_verbatimmodulesyntax",
+      "tsconfig_node_include"
+    ],
+    "7": [
+      "ref_node_assert",
+      "ref_node_fs",
+      "ref_node_http",
+      "ref_node_path",
+      "ref_playwright",
+      "scripts_verify_current_content",
+      "scripts_verify_current_content_mime",
+      "scripts_verify_current_content_names",
+      "scripts_verify_current_content_results",
+      "scripts_verify_current_content_root",
+      "scripts_verify_current_content_server",
+      "scripts_verify_current_content_slugs"
+    ],
+    "8": [
+      "package_scripts",
+      "package_scripts_build",
+      "package_scripts_dev",
+      "package_scripts_preview",
+      "package_scripts_test",
+      "package_scripts_test_e2e",
+      "package_scripts_typecheck"
+    ],
+    "9": [
+      "package_dependencies",
+      "package_dependencies_react",
+      "package_dependencies_react_dom",
+      "ref_react",
+      "ref_react_dom",
+      "src_main"
+    ],
+    "10": [
+      "tsconfig",
+      "tsconfig_files",
+      "tsconfig_references"
+    ],
+    "11": [
+      "src_vite_env_d"
+    ]
+  },
+  "cohesion": {
+    "0": 0.0967741935483871,
+    "1": 0.12258064516129032,
+    "2": 0.10526315789473684,
+    "3": 0.16483516483516483,
+    "4": 0.1978021978021978,
+    "5": 0.27472527472527475,
+    "6": 0.14285714285714285,
+    "7": 0.16666666666666666,
+    "8": 0.2857142857142857,
+    "9": 0.4,
+    "10": 0.6666666666666666,
+    "11": 1.0
+  },
+  "gods": [
+    {
+      "id": "tsconfig_app_compileroptions",
+      "label": "compilerOptions",
+      "degree": 17
+    },
+    {
+      "id": "src_app_app",
+      "label": "App()",
+      "degree": 12
+    },
+    {
+      "id": "tsconfig_node_compileroptions",
+      "label": "compilerOptions",
+      "degree": 12
+    },
+    {
+      "id": "src_router_routehref",
+      "label": "routeHref()",
+      "degree": 8
+    },
+    {
+      "id": "package_scripts",
+      "label": "scripts",
+      "degree": 7
+    },
+    {
+      "id": "ref_vitest",
+      "label": "vitest",
+      "degree": 7
+    },
+    {
+      "id": "src_app_home",
+      "label": "Home()",
+      "degree": 7
+    },
+    {
+      "id": "src_app_projectcard",
+      "label": "ProjectCard()",
+      "degree": 7
+    },
+    {
+      "id": "src_app_detail",
+      "label": "Detail()",
+      "degree": 7
+    },
+    {
+      "id": "ref_playwright_test",
+      "label": "@playwright/test",
+      "degree": 6
+    }
+  ],
+  "surprises": [
+    {
+      "source": "App()",
+      "target": "readRoute()",
+      "source_files": [
+        "src/App.tsx",
+        "src/router.ts"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "calls",
+      "why": "bridges separate communities"
+    },
+    {
+      "source": "App()",
+      "target": "routeHref()",
+      "source_files": [
+        "src/App.tsx",
+        "src/router.ts"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "calls",
+      "why": "cross-file semantic connection"
+    },
+    {
+      "source": "HeroProjects()",
+      "target": "routeHref()",
+      "source_files": [
+        "src/App.tsx",
+        "src/router.ts"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "calls",
+      "why": "cross-file semantic connection"
+    },
+    {
+      "source": "Home()",
+      "target": "routeHref()",
+      "source_files": [
+        "src/App.tsx",
+        "src/router.ts"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "calls",
+      "why": "cross-file semantic connection"
+    },
+    {
+      "source": "ProjectCard()",
+      "target": "routeHref()",
+      "source_files": [
+        "src/App.tsx",
+        "src/router.ts"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "calls",
+      "why": "cross-file semantic connection"
+    }
+  ],
+  "questions": [
+    {
+      "type": "bridge_node",
+      "question": "Why does `react` connect `React Application Entry` to `Development Toolchain`, `Portfolio Data and Routing`?",
+      "why": "High betweenness centrality (0.075) - this node is a cross-community bridge."
+    },
+    {
+      "type": "low_cohesion",
+      "question": "Should `Development Toolchain` be split into smaller, more focused modules?",
+      "why": "Cohesion score 0.0967741935483871 - nodes in this community are weakly interconnected."
+    },
+    {
+      "type": "bridge_node",
+      "question": "Why does `scripts` connect `Package Run Scripts` to `Development Toolchain`?",
+      "why": "High betweenness centrality (0.044) - this node is a cross-community bridge."
+    },
+    {
+      "type": "low_cohesion",
+      "question": "Should `Portfolio Data and Routing` be split into smaller, more focused modules?",
+      "why": "Cohesion score 0.12258064516129032 - nodes in this community are weakly interconnected."
+    },
+    {
+      "type": "bridge_node",
+      "question": "Why does `@playwright/test` connect `Playwright Browser Tests` to `Development Toolchain`?",
+      "why": "High betweenness centrality (0.040) - this node is a cross-community bridge."
+    },
+    {
+      "type": "low_cohesion",
+      "question": "Should `Application TypeScript Configuration` be split into smaller, more focused modules?",
+      "why": "Cohesion score 0.10526315789473684 - nodes in this community are weakly interconnected."
+    },
+    {
+      "type": "low_cohesion",
+      "question": "Should `Node TypeScript Configuration` be split into smaller, more focused modules?",
+      "why": "Cohesion score 0.14285714285714285 - nodes in this community are weakly interconnected."
+    }
+  ]
+}

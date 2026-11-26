@@ -1,0 +1,585 @@
+{
+  "total_chunks": 243,
+  "chunks": [
+    {
+      "index": 1,
+      "files": [
+        "/home/tpang/documents/websiteProfileV2/README.md",
+        "/home/tpang/documents/websiteProfileV2/docs/DESIGN.md",
+        "/home/tpang/documents/websiteProfileV2/docs/FIELD_NOTES_REVIEW.md",
+        "/home/tpang/documents/websiteProfileV2/docs/PLAN.md",
+        "/home/tpang/documents/websiteProfileV2/docs/PLAYWRIGHT_VERIFICATION.md",
+        "/home/tpang/documents/websiteProfileV2/docs/PROGRESS.md",
+        "/home/tpang/documents/websiteProfileV2/docs/verification/playwright/matrix-resume/artifacts/.playwright-artifacts-1/traces/resources/ec00c814e7d33a23a96c91889ff4e10d547dfa0e.html",
+        "/home/tpang/documents/websiteProfileV2/docs/verification/playwright/matrix-resume/artifacts/portfolio-id-dark-home-archive-current-details-accessibility-narrow/error-context.md",
+        "/home/tpang/documents/websiteProfileV2/docs/verification/playwright/matrix/artifacts/portfolio-capture-responsive-production-evidence-mobile/error-context.md",
+        "/home/tpang/documents/websiteProfileV2/docs/verification/playwright/repro-tablet-en-dark/artifacts/portfolio-en-dark-home-archive-current-details-accessibility-tablet/error-context.md",
+        "/home/tpang/documents/websiteProfileV2/index.html",
+        "/home/tpang/documents/websiteProfileV2/public/fonts/dmsans-OFL.txt",
+        "/home/tpang/documents/websiteProfileV2/public/fonts/ibmplexmono-OFL.txt",
+        "/home/tpang/documents/websiteProfileV2/public/fonts/spacegrotesk-OFL.txt"
+      ],
+      "output": "/home/tpang/documents/websiteProfileV2/graphify-out/.graphify_chunk_001.json"
+    },
+    {
+      "index": 4,
+      "files": [
+        "/home/tpang/documents/websiteProfileV2/docs/screenshots/desktop-en-dark-modal.png"
+      ],
+      "output": "/home/tpang/documents/websiteProfileV2/graphify-out/.graphify_chunk_004.json"
+    },
+    {
+      "index": 7,
+      "files": [
+        "/home/tpang/documents/websiteProfileV2/docs/screenshots/desktop-en-light-modal.png"
+      ],
+      "output": "/home/tpang/documents/websiteProfileV2/graphify-out/.graphify_chunk_007.json"
+    },
+    {
+      "index": 10,
+      "files": [
+        "/home/tpang/documents/websiteProfileV2/docs/screenshots/desktop-id-dark-modal.png"
+      ],
+      "output": "/home/tpang/documents/websiteProfileV2/graphify-out/.graphify_chunk_010.json"
+    },
+    {
+      "index": 13,
+      "files": [
+        "/home/tpang/documents/websiteProfileV2/docs/screenshots/desktop-id-light-modal.png"
+      ],
+      "output": "/home/tpang/documents/websiteProfileV2/graphify-out/.graphify_chunk_013.json"
+    },
+    {
+      "index": 16,
+      "files": [
+        "/home/tpang/documents/websiteProfileV2/docs/screenshots/field-notes/detail-mobile.png"
+      ],
+      "output": "/home/tpang/documents/websiteProfileV2/graphify-out/.graphify_chunk_016.json"
+    },
+    {
+      "index": 19,
+      "files": [
+        "/home/tpang/documents/websiteProfileV2/docs/screenshots/field-notes/home-desktop.png"
+      ],
+      "output": "/home/tpang/documents/websiteProfileV2/graphify-out/.graphify_chunk_019.json"
+    },
+    {
+      "index": 22,
+      "files": [
+        "/home/tpang/documents/websiteProfileV2/docs/screenshots/field-notes/home-tablet.png"
+      ],
+      "output": "/home/tpang/documents/websiteProfileV2/graphify-out/.graphify_chunk_022.json"
+    },
+    {
+      "index": 25,
+      "files": [
+        "/home/tpang/documents/websiteProfileV2/docs/screenshots/field-notes/positioning/detail-narrow.png"
+      ],
+      "output": "/home/tpang/documents/websiteProfileV2/graphify-out/.graphify_chunk_025.json"
+    },
+    {
+      "index": 28,
+      "files": [
+        "/home/tpang/documents/websiteProfileV2/docs/screenshots/field-notes/positioning/home-en-desktop.png"
+      ],
+      "output": "/home/tpang/documents/websiteProfileV2/graphify-out/.graphify_chunk_028.json"
+    },
+    {
+      "index": 31,
+      "files": [
+        "/home/tpang/documents/websiteProfileV2/docs/screenshots/field-notes/positioning/home-en-tablet.png"
+      ],
+      "output": "/home/tpang/documents/websiteProfileV2/graphify-out/.graphify_chunk_031.json"
+    },
+    {
+      "index": 34,
+      "files": [
+        "/home/tpang/documents/websiteProfileV2/docs/screenshots/field-notes/positioning/home-tablet.png"
+      ],
+      "output": "/home/tpang/documents/websiteProfileV2/graphify-out/.graphify_chunk_034.json"
+    },
+    {
+      "index": 37,
+      "files": [
+        "/home/tpang/documents/websiteProfileV2/docs/screenshots/field-notes/positioning/projects-narrow.png"
+      ],
+      "output": "/home/tpang/documents/websiteProfileV2/graphify-out/.graphify_chunk_037.json"
+    },
+    {
+      "index": 40,
+      "files": [
+        "/home/tpang/documents/websiteProfileV2/docs/screenshots/field-notes/positioning/verified-home-mobile.png"
+      ],
+      "output": "/home/tpang/documents/websiteProfileV2/graphify-out/.graphify_chunk_040.json"
+    },
+    {
+      "index": 43,
+      "files": [
+        "/home/tpang/documents/websiteProfileV2/docs/screenshots/field-notes/projects-narrow.png"
+      ],
+      "output": "/home/tpang/documents/websiteProfileV2/graphify-out/.graphify_chunk_043.json"
+    },
+    {
+      "index": 46,
+      "files": [
+        "/home/tpang/documents/websiteProfileV2/docs/screenshots/mobile-en-dark-modal.png"
+      ],
+      "output": "/home/tpang/documents/websiteProfileV2/graphify-out/.graphify_chunk_046.json"
+    },
+    {
+      "index": 49,
+      "files": [
+        "/home/tpang/documents/websiteProfileV2/docs/screenshots/mobile-en-light-modal.png"
+      ],
+      "output": "/home/tpang/documents/websiteProfileV2/graphify-out/.graphify_chunk_049.json"
+    },
+    {
+      "index": 52,
+      "files": [
+        "/home/tpang/documents/websiteProfileV2/docs/screenshots/mobile-id-dark-modal.png"
+      ],
+      "output": "/home/tpang/documents/websiteProfileV2/graphify-out/.graphify_chunk_052.json"
+    },
+    {
+      "index": 55,
+      "files": [
+        "/home/tpang/documents/websiteProfileV2/docs/screenshots/mobile-id-light-modal.png"
+      ],
+      "output": "/home/tpang/documents/websiteProfileV2/graphify-out/.graphify_chunk_055.json"
+    },
+    {
+      "index": 58,
+      "files": [
+        "/home/tpang/documents/websiteProfileV2/docs/screenshots/revision-2/detail-mobile.png"
+      ],
+      "output": "/home/tpang/documents/websiteProfileV2/graphify-out/.graphify_chunk_058.json"
+    },
+    {
+      "index": 61,
+      "files": [
+        "/home/tpang/documents/websiteProfileV2/docs/screenshots/revision-2/projects-desktop.png"
+      ],
+      "output": "/home/tpang/documents/websiteProfileV2/graphify-out/.graphify_chunk_061.json"
+    },
+    {
+      "index": 64,
+      "files": [
+        "/home/tpang/documents/websiteProfileV2/docs/screenshots/revision-3/desktop-home.png"
+      ],
+      "output": "/home/tpang/documents/websiteProfileV2/graphify-out/.graphify_chunk_064.json"
+    },
+    {
+      "index": 67,
+      "files": [
+        "/home/tpang/documents/websiteProfileV2/docs/screenshots/revision-3/mobile-home.png"
+      ],
+      "output": "/home/tpang/documents/websiteProfileV2/graphify-out/.graphify_chunk_067.json"
+    },
+    {
+      "index": 70,
+      "files": [
+        "/home/tpang/documents/websiteProfileV2/docs/screenshots/revision-4/desktop-home.png"
+      ],
+      "output": "/home/tpang/documents/websiteProfileV2/graphify-out/.graphify_chunk_070.json"
+    },
+    {
+      "index": 73,
+      "files": [
+        "/home/tpang/documents/websiteProfileV2/docs/screenshots/revision-4/mobile-home.png"
+      ],
+      "output": "/home/tpang/documents/websiteProfileV2/graphify-out/.graphify_chunk_073.json"
+    },
+    {
+      "index": 76,
+      "files": [
+        "/home/tpang/documents/websiteProfileV2/docs/screenshots/revision-4/narrow-home.png"
+      ],
+      "output": "/home/tpang/documents/websiteProfileV2/graphify-out/.graphify_chunk_076.json"
+    },
+    {
+      "index": 79,
+      "files": [
+        "/home/tpang/documents/websiteProfileV2/docs/screenshots/revision-5/projects-mobile.png"
+      ],
+      "output": "/home/tpang/documents/websiteProfileV2/graphify-out/.graphify_chunk_079.json"
+    },
+    {
+      "index": 82,
+      "files": [
+        "/home/tpang/documents/websiteProfileV2/docs/screenshots/revision-7/home-mobile.png"
+      ],
+      "output": "/home/tpang/documents/websiteProfileV2/graphify-out/.graphify_chunk_082.json"
+    },
+    {
+      "index": 85,
+      "files": [
+        "/home/tpang/documents/websiteProfileV2/docs/verification/playwright/final-hero/artifacts/portfolio-hero-selection-c-1c533-focus-links-and-no-autoplay-mobile/test-finished-1.png"
+      ],
+      "output": "/home/tpang/documents/websiteProfileV2/graphify-out/.graphify_chunk_085.json"
+    },
+    {
+      "index": 88,
+      "files": [
+        "/home/tpang/documents/websiteProfileV2/docs/verification/playwright/final-narrow/artifacts/portfolio-capture-responsive-production-evidence-narrow/test-finished-1.png"
+      ],
+      "output": "/home/tpang/documents/websiteProfileV2/graphify-out/.graphify_chunk_088.json"
+    },
+    {
+      "index": 91,
+      "files": [
+        "/home/tpang/documents/websiteProfileV2/docs/verification/playwright/final-narrow/artifacts/portfolio-hero-selection-c-1c533-focus-links-and-no-autoplay-narrow/test-finished-1.png"
+      ],
+      "output": "/home/tpang/documents/websiteProfileV2/graphify-out/.graphify_chunk_091.json"
+    },
+    {
+      "index": 94,
+      "files": [
+        "/home/tpang/documents/websiteProfileV2/docs/verification/playwright/final-narrow/artifacts/portfolio-preferences-pers-582fe-orage-failure-remain-usable-narrow/test-finished-1.png"
+      ],
+      "output": "/home/tpang/documents/websiteProfileV2/graphify-out/.graphify_chunk_094.json"
+    },
+    {
+      "index": 97,
+      "files": [
+        "/home/tpang/documents/websiteProfileV2/docs/verification/playwright/fixed-mobile-capture/artifacts/portfolio-capture-responsive-production-evidence-mobile/test-finished-1.png"
+      ],
+      "output": "/home/tpang/documents/websiteProfileV2/graphify-out/.graphify_chunk_097.json"
+    },
+    {
+      "index": 100,
+      "files": [
+        "/home/tpang/documents/websiteProfileV2/docs/verification/playwright/matrix-resume/artifacts/.playwright-artifacts-1/traces/screencast/page@5fa97c472327e103f6c9f1f1a90938e4-1795333990823.jpeg"
+      ],
+      "output": "/home/tpang/documents/websiteProfileV2/graphify-out/.graphify_chunk_100.json"
+    },
+    {
+      "index": 103,
+      "files": [
+        "/home/tpang/documents/websiteProfileV2/docs/verification/playwright/matrix-resume/artifacts/.playwright-artifacts-1/traces/screencast/page@5fa97c472327e103f6c9f1f1a90938e4-1795333990919.jpeg"
+      ],
+      "output": "/home/tpang/documents/websiteProfileV2/graphify-out/.graphify_chunk_103.json"
+    },
+    {
+      "index": 106,
+      "files": [
+        "/home/tpang/documents/websiteProfileV2/docs/verification/playwright/matrix-resume/artifacts/.playwright-artifacts-1/traces/screencast/page@5fa97c472327e103f6c9f1f1a90938e4-1795333991002.jpeg"
+      ],
+      "output": "/home/tpang/documents/websiteProfileV2/graphify-out/.graphify_chunk_106.json"
+    },
+    {
+      "index": 109,
+      "files": [
+        "/home/tpang/documents/websiteProfileV2/docs/verification/playwright/matrix-resume/artifacts/.playwright-artifacts-1/traces/screencast/page@5fa97c472327e103f6c9f1f1a90938e4-1795333991140.jpeg"
+      ],
+      "output": "/home/tpang/documents/websiteProfileV2/graphify-out/.graphify_chunk_109.json"
+    },
+    {
+      "index": 112,
+      "files": [
+        "/home/tpang/documents/websiteProfileV2/docs/verification/playwright/matrix-resume/artifacts/.playwright-artifacts-1/traces/screencast/page@5fa97c472327e103f6c9f1f1a90938e4-1795333991259.jpeg"
+      ],
+      "output": "/home/tpang/documents/websiteProfileV2/graphify-out/.graphify_chunk_112.json"
+    },
+    {
+      "index": 115,
+      "files": [
+        "/home/tpang/documents/websiteProfileV2/docs/verification/playwright/matrix-resume/artifacts/.playwright-artifacts-1/traces/screencast/page@5fa97c472327e103f6c9f1f1a90938e4-1795333991288.jpeg"
+      ],
+      "output": "/home/tpang/documents/websiteProfileV2/graphify-out/.graphify_chunk_115.json"
+    },
+    {
+      "index": 118,
+      "files": [
+        "/home/tpang/documents/websiteProfileV2/docs/verification/playwright/matrix-resume/artifacts/.playwright-artifacts-1/traces/screencast/page@7c68d73e13fa8ed5d3a8ee33a959db9c-1795333985005.jpeg"
+      ],
+      "output": "/home/tpang/documents/websiteProfileV2/graphify-out/.graphify_chunk_118.json"
+    },
+    {
+      "index": 121,
+      "files": [
+        "/home/tpang/documents/websiteProfileV2/docs/verification/playwright/matrix-resume/artifacts/.playwright-artifacts-1/traces/screencast/page@7c68d73e13fa8ed5d3a8ee33a959db9c-1795333985536.jpeg"
+      ],
+      "output": "/home/tpang/documents/websiteProfileV2/graphify-out/.graphify_chunk_121.json"
+    },
+    {
+      "index": 124,
+      "files": [
+        "/home/tpang/documents/websiteProfileV2/docs/verification/playwright/matrix-resume/artifacts/.playwright-artifacts-1/traces/screencast/page@7c68d73e13fa8ed5d3a8ee33a959db9c-1795333985642.jpeg"
+      ],
+      "output": "/home/tpang/documents/websiteProfileV2/graphify-out/.graphify_chunk_124.json"
+    },
+    {
+      "index": 127,
+      "files": [
+        "/home/tpang/documents/websiteProfileV2/docs/verification/playwright/matrix-resume/artifacts/.playwright-artifacts-1/traces/screencast/page@7c68d73e13fa8ed5d3a8ee33a959db9c-1795333985723.jpeg"
+      ],
+      "output": "/home/tpang/documents/websiteProfileV2/graphify-out/.graphify_chunk_127.json"
+    },
+    {
+      "index": 130,
+      "files": [
+        "/home/tpang/documents/websiteProfileV2/docs/verification/playwright/matrix-resume/artifacts/.playwright-artifacts-1/traces/screencast/page@7c68d73e13fa8ed5d3a8ee33a959db9c-1795333985856.jpeg"
+      ],
+      "output": "/home/tpang/documents/websiteProfileV2/graphify-out/.graphify_chunk_130.json"
+    },
+    {
+      "index": 133,
+      "files": [
+        "/home/tpang/documents/websiteProfileV2/docs/verification/playwright/matrix-resume/artifacts/.playwright-artifacts-1/traces/screencast/page@7c68d73e13fa8ed5d3a8ee33a959db9c-1795333985888.jpeg"
+      ],
+      "output": "/home/tpang/documents/websiteProfileV2/graphify-out/.graphify_chunk_133.json"
+    },
+    {
+      "index": 136,
+      "files": [
+        "/home/tpang/documents/websiteProfileV2/docs/verification/playwright/matrix-resume/artifacts/.playwright-artifacts-1/traces/screencast/page@7c68d73e13fa8ed5d3a8ee33a959db9c-1795333985979.jpeg"
+      ],
+      "output": "/home/tpang/documents/websiteProfileV2/graphify-out/.graphify_chunk_136.json"
+    },
+    {
+      "index": 139,
+      "files": [
+        "/home/tpang/documents/websiteProfileV2/docs/verification/playwright/matrix-resume/artifacts/.playwright-artifacts-1/traces/screencast/page@7c68d73e13fa8ed5d3a8ee33a959db9c-1795333986270.jpeg"
+      ],
+      "output": "/home/tpang/documents/websiteProfileV2/graphify-out/.graphify_chunk_139.json"
+    },
+    {
+      "index": 142,
+      "files": [
+        "/home/tpang/documents/websiteProfileV2/docs/verification/playwright/matrix-resume/artifacts/.playwright-artifacts-1/traces/screencast/page@7c68d73e13fa8ed5d3a8ee33a959db9c-1795333986352.jpeg"
+      ],
+      "output": "/home/tpang/documents/websiteProfileV2/graphify-out/.graphify_chunk_142.json"
+    },
+    {
+      "index": 145,
+      "files": [
+        "/home/tpang/documents/websiteProfileV2/docs/verification/playwright/matrix-resume/artifacts/.playwright-artifacts-1/traces/screencast/page@7c68d73e13fa8ed5d3a8ee33a959db9c-1795333986422.jpeg"
+      ],
+      "output": "/home/tpang/documents/websiteProfileV2/graphify-out/.graphify_chunk_145.json"
+    },
+    {
+      "index": 148,
+      "files": [
+        "/home/tpang/documents/websiteProfileV2/docs/verification/playwright/matrix-resume/artifacts/.playwright-artifacts-1/traces/screencast/page@7c68d73e13fa8ed5d3a8ee33a959db9c-1795333986520.jpeg"
+      ],
+      "output": "/home/tpang/documents/websiteProfileV2/graphify-out/.graphify_chunk_148.json"
+    },
+    {
+      "index": 151,
+      "files": [
+        "/home/tpang/documents/websiteProfileV2/docs/verification/playwright/matrix-resume/artifacts/.playwright-artifacts-1/traces/screencast/page@7c68d73e13fa8ed5d3a8ee33a959db9c-1795333986614.jpeg"
+      ],
+      "output": "/home/tpang/documents/websiteProfileV2/graphify-out/.graphify_chunk_151.json"
+    },
+    {
+      "index": 154,
+      "files": [
+        "/home/tpang/documents/websiteProfileV2/docs/verification/playwright/matrix-resume/artifacts/.playwright-artifacts-1/traces/screencast/page@7c68d73e13fa8ed5d3a8ee33a959db9c-1795333986690.jpeg"
+      ],
+      "output": "/home/tpang/documents/websiteProfileV2/graphify-out/.graphify_chunk_154.json"
+    },
+    {
+      "index": 157,
+      "files": [
+        "/home/tpang/documents/websiteProfileV2/docs/verification/playwright/matrix-resume/artifacts/.playwright-artifacts-1/traces/screencast/page@7c68d73e13fa8ed5d3a8ee33a959db9c-1795333986791.jpeg"
+      ],
+      "output": "/home/tpang/documents/websiteProfileV2/graphify-out/.graphify_chunk_157.json"
+    },
+    {
+      "index": 160,
+      "files": [
+        "/home/tpang/documents/websiteProfileV2/docs/verification/playwright/matrix-resume/artifacts/.playwright-artifacts-1/traces/screencast/page@7c68d73e13fa8ed5d3a8ee33a959db9c-1795333986912.jpeg"
+      ],
+      "output": "/home/tpang/documents/websiteProfileV2/graphify-out/.graphify_chunk_160.json"
+    },
+    {
+      "index": 163,
+      "files": [
+        "/home/tpang/documents/websiteProfileV2/docs/verification/playwright/matrix-resume/artifacts/.playwright-artifacts-1/traces/screencast/page@7c68d73e13fa8ed5d3a8ee33a959db9c-1795333987140.jpeg"
+      ],
+      "output": "/home/tpang/documents/websiteProfileV2/graphify-out/.graphify_chunk_163.json"
+    },
+    {
+      "index": 166,
+      "files": [
+        "/home/tpang/documents/websiteProfileV2/docs/verification/playwright/matrix-resume/artifacts/.playwright-artifacts-1/traces/screencast/page@7c68d73e13fa8ed5d3a8ee33a959db9c-1795333987202.jpeg"
+      ],
+      "output": "/home/tpang/documents/websiteProfileV2/graphify-out/.graphify_chunk_166.json"
+    },
+    {
+      "index": 169,
+      "files": [
+        "/home/tpang/documents/websiteProfileV2/docs/verification/playwright/matrix-resume/artifacts/.playwright-artifacts-1/traces/screencast/page@7c68d73e13fa8ed5d3a8ee33a959db9c-1795333987282.jpeg"
+      ],
+      "output": "/home/tpang/documents/websiteProfileV2/graphify-out/.graphify_chunk_169.json"
+    },
+    {
+      "index": 172,
+      "files": [
+        "/home/tpang/documents/websiteProfileV2/docs/verification/playwright/matrix-resume/artifacts/.playwright-artifacts-1/traces/screencast/page@7c68d73e13fa8ed5d3a8ee33a959db9c-1795333987356.jpeg"
+      ],
+      "output": "/home/tpang/documents/websiteProfileV2/graphify-out/.graphify_chunk_172.json"
+    },
+    {
+      "index": 175,
+      "files": [
+        "/home/tpang/documents/websiteProfileV2/docs/verification/playwright/matrix-resume/artifacts/.playwright-artifacts-1/traces/screencast/page@7c68d73e13fa8ed5d3a8ee33a959db9c-1795333987437.jpeg"
+      ],
+      "output": "/home/tpang/documents/websiteProfileV2/graphify-out/.graphify_chunk_175.json"
+    },
+    {
+      "index": 178,
+      "files": [
+        "/home/tpang/documents/websiteProfileV2/docs/verification/playwright/matrix-resume/artifacts/.playwright-artifacts-1/traces/screencast/page@7c68d73e13fa8ed5d3a8ee33a959db9c-1795333987506.jpeg"
+      ],
+      "output": "/home/tpang/documents/websiteProfileV2/graphify-out/.graphify_chunk_178.json"
+    },
+    {
+      "index": 181,
+      "files": [
+        "/home/tpang/documents/websiteProfileV2/docs/verification/playwright/matrix-resume/artifacts/.playwright-artifacts-1/traces/screencast/page@7c68d73e13fa8ed5d3a8ee33a959db9c-1795333987556.jpeg"
+      ],
+      "output": "/home/tpang/documents/websiteProfileV2/graphify-out/.graphify_chunk_181.json"
+    },
+    {
+      "index": 184,
+      "files": [
+        "/home/tpang/documents/websiteProfileV2/docs/verification/playwright/matrix-resume/artifacts/.playwright-artifacts-1/traces/screencast/page@7c68d73e13fa8ed5d3a8ee33a959db9c-1795333987618.jpeg"
+      ],
+      "output": "/home/tpang/documents/websiteProfileV2/graphify-out/.graphify_chunk_184.json"
+    },
+    {
+      "index": 187,
+      "files": [
+        "/home/tpang/documents/websiteProfileV2/docs/verification/playwright/matrix-resume/artifacts/.playwright-artifacts-1/traces/screencast/page@7c68d73e13fa8ed5d3a8ee33a959db9c-1795333988731.jpeg"
+      ],
+      "output": "/home/tpang/documents/websiteProfileV2/graphify-out/.graphify_chunk_187.json"
+    },
+    {
+      "index": 190,
+      "files": [
+        "/home/tpang/documents/websiteProfileV2/docs/verification/playwright/matrix-resume/artifacts/portfolio-en-dark-home-archive-current-details-accessibility-mobile/test-finished-1.png"
+      ],
+      "output": "/home/tpang/documents/websiteProfileV2/graphify-out/.graphify_chunk_190.json"
+    },
+    {
+      "index": 193,
+      "files": [
+        "/home/tpang/documents/websiteProfileV2/docs/verification/playwright/matrix-resume/artifacts/portfolio-hero-selection-c-1c533-focus-links-and-no-autoplay-narrow/test-finished-1.png"
+      ],
+      "output": "/home/tpang/documents/websiteProfileV2/graphify-out/.graphify_chunk_193.json"
+    },
+    {
+      "index": 196,
+      "files": [
+        "/home/tpang/documents/websiteProfileV2/docs/verification/playwright/matrix-resume/artifacts/portfolio-id-light-home-ar-108b3-rrent-details-accessibility-mobile/test-finished-1.png"
+      ],
+      "output": "/home/tpang/documents/websiteProfileV2/graphify-out/.graphify_chunk_196.json"
+    },
+    {
+      "index": 199,
+      "files": [
+        "/home/tpang/documents/websiteProfileV2/docs/verification/playwright/matrix-resume/artifacts/positioning-current-positi-7587e-nd-honest-verification-copy-mobile/test-finished-1.png"
+      ],
+      "output": "/home/tpang/documents/websiteProfileV2/graphify-out/.graphify_chunk_199.json"
+    },
+    {
+      "index": 202,
+      "files": [
+        "/home/tpang/documents/websiteProfileV2/docs/verification/playwright/matrix/artifacts/portfolio-CTAs-mobile-menu-3f869-story-contact-and-clipboard-tablet/test-finished-1.png"
+      ],
+      "output": "/home/tpang/documents/websiteProfileV2/graphify-out/.graphify_chunk_202.json"
+    },
+    {
+      "index": 205,
+      "files": [
+        "/home/tpang/documents/websiteProfileV2/docs/verification/playwright/matrix/artifacts/portfolio-en-dark-home-archive-current-details-accessibility-desktop/test-finished-1.png"
+      ],
+      "output": "/home/tpang/documents/websiteProfileV2/graphify-out/.graphify_chunk_205.json"
+    },
+    {
+      "index": 208,
+      "files": [
+        "/home/tpang/documents/websiteProfileV2/docs/verification/playwright/matrix/artifacts/portfolio-en-light-home-ar-13ee7-rrent-details-accessibility-desktop/test-finished-1.png"
+      ],
+      "output": "/home/tpang/documents/websiteProfileV2/graphify-out/.graphify_chunk_208.json"
+    },
+    {
+      "index": 211,
+      "files": [
+        "/home/tpang/documents/websiteProfileV2/docs/verification/playwright/matrix/artifacts/portfolio-hero-selection-c-1c533-focus-links-and-no-autoplay-desktop/test-finished-1.png"
+      ],
+      "output": "/home/tpang/documents/websiteProfileV2/graphify-out/.graphify_chunk_211.json"
+    },
+    {
+      "index": 214,
+      "files": [
+        "/home/tpang/documents/websiteProfileV2/docs/verification/playwright/matrix/artifacts/portfolio-id-dark-home-archive-current-details-accessibility-desktop/test-finished-1.png"
+      ],
+      "output": "/home/tpang/documents/websiteProfileV2/graphify-out/.graphify_chunk_214.json"
+    },
+    {
+      "index": 217,
+      "files": [
+        "/home/tpang/documents/websiteProfileV2/docs/verification/playwright/matrix/artifacts/portfolio-id-light-home-ar-108b3-rrent-details-accessibility-desktop/test-finished-1.png"
+      ],
+      "output": "/home/tpang/documents/websiteProfileV2/graphify-out/.graphify_chunk_217.json"
+    },
+    {
+      "index": 220,
+      "files": [
+        "/home/tpang/documents/websiteProfileV2/docs/verification/playwright/matrix/artifacts/portfolio-preferences-pers-582fe-orage-failure-remain-usable-desktop/test-finished-1.png"
+      ],
+      "output": "/home/tpang/documents/websiteProfileV2/graphify-out/.graphify_chunk_220.json"
+    },
+    {
+      "index": 223,
+      "files": [
+        "/home/tpang/documents/websiteProfileV2/docs/verification/playwright/matrix/artifacts/portfolio-unknown-malforme-71263-cy-sample-URLs-do-not-crash-desktop/test-finished-1.png"
+      ],
+      "output": "/home/tpang/documents/websiteProfileV2/graphify-out/.graphify_chunk_223.json"
+    },
+    {
+      "index": 226,
+      "files": [
+        "/home/tpang/documents/websiteProfileV2/docs/verification/playwright/matrix/artifacts/positioning-current-positi-7587e-nd-honest-verification-copy-desktop/test-finished-1.png"
+      ],
+      "output": "/home/tpang/documents/websiteProfileV2/graphify-out/.graphify_chunk_226.json"
+    },
+    {
+      "index": 229,
+      "files": [
+        "/home/tpang/documents/websiteProfileV2/public/assets/catatan-saku.svg"
+      ],
+      "output": "/home/tpang/documents/websiteProfileV2/graphify-out/.graphify_chunk_229.json"
+    },
+    {
+      "index": 232,
+      "files": [
+        "/home/tpang/documents/websiteProfileV2/public/assets/papan-status.svg"
+      ],
+      "output": "/home/tpang/documents/websiteProfileV2/graphify-out/.graphify_chunk_232.json"
+    },
+    {
+      "index": 235,
+      "files": [
+        "/home/tpang/documents/websiteProfileV2/public/assets/projects/chat-app.webp"
+      ],
+      "output": "/home/tpang/documents/websiteProfileV2/graphify-out/.graphify_chunk_235.json"
+    },
+    {
+      "index": 238,
+      "files": [
+        "/home/tpang/documents/websiteProfileV2/public/assets/projects/laravel-blog.webp"
+      ],
+      "output": "/home/tpang/documents/websiteProfileV2/graphify-out/.graphify_chunk_238.json"
+    },
+    {
+      "index": 241,
+      "files": [
+        "/home/tpang/documents/websiteProfileV2/public/assets/projects/school-website.webp"
+      ],
+      "output": "/home/tpang/documents/websiteProfileV2/graphify-out/.graphify_chunk_241.json"
+    }
+  ]
+}

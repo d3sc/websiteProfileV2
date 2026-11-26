@@ -1,0 +1,24 @@
+const { chromium } = require('playwright');
+const fs = require('node:fs');
+const path = require('node:path');
+(async () => {
+  console.log('Launching Chromium');
+  const browser = await chromium.launch({ headless: true, timeout: 180000, args: ['--disable-gpu', '--renderer-process-limit=1'] });
+  console.log('Chromium launched');
+  const page = await browser.newPage({ viewport: { width: 1440, height: 1000 } });
+  const errors = [], requests = [];
+  page.on('pageerror', error => errors.push(String(error)));
+  page.on('console', msg => { if (msg.type() === 'error') errors.push(msg.text()); });
+  page.on('requestfailed', req => requests.push({url:req.url(),error:req.failure()}));
+  const file = 'file://' + path.resolve('graphify-out/graph.html');
+  await page.goto(file, { waitUntil: 'networkidle', timeout: 60000 });
+  await page.waitForFunction(() => document.querySelector('#graph canvas') !== null, { timeout: 30000 });
+  await page.locator('#search').fill('HeroProjects');
+  await page.waitForFunction(() => document.querySelector('#search-results')?.innerText.includes('HeroProjects'), { timeout: 10000 });
+  const result = {url:page.url(), title:await page.title(), canvasCount:await page.locator('#graph canvas').count(), searchResult:await page.locator('#search-results').innerText(), stats:await page.locator('#stats').innerText(),errors,requests};
+  await page.screenshot({path:'graphify-out/graph-browser-desktop.png'});
+  fs.writeFileSync('graphify-out/browser-verification.json', JSON.stringify(result,null,2));
+  console.log(JSON.stringify(result,null,2));
+  await browser.close();
+  if(errors.length || requests.length) process.exitCode = 1;
+})().catch(error => {console.error(error); process.exitCode=1;});

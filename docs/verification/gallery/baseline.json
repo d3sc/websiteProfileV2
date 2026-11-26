@@ -1,0 +1,80 @@
+[
+  {
+    "width": 1440,
+    "title": "Beranda — Ikbar Rabbani Purwanto",
+    "images": [
+      {
+        "src": "assets/projects/vps-manager.webp",
+        "broken": false
+      },
+      {
+        "src": "assets/projects/proxmox-home-lab.webp",
+        "broken": false
+      },
+      {
+        "src": "assets/projects/lms-ujian-online.webp",
+        "broken": false
+      },
+      {
+        "src": "assets/projects/vps-manager.webp",
+        "broken": false
+      },
+      {
+        "src": "assets/projects/proxmox-home-lab.webp",
+        "broken": false
+      },
+      {
+        "src": "assets/projects/lms-ujian-online.webp",
+        "broken": false
+      },
+      {
+        "src": "assets/projects/helpdesk-ticketing.webp",
+        "broken": false
+      },
+      {
+        "src": "assets/projects/trading-analysis-dashboard.webp",
+        "broken": true
+      }
+    ],
+    "errors": []
+  },
+  {
+    "width": 360,
+    "title": "Beranda — Ikbar Rabbani Purwanto",
+    "images": [
+      {
+        "src": "assets/projects/vps-manager.webp",
+        "broken": false
+      },
+      {
+        "src": "assets/projects/proxmox-home-lab.webp",
+        "broken": false
+      },
+      {
+        "src": "assets/projects/lms-ujian-online.webp",
+        "broken": false
+      },
+      {
+        "src": "assets/projects/vps-manager.webp",
+        "broken": false
+      },
+      {
+        "src": "assets/projects/proxmox-home-lab.webp",
+        "broken": false
+      },
+      {
+        "src": "assets/projects/lms-ujian-online.webp",
+        "broken": false
+      },
+      {
+        "src": "assets/projects/helpdesk-ticketing.webp",
+        "broken": false
+      },
+      {
+        "src": "assets/projects/trading-analysis-dashboard.webp",
+        "broken": false
+      }
+    ],
+    "errors": []
+  }
+]

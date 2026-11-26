@@ -1,0 +1,140 @@
+Graph: graphify-out/graph.json (167 nodes) | Traversal: BFS depth=2 | Start: ['routeHref()', 'HeroProjects()'] | 42 nodes found
+
+[i] Complete answer over budget: all 42 nodes and 94 edges shown (~3606 tokens vs the requested ~2000-token budget). Edges are never dropped once every node fits, so this is already the full answer — raising --budget further will not shrink it. Narrow with context_filter=['call'] or use get_node for a specific symbol to reduce size instead.
+
+NODE HeroProjects() [src=src/App.tsx loc=L259 community=Portfolio UI Components]
+NODE routeHref() [src=src/router.ts loc=L28 community=Portfolio UI Components]
+NODE App.tsx [src=src/App.tsx loc=L1 community=Portfolio Data and Routing]
+NODE App() [src=src/App.tsx loc=L99 community=Portfolio UI Components]
+NODE Detail() [src=src/App.tsx loc=L671 community=Portfolio UI Components]
+NODE Home() [src=src/App.tsx loc=L335 community=Portfolio UI Components]
+NODE ProjectCard() [src=src/App.tsx loc=L560 community=Portfolio UI Components]
+NODE router.ts [src=src/router.ts loc=L1 community=Portfolio Data and Routing]
+NODE NotFound() [src=src/App.tsx loc=L750 community=Portfolio UI Components]
+NODE Visual() [src=src/App.tsx loc=L69 community=Portfolio UI Components]
+NODE keydown() [src=src/App.tsx loc=L263 community=Portfolio UI Components]
+NODE data.ts [src=src/data.ts loc=L1 community=Portfolio Data and Routing]
+NODE data.test.ts [src=src/data.test.ts loc=L1 community=Portfolio Data and Routing]
+NODE positioning.test.tsx [src=src/positioning.test.tsx loc=L1 community=Portfolio Data and Routing]
+NODE projects [src=src/data.ts loc=L154 community=Portfolio Data and Routing]
+NODE App.test.tsx [src=src/App.test.tsx loc=L1 community=Development Toolchain]
+NODE field-notes.test.tsx [src=src/field-notes.test.tsx loc=L1 community=Development Toolchain]
+NODE react [src=package.json loc=L15 community=React Application Entry]
+NODE External() [src=src/App.tsx loc=L42 community=Portfolio UI Components]
+NODE copy [src=src/data.ts loc=L223 community=Portfolio Data and Routing]
+NODE Locale [src=src/data.ts loc=L4 community=Portfolio Data and Routing]
+NODE Project [src=src/data.ts loc=L6 community=Portfolio Data and Routing]
+NODE main.tsx [src=src/main.tsx loc=L1 community=React Application Entry]
+NODE readRoute() [src=src/router.ts loc=L7 community=Portfolio Data and Routing]
+NODE ProjectArchive() [src=src/App.tsx loc=L616 community=Portfolio UI Components]
+NODE Tags() [src=src/App.tsx loc=L60 community=Portfolio UI Components]
+NODE allProjects [src=src/data.ts loc=L158 community=Portfolio Data and Routing]
+NODE archivedProjects [src=src/data.ts loc=L153 community=Portfolio Data and Routing]
+NODE categoryLabels [src=src/data.ts loc=L24 community=Portfolio Data and Routing]
+NODE profileName [src=src/data.ts loc=L3 community=Portfolio Data and Routing]
+NODE preference() [src=src/App.tsx loc=L30 community=Portfolio UI Components]
+NODE achievements [src=src/data.ts loc=L172 community=Portfolio Data and Routing]
+NODE categories [src=src/data.ts loc=L23 community=Portfolio Data and Routing]
+NODE Category [src=src/data.ts loc=L5 community=Portfolio Data and Routing]
+NODE email [src=src/data.ts loc=L162 community=Portfolio Data and Routing]
+NODE skills [src=src/data.ts loc=L186 community=Portfolio Data and Routing]
+NODE socialLinks [src=src/data.ts loc=L163 community=Portfolio Data and Routing]
+NODE Route [src=src/router.ts loc=L1 community=Portfolio Data and Routing]
+NODE copyEmail() [src=src/App.tsx loc=L355 community=Portfolio UI Components]
+NODE Text [src=src/App.tsx loc=L29 community=Portfolio Data and Routing]
+NODE Theme [src=src/App.tsx loc=L28 community=Portfolio Data and Routing]
+NODE src_styles [src= loc= community=Portfolio Data and Routing]
+EDGE App() --calls [EXTRACTED context=call]--> routeHref() at=src/App.tsx:L184
+EDGE Detail() --calls [EXTRACTED context=call]--> routeHref() at=src/App.tsx:L686
+EDGE Home() --calls [EXTRACTED context=call]--> routeHref() at=src/App.tsx:L383
+EDGE NotFound() --calls [EXTRACTED context=call]--> routeHref() at=src/App.tsx:L756
+EDGE ProjectCard() --calls [EXTRACTED context=call]--> routeHref() at=src/App.tsx:L573
+EDGE App.tsx --imports [EXTRACTED context=import]--> routeHref() at=src/App.tsx:L25
+EDGE router.ts --contains [EXTRACTED]--> routeHref() at=src/router.ts:L28
+EDGE HeroProjects() --calls [EXTRACTED context=call]--> Visual() at=src/App.tsx:L296
+EDGE Home() --calls [EXTRACTED context=call]--> HeroProjects() at=src/App.tsx:L397
+EDGE HeroProjects() --contains [EXTRACTED context=call]--> keydown() at=src/App.tsx:L263
+EDGE App.tsx --contains [EXTRACTED]--> HeroProjects() at=src/App.tsx:L259
+EDGE App() --calls [EXTRACTED context=call]--> preference() at=src/App.tsx:L101
+EDGE App() --calls [EXTRACTED context=call]--> readRoute() at=src/App.tsx:L106
+EDGE App() --calls [EXTRACTED context=call]--> ProjectArchive() at=src/App.tsx:L239
+EDGE App.test.tsx --imports [EXTRACTED context=import]--> App() at=src/App.test.tsx:L4
+EDGE field-notes.test.tsx --imports [EXTRACTED context=import]--> App() at=src/field-notes.test.tsx:L4
+EDGE main.tsx --imports [EXTRACTED context=import]--> App() at=src/main.tsx:L3
+EDGE positioning.test.tsx --imports [EXTRACTED context=import]--> App() at=src/positioning.test.tsx:L4
+EDGE Detail() --calls [EXTRACTED context=call]--> Tags() at=src/App.tsx:L706
+EDGE Detail() --calls [EXTRACTED context=call]--> External() at=src/App.tsx:L734
+EDGE Home() --calls [EXTRACTED context=call]--> External() at=src/App.tsx:L505
+EDGE Home() --contains [EXTRACTED]--> copyEmail() at=src/App.tsx:L355
+EDGE ProjectArchive() --calls [EXTRACTED context=call]--> ProjectCard() at=src/App.tsx:L650
+EDGE ProjectCard() --calls [EXTRACTED context=call]--> Tags() at=src/App.tsx:L599
+EDGE ProjectCard() --calls [EXTRACTED context=call]--> External() at=src/App.tsx:L605
+EDGE App.tsx --imports [EXTRACTED context=import]--> readRoute() at=src/App.tsx:L25
+EDGE App.tsx --imports [EXTRACTED context=import]--> Route at=src/App.tsx:L25
+EDGE App.tsx --imports [EXTRACTED context=import]--> achievements at=src/App.tsx:L9
+EDGE App.tsx --imports [EXTRACTED context=import]--> allProjects at=src/App.tsx:L9
+EDGE App.tsx --imports [EXTRACTED context=import]--> archivedProjects at=src/App.tsx:L9
+EDGE App.tsx --imports [EXTRACTED context=import]--> categories at=src/App.tsx:L9
+EDGE App.tsx --imports [EXTRACTED context=import]--> Category at=src/App.tsx:L9
+EDGE App.tsx --imports [EXTRACTED context=import]--> categoryLabels at=src/App.tsx:L9
+EDGE App.tsx --imports [EXTRACTED context=import]--> copy at=src/App.tsx:L9
+EDGE App.tsx --imports [EXTRACTED context=import]--> email at=src/App.tsx:L9
+EDGE App.tsx --imports [EXTRACTED context=import]--> Locale at=src/App.tsx:L9
+EDGE App.tsx --imports [EXTRACTED context=import]--> profileName at=src/App.tsx:L9
+EDGE App.tsx --imports [EXTRACTED context=import]--> Project at=src/App.tsx:L9
+EDGE App.tsx --imports [EXTRACTED context=import]--> projects at=src/App.tsx:L9
+EDGE App.tsx --imports [EXTRACTED context=import]--> skills at=src/App.tsx:L9
+EDGE App.tsx --imports [EXTRACTED context=import]--> socialLinks at=src/App.tsx:L9
+EDGE App.tsx --imports_from [EXTRACTED context=import]--> react at=src/App.tsx:L1
+EDGE App.tsx --imports_from [EXTRACTED context=import]--> src_styles at=src/App.tsx:L26
+EDGE App.tsx --imports_from [EXTRACTED context=import]--> data.ts at=src/App.tsx:L9
+EDGE App.test.tsx --imports_from [EXTRACTED context=import]--> App.tsx at=src/App.test.tsx:L4
+EDGE field-notes.test.tsx --imports_from [EXTRACTED context=import]--> App.tsx at=src/field-notes.test.tsx:L4
+EDGE main.tsx --imports_from [EXTRACTED context=import]--> App.tsx at=src/main.tsx:L3
+EDGE positioning.test.tsx --imports_from [EXTRACTED context=import]--> App.tsx at=src/positioning.test.tsx:L4
+EDGE App.tsx --contains [EXTRACTED]--> Theme at=src/App.tsx:L28
+EDGE App.tsx --contains [EXTRACTED]--> Text at=src/App.tsx:L29
+EDGE App.tsx --contains [EXTRACTED]--> preference() at=src/App.tsx:L30
+EDGE App.tsx --contains [EXTRACTED]--> External() at=src/App.tsx:L42
+EDGE App.tsx --contains [EXTRACTED]--> Tags() at=src/App.tsx:L60
+EDGE App.tsx --contains [EXTRACTED]--> ProjectArchive() at=src/App.tsx:L616
+EDGE data.test.ts --imports_from [EXTRACTED context=import]--> router.ts at=src/data.test.ts:L3
+EDGE router.ts --contains [EXTRACTED]--> Route at=src/router.ts:L1
+EDGE router.ts --contains [EXTRACTED]--> readRoute() at=src/router.ts:L7
+EDGE main.tsx --imports_from [EXTRACTED context=import]--> react at=src/main.tsx:L1
+EDGE App.tsx --imports_from [EXTRACTED context=import]--> router.ts at=src/App.tsx:L25
+EDGE App.tsx --contains [EXTRACTED]--> Home() at=src/App.tsx:L335
+EDGE App.tsx --contains [EXTRACTED]--> ProjectCard() at=src/App.tsx:L560
+EDGE App.tsx --contains [EXTRACTED]--> Detail() at=src/App.tsx:L671
+EDGE App.tsx --contains [EXTRACTED]--> Visual() at=src/App.tsx:L69
+EDGE App.tsx --contains [EXTRACTED]--> NotFound() at=src/App.tsx:L750
+EDGE App.tsx --contains [EXTRACTED]--> App() at=src/App.tsx:L99
+EDGE App() --calls [EXTRACTED context=call]--> Home() at=src/App.tsx:L238
+EDGE App() --calls [EXTRACTED context=call]--> Detail() at=src/App.tsx:L241
+EDGE App() --calls [EXTRACTED context=call]--> NotFound() at=src/App.tsx:L247
+EDGE Detail() --calls [EXTRACTED context=call]--> NotFound() at=src/App.tsx:L691
+EDGE Detail() --calls [EXTRACTED context=call]--> Visual() at=src/App.tsx:L708
+EDGE HeroProjects() --calls [EXTRACTED context=call]--> routeHref() at=src/App.tsx:L304
+EDGE Home() --calls [EXTRACTED context=call]--> ProjectCard() at=src/App.tsx:L426
+EDGE ProjectCard() --calls [EXTRACTED context=call]--> Visual() at=src/App.tsx:L576
+EDGE data.test.ts --imports_from [EXTRACTED context=import]--> data.ts at=src/data.test.ts:L2
+EDGE positioning.test.tsx --imports_from [EXTRACTED context=import]--> data.ts at=src/positioning.test.tsx:L5
+EDGE data.ts --contains [EXTRACTED]--> archivedProjects at=src/data.ts:L153
+EDGE data.ts --contains [EXTRACTED]--> projects at=src/data.ts:L154
+EDGE data.ts --contains [EXTRACTED]--> allProjects at=src/data.ts:L158
+EDGE data.ts --contains [EXTRACTED]--> email at=src/data.ts:L162
+EDGE data.ts --contains [EXTRACTED]--> socialLinks at=src/data.ts:L163
+EDGE data.ts --contains [EXTRACTED]--> achievements at=src/data.ts:L172
+EDGE data.ts --contains [EXTRACTED]--> skills at=src/data.ts:L186
+EDGE data.ts --contains [EXTRACTED]--> copy at=src/data.ts:L223
+EDGE data.ts --contains [EXTRACTED]--> categories at=src/data.ts:L23
+EDGE data.ts --contains [EXTRACTED]--> categoryLabels at=src/data.ts:L24
+EDGE data.ts --contains [EXTRACTED]--> profileName at=src/data.ts:L3
+EDGE data.ts --contains [EXTRACTED]--> Locale at=src/data.ts:L4
+EDGE data.ts --contains [EXTRACTED]--> Category at=src/data.ts:L5
+EDGE data.ts --contains [EXTRACTED]--> Project at=src/data.ts:L6
+EDGE data.test.ts --imports [EXTRACTED context=import]--> allProjects at=src/data.test.ts:L2
+EDGE data.test.ts --imports [EXTRACTED context=import]--> archivedProjects at=src/data.test.ts:L2
+EDGE data.test.ts --imports [EXTRACTED context=import]--> projects at=src/data.test.ts:L2
+EDGE positioning.test.tsx --imports [EXTRACTED context=import]--> projects at=src/positioning.test.tsx:L5
+EDGE data.test.ts --imports [EXTRACTED context=import]--> readRoute() at=src/data.test.ts:L3

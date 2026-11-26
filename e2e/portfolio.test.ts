@@ -123,7 +123,7 @@ for (const locale of ["id", "en"] as const)
       await noOverflow(page);
       await navigate(page, t.work);
       await expect(page).toHaveURL(/#\/projects$/);
-      await expect(page.locator(".project-card")).toHaveCount(12);
+      await expect(page.locator(".project-card")).toHaveCount(11);
       await expect(page.locator("#primary-nav a[aria-current]")).toContainText(
         t.work,
       );
@@ -150,7 +150,7 @@ for (const locale of ["id", "en"] as const)
           await expect(external).toHaveAttribute("href", p.externalUrl);
         else await expect(external).toHaveCount(0);
         if (p.image) {
-          const img = page.locator(".detail-visual img");
+          const img = page.locator(".gallery-enlarge img");
           await expect(img).toHaveAttribute("src", p.image);
           await expect
             .poll(() =>
@@ -186,7 +186,8 @@ test("CTAs, mobile menu Escape, anchors, history, contact and clipboard", async 
     .locator(".hero-actions")
     .getByRole("link", { name: "Lihat Proyek" })
     .click();
-  await expect(page).toHaveURL(/#\/projects$/);
+  await expect(page).toHaveURL(/#\/#selected-projects$/);
+  await expect(page.locator("#selected-projects")).toBeFocused();
   await page.goBack();
   await expect(page.getByRole("tab").first()).toBeVisible();
   await page
@@ -304,7 +305,7 @@ test("capture responsive production evidence", async ({ page }, info) => {
     });
     await noOverflow(page);
     await page.screenshot({
-      path: `docs/screenshots/field-notes/positioning/${name}-${info.project.name}.png`,
+      path: `docs/verification/gallery/regression-${name}-${info.project.name}.png`,
       fullPage: true,
       scale: "css",
       animations: "disabled",

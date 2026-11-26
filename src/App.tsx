@@ -24,6 +24,9 @@ import {
 } from "./data";
 import { readRoute, routeHref, type Route } from "./router";
 import "./styles.css";
+import "./gallery.css";
+import { ProjectGallery } from "./ProjectGallery";
+import { galleryCopy, projectImages } from "./project-media";
 
 type Theme = "light" | "dark";
 type Text = (typeof copy)[Locale];
@@ -75,13 +78,15 @@ function Visual({
   t: Text;
   eager?: boolean;
 }) {
-  return project.image ? (
-    
+  const image = projectImages(project.slug, t === copy.id ? "id" : "en")[0];
+  return image ? (
     <img
-      src={`assets/projects/${project.image}`}
-      alt={`${project.title} — ${t.source}`}
-      width="1366"
-      height="768"
+      src={image.src}
+      srcSet={image.srcSet}
+      sizes="(max-width: 700px) 100vw, (max-width: 1100px) 60vw, 800px"
+      alt={`${project.title} — ${image.alt}`}
+      width={image.width}
+      height={image.height}
       loading={eager ? "eager" : "lazy"}
       decoding="async"
     />
@@ -159,7 +164,13 @@ export default function App() {
   }, [route, locale, t]);
   const nav = [
     ["/", t.home, route.kind === "home" && !route.section],
-    ["/projects", t.work, route.kind === "projects" || route.kind === "detail"],
+    [
+      "/projects",
+      t.work,
+      route.kind === "projects" ||
+        route.kind === "detail" ||
+        (route.kind === "home" && route.section === "selected-projects"),
+    ],
     ["/#about", t.about, route.kind === "home" && route.section === "about"],
     [
       "/#contact",
@@ -293,7 +304,7 @@ function HeroProjects({ t, locale }: { t: Text; locale: Locale }) {
             inert={active !== i}
           >
             <div className="preview-image">
-              <Visual project={p} t={t} eager />
+              <Visual project={p} t={t} eager={active === i} />
             </div>
             <div className="preview-caption">
               <span className="mono">
@@ -380,7 +391,10 @@ function Home({ t, locale }: { t: Text; locale: Locale }) {
           </h1>
           <p className="hero-copy">{t.intro}</p>
           <div className="hero-actions">
-            <a className="button primary" href={routeHref("/projects")}>
+            <a
+              className="button primary"
+              href={routeHref("/#selected-projects")}
+            >
               {t.cta}
               <span aria-hidden="true">↗</span>
             </a>
@@ -406,6 +420,7 @@ function Home({ t, locale }: { t: Text; locale: Locale }) {
       <section
         className="section container selected-section"
         id="selected-projects"
+        tabIndex={-1}
         data-reveal
       >
         <div className="section-heading">
@@ -566,14 +581,24 @@ function ProjectCard({
   t: Text;
   featured?: boolean;
 }) {
+  const locale = t === copy.id ? "id" : "en";
+  const media = projectImages(p.slug, locale);
+  const g = galleryCopy[locale];
   return (
-    <article className={`project-card ${featured ? "featured-card" : ""}`}>
+    <article
+      className={`project-card ${featured ? "featured-card" : ""} ${media.length ? "image-led" : "text-led"}`}
+    >
       <a
         className="project-visual"
         href={routeHref(`/projects/${p.slug}`)}
         aria-label={`${t.details}: ${p.title}`}
       >
         <Visual project={p} t={t} />
+        {media.length > 0 && (
+          <span className="cover-label mono">
+            {g.preview} / {String(media.length).padStart(2, "0")}
+          </span>
+        )}
         <span className="visual-arrow" aria-hidden="true">
           ↗
         </span>
@@ -599,7 +624,7 @@ function ProjectCard({
         <Tags project={p} />
         <div className="card-links">
           <a className="text-link" href={routeHref(`/projects/${p.slug}`)}>
-            {t.details} ↗
+            {media.length ? g.open : t.details} ↗
           </a>
           {p.externalUrl && (
             <External href={p.externalUrl} t={t}>
@@ -704,10 +729,20 @@ function Detail({
       </h1>
       <p className="detail-intro">{p.summary}</p>
       <Tags project={p} />
-      <div className="detail-visual">
-        <Visual project={p} t={t} eager />
-      </div>
-      <p className="image-credit mono">{p.image ? t.source : t.noImage}</p>
+      {projectImages(p.slug, t === copy.id ? "id" : "en").length ? (
+        <ProjectGallery
+          key={p.slug}
+          images={projectImages(p.slug, t === copy.id ? "id" : "en")}
+          title={p.title}
+          locale={t === copy.id ? "id" : "en"}
+        />
+      ) : (
+        <div className="missing-screens">
+          <p className="eyebrow">FIELD NOTE / {p.id}</p>
+          <h2>{galleryCopy[t === copy.id ? "id" : "en"].missing}</h2>
+          <p>{galleryCopy[t === copy.id ? "id" : "en"].missingText}</p>
+        </div>
+      )}
       {p.problem && (
         <section className="project-problem">
           <p className="eyebrow">{t.problem}</p>

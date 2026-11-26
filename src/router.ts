@@ -1,11 +1,13 @@
 export type Route =
-  | { kind: "home"; section?: "about" | "contact" }
+  | { kind: "home"; section?: "about" | "contact" | "selected-projects" }
   | { kind: "projects" }
   | { kind: "detail"; slug: string }
   | { kind: "notfound" };
 
 export function readRoute(hash = window.location.hash): Route {
   const value = hash.replace(/^#/, "") || "/";
+  if (value === "/#selected-projects")
+    return { kind: "home", section: "selected-projects" };
   if (value === "/" || value === "/#about" || value === "/#contact") {
     return value === "/#about"
       ? { kind: "home", section: "about" }

@@ -1,0 +1,186 @@
+{
+  "backup": "/tmp/websiteProfileV2-gallery-originals",
+  "redactions": {
+    "vps-manager": [
+      [
+        1320,
+        465,
+        1735,
+        830
+      ]
+    ],
+    "proxmox-home-lab": [
+      [
+        0,
+        88,
+        376,
+        675
+      ],
+      [
+        390,
+        48,
+        590,
+        90
+      ],
+      [
+        1655,
+        0,
+        1789,
+        44
+      ],
+      [
+        580,
+        96,
+        1230,
+        125
+      ],
+      [
+        580,
+        280,
+        790,
+        315
+      ],
+      [
+        0,
+        762,
+        1789,
+        924
+      ]
+    ]
+  },
+  "crops": {
+    "vps-manager-metrics": {
+      "source": "vps-manager",
+      "box": [
+        320,
+        180,
+        1768,
+        372
+      ]
+    },
+    "helpdesk-ticketing-filters": {
+      "source": "helpdesk-ticketing",
+      "box": [
+        178,
+        460,
+        1614,
+        748
+      ]
+    },
+    "lms-ujian-online-controls": {
+      "source": "lms-ujian-online",
+      "box": [
+        344,
+        302,
+        1770,
+        611
+      ]
+    }
+  },
+  "assets": {
+    "anime-scraping": {
+      "width": 1319,
+      "height": 728,
+      "widths": [
+        480,
+        960
+      ]
+    },
+    "cashier-application": {
+      "width": 1267,
+      "height": 728,
+      "widths": [
+        480,
+        960
+      ]
+    },
+    "chat-app": {
+      "width": 1318,
+      "height": 726,
+      "widths": [
+        480,
+        960
+      ]
+    },
+    "helpdesk-ticketing-filters": {
+      "width": 1436,
+      "height": 288,
+      "widths": [
+        480,
+        960
+      ]
+    },
+    "helpdesk-ticketing": {
+      "width": 1789,
+      "height": 925,
+      "widths": [
+        480,
+        960
+      ]
+    },
+    "kulineran": {
+      "width": 1317,
+      "height": 727,
+      "widths": [
+        480,
+        960
+      ]
+    },
+    "laravel-blog": {
+      "width": 1318,
+      "height": 695,
+      "widths": [
+        480,
+        960
+      ]
+    },
+    "lms-ujian-online-controls": {
+      "width": 1426,
+      "height": 309,
+      "widths": [
+        480,
+        960
+      ]
+    },
+    "lms-ujian-online": {
+      "width": 1793,
+      "height": 931,
+      "widths": [
+        480,
+        960
+      ]
+    },
+    "proxmox-home-lab": {
+      "width": 1789,
+      "height": 924,
+      "widths": [
+        480,
+        960
+      ]
+    },
+    "school-website": {
+      "width": 1366,
+      "height": 768,
+      "widths": [
+        480,
+        960
+      ]
+    },
+    "vps-manager-metrics": {
+      "width": 1448,
+      "height": 192,
+      "widths": [
+        480,
+        960
+      ]
+    },
+    "vps-manager": {
+      "width": 1787,
+      "height": 926,
+      "widths": [
+        480,
+        960
+      ]
+    }
+  }
+}
