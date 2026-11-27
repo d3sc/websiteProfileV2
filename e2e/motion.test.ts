@@ -15,17 +15,15 @@ test("entrance motion keeps text readable at its first frame", async ({
       return Number(getComputedStyle(element).opacity);
     });
   expect(firstFrame).toBeGreaterThanOrEqual(0.9);
-  await page.locator("#selected-projects").scrollIntoViewIfNeeded();
-  await expect(page.locator("#selected-projects")).toHaveClass(/revealed/);
-  const reveal = await page
-    .locator("#selected-projects")
-    .evaluate((element) => {
-      const animation = element.getAnimations()[0];
-      if (animation) {
-        animation.pause();
-        animation.currentTime = 0;
-      }
-      return Number(getComputedStyle(element).opacity);
-    });
+  await page.locator("#about").scrollIntoViewIfNeeded();
+  await expect(page.locator("#about")).toHaveClass(/revealed/);
+  const reveal = await page.locator("#about").evaluate((element) => {
+    const animation = element.getAnimations()[0];
+    if (animation) {
+      animation.pause();
+      animation.currentTime = 0;
+    }
+    return Number(getComputedStyle(element).opacity);
+  });
   expect(reveal).toBeGreaterThanOrEqual(0.9);
 });

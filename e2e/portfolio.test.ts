@@ -305,7 +305,7 @@ test("capture responsive production evidence", async ({ page }, info) => {
     });
     await noOverflow(page);
     await page.screenshot({
-      path: `docs/verification/gallery/regression-${name}-${info.project.name}.png`,
+      path: `docs/verification/horizontal-home/regression-${name}-${info.project.name}.png`,
       fullPage: true,
       scale: "css",
       animations: "disabled",

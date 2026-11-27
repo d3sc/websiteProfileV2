@@ -45,6 +45,8 @@ The repo has no lint script/ESLint configuration. Prettier is a formatting check
 - Old sample URLs still show explicit legacy notices. No CV file/URL was available, so there is no invented download action.
 - Fonts are self-hosted WOFF2 with bundled OFL licenses.
 
+See `docs/HOMEPAGE_SCROLL_REVIEW.md` for the current homepage-only terminal palette, native-scroll-driven horizontal showcase, viewer integration and browser verification. The screenshot-gallery implementation remains documented in `docs/GALLERY_REVIEW.md`.
+
 See `docs/GALLERY_REVIEW.md` for the screenshot/gallery upgrade, privacy review, current verification and per-project missing assets. `docs/FIELD_NOTES_REVIEW.md` and `docs/PLAYWRIGHT_VERIFICATION.md` preserve earlier evidence and are historical rather than acceptance of this upgrade.
 
 For an instrumented one-worker rerun (use a fresh run name to retain older evidence):

@@ -1,0 +1,1247 @@
+
+> ikbar-portfolio@1.0.0 test
+> vitest run --maxWorkers=1
+
+
+[1m[30m[46m RUN [49m[39m[22m [36mv5.0.5 [39m[90m/home/tpang/documents/websiteProfileV2[39m
+
+ [31m❯[39m src/scroll-home.test.tsx [2m([22m[2m1 test[22m[2m | [22m[31m1 failed[39m[2m)[22m[33m 2203[2mms[22m[39m
+[31m   [31m×[31m places the real screenshot sequence between hero and compact project index[39m[33m 2197[2mms[22m[39m
+ [32m✓[39m src/App.test.tsx [2m([22m[2m6 tests[22m[2m)[22m[33m 1784[2mms[22m[39m
+   [32m✓[39m routed portfolio [2m(6)[22m
+     [33m[2m✓[22m[39m navigates from home to projects and detail[33m 1066[2mms[22m[39m
+     [33m[2m✓[22m[39m switches locale and preserves theme controls[33m 370[2mms[22m[39m
+ [31m❯[39m src/positioning.test.tsx [2m([22m[2m4 tests[22m[2m | [22m[31m1 failed[39m[2m)[22m[33m 1675[2mms[22m[39m
+   [33m[2m✓[22m[39m uses the updated full name, first-person bio and four project-linked skill groups[33m 912[2mms[22m[39m
+[31m   [31m×[31m orders hero and featured projects as VPS, Proxmox and LMS with correct detail destinations[39m[33m 420[2mms[22m[39m
+   [33m[2m✓[22m[39m shows scoped evidence and no made-up external links on every new detail[33m 321[2mms[22m[39m
+   [32m✓[39m publishes only the five supplied projects as current work[32m 11[2mms[22m[39m
+ [32m✓[39m src/gallery.test.tsx [2m([22m[2m4 tests[22m[2m)[22m[33m 982[2mms[22m[39m
+   [33m[2m✓[22m[39m provides a manually controlled gallery with truthful crop captions[33m 527[2mms[22m[39m
+ [32m✓[39m src/field-notes.test.tsx [2m([22m[2m2 tests[22m[2m)[22m[33m 935[2mms[22m[39m
+   [33m[2m✓[22m[39m lets visitors select a hero project with keyboard and updates the preview link[33m 604[2mms[22m[39m
+   [33m[2m✓[22m[39m keeps placeholder entries out of the public work selection[33m 325[2mms[22m[39m
+ [32m✓[39m src/data.test.ts [2m([22m[2m2 tests[22m[2m)[22m[32m 25[2mms[22m[39m
+
+[31m⎯⎯⎯⎯⎯⎯⎯[39m[1m[41m Failed Tests 2 [49m[22m[31m⎯⎯⎯⎯⎯⎯⎯[39m
+
+[41m[1m FAIL [22m[49m src/positioning.test.tsx[2m > [22morders hero and featured projects as VPS, Proxmox and LMS with correct detail destinations
+[31m[1mAssertionError[22m: expected  to have a length of 3 but got +0[39m
+
+[32m- Expected[39m
+[31m+ Received[39m
+
+[32m- 3[39m
+[31m+ 0[39m
+
+[36m [2m❯[22m src/positioning.test.tsx:[2m56:5[22m[39m
+    [90m 54|[39m   expect(
+    [90m 55|[39m     document.querySelectorAll("#selected-projects .project-card"),
+    [90m 56|[39m   ).toHaveLength(3);
+    [90m   |[39m     [31m^[39m
+    [90m 57|[39m   expect(
+    [90m 58|[39m     document.querySelectorAll("#other-projects .project-card"),
+
+[31m[2m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/2]⎯[22m[39m
+
+[41m[1m FAIL [22m[49m src/scroll-home.test.tsx[2m > [22mplaces the real screenshot sequence between hero and compact project index
+[31m[1mTestingLibraryElementError[22m[39m: Unable to find an accessible element with the role "link" and name "Lewati galeri"
+
+Here are the accessible roles:
+
+  link:
+
+  Name "Lewati ke konten":
+  [36m<a[39m
+    [33mclass[39m=[32m"skip-link"[39m
+    [33mhref[39m=[32m"#main"[39m
+  [36m/>[39m
+
+  Name "Ikbar Rabbani Purwanto":
+  [36m<a[39m
+    [33maria-label[39m=[32m"Ikbar Rabbani Purwanto"[39m
+    [33mclass[39m=[32m"brand"[39m
+    [33mhref[39m=[32m"#/"[39m
+  [36m/>[39m
+
+  Name "Beranda":
+  [36m<a[39m
+    [33maria-current[39m=[32m"page"[39m
+    [33mhref[39m=[32m"#/"[39m
+  [36m/>[39m
+
+  Name "Proyek":
+  [36m<a[39m
+    [33mhref[39m=[32m"#/projects"[39m
+  [36m/>[39m
+
+  Name "Tentang":
+  [36m<a[39m
+    [33mhref[39m=[32m"#/#about"[39m
+  [36m/>[39m
+
+  Name "Kontak":
+  [36m<a[39m
+    [33mhref[39m=[32m"#/#contact"[39m
+  [36m/>[39m
+
+  Name "Lihat Proyek":
+  [36m<a[39m
+    [33mclass[39m=[32m"button primary"[39m
+    [33mhref[39m=[32m"#/#selected-projects"[39m
+  [36m/>[39m
+
+  Name "Hubungi Saya":
+  [36m<a[39m
+    [33mclass[39m=[32m"button secondary"[39m
+    [33mhref[39m=[32m"#/#contact"[39m
+  [36m/>[39m
+
+  Name "Lihat detail":
+  [36m<a[39m
+    [33mclass[39m=[32m"text-link"[39m
+    [33mhref[39m=[32m"#/projects/vps-manager"[39m
+  [36m/>[39m
+
+  Name "Lewati galeri ↘":
+  [36m<a[39m
+    [33mclass[39m=[32m"rail-skip mono"[39m
+    [33mhref[39m=[32m"#project-index"[39m
+  [36m/>[39m
+
+  Name "VPS Manager":
+  [36m<a[39m
+    [33mhref[39m=[32m"#/projects/vps-manager"[39m
+  [36m/>[39m
+
+  Name "Proxmox Home Lab":
+  [36m<a[39m
+    [33mhref[39m=[32m"#/projects/proxmox-home-lab"[39m
+  [36m/>[39m
+
+  Name "LMS Ujian Online":
+  [36m<a[39m
+    [33mhref[39m=[32m"#/projects/lms-ujian-online"[39m
+  [36m/>[39m
+
+  Name "Helpdesk Ticketing":
+  [36m<a[39m
+    [33mhref[39m=[32m"#/projects/helpdesk-ticketing"[39m
+  [36m/>[39m
+
+  Name "Trading Analysis Dashboard":
+  [36m<a[39m
+    [33mhref[39m=[32m"#/projects/trading-analysis-dashboard"[39m
+  [36m/>[39m
+
+  Name "Jelajahi semua proyek 05 proyek ↗":
+  [36m<a[39m
+    [33mclass[39m=[32m"archive-link"[39m
+    [33mhref[39m=[32m"#/projects"[39m
+  [36m/>[39m
+
+  Name "VPS Manager ↗":
+  [36m<a[39m
+    [33mhref[39m=[32m"#/projects/vps-manager"[39m
+  [36m/>[39m
+
+  Name "LMS Ujian Online ↗":
+  [36m<a[39m
+    [33mhref[39m=[32m"#/projects/lms-ujian-online"[39m
+  [36m/>[39m
+
+  Name "Helpdesk Ticketing ↗":
+  [36m<a[39m
+    [33mhref[39m=[32m"#/projects/helpdesk-ticketing"[39m
+  [36m/>[39m
+
+  Name "Trading Analysis Dashboard ↗":
+  [36m<a[39m
+    [33mhref[39m=[32m"#/projects/trading-analysis-dashboard"[39m
+  [36m/>[39m
+
+  Name "VPS Manager ↗":
+  [36m<a[39m
+    [33mhref[39m=[32m"#/projects/vps-manager"[39m
+  [36m/>[39m
+
+  Name "LMS Ujian Online ↗":
+  [36m<a[39m
+    [33mhref[39m=[32m"#/projects/lms-ujian-online"[39m
+  [36m/>[39m
+
+  Name "Chat APP ↗":
+  [36m<a[39m
+    [33mhref[39m=[32m"#/projects/chat-app"[39m
+  [36m/>[39m
+
+  Name "Proxmox Home Lab ↗":
+  [36m<a[39m
+    [33mhref[39m=[32m"#/projects/proxmox-home-lab"[39m
+  [36m/>[39m
+
+  Name "VPS Manager ↗":
+  [36m<a[39m
+    [33mhref[39m=[32m"#/projects/vps-manager"[39m
+  [36m/>[39m
+
+  Name "VPS Manager ↗":
+  [36m<a[39m
+    [33mhref[39m=[32m"#/projects/vps-manager"[39m
+  [36m/>[39m
+
+  Name "Helpdesk Ticketing ↗":
+  [36m<a[39m
+    [33mhref[39m=[32m"#/projects/helpdesk-ticketing"[39m
+  [36m/>[39m
+
+  Name "Trading Analysis Dashboard ↗":
+  [36m<a[39m
+    [33mhref[39m=[32m"#/projects/trading-analysis-dashboard"[39m
+  [36m/>[39m
+
+  Name "Basic Javascript Programming (tab baru)":
+  [36m<a[39m
+    [33mclass[39m=[32m"text-link"[39m
+    [33mhref[39m=[32m"https://www.dicoding.com/certificates/MEPJE400WX3V"[39m
+    [33mrel[39m=[32m"noreferrer"[39m
+    [33mtarget[39m=[32m"_blank"[39m
+  [36m/>[39m
+
+  Name "Creating a backend app for beginners (tab baru)":
+  [36m<a[39m
+    [33mclass[39m=[32m"text-link"[39m
+    [33mhref[39m=[32m"https://www.dicoding.com/certificates/JLX1L4Y8NX72"[39m
+    [33mrel[39m=[32m"noreferrer"[39m
+    [33mtarget[39m=[32m"_blank"[39m
+  [36m/>[39m
+
+  Name "Basic Python for beginners (tab baru)":
+  [36m<a[39m
+    [33mclass[39m=[32m"text-link"[39m
+    [33mhref[39m=[32m"https://www.dicoding.com/certificates/81P27JWGNZOY"[39m
+    [33mrel[39m=[32m"noreferrer"[39m
+    [33mtarget[39m=[32m"_blank"[39m
+  [36m/>[39m
+
+  Name "Tulis email":
+  [36m<a[39m
+    [33mclass[39m=[32m"button primary"[39m
+    [33mhref[39m=[32m"mailto:ikbar686@gmail.com"[39m
+  [36m/>[39m
+
+  Name "ikbar686@gmail.com":
+  [36m<a[39m
+    [33mclass[39m=[32m"email"[39m
+    [33mhref[39m=[32m"mailto:ikbar686@gmail.com"[39m
+  [36m/>[39m
+
+  Name "WhatsApp (tab baru)":
+  [36m<a[39m
+    [33mclass[39m=[32m"text-link"[39m
+    [33mhref[39m=[32m"https://wa.me/6281413265114"[39m
+    [33mrel[39m=[32m"noreferrer"[39m
+    [33mtarget[39m=[32m"_blank"[39m
+  [36m/>[39m
+
+  Name "+62 81413265114":
+  [36m<a[39m
+    [33mclass[39m=[32m"text-link"[39m
+    [33mhref[39m=[32m"tel:+6281413265114"[39m
+  [36m/>[39m
+
+  Name "GitHub (tab baru)":
+  [36m<a[39m
+    [33mclass[39m=[32m"text-link"[39m
+    [33mhref[39m=[32m"https://github.com/d3sc"[39m
+    [33mrel[39m=[32m"noreferrer"[39m
+    [33mtarget[39m=[32m"_blank"[39m
+  [36m/>[39m
+
+  Name "Instagram (tab baru)":
+  [36m<a[39m
+    [33mclass[39m=[32m"text-link"[39m
+    [33mhref[39m=[32m"https://www.instagram.com/ikrabni_09/"[39m
+    [33mrel[39m=[32m"noreferrer"[39m
+    [33mtarget[39m=[32m"_blank"[39m
+  [36m/>[39m
+
+  Name "LinkedIn (tab baru)":
+  [36m<a[39m
+    [33mclass[39m=[32m"text-link"[39m
+    [33mhref[39m=[32m"https://www.linkedin.com/in/ikbar-rabbani-b93096285/"[39m
+    [33mrel[39m=[32m"noreferrer"[39m
+    [33mtarget[39m=[32m"_blank"[39m
+  [36m/>[39m
+
+  Name "YouTube (tab baru)":
+  [36m<a[39m
+    [33mclass[39m=[32m"text-link"[39m
+    [33mhref[39m=[32m"https://www.youtube.com/watch?v=9pyZO3N_ltE"[39m
+    [33mrel[39m=[32m"noreferrer"[39m
+    [33mtarget[39m=[32m"_blank"[39m
+  [36m/>[39m
+
+  Name "↑ Beranda":
+  [36m<a[39m
+    [33mhref[39m=[32m"#/"[39m
+  [36m/>[39m
+
+  --------------------------------------------------
+  banner:
+
+  Name "":
+  [36m<header[39m
+    [33mclass[39m=[32m"site-header"[39m
+  [36m/>[39m
+
+  --------------------------------------------------
+  button:
+
+  Name "Menu":
+  [36m<button[39m
+    [33maria-controls[39m=[32m"primary-nav"[39m
+    [33maria-expanded[39m=[32m"false"[39m
+    [33mclass[39m=[32m"menu-toggle control"[39m
+  [36m/>[39m
+
+  Name "Ganti bahasa":
+  [36m<button[39m
+    [33maria-label[39m=[32m"Ganti bahasa"[39m
+    [33mclass[39m=[32m"control"[39m
+  [36m/>[39m
+
+  Name "Ganti ke tema terang":
+  [36m<button[39m
+    [33maria-label[39m=[32m"Ganti ke tema terang"[39m
+    [33mclass[39m=[32m"control theme-control"[39m
+  [36m/>[39m
+
+  Name "VPS Manager — Dashboard layanan":
+  [36m<button[39m
+    [33maria-haspopup[39m=[32m"dialog"[39m
+    [33maria-label[39m=[32m"VPS Manager — Dashboard layanan"[39m
+    [33mclass[39m=[32m"rail-image"[39m
+  [36m/>[39m
+
+  Name "VPS Manager — Detail ringkasan":
+  [36m<button[39m
+    [33maria-haspopup[39m=[32m"dialog"[39m
+    [33maria-label[39m=[32m"VPS Manager — Detail ringkasan"[39m
+    [33mclass[39m=[32m"rail-image"[39m
+  [36m/>[39m
+
+  Name "Proxmox Home Lab — Konsol administrasi":
+  [36m<button[39m
+    [33maria-haspopup[39m=[32m"dialog"[39m
+    [33maria-label[39m=[32m"Proxmox Home Lab — Konsol administrasi"[39m
+    [33mclass[39m=[32m"rail-image"[39m
+  [36m/>[39m
+
+  Name "LMS Ujian Online — Dashboard admin":
+  [36m<button[39m
+    [33maria-haspopup[39m=[32m"dialog"[39m
+    [33maria-label[39m=[32m"LMS Ujian Online — Dashboard admin"[39m
+    [33mclass[39m=[32m"rail-image"[39m
+  [36m/>[39m
+
+  Name "LMS Ujian Online — Detail pengelolaan":
+  [36m<button[39m
+    [33maria-haspopup[39m=[32m"dialog"[39m
+    [33maria-label[39m=[32m"LMS Ujian Online — Detail pengelolaan"[39m
+    [33mclass[39m=[32m"rail-image"[39m
+  [36m/>[39m
+
+  Name "Helpdesk Ticketing — Antrean tiket":
+  [36m<button[39m
+    [33maria-haspopup[39m=[32m"dialog"[39m
+    [33maria-label[39m=[32m"Helpdesk Ticketing — Antrean tiket"[39m
+    [33mclass[39m=[32m"rail-image"[39m
+  [36m/>[39m
+
+  Name "Helpdesk Ticketing — Detail filter":
+  [36m<button[39m
+    [33maria-haspopup[39m=[32m"dialog"[39m
+    [33maria-label[39m=[32m"Helpdesk Ticketing — Detail filter"[39m
+    [33mclass[39m=[32m"rail-image"[39m
+  [36m/>[39m
+
+  Name "Salin email":
+  [36m<button[39m
+    [33mclass[39m=[32m"copy-button"[39m
+  [36m/>[39m
+
+  --------------------------------------------------
+  navigation:
+
+  Name "Navigasi utama":
+  [36m<nav[39m
+    [33maria-label[39m=[32m"Navigasi utama"[39m
+    [33mclass[39m=[32m"nav "[39m
+    [33mid[39m=[32m"primary-nav"[39m
+  [36m/>[39m
+
+  Name "Tautan sosial":
+  [36m<nav[39m
+    [33maria-label[39m=[32m"Tautan sosial"[39m
+    [33mclass[39m=[32m"social-links"[39m
+  [36m/>[39m
+
+  --------------------------------------------------
+  main:
+
+  Name "":
+  [36m<main[39m
+    [33mid[39m=[32m"main"[39m
+    [33mtabindex[39m=[32m"-1"[39m
+  [36m/>[39m
+
+  --------------------------------------------------
+  paragraph:
+
+  Name "":
+  [36m<p[39m
+    [33mclass[39m=[32m"eyebrow"[39m
+  [36m/>[39m
+
+  Name "":
+  [36m<p[39m
+    [33mclass[39m=[32m"hero-copy"[39m
+  [36m/>[39m
+
+  Name "":
+  [36m<p />[39m
+
+  Name "":
+  [36m<p[39m
+    [33mclass[39m=[32m"eyebrow"[39m
+  [36m/>[39m
+
+  Name "":
+  [36m<p />[39m
+
+  Name "":
+  [36m<p />[39m
+
+  Name "":
+  [36m<p />[39m
+
+  Name "":
+  [36m<p />[39m
+
+  Name "":
+  [36m<p />[39m
+
+  Name "":
+  [36m<p />[39m
+
+  Name "":
+  [36m<p />[39m
+
+  Name "":
+  [36m<p[39m
+    [33mclass[39m=[32m"eyebrow"[39m
+  [36m/>[39m
+
+  Name "":
+  [36m<p />[39m
+
+  Name "":
+  [36m<p />[39m
+
+  Name "":
+  [36m<p[39m
+    [33mclass[39m=[32m"project-status"[39m
+  [36m/>[39m
+
+  Name "":
+  [36m<p />[39m
+
+  Name "":
+  [36m<p[39m
+    [33mclass[39m=[32m"project-status"[39m
+  [36m/>[39m
+
+  Name "":
+  [36m<p />[39m
+
+  Name "":
+  [36m<p[39m
+    [33mclass[39m=[32m"project-status"[39m
+  [36m/>[39m
+
+  Name "":
+  [36m<p />[39m
+
+  Name "":
+  [36m<p[39m
+    [33mclass[39m=[32m"project-status"[39m
+  [36m/>[39m
+
+  Name "":
+  [36m<p />[39m
+
+  Name "":
+  [36m<p[39m
+    [33mclass[39m=[32m"project-status"[39m
+  [36m/>[39m
+
+  Name "":
+  [36m<p[39m
+    [33mclass[39m=[32m"eyebrow"[39m
+  [36m/>[39m
+
+  Name "":
+  [36m<p[39m
+    [33mclass[39m=[32m"mono about-signature"[39m
+  [36m/>[39m
+
+  Name "":
+  [36m<p[39m
+    [33mclass[39m=[32m"large-copy"[39m
+  [36m/>[39m
+
+  Name "":
+  [36m<p />[39m
+
+  Name "":
+  [36m<p />[39m
+
+  Name "":
+  [36m<p />[39m
+
+  Name "":
+  [36m<p[39m
+    [33mclass[39m=[32m"skill-note"[39m
+  [36m/>[39m
+
+  Name "":
+  [36m<p />[39m
+
+  Name "":
+  [36m<p />[39m
+
+  Name "":
+  [36m<p[39m
+    [33mclass[39m=[32m"eyebrow"[39m
+  [36m/>[39m
+
+  Name "":
+  [36m<p[39m
+    [33mclass[39m=[32m"eyebrow"[39m
+  [36m/>[39m
+
+  Name "":
+  [36m<p />[39m
+
+  --------------------------------------------------
+  heading:
+
+  Name "Ikbar Rabbani Purwanto .":
+  [36m<h1 />[39m
+
+  Name "VPS Manager":
+  [36m<h2 />[39m
+
+  Name "Dibuat untuk digunakan.":
+  [36m<h2 />[39m
+
+  Name "Proyek":
+  [36m<h2 />[39m
+
+  Name "VPS Manager":
+  [36m<h3 />[39m
+
+  Name "Proxmox Home Lab":
+  [36m<h3 />[39m
+
+  Name "LMS Ujian Online":
+  [36m<h3 />[39m
+
+  Name "Karya lainnya":
+  [36m<h3[39m
+    [33mclass[39m=[32m"eyebrow other-index-title"[39m
+  [36m/>[39m
+
+  Name "Helpdesk Ticketing":
+  [36m<h3 />[39m
+
+  Name "Trading Analysis Dashboard":
+  [36m<h3 />[39m
+
+  Name "Dari aplikasi,
+  ke server sendiri.":
+  [36m<h2[39m
+    [33mclass[39m=[32m"linebreak"[39m
+  [36m/>[39m
+
+  Name "Perangkat kerja":
+  [36m<h3[39m
+    [33mclass[39m=[32m"eyebrow toolkit-label"[39m
+  [36m/>[39m
+
+  Name "Backend & Database":
+  [36m<h3 />[39m
+
+  Name "Frontend":
+  [36m<h3 />[39m
+
+  Name "Infrastruktur":
+  [36m<h3 />[39m
+
+  Name "Otomasi & Integrasi":
+  [36m<h3 />[39m
+
+  Name "Punya ide?
+  Mari kita bicarakan.":
+  [36m<h2[39m
+    [33mclass[39m=[32m"linebreak"[39m
+  [36m/>[39m
+
+  --------------------------------------------------
+  tabpanel:
+
+  Name "01 VPS Manager":
+  [36m<div[39m
+    [33maria-hidden[39m=[32m"false"[39m
+    [33maria-labelledby[39m=[32m"project-tab-0"[39m
+    [33mclass[39m=[32m"hero-panel is-active"[39m
+    [33mid[39m=[32m"project-panel-0"[39m
+    [33mrole[39m=[32m"tabpanel"[39m
+  [36m/>[39m
+
+  --------------------------------------------------
+  img:
+
+  Name "VPS Manager — Dashboard layanan":
+  [36m<img[39m
+    [33malt[39m=[32m"VPS Manager — Dashboard layanan"[39m
+    [33mdecoding[39m=[32m"async"[39m
+    [33mheight[39m=[32m"926"[39m
+    [33mloading[39m=[32m"eager"[39m
+    [33msizes[39m=[32m"(max-width: 700px) 100vw, (max-width: 1100px) 60vw, 800px"[39m
+    [33msrc[39m=[32m"/assets/projects/vps-manager.webp"[39m
+    [33msrcset[39m=[32m"/assets/projects/vps-manager-480.webp 480w, /assets/projects/vps-manager-960.webp 960w, /assets/projects/vps-manager.webp 1787w"[39m
+    [33mwidth[39m=[32m"1787"[39m
+  [36m/>[39m
+
+  Name "Dashboard layanan":
+  [36m<img[39m
+    [33malt[39m=[32m"Dashboard layanan"[39m
+    [33mdecoding[39m=[32m"async"[39m
+    [33mheight[39m=[32m"926"[39m
+    [33mloading[39m=[32m"eager"[39m
+    [33msizes[39m=[32m"(min-width:1000px) 70vw, 86vw"[39m
+    [33msrc[39m=[32m"/assets/projects/vps-manager.webp"[39m
+    [33msrcset[39m=[32m"/assets/projects/vps-manager-480.webp 480w, /assets/projects/vps-manager-960.webp 960w, /assets/projects/vps-manager.webp 1787w"[39m
+    [33mwidth[39m=[32m"1787"[39m
+  [36m/>[39m
+
+  Name "Detail ringkasan":
+  [36m<img[39m
+    [33malt[39m=[32m"Detail ringkasan"[39m
+    [33mdecoding[39m=[32m"async"[39m
+    [33mheight[39m=[32m"192"[39m
+    [33mloading[39m=[32m"lazy"[39m
+    [33msizes[39m=[32m"(min-width:1000px) 40vw, 86vw"[39m
+    [33msrc[39m=[32m"/assets/projects/vps-manager-metrics.webp"[39m
+    [33msrcset[39m=[32m"/assets/projects/vps-manager-metrics-480.webp 480w, /assets/projects/vps-manager-metrics-960.webp 960w, /assets/projects/vps-manager-metrics.webp 1448w"[39m
+    [33mwidth[39m=[32m"1448"[39m
+  [36m/>[39m
+
+  Name "Konsol administrasi":
+  [36m<img[39m
+    [33malt[39m=[32m"Konsol administrasi"[39m
+    [33mdecoding[39m=[32m"async"[39m
+    [33mheight[39m=[32m"924"[39m
+    [33mloading[39m=[32m"lazy"[39m
+    [33msizes[39m=[32m"(min-width:1000px) 70vw, 86vw"[39m
+    [33msrc[39m=[32m"/assets/projects/proxmox-home-lab.webp"[39m
+    [33msrcset[39m=[32m"/assets/projects/proxmox-home-lab-480.webp 480w, /assets/projects/proxmox-home-lab-960.webp 960w, /assets/projects/proxmox-home-lab.webp 1789w"[39m
+    [33mwidth[39m=[32m"1789"[39m
+  [36m/>[39m
+
+  Name "Dashboard admin":
+  [36m<img[39m
+    [33malt[39m=[32m"Dashboard admin"[39m
+    [33mdecoding[39m=[32m"async"[39m
+    [33mheight[39m=[32m"931"[39m
+    [33mloading[39m=[32m"lazy"[39m
+    [33msizes[39m=[32m"(min-width:1000px) 70vw, 86vw"[39m
+    [33msrc[39m=[32m"/assets/projects/lms-ujian-online.webp"[39m
+    [33msrcset[39m=[32m"/assets/projects/lms-ujian-online-480.webp 480w, /assets/projects/lms-ujian-online-960.webp 960w, /assets/projects/lms-ujian-online.webp 1793w"[39m
+    [33mwidth[39m=[32m"1793"[39m
+  [36m/>[39m
+
+  Name "Detail pengelolaan":
+  [36m<img[39m
+    [33malt[39m=[32m"Detail pengelolaan"[39m
+    [33mdecoding[39m=[32m"async"[39m
+    [33mheight[39m=[32m"309"[39m
+    [33mloading[39m=[32m"lazy"[39m
+    [33msizes[39m=[32m"(min-width:1000px) 40vw, 86vw"[39m
+    [33msrc[39m=[32m"/assets/projects/lms-ujian-online-controls.webp"[39m
+    [33msrcset[39m=[32m"/assets/projects/lms-ujian-online-controls-480.webp 480w, /assets/projects/lms-ujian-online-controls-960.webp 960w, /assets/projects/lms-ujian-online-controls.webp 1426w"[39m
+    [33mwidth[39m=[32m"1426"[39m
+  [36m/>[39m
+
+  Name "Antrean tiket":
+  [36m<img[39m
+    [33malt[39m=[32m"Antrean tiket"[39m
+    [33mdecoding[39m=[32m"async"[39m
+    [33mheight[39m=[32m"925"[39m
+    [33mloading[39m=[32m"lazy"[39m
+    [33msizes[39m=[32m"(min-width:1000px) 70vw, 86vw"[39m
+    [33msrc[39m=[32m"/assets/projects/helpdesk-ticketing.webp"[39m
+    [33msrcset[39m=[32m"/assets/projects/helpdesk-ticketing-480.webp 480w, /assets/projects/helpdesk-ticketing-960.webp 960w, /assets/projects/helpdesk-ticketing.webp 1789w"[39m
+    [33mwidth[39m=[32m"1789"[39m
+  [36m/>[39m
+
+  Name "Detail filter":
+  [36m<img[39m
+    [33malt[39m=[32m"Detail filter"[39m
+    [33mdecoding[39m=[32m"async"[39m
+    [33mheight[39m=[32m"288"[39m
+    [33mloading[39m=[32m"lazy"[39m
+    [33msizes[39m=[32m"(min-width:1000px) 40vw, 86vw"[39m
+    [33msrc[39m=[32m"/assets/projects/helpdesk-ticketing-filters.webp"[39m
+    [33msrcset[39m=[32m"/assets/projects/helpdesk-ticketing-filters-480.webp 480w, /assets/projects/helpdesk-ticketing-filters-960.webp 960w, /assets/projects/helpdesk-ticketing-filters.webp 1436w"[39m
+    [33mwidth[39m=[32m"1436"[39m
+  [36m/>[39m
+
+  --------------------------------------------------
+  tablist:
+
+  Name "Pilih proyek":
+  [36m<div[39m
+    [33maria-label[39m=[32m"Pilih proyek"[39m
+    [33mclass[39m=[32m"project-tabs"[39m
+    [33mrole[39m=[32m"tablist"[39m
+  [36m/>[39m
+
+  --------------------------------------------------
+  tab:
+
+  Name "01 VPS Manager":
+  [36m<button[39m
+    [33maria-controls[39m=[32m"project-panel-0"[39m
+    [33maria-selected[39m=[32m"true"[39m
+    [33mid[39m=[32m"project-tab-0"[39m
+    [33mrole[39m=[32m"tab"[39m
+    [33mtabindex[39m=[32m"0"[39m
+  [36m/>[39m
+
+  Name "02 Proxmox Home Lab":
+  [36m<button[39m
+    [33maria-controls[39m=[32m"project-panel-1"[39m
+    [33maria-selected[39m=[32m"false"[39m
+    [33mid[39m=[32m"project-tab-1"[39m
+    [33mrole[39m=[32m"tab"[39m
+    [33mtabindex[39m=[32m"-1"[39m
+  [36m/>[39m
+
+  Name "03 LMS Ujian Online":
+  [36m<button[39m
+    [33maria-controls[39m=[32m"project-panel-2"[39m
+    [33maria-selected[39m=[32m"false"[39m
+    [33mid[39m=[32m"project-tab-2"[39m
+    [33mrole[39m=[32m"tab"[39m
+    [33mtabindex[39m=[32m"-1"[39m
+  [36m/>[39m
+
+  --------------------------------------------------
+  region:
+
+  Name "Proyek terpilih":
+  [36m<section[39m
+    [33maria-label[39m=[32m"Proyek terpilih"[39m
+    [33mclass[39m=[32m"scroll-gallery"[39m
+    [33mdata-mode[39m=[32m"static"[39m
+    [33mid[39m=[32m"selected-projects"[39m
+    [33mtabindex[39m=[32m"-1"[39m
+  [36m/>[39m
+
+  --------------------------------------------------
+  list:
+
+  Name "":
+  [36m<div[39m
+    [33mclass[39m=[32m"rail-track"[39m
+    [33mrole[39m=[32m"list"[39m
+  [36m/>[39m
+
+  Name "Stack":
+  [36m<ul[39m
+    [33maria-label[39m=[32m"Stack"[39m
+    [33mclass[39m=[32m"tags"[39m
+  [36m/>[39m
+
+  Name "Stack":
+  [36m<ul[39m
+    [33maria-label[39m=[32m"Stack"[39m
+    [33mclass[39m=[32m"tags"[39m
+  [36m/>[39m
+
+  Name "Stack":
+  [36m<ul[39m
+    [33maria-label[39m=[32m"Stack"[39m
+    [33mclass[39m=[32m"tags"[39m
+  [36m/>[39m
+
+  Name "Stack":
+  [36m<ul[39m
+    [33maria-label[39m=[32m"Stack"[39m
+    [33mclass[39m=[32m"tags"[39m
+  [36m/>[39m
+
+  Name "Stack":
+  [36m<ul[39m
+    [33maria-label[39m=[32m"Stack"[39m
+    [33mclass[39m=[32m"tags"[39m
+  [36m/>[39m
+
+  --------------------------------------------------
+  listitem:
+
+  Name "":
+  [36m<figure[39m
+    [33mclass[39m=[32m"rail-frame rail-overview"[39m
+    [33mrole[39m=[32m"listitem"[39m
+  [36m/>[39m
+
+  Name "":
+  [36m<figure[39m
+    [33mclass[39m=[32m"rail-frame rail-detail"[39m
+    [33mrole[39m=[32m"listitem"[39m
+  [36m/>[39m
+
+  Name "":
+  [36m<figure[39m
+    [33mclass[39m=[32m"rail-frame rail-overview"[39m
+    [33mrole[39m=[32m"listitem"[39m
+  [36m/>[39m
+
+  Name "":
+  [36m<figure[39m
+    [33mclass[39m=[32m"rail-frame rail-overview"[39m
+    [33mrole[39m=[32m"listitem"[39m
+  [36m/>[39m
+
+  Name "":
+  [36m<figure[39m
+    [33mclass[39m=[32m"rail-frame rail-detail"[39m
+    [33mrole[39m=[32m"listitem"[39m
+  [36m/>[39m
+
+  Name "":
+  [36m<figure[39m
+    [33mclass[39m=[32m"rail-frame rail-overview"[39m
+    [33mrole[39m=[32m"listitem"[39m
+  [36m/>[39m
+
+  Name "":
+  [36m<figure[39m
+    [33mclass[39m=[32m"rail-frame rail-detail"[39m
+    [33mrole[39m=[32m"listitem"[39m
+  [36m/>[39m
+
+  Name "":
+  [36m<li />[39m
+
+  Name "":
+  [36m<li />[39m
+
+  Name "":
+  [36m<li />[39m
+
+  Name "":
+  [36m<li />[39m
+
+  Name "":
+  [36m<li />[39m
+
+  Name "":
+  [36m<li />[39m
+
+  Name "":
+  [36m<li />[39m
+
+  Name "":
+  [36m<li />[39m
+
+  Name "":
+  [36m<li />[39m
+
+  Name "":
+  [36m<li />[39m
+
+  Name "":
+  [36m<li />[39m
+
+  Name "":
+  [36m<li />[39m
+
+  Name "":
+  [36m<li />[39m
+
+  Name "":
+  [36m<li />[39m
+
+  Name "":
+  [36m<li />[39m
+
+  Name "":
+  [36m<li />[39m
+
+  Name "":
+  [36m<li />[39m
+
+  Name "":
+  [36m<li />[39m
+
+  Name "":
+  [36m<li />[39m
+
+  Name "":
+  [36m<li />[39m
+
+  Name "":
+  [36m<li />[39m
+
+  Name "":
+  [36m<li />[39m
+
+  Name "":
+  [36m<li />[39m
+
+  Name "":
+  [36m<li />[39m
+
+  Name "":
+  [36m<li />[39m
+
+  Name "":
+  [36m<li />[39m
+
+  Name "":
+  [36m<li />[39m
+
+  Name "":
+  [36m<li />[39m
+
+  Name "":
+  [36m<li />[39m
+
+  Name "":
+  [36m<li />[39m
+
+  Name "":
+  [36m<li />[39m
+
+  Name "":
+  [36m<li />[39m
+
+  --------------------------------------------------
+  strong:
+
+  Name "":
+  [36m<strong />[39m
+
+  Name "":
+  [36m<strong />[39m
+
+  Name "":
+  [36m<strong />[39m
+
+  Name "":
+  [36m<strong />[39m
+
+  Name "":
+  [36m<strong />[39m
+
+  Name "":
+  [36m<strong />[39m
+
+  Name "":
+  [36m<strong />[39m
+
+  --------------------------------------------------
+  article:
+
+  Name "":
+  [36m<article[39m
+    [33mclass[39m=[32m"home-project-row"[39m
+  [36m/>[39m
+
+  Name "":
+  [36m<article[39m
+    [33mclass[39m=[32m"home-project-row"[39m
+  [36m/>[39m
+
+  Name "":
+  [36m<article[39m
+    [33mclass[39m=[32m"home-project-row"[39m
+  [36m/>[39m
+
+  Name "":
+  [36m<article[39m
+    [33mclass[39m=[32m"home-project-row"[39m
+  [36m/>[39m
+
+  Name "":
+  [36m<article[39m
+    [33mclass[39m=[32m"home-project-row"[39m
+  [36m/>[39m
+
+  --------------------------------------------------
+  status:
+
+  Name "":
+  [36m<p[39m
+    [33mclass[39m=[32m"copy-status"[39m
+    [33mrole[39m=[32m"status"[39m
+  [36m/>[39m
+
+  --------------------------------------------------
+  contentinfo:
+
+  Name "":
+  [36m<footer[39m
+    [33mclass[39m=[32m"container footer"[39m
+  [36m/>[39m
+
+  --------------------------------------------------
+
+Ignored nodes: comments, script, style
+[36m<body>[39m
+  [36m<div>[39m
+    [36m<a[39m
+      [33mclass[39m=[32m"skip-link"[39m
+      [33mhref[39m=[32m"#main"[39m
+    [36m>[39m
+      [0mLewati ke konten[0m
+    [36m</a>[39m
+    [36m<header[39m
+      [33mclass[39m=[32m"site-header"[39m
+    [36m>[39m
+      [36m<div[39m
+        [33mclass[39m=[32m"container header-inner"[39m
+      [36m>[39m
+        [36m<a[39m
+          [33maria-label[39m=[32m"Ikbar Rabbani Purwanto"[39m
+          [33mclass[39m=[32m"brand"[39m
+          [33mhref[39m=[32m"#/"[39m
+        [36m>[39m
+          [0mir[0m
+          [36m<span[39m
+            [33mclass[39m=[32m"brand-mark"[39m
+          [36m>[39m
+            [0m/[0m
+          [36m</span>[39m
+          [36m<span[39m
+            [33mclass[39m=[32m"brand-note"[39m
+          [36m>[39m
+            [0mdeveloper[0m
+            [36m<br />[39m
+            [0mfield notes[0m
+          [36m</span>[39m
+        [36m</a>[39m
+        [36m<button[39m
+          [33maria-controls[39m=[32m"primary-nav"[39m
+          [33maria-expanded[39m=[32m"false"[39m
+          [33mclass[39m=[32m"menu-toggle control"[39m
+        [36m>[39m
+          [0mMenu[0m
+          [0m [0m
+          [36m<span[39m
+            [33maria-hidden[39m=[32m"true"[39m
+          [36m>[39m
+            [0m+[0m
+          [36m</span>[39m
+        [36m</button>[39m
+        [36m<nav[39m
+          [33maria-label[39m=[32m"Navigasi utama"[39m
+          [33mclass[39m=[32m"nav "[39m
+          [33mid[39m=[32m"primary-nav"[39m
+        [36m>[39m
+          [36m<a[39m
+            [33maria-current[39m=[32m"page"[39m
+            [33mhref[39m=[32m"#/"[39m
+          [36m>[39m
+            [36m<span[39m
+              [33maria-hidden[39m=[32m"true"[39m
+              [33mclass[39m=[32m"nav-number"[39m
+            [36m>[39m
+              [0m0[0m
+              [0m1[0m
+            [36m</span>[39m
+            [0mBeranda[0m
+          [36m</a>[39m
+          [36m<a[39m
+            [33mhref[39m=[32m"#/projects"[39m
+          [36m>[39m
+            [36m<span[39m
+              [33maria-hidden[39m=[32m"true"[39m
+              [33mclass[39m=[32m"nav-number"[39m
+            [36m>[39m
+              [0m0[0m
+              [0m2[0m
+            [36m</span>[39m
+            [0mProyek[0m
+          [36m</a>[39m
+          [36m<a[39m
+            [33mhref[39m=[32m"#/#about"[39m
+          [36m>[39m
+            [36m<span[39m
+              [33maria-hidden[39m=[32m"true"[39m
+              [33mclass[39m=[32m"nav-number"[39m
+            [36m>[39m
+              [0m0[0m
+              [0m3[0m
+            [36m</span>[39m
+            [0mTentang[0m
+          [36m</a>[39m
+          [36m<a[39m
+            [33mhref[39m=[32m"#/#contact"[39m
+          [36m>[39m
+            [36m<span[39m
+              [33maria-hidden[39m=[32m"true"[39m
+              [33mclass[39m=[32m"nav-number"[39m
+            [36m>[39m
+              [0m0[0m
+              [0m4[0m
+            [36m</span>[39m
+            [0mKontak[0m
+          [36m</a>[39m
+        [36m</nav>[39m
+        [36m<div[39m
+          [33mclass[39m=[32m"controls"[39m
+        [36m>[39m
+          [36m<button[39m
+            [33maria-label[39m=[32m"Ganti bahasa"[39m
+            [33mclass[39m=[32m"control"[39m
+          [36m>[39m
+            [0mID[0m
+          [36m</button>[39m
+          [36m<button[39m
+            [33maria-label[39m=[32m"Ganti ke tema terang"[39m
+            [33mclass[39m=[32m"control theme-control"[39m
+          [36m>[39m
+            [0m☀[0m
+          [36m</button>[39m
+        [36m</div>[39m
+      [36m</div>[39m
+    [36m</header>[39m
+    [36m<main[39m
+      [33mid[39m=[32m"main"[39m
+      [33mtabindex[39m=[32m"-1"[39m
+    [36m>[39m
+      [36m<div[39m
+        [33mclass[39m=[32m"terminal-home"[39m
+      [36m>[39m
+        [36m<section[39m
+          [33mclass[39m=[32m"hero container"[39m
+          [33mid[39m=[32m"hero"[39m
+        [36m>[39m
+          [36m<div[39m
+            [33mclass[39m=[32m"hero-identity"[39m
+          [36m>[39m
+            [36m<p[39m
+              [33mclass[39m=[32m"eyebrow"[39m
+            [36m>[39m
+              [36m<span[39m
+                [33maria-hidden[39m=[32m"true"[39m
+                [33mclass[39m=[32m"cross"[39m
+              [36m>[39m
+                [0m+[0m
+              [36m</span>[39m
+              [0m [0m
+              [0mFull-Stack Developer · Linux & Self-Hosting[0m
+            [36m</p>[39m
+            [36m<h1>[39m
+              [0mIkbar[0m
+              [36m<br />[39m
+              [36m<span>[39m
+                [0mRabbani[0m
+              [36m</span>[39m
+              [36m<br />[39m
+              [36m<span>[39m
+                [0mPurwanto[0m
+              [36m</span>[39m
+              [36m<span[39m
+                [33mclass[39m=[32m"name-period"[39m
+              [36m>[39m
+                [0m.[0m
+              [36m</span>[39m
+            [36m</h1>[39m
+            [36m<p[39m
+              [33mclass[39m=[32m"hero-copy"[39m
+            [36m>[39m
+              [0mSaya membangun aplikasi web untuk kebutuhan operasional: layanan VPS, ujian online, dan ticketing. Fokus saya backend, otomasi, dan aplikasi di server Linux.[0m
+            [36m</p>[39m
+            [36m<div[39m
+              [33mclass[39m=[32m"hero-actions"[39m
+            [36m>[39m
+              [36m<a[39m
+                [33mclass[39m=[32m"button primary"[39m
+                [33mhref[39m=[32m"#/#selected-projects"[39m
+              [36m>[39m
+                [0mLihat Proyek[0m
+                [36m<span[39m
+                  [33maria-hidden[39m=[32m"true"[39m
+                [36m>[39m
+                  [0m↗[0m
+                [36m</span>[39m
+              [36m</a>[39m
+              [36m<a[39m
+                [33mclass[39m=[32m"button secondary"[39m
+                [33mhref[39m=[32m"#/#contact"[39m
+              [36m>[39m
+                [0mHubungi Saya[0m
+                [36m<span[39m
+                  [33maria-hidden[39m=[32m"true"[39m
+                [36m>[39m
+                  [0m↘[0m
+                [36m</span>[39m
+              [36m</a>[39m
+            [36m</div>[39m
+            [36m<div[39m
+              [33mclass[39m=[32m"hero-footnote mono"[39m
+            [36m>[39m
+              [36m<span>[39m
+                [0m01 — PERSONAL PORTFOLIO[0m
+              [36m</span>[39m
+              [36m<span>[39m
+                [0mBACKEND / LINUX / AUTOMATION[0m
+              [36m</span>[39m
+            [36m</div>[39m
+          [36m</div>[39m
+          [36m<div[39m
+            [33mclass[39m=[32m"project-selector"[39m
+          [36m>[39m
+            [36m<div[39m
+  ...
+[90m [2m❯[22m Object.getElementError node_modules/@testing-library/dom/dist/config.js:[2m37:19[22m[39m
+[90m [2m❯[22m node_modules/@testing-library/dom/dist/query-helpers.js:[2m76:38[22m[39m
+[90m [2m❯[22m node_modules/@testing-library/dom/dist/query-helpers.js:[2m52:17[22m[39m
+[90m [2m❯[22m node_modules/@testing-library/dom/dist/query-helpers.js:[2m95:19[22m[39m
+[36m [2m❯[22m src/scroll-home.test.tsx:[2m16:17[22m[39m
+    [90m 14|[39m   expect(gallery?.querySelectorAll("img")).toHaveLength(7);
+    [90m 15|[39m   expect(container.querySelector("#project-index")).not.toBeNull();
+    [90m 16|[39m   expect(screen.getByRole("link", { name: "Lewati galeri" })).toBeTrut…
+    [90m   |[39m                 [31m^[39m
+    [90m 17|[39m   expect(container.querySelector(".hero-copy")?.textContent).toContain…
+    [90m 18|[39m });
+
+[31m[2m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/2]⎯[22m[39m
+
+
+[2m Test Files [22m [1m[31m2 failed[39m[22m[2m | [22m[1m[32m4 passed[39m[22m[90m (6)[39m
+[2m      Tests [22m [1m[31m2 failed[39m[22m[2m | [22m[1m[32m17 passed[39m[22m[90m (19)[39m
+[2m   Start at [22m 10:26:58
+[2m   Duration [22m 21.13s[2m (tests 40%, environment 35%, import 19%, transform 5%)[22m
+
+[2mEnvironment [22m [33mjsdom was created 6 times[39m[2m · 6.66s total, 35% of tracked time[22m
+[2m            [22m [2mcreate it once per worker with [22m[33mpool: 'vmThreads'[39m[2m (keeps per-file isolation) or [22m[33misolate: false[39m[2m (shares it across files)[22m
+[2m            [22m [2mlearn more: https://vitest.dev/guide/improving-performance#test-environments[22m
+

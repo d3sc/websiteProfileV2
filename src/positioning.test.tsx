@@ -52,10 +52,10 @@ it("orders hero and featured projects as VPS, Proxmox and LMS with correct detai
     ).toBe(`#/projects/${slug}`);
   }
   expect(
-    document.querySelectorAll("#selected-projects .project-card"),
-  ).toHaveLength(3);
+    document.querySelectorAll("#project-index .home-project-row"),
+  ).toHaveLength(5);
   expect(
-    document.querySelectorAll("#other-projects .project-card"),
+    document.querySelectorAll("#other-projects .home-project-row"),
   ).toHaveLength(2);
 });
 it("shows scoped evidence and no made-up external links on every new detail", () => {

@@ -21,16 +21,14 @@ test("current positioning, linked skills, other work and honest verification cop
     "02Proxmox Home Lab↗",
     "03LMS Ujian Online↗",
   ]);
-  await expect(page.locator("#selected-projects .project-card h3")).toHaveText(
-    projects.id.slice(0, 3).map((p) => p.title),
+  await expect(page.locator("#project-index .home-project-row h3")).toHaveText(
+    projects.id.map((p) => p.title + " ↗"),
   );
-  await expect(page.locator("#other-projects .project-card h3")).toHaveText([
-    "Helpdesk Ticketing",
-    "Trading Analysis Dashboard",
-  ]);
+  await expect(page.locator("#other-projects .home-project-row h3")).toHaveText(
+    ["Helpdesk Ticketing ↗", "Trading Analysis Dashboard ↗"],
+  );
   for (const p of projects.id) {
-    const section = p.id < "04" ? "#selected-projects" : "#other-projects";
-    const card = page.locator(`${section} .project-card`).filter({
+    const card = page.locator("#project-index .home-project-row").filter({
       has: page.getByRole("heading", { name: p.title, exact: true }),
     });
     await expect(card).toContainText(p.summary);
@@ -62,7 +60,7 @@ test("current positioning, linked skills, other work and honest verification cop
   await page.emulateMedia({ reducedMotion: "reduce" });
   await page.evaluate(() => document.fonts.ready);
   await page.screenshot({
-    path: `docs/verification/gallery/regression-home-en-${info.project.name}.png`,
+    path: `docs/verification/horizontal-home/regression-home-en-${info.project.name}.png`,
     fullPage: true,
     scale: "css",
     animations: "disabled",

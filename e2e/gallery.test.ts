@@ -81,7 +81,7 @@ test("gallery: buttons, keyboard, thumbnails, stable stage and no autoplay", asy
   await overflow(page);
   await page.evaluate(() => window.scrollTo({ top: 0, behavior: "instant" }));
   await page.screenshot({
-    path: `docs/verification/gallery/detail-${info.project.name}.png`,
+    path: `docs/verification/horizontal-home/regression-detail-${info.project.name}.png`,
     fullPage: true,
     scale: "css",
     animations: "disabled",
@@ -115,7 +115,7 @@ test("lightbox: modal focus, arrows, zoom, Escape, close button and focus return
   expect(natural.width).toBe(natural.naturalWidth);
   await modal.getByRole("button", { name: "Sesuaikan layar" }).click();
   await page.screenshot({
-    path: `docs/verification/gallery/lightbox-${info.project.name}.png`,
+    path: `docs/verification/horizontal-home/regression-lightbox-${info.project.name}.png`,
     scale: "css",
     animations: "disabled",
   });
@@ -216,7 +216,7 @@ test("showcase entry, mobile navigation, bilingual galleries, reduced motion and
   await page.evaluate(() => document.fonts.ready);
   await overflow(page);
   await page.screenshot({
-    path: `docs/verification/gallery/home-${info.project.name}.png`,
+    path: `docs/verification/horizontal-home/regression-home-${info.project.name}.png`,
     fullPage: true,
     scale: "css",
     animations: "disabled",
@@ -228,8 +228,12 @@ test("showcase entry, mobile navigation, bilingual galleries, reduced motion and
   );
   await page
     .locator("#selected-projects")
-    .getByRole("link", { name: /Buka galeri/ })
+    .getByRole("button", { name: /VPS Manager — Dashboard/ })
     .first()
+    .click();
+  await page
+    .getByRole("dialog")
+    .getByRole("link", { name: /Catatan proyek/ })
     .click();
   await expect(page).toHaveURL(/vps-manager$/);
   await expect(page.locator(".gallery-slide")).toHaveCSS(
@@ -247,7 +251,7 @@ test("showcase entry, mobile navigation, bilingual galleries, reduced motion and
   await page.getByRole("button", { name: "Switch to light theme" }).click();
   await expect(page.locator("html")).toHaveAttribute("data-theme", "light");
   await page.screenshot({
-    path: `docs/verification/gallery/gallery-light-en-${info.project.name}.png`,
+    path: `docs/verification/horizontal-home/regression-gallery-light-en-${info.project.name}.png`,
     fullPage: true,
     scale: "css",
     animations: "disabled",

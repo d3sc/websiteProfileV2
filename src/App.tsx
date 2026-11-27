@@ -27,6 +27,9 @@ import "./styles.css";
 import "./gallery.css";
 import { ProjectGallery } from "./ProjectGallery";
 import { galleryCopy, projectImages } from "./project-media";
+import { ScrollShowcase } from "./ScrollShowcase";
+import { HomeProjectIndex } from "./HomeProjectIndex";
+import "./home.css";
 
 type Theme = "light" | "dark";
 type Text = (typeof copy)[Locale];
@@ -372,7 +375,7 @@ function Home({ t, locale }: { t: Text; locale: Locale }) {
     }
   }
   return (
-    <div ref={root}>
+    <div ref={root} className="terminal-home">
       <section className="hero container" id="hero">
         <div className="hero-identity">
           <p className="eyebrow">
@@ -410,62 +413,8 @@ function Home({ t, locale }: { t: Text; locale: Locale }) {
         </div>
         <HeroProjects t={t} locale={locale} />
       </section>
-      <div className="container">
-        <div className="chapter-bar mono">
-          <span>DEVELOPER FIELD NOTES</span>
-          <span>Learning → Evolving → Innovating</span>
-          <span aria-hidden="true">SCROLL TO EXPLORE ↓</span>
-        </div>
-      </div>
-      <section
-        className="section container selected-section"
-        id="selected-projects"
-        tabIndex={-1}
-        data-reveal
-      >
-        <div className="section-heading">
-          <div>
-            <p className="eyebrow">01 / {t.selected}</p>
-            <h2>
-              {locale === "id" ? "Dibuat untuk" : "Built to"}
-              <br />
-              <span className="muted">
-                {locale === "id" ? "digunakan." : "be used."}
-              </span>
-            </h2>
-          </div>
-          <p>{t.projectIntro}</p>
-        </div>
-        <div className="selected-grid">
-          {projects[locale].slice(0, 3).map((p, i) => (
-            <ProjectCard project={p} t={t} key={p.id} featured={i === 0} />
-          ))}
-        </div>
-        <a className="archive-link" href={routeHref("/projects")}>
-          <span>{t.viewAll}</span>
-          <span className="mono">
-            {String(projects[locale].length).padStart(2, "0")} {t.count}{" "}
-            <span aria-hidden="true">↗</span>
-          </span>
-        </a>
-      </section>
-      <section
-        id="other-projects"
-        className="container other-projects"
-        data-reveal
-      >
-        <div className="section-heading">
-          <div>
-            <p className="eyebrow">↳ {t.other}</p>
-            <h2>{t.other}</h2>
-          </div>
-        </div>
-        <div className="selected-grid">
-          {projects[locale].slice(3).map((project) => (
-            <ProjectCard key={project.id} project={project} t={t} />
-          ))}
-        </div>
-      </section>
+      <ScrollShowcase locale={locale} />
+      <HomeProjectIndex locale={locale} />
       <section
         className="section container about-section"
         id="about"

@@ -1,0 +1,1326 @@
+{
+  "config": {
+    "argv": [
+      "/home/tpang/.nvm/versions/node/v24.12.0/bin/node",
+      "/home/tpang/documents/websiteProfileV2/node_modules/.bin/playwright",
+      "test",
+      "e2e/horizontal-home.test.ts",
+      "e2e/horizontal-keyboard.test.ts",
+      "--workers=1",
+      "--trace=on",
+      "--output=docs/verification/horizontal-home/final-responsive-artifacts",
+      "--reporter=list,json"
+    ],
+    "configFile": "/home/tpang/documents/websiteProfileV2/playwright.config.ts",
+    "rootDir": "/home/tpang/documents/websiteProfileV2/e2e",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": true,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/home/tpang/documents/websiteProfileV2/docs/verification/horizontal-home/final-responsive-artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "tablet",
+        "name": "tablet",
+        "testDir": "/home/tpang/documents/websiteProfileV2/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 120000
+      },
+      {
+        "outputDir": "/home/tpang/documents/websiteProfileV2/docs/verification/horizontal-home/final-responsive-artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "desktop",
+        "name": "desktop",
+        "testDir": "/home/tpang/documents/websiteProfileV2/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 120000
+      },
+      {
+        "outputDir": "/home/tpang/documents/websiteProfileV2/docs/verification/horizontal-home/final-responsive-artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "mobile",
+        "name": "mobile",
+        "testDir": "/home/tpang/documents/websiteProfileV2/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 120000
+      },
+      {
+        "outputDir": "/home/tpang/documents/websiteProfileV2/docs/verification/horizontal-home/final-responsive-artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "narrow",
+        "name": "narrow",
+        "testDir": "/home/tpang/documents/websiteProfileV2/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 120000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "/home/tpang/documents/websiteProfileV2/docs/verification/horizontal-home/final-responsive-artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "tablet",
+        "testDir": "/home/tpang/documents/websiteProfileV2/e2e",
+        "snapshotDir": "/home/tpang/documents/websiteProfileV2/e2e",
+        "testIgnore": [],
+        "testMatch": "**/*.@(spec|test).?(c|m)[jt]s?(x)",
+        "timeout": 120000,
+        "use": {
+          "baseURL": "http://127.0.0.1:4173",
+          "browserName": "chromium",
+          "colorScheme": "light",
+          "trace": "on",
+          "screenshot": "only-on-failure",
+          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.8078.4 Safari/537.36",
+          "viewport": {
+            "width": 768,
+            "height": 1024
+          },
+          "screen": {
+            "width": 1920,
+            "height": 1080
+          },
+          "deviceScaleFactor": 1,
+          "isMobile": false,
+          "hasTouch": false,
+          "defaultBrowserType": "chromium"
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": "tablet"
+      },
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "/home/tpang/documents/websiteProfileV2/docs/verification/horizontal-home/final-responsive-artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "desktop",
+        "testDir": "/home/tpang/documents/websiteProfileV2/e2e",
+        "snapshotDir": "/home/tpang/documents/websiteProfileV2/e2e",
+        "testIgnore": [],
+        "testMatch": "**/*.@(spec|test).?(c|m)[jt]s?(x)",
+        "timeout": 120000,
+        "use": {
+          "baseURL": "http://127.0.0.1:4173",
+          "browserName": "chromium",
+          "colorScheme": "light",
+          "trace": "on",
+          "screenshot": "only-on-failure",
+          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.8078.4 Safari/537.36",
+          "viewport": {
+            "width": 1440,
+            "height": 1000
+          },
+          "screen": {
+            "width": 1920,
+            "height": 1080
+          },
+          "deviceScaleFactor": 1,
+          "isMobile": false,
+          "hasTouch": false,
+          "defaultBrowserType": "chromium"
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": "desktop"
+      },
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "/home/tpang/documents/websiteProfileV2/docs/verification/horizontal-home/final-responsive-artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "mobile",
+        "testDir": "/home/tpang/documents/websiteProfileV2/e2e",
+        "snapshotDir": "/home/tpang/documents/websiteProfileV2/e2e",
+        "testIgnore": [],
+        "testMatch": "**/*.@(spec|test).?(c|m)[jt]s?(x)",
+        "timeout": 120000,
+        "use": {
+          "baseURL": "http://127.0.0.1:4173",
+          "browserName": "chromium",
+          "colorScheme": "light",
+          "trace": "on",
+          "screenshot": "only-on-failure",
+          "userAgent": "Mozilla/5.0 (iPhone; CPU iPhone OS 14_4 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/27.2 Mobile/15E148 Safari/604.1",
+          "viewport": {
+            "width": 360,
+            "height": 800
+          },
+          "screen": {
+            "width": 390,
+            "height": 844
+          },
+          "deviceScaleFactor": 3,
+          "isMobile": false,
+          "hasTouch": true,
+          "defaultBrowserType": "webkit"
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": "mobile"
+      },
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "/home/tpang/documents/websiteProfileV2/docs/verification/horizontal-home/final-responsive-artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "narrow",
+        "testDir": "/home/tpang/documents/websiteProfileV2/e2e",
+        "snapshotDir": "/home/tpang/documents/websiteProfileV2/e2e",
+        "testIgnore": [],
+        "testMatch": "**/*.@(spec|test).?(c|m)[jt]s?(x)",
+        "timeout": 120000,
+        "use": {
+          "baseURL": "http://127.0.0.1:4173",
+          "browserName": "chromium",
+          "colorScheme": "light",
+          "trace": "on",
+          "screenshot": "only-on-failure",
+          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.8078.4 Safari/537.36",
+          "viewport": {
+            "width": 320,
+            "height": 844
+          },
+          "screen": {
+            "width": 1920,
+            "height": 1080
+          },
+          "deviceScaleFactor": 1,
+          "isMobile": false,
+          "hasTouch": false,
+          "defaultBrowserType": "chromium"
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": "narrow"
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list"
+      ],
+      [
+        "json"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.64.1",
+    "workers": 1,
+    "webServer": {
+      "command": "npx vite preview --host 127.0.0.1 --port 4173 --strictPort",
+      "url": "http://127.0.0.1:4173",
+      "reuseExistingServer": false,
+      "timeout": 120000
+    }
+  },
+  "suites": [
+    {
+      "title": "horizontal-home.test.ts",
+      "file": "horizontal-home.test.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "horizontal homepage: native wheel pin/reverse/release or swipe track and arrows",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "tablet",
+              "projectName": "tablet",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4605,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-27T03:51:22.558Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "browser-diagnostics",
+                      "contentType": "application/json",
+                      "body": "ewogICJicm93c2VyIjogImNocm9taXVtIiwKICAidmVyc2lvbiI6ICIxNTYuMC44MDc4LjQiLAogICJ2aWV3cG9ydCI6IHsKICAgICJ3aWR0aCI6IDc2OCwKICAgICJoZWlnaHQiOiAxMDI0CiAgfSwKICAiaGFzVG91Y2giOiBmYWxzZSwKICAiaXNNb2JpbGUiOiBmYWxzZSwKICAidXJsIjogIltwb3J0Zm9saW9dLyMvI3NlbGVjdGVkLXByb2plY3RzIiwKICAiZXJyb3JzIjogW10KfQ=="
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/home/tpang/documents/websiteProfileV2/docs/verification/horizontal-home/final-responsive-artifacts/horizontal-home-horizontal-3e700-e-or-swipe-track-and-arrows-tablet/trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "650f104f71ca21c30851-51370f6fc8cdc0ce2f63",
+          "file": "horizontal-home.test.ts",
+          "line": 78,
+          "column": 1
+        },
+        {
+          "title": "homepage viewer opens exact second screenshot and returns focus and position",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "tablet",
+              "projectName": "tablet",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4585,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-27T03:51:28.051Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "browser-diagnostics",
+                      "contentType": "application/json",
+                      "body": "ewogICJicm93c2VyIjogImNocm9taXVtIiwKICAidmVyc2lvbiI6ICIxNTYuMC44MDc4LjQiLAogICJ2aWV3cG9ydCI6IHsKICAgICJ3aWR0aCI6IDc2OCwKICAgICJoZWlnaHQiOiAxMDI0CiAgfSwKICAiaGFzVG91Y2giOiBmYWxzZSwKICAiaXNNb2JpbGUiOiBmYWxzZSwKICAidXJsIjogIltwb3J0Zm9saW9dLyIsCiAgImVycm9ycyI6IFtdCn0="
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/home/tpang/documents/websiteProfileV2/docs/verification/horizontal-home/final-responsive-artifacts/horizontal-home-homepage-v-e5d79--returns-focus-and-position-tablet/trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "650f104f71ca21c30851-3d93f417946ed7e76718",
+          "file": "horizontal-home.test.ts",
+          "line": 179,
+          "column": 1
+        },
+        {
+          "title": "homepage static reduced motion, both themes/locales, image dimensions and index routes",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "tablet",
+              "projectName": "tablet",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 5391,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-27T03:51:33.178Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "browser-diagnostics",
+                      "contentType": "application/json",
+                      "body": "ewogICJicm93c2VyIjogImNocm9taXVtIiwKICAidmVyc2lvbiI6ICIxNTYuMC44MDc4LjQiLAogICJ2aWV3cG9ydCI6IHsKICAgICJ3aWR0aCI6IDc2OCwKICAgICJoZWlnaHQiOiAxMDI0CiAgfSwKICAiaGFzVG91Y2giOiBmYWxzZSwKICAiaXNNb2JpbGUiOiBmYWxzZSwKICAidXJsIjogIltwb3J0Zm9saW9dLyMvcHJvamVjdHMvdnBzLW1hbmFnZXIiLAogICJlcnJvcnMiOiBbXQp9"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/home/tpang/documents/websiteProfileV2/docs/verification/horizontal-home/final-responsive-artifacts/horizontal-home-homepage-s-8185d-dimensions-and-index-routes-tablet/trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "650f104f71ca21c30851-a7ff3b6c5b4e85afce94",
+          "file": "horizontal-home.test.ts",
+          "line": 246,
+          "column": 1
+        },
+        {
+          "title": "horizontal homepage: native wheel pin/reverse/release or swipe track and arrows",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4853,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-27T03:51:41.285Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "browser-diagnostics",
+                      "contentType": "application/json",
+                      "body": "ewogICJicm93c2VyIjogImNocm9taXVtIiwKICAidmVyc2lvbiI6ICIxNTYuMC44MDc4LjQiLAogICJ2aWV3cG9ydCI6IHsKICAgICJ3aWR0aCI6IDEyODAsCiAgICAiaGVpZ2h0IjogODAwCiAgfSwKICAiaGFzVG91Y2giOiBmYWxzZSwKICAiaXNNb2JpbGUiOiBmYWxzZSwKICAidXJsIjogIltwb3J0Zm9saW9dLyMvI3NlbGVjdGVkLXByb2plY3RzIiwKICAiZXJyb3JzIjogW10KfQ=="
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/home/tpang/documents/websiteProfileV2/docs/verification/horizontal-home/final-responsive-artifacts/horizontal-home-horizontal-3e700-e-or-swipe-track-and-arrows-desktop/trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "650f104f71ca21c30851-f1426da75938df08a9b2",
+          "file": "horizontal-home.test.ts",
+          "line": 78,
+          "column": 1
+        },
+        {
+          "title": "homepage viewer opens exact second screenshot and returns focus and position",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4867,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-27T03:51:46.775Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "browser-diagnostics",
+                      "contentType": "application/json",
+                      "body": "ewogICJicm93c2VyIjogImNocm9taXVtIiwKICAidmVyc2lvbiI6ICIxNTYuMC44MDc4LjQiLAogICJ2aWV3cG9ydCI6IHsKICAgICJ3aWR0aCI6IDE0NDAsCiAgICAiaGVpZ2h0IjogMTAwMAogIH0sCiAgImhhc1RvdWNoIjogZmFsc2UsCiAgImlzTW9iaWxlIjogZmFsc2UsCiAgInVybCI6ICJbcG9ydGZvbGlvXS8iLAogICJlcnJvcnMiOiBbXQp9"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/home/tpang/documents/websiteProfileV2/docs/verification/horizontal-home/final-responsive-artifacts/horizontal-home-homepage-v-e5d79--returns-focus-and-position-desktop/trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "650f104f71ca21c30851-3b1b2543932a7bf02a43",
+          "file": "horizontal-home.test.ts",
+          "line": 179,
+          "column": 1
+        },
+        {
+          "title": "homepage static reduced motion, both themes/locales, image dimensions and index routes",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 5538,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-27T03:51:52.059Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "browser-diagnostics",
+                      "contentType": "application/json",
+                      "body": "ewogICJicm93c2VyIjogImNocm9taXVtIiwKICAidmVyc2lvbiI6ICIxNTYuMC44MDc4LjQiLAogICJ2aWV3cG9ydCI6IHsKICAgICJ3aWR0aCI6IDE0NDAsCiAgICAiaGVpZ2h0IjogMTAwMAogIH0sCiAgImhhc1RvdWNoIjogZmFsc2UsCiAgImlzTW9iaWxlIjogZmFsc2UsCiAgInVybCI6ICJbcG9ydGZvbGlvXS8jL3Byb2plY3RzL3Zwcy1tYW5hZ2VyIiwKICAiZXJyb3JzIjogW10KfQ=="
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/home/tpang/documents/websiteProfileV2/docs/verification/horizontal-home/final-responsive-artifacts/horizontal-home-homepage-s-8185d-dimensions-and-index-routes-desktop/trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "650f104f71ca21c30851-654638843d56f5782eed",
+          "file": "horizontal-home.test.ts",
+          "line": 246,
+          "column": 1
+        },
+        {
+          "title": "horizontal homepage: native wheel pin/reverse/release or swipe track and arrows",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 6879,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-27T03:52:06.762Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "browser-diagnostics",
+                      "contentType": "application/json",
+                      "body": "ewogICJicm93c2VyIjogImNocm9taXVtIiwKICAidmVyc2lvbiI6ICIxNTYuMC44MDc4LjQiLAogICJ2aWV3cG9ydCI6IHsKICAgICJ3aWR0aCI6IDM2MCwKICAgICJoZWlnaHQiOiA4MDAKICB9LAogICJoYXNUb3VjaCI6IHRydWUsCiAgImlzTW9iaWxlIjogZmFsc2UsCiAgInVybCI6ICJbcG9ydGZvbGlvXS8jLyNzZWxlY3RlZC1wcm9qZWN0cyIsCiAgImVycm9ycyI6IFtdCn0="
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/home/tpang/documents/websiteProfileV2/docs/verification/horizontal-home/final-responsive-artifacts/horizontal-home-horizontal-3e700-e-or-swipe-track-and-arrows-mobile/trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "650f104f71ca21c30851-a349456108e39bbb22c8",
+          "file": "horizontal-home.test.ts",
+          "line": 78,
+          "column": 1
+        },
+        {
+          "title": "homepage viewer opens exact second screenshot and returns focus and position",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 5120,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-27T03:52:14.693Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "browser-diagnostics",
+                      "contentType": "application/json",
+                      "body": "ewogICJicm93c2VyIjogImNocm9taXVtIiwKICAidmVyc2lvbiI6ICIxNTYuMC44MDc4LjQiLAogICJ2aWV3cG9ydCI6IHsKICAgICJ3aWR0aCI6IDM2MCwKICAgICJoZWlnaHQiOiA4MDAKICB9LAogICJoYXNUb3VjaCI6IHRydWUsCiAgImlzTW9iaWxlIjogZmFsc2UsCiAgInVybCI6ICJbcG9ydGZvbGlvXS8iLAogICJlcnJvcnMiOiBbXQp9"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/home/tpang/documents/websiteProfileV2/docs/verification/horizontal-home/final-responsive-artifacts/horizontal-home-homepage-v-e5d79--returns-focus-and-position-mobile/trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "650f104f71ca21c30851-3732acea720863526ac6",
+          "file": "horizontal-home.test.ts",
+          "line": 179,
+          "column": 1
+        },
+        {
+          "title": "homepage static reduced motion, both themes/locales, image dimensions and index routes",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 5198,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-27T03:52:20.514Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "browser-diagnostics",
+                      "contentType": "application/json",
+                      "body": "ewogICJicm93c2VyIjogImNocm9taXVtIiwKICAidmVyc2lvbiI6ICIxNTYuMC44MDc4LjQiLAogICJ2aWV3cG9ydCI6IHsKICAgICJ3aWR0aCI6IDM2MCwKICAgICJoZWlnaHQiOiA4MDAKICB9LAogICJoYXNUb3VjaCI6IHRydWUsCiAgImlzTW9iaWxlIjogZmFsc2UsCiAgInVybCI6ICJbcG9ydGZvbGlvXS8jL3Byb2plY3RzL3Zwcy1tYW5hZ2VyIiwKICAiZXJyb3JzIjogW10KfQ=="
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/home/tpang/documents/websiteProfileV2/docs/verification/horizontal-home/final-responsive-artifacts/horizontal-home-homepage-s-8185d-dimensions-and-index-routes-mobile/trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "650f104f71ca21c30851-aed35d2b791a429731e9",
+          "file": "horizontal-home.test.ts",
+          "line": 246,
+          "column": 1
+        },
+        {
+          "title": "horizontal homepage: native wheel pin/reverse/release or swipe track and arrows",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "narrow",
+              "projectName": "narrow",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3707,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-27T03:52:28.619Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "browser-diagnostics",
+                      "contentType": "application/json",
+                      "body": "ewogICJicm93c2VyIjogImNocm9taXVtIiwKICAidmVyc2lvbiI6ICIxNTYuMC44MDc4LjQiLAogICJ2aWV3cG9ydCI6IHsKICAgICJ3aWR0aCI6IDMyMCwKICAgICJoZWlnaHQiOiA4NDQKICB9LAogICJoYXNUb3VjaCI6IGZhbHNlLAogICJpc01vYmlsZSI6IGZhbHNlLAogICJ1cmwiOiAiW3BvcnRmb2xpb10vIy8jc2VsZWN0ZWQtcHJvamVjdHMiLAogICJlcnJvcnMiOiBbXQp9"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/home/tpang/documents/websiteProfileV2/docs/verification/horizontal-home/final-responsive-artifacts/horizontal-home-horizontal-3e700-e-or-swipe-track-and-arrows-narrow/trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "650f104f71ca21c30851-c86faab37ce7e3abdeb3",
+          "file": "horizontal-home.test.ts",
+          "line": 78,
+          "column": 1
+        },
+        {
+          "title": "homepage viewer opens exact second screenshot and returns focus and position",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "narrow",
+              "projectName": "narrow",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 5409,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-27T03:52:33.038Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "browser-diagnostics",
+                      "contentType": "application/json",
+                      "body": "ewogICJicm93c2VyIjogImNocm9taXVtIiwKICAidmVyc2lvbiI6ICIxNTYuMC44MDc4LjQiLAogICJ2aWV3cG9ydCI6IHsKICAgICJ3aWR0aCI6IDMyMCwKICAgICJoZWlnaHQiOiA4NDQKICB9LAogICJoYXNUb3VjaCI6IGZhbHNlLAogICJpc01vYmlsZSI6IGZhbHNlLAogICJ1cmwiOiAiW3BvcnRmb2xpb10vIiwKICAiZXJyb3JzIjogW10KfQ=="
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/home/tpang/documents/websiteProfileV2/docs/verification/horizontal-home/final-responsive-artifacts/horizontal-home-homepage-v-e5d79--returns-focus-and-position-narrow/trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "650f104f71ca21c30851-c0ea842e5899e64f3ec2",
+          "file": "horizontal-home.test.ts",
+          "line": 179,
+          "column": 1
+        },
+        {
+          "title": "homepage static reduced motion, both themes/locales, image dimensions and index routes",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "narrow",
+              "projectName": "narrow",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4477,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-27T03:52:38.970Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "browser-diagnostics",
+                      "contentType": "application/json",
+                      "body": "ewogICJicm93c2VyIjogImNocm9taXVtIiwKICAidmVyc2lvbiI6ICIxNTYuMC44MDc4LjQiLAogICJ2aWV3cG9ydCI6IHsKICAgICJ3aWR0aCI6IDMyMCwKICAgICJoZWlnaHQiOiA4NDQKICB9LAogICJoYXNUb3VjaCI6IGZhbHNlLAogICJpc01vYmlsZSI6IGZhbHNlLAogICJ1cmwiOiAiW3BvcnRmb2xpb10vIy9wcm9qZWN0cy92cHMtbWFuYWdlciIsCiAgImVycm9ycyI6IFtdCn0="
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/home/tpang/documents/websiteProfileV2/docs/verification/horizontal-home/final-responsive-artifacts/horizontal-home-homepage-s-8185d-dimensions-and-index-routes-narrow/trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "650f104f71ca21c30851-1e151750128161d060ff",
+          "file": "horizontal-home.test.ts",
+          "line": 246,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "horizontal-keyboard.test.ts",
+      "file": "horizontal-keyboard.test.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "desktop pinned frame and full captions fit shorter viewports",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [
+                {
+                  "type": "skip",
+                  "description": "Desktop-specific viewport and keyboard regression",
+                  "location": {
+                    "file": "/home/tpang/documents/websiteProfileV2/e2e/horizontal-keyboard.test.ts",
+                    "line": 3,
+                    "column": 8
+                  }
+                }
+              ],
+              "expectedStatus": "skipped",
+              "projectId": "tablet",
+              "projectName": "tablet",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "skipped",
+                  "duration": 304,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-27T03:51:38.996Z",
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "Desktop-specific viewport and keyboard regression",
+                      "location": {
+                        "file": "/home/tpang/documents/websiteProfileV2/e2e/horizontal-keyboard.test.ts",
+                        "line": 3,
+                        "column": 8
+                      }
+                    }
+                  ],
+                  "attachments": [
+                    {
+                      "name": "browser-diagnostics",
+                      "contentType": "application/json",
+                      "body": "ewogICJicm93c2VyIjogImNocm9taXVtIiwKICAidmVyc2lvbiI6ICIxNTYuMC44MDc4LjQiLAogICJ2aWV3cG9ydCI6IHsKICAgICJ3aWR0aCI6IDc2OCwKICAgICJoZWlnaHQiOiAxMDI0CiAgfSwKICAiaGFzVG91Y2giOiBmYWxzZSwKICAiaXNNb2JpbGUiOiBmYWxzZSwKICAidXJsIjogImFib3V0OmJsYW5rIiwKICAiZXJyb3JzIjogW10KfQ=="
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/home/tpang/documents/websiteProfileV2/docs/verification/horizontal-home/final-responsive-artifacts/horizontal-keyboard-deskto-3c482-tions-fit-shorter-viewports-tablet/trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "skipped"
+            }
+          ],
+          "id": "654614978b1bee9a46e9-6facce482e8c5bacc6a6",
+          "file": "horizontal-keyboard.test.ts",
+          "line": 9,
+          "column": 1
+        },
+        {
+          "title": "native PageDown/PageUp and partially visible screenshot return position",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [
+                {
+                  "type": "skip",
+                  "description": "Desktop-specific viewport and keyboard regression",
+                  "location": {
+                    "file": "/home/tpang/documents/websiteProfileV2/e2e/horizontal-keyboard.test.ts",
+                    "line": 3,
+                    "column": 8
+                  }
+                }
+              ],
+              "expectedStatus": "skipped",
+              "projectId": "tablet",
+              "projectName": "tablet",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "skipped",
+                  "duration": 283,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-27T03:51:39.412Z",
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "Desktop-specific viewport and keyboard regression",
+                      "location": {
+                        "file": "/home/tpang/documents/websiteProfileV2/e2e/horizontal-keyboard.test.ts",
+                        "line": 3,
+                        "column": 8
+                      }
+                    }
+                  ],
+                  "attachments": [
+                    {
+                      "name": "browser-diagnostics",
+                      "contentType": "application/json",
+                      "body": "ewogICJicm93c2VyIjogImNocm9taXVtIiwKICAidmVyc2lvbiI6ICIxNTYuMC44MDc4LjQiLAogICJ2aWV3cG9ydCI6IHsKICAgICJ3aWR0aCI6IDc2OCwKICAgICJoZWlnaHQiOiAxMDI0CiAgfSwKICAiaGFzVG91Y2giOiBmYWxzZSwKICAiaXNNb2JpbGUiOiBmYWxzZSwKICAidXJsIjogImFib3V0OmJsYW5rIiwKICAiZXJyb3JzIjogW10KfQ=="
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/home/tpang/documents/websiteProfileV2/docs/verification/horizontal-home/final-responsive-artifacts/horizontal-keyboard-native-5d809--screenshot-return-position-tablet/trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "skipped"
+            }
+          ],
+          "id": "654614978b1bee9a46e9-1d5cf3b7c9b6f54c0ca2",
+          "file": "horizontal-keyboard.test.ts",
+          "line": 50,
+          "column": 1
+        },
+        {
+          "title": "desktop pinned frame and full captions fit shorter viewports",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2333,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-27T03:51:57.945Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "browser-diagnostics",
+                      "contentType": "application/json",
+                      "body": "ewogICJicm93c2VyIjogImNocm9taXVtIiwKICAidmVyc2lvbiI6ICIxNTYuMC44MDc4LjQiLAogICJ2aWV3cG9ydCI6IHsKICAgICJ3aWR0aCI6IDE0NDAsCiAgICAiaGVpZ2h0IjogNjAwCiAgfSwKICAiaGFzVG91Y2giOiBmYWxzZSwKICAiaXNNb2JpbGUiOiBmYWxzZSwKICAidXJsIjogIltwb3J0Zm9saW9dLyIsCiAgImVycm9ycyI6IFtdCn0="
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/home/tpang/documents/websiteProfileV2/docs/verification/horizontal-home/final-responsive-artifacts/horizontal-keyboard-deskto-3c482-tions-fit-shorter-viewports-desktop/trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "654614978b1bee9a46e9-df640053dbcb3a1a7a90",
+          "file": "horizontal-keyboard.test.ts",
+          "line": 9,
+          "column": 1
+        },
+        {
+          "title": "native PageDown/PageUp and partially visible screenshot return position",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4307,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-27T03:52:00.506Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "browser-diagnostics",
+                      "contentType": "application/json",
+                      "body": "ewogICJicm93c2VyIjogImNocm9taXVtIiwKICAidmVyc2lvbiI6ICIxNTYuMC44MDc4LjQiLAogICJ2aWV3cG9ydCI6IHsKICAgICJ3aWR0aCI6IDE0NDAsCiAgICAiaGVpZ2h0IjogMTAwMAogIH0sCiAgImhhc1RvdWNoIjogZmFsc2UsCiAgImlzTW9iaWxlIjogZmFsc2UsCiAgInVybCI6ICJbcG9ydGZvbGlvXS8jLyNzZWxlY3RlZC1wcm9qZWN0cyIsCiAgImVycm9ycyI6IFtdCn0="
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/home/tpang/documents/websiteProfileV2/docs/verification/horizontal-home/final-responsive-artifacts/horizontal-keyboard-native-5d809--screenshot-return-position-desktop/trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "654614978b1bee9a46e9-385fbd463ff64f049fb0",
+          "file": "horizontal-keyboard.test.ts",
+          "line": 50,
+          "column": 1
+        },
+        {
+          "title": "desktop pinned frame and full captions fit shorter viewports",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [
+                {
+                  "type": "skip",
+                  "description": "Desktop-specific viewport and keyboard regression",
+                  "location": {
+                    "file": "/home/tpang/documents/websiteProfileV2/e2e/horizontal-keyboard.test.ts",
+                    "line": 3,
+                    "column": 8
+                  }
+                }
+              ],
+              "expectedStatus": "skipped",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "skipped",
+                  "duration": 363,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-27T03:52:26.149Z",
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "Desktop-specific viewport and keyboard regression",
+                      "location": {
+                        "file": "/home/tpang/documents/websiteProfileV2/e2e/horizontal-keyboard.test.ts",
+                        "line": 3,
+                        "column": 8
+                      }
+                    }
+                  ],
+                  "attachments": [
+                    {
+                      "name": "browser-diagnostics",
+                      "contentType": "application/json",
+                      "body": "ewogICJicm93c2VyIjogImNocm9taXVtIiwKICAidmVyc2lvbiI6ICIxNTYuMC44MDc4LjQiLAogICJ2aWV3cG9ydCI6IHsKICAgICJ3aWR0aCI6IDM2MCwKICAgICJoZWlnaHQiOiA4MDAKICB9LAogICJoYXNUb3VjaCI6IHRydWUsCiAgImlzTW9iaWxlIjogZmFsc2UsCiAgInVybCI6ICJhYm91dDpibGFuayIsCiAgImVycm9ycyI6IFtdCn0="
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/home/tpang/documents/websiteProfileV2/docs/verification/horizontal-home/final-responsive-artifacts/horizontal-keyboard-deskto-3c482-tions-fit-shorter-viewports-mobile/trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "skipped"
+            }
+          ],
+          "id": "654614978b1bee9a46e9-f389f856c8b4d71eaac7",
+          "file": "horizontal-keyboard.test.ts",
+          "line": 9,
+          "column": 1
+        },
+        {
+          "title": "native PageDown/PageUp and partially visible screenshot return position",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [
+                {
+                  "type": "skip",
+                  "description": "Desktop-specific viewport and keyboard regression",
+                  "location": {
+                    "file": "/home/tpang/documents/websiteProfileV2/e2e/horizontal-keyboard.test.ts",
+                    "line": 3,
+                    "column": 8
+                  }
+                }
+              ],
+              "expectedStatus": "skipped",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "skipped",
+                  "duration": 343,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-27T03:52:26.594Z",
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "Desktop-specific viewport and keyboard regression",
+                      "location": {
+                        "file": "/home/tpang/documents/websiteProfileV2/e2e/horizontal-keyboard.test.ts",
+                        "line": 3,
+                        "column": 8
+                      }
+                    }
+                  ],
+                  "attachments": [
+                    {
+                      "name": "browser-diagnostics",
+                      "contentType": "application/json",
+                      "body": "ewogICJicm93c2VyIjogImNocm9taXVtIiwKICAidmVyc2lvbiI6ICIxNTYuMC44MDc4LjQiLAogICJ2aWV3cG9ydCI6IHsKICAgICJ3aWR0aCI6IDM2MCwKICAgICJoZWlnaHQiOiA4MDAKICB9LAogICJoYXNUb3VjaCI6IHRydWUsCiAgImlzTW9iaWxlIjogZmFsc2UsCiAgInVybCI6ICJhYm91dDpibGFuayIsCiAgImVycm9ycyI6IFtdCn0="
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/home/tpang/documents/websiteProfileV2/docs/verification/horizontal-home/final-responsive-artifacts/horizontal-keyboard-native-5d809--screenshot-return-position-mobile/trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "skipped"
+            }
+          ],
+          "id": "654614978b1bee9a46e9-cd5384715df62291772d",
+          "file": "horizontal-keyboard.test.ts",
+          "line": 50,
+          "column": 1
+        },
+        {
+          "title": "desktop pinned frame and full captions fit shorter viewports",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [
+                {
+                  "type": "skip",
+                  "description": "Desktop-specific viewport and keyboard regression",
+                  "location": {
+                    "file": "/home/tpang/documents/websiteProfileV2/e2e/horizontal-keyboard.test.ts",
+                    "line": 3,
+                    "column": 8
+                  }
+                }
+              ],
+              "expectedStatus": "skipped",
+              "projectId": "narrow",
+              "projectName": "narrow",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "skipped",
+                  "duration": 345,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-27T03:52:43.722Z",
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "Desktop-specific viewport and keyboard regression",
+                      "location": {
+                        "file": "/home/tpang/documents/websiteProfileV2/e2e/horizontal-keyboard.test.ts",
+                        "line": 3,
+                        "column": 8
+                      }
+                    }
+                  ],
+                  "attachments": [
+                    {
+                      "name": "browser-diagnostics",
+                      "contentType": "application/json",
+                      "body": "ewogICJicm93c2VyIjogImNocm9taXVtIiwKICAidmVyc2lvbiI6ICIxNTYuMC44MDc4LjQiLAogICJ2aWV3cG9ydCI6IHsKICAgICJ3aWR0aCI6IDMyMCwKICAgICJoZWlnaHQiOiA4NDQKICB9LAogICJoYXNUb3VjaCI6IGZhbHNlLAogICJpc01vYmlsZSI6IGZhbHNlLAogICJ1cmwiOiAiYWJvdXQ6YmxhbmsiLAogICJlcnJvcnMiOiBbXQp9"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/home/tpang/documents/websiteProfileV2/docs/verification/horizontal-home/final-responsive-artifacts/horizontal-keyboard-deskto-3c482-tions-fit-shorter-viewports-narrow/trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "skipped"
+            }
+          ],
+          "id": "654614978b1bee9a46e9-9e035e17cb086ce8031d",
+          "file": "horizontal-keyboard.test.ts",
+          "line": 9,
+          "column": 1
+        },
+        {
+          "title": "native PageDown/PageUp and partially visible screenshot return position",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [
+                {
+                  "type": "skip",
+                  "description": "Desktop-specific viewport and keyboard regression",
+                  "location": {
+                    "file": "/home/tpang/documents/websiteProfileV2/e2e/horizontal-keyboard.test.ts",
+                    "line": 3,
+                    "column": 8
+                  }
+                }
+              ],
+              "expectedStatus": "skipped",
+              "projectId": "narrow",
+              "projectName": "narrow",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "skipped",
+                  "duration": 231,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-27T03:52:44.149Z",
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "Desktop-specific viewport and keyboard regression",
+                      "location": {
+                        "file": "/home/tpang/documents/websiteProfileV2/e2e/horizontal-keyboard.test.ts",
+                        "line": 3,
+                        "column": 8
+                      }
+                    }
+                  ],
+                  "attachments": [
+                    {
+                      "name": "browser-diagnostics",
+                      "contentType": "application/json",
+                      "body": "ewogICJicm93c2VyIjogImNocm9taXVtIiwKICAidmVyc2lvbiI6ICIxNTYuMC44MDc4LjQiLAogICJ2aWV3cG9ydCI6IHsKICAgICJ3aWR0aCI6IDMyMCwKICAgICJoZWlnaHQiOiA4NDQKICB9LAogICJoYXNUb3VjaCI6IGZhbHNlLAogICJpc01vYmlsZSI6IGZhbHNlLAogICJ1cmwiOiAiYWJvdXQ6YmxhbmsiLAogICJlcnJvcnMiOiBbXQp9"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/home/tpang/documents/websiteProfileV2/docs/verification/horizontal-home/final-responsive-artifacts/horizontal-keyboard-native-5d809--screenshot-return-position-narrow/trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "skipped"
+            }
+          ],
+          "id": "654614978b1bee9a46e9-46f676083ac1f2409b1b",
+          "file": "horizontal-keyboard.test.ts",
+          "line": 50,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-11-27T03:51:19.123Z",
+    "duration": 85517.50600000001,
+    "expected": 14,
+    "skipped": 6,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

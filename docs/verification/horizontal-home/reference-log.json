@@ -1,0 +1,1650 @@
+{
+  "desktop": {
+    "samples": [
+      {
+        "y": 0,
+        "height": 11909,
+        "images": [
+          {
+            "alt": "Elena Vance - Designer",
+            "x": 832,
+            "y": 234,
+            "w": 448
+          }
+        ],
+        "sticky": [
+          {
+            "tag": "DIV",
+            "cls": "sticky top-0 h-dvh w-full overflow-hidden bg-secondary",
+            "top": 1044
+          }
+        ]
+      },
+      {
+        "y": 700,
+        "height": 11909,
+        "images": [
+          {
+            "alt": "Elena Vance - Designer",
+            "x": 832,
+            "y": -466,
+            "w": 448
+          },
+          {
+            "alt": "Northlight Studio brand composition",
+            "x": 144,
+            "y": 514,
+            "w": 420
+          },
+          {
+            "alt": "Meridian Architects typography detail",
+            "x": 604,
+            "y": 424,
+            "w": 400
+          },
+          {
+            "alt": "Ember & Co logo on textured paper",
+            "x": 1032,
+            "y": 864,
+            "w": 240
+          },
+          {
+            "alt": "Stillwater Journal stationery suite",
+            "x": 1328,
+            "y": 584,
+            "w": 560
+          },
+          {
+            "alt": "Aura Wellness digital interface",
+            "x": 1924,
+            "y": 424,
+            "w": 320
+          },
+          {
+            "alt": "Forge Collective packaging detail",
+            "x": 2324,
+            "y": 674,
+            "w": 300
+          },
+          {
+            "alt": "Halcyon Press brand guidelines",
+            "x": 2656,
+            "y": 604,
+            "w": 420
+          },
+          {
+            "alt": "Drift Studio environmental signage",
+            "x": 3124,
+            "y": 634,
+            "w": 400
+          },
+          {
+            "alt": "Northlight Studio color palette",
+            "x": 3584,
+            "y": 424,
+            "w": 240
+          },
+          {
+            "alt": "Meridian Architects business cards",
+            "x": 3864,
+            "y": 584,
+            "w": 560
+          },
+          {
+            "alt": "Stillwater Journal editorial layout",
+            "x": 4452,
+            "y": 764,
+            "w": 320
+          },
+          {
+            "alt": "Ember & Co texture exploration",
+            "x": 4828,
+            "y": 424,
+            "w": 300
+          },
+          {
+            "alt": "Aura Wellness website design",
+            "x": 5164,
+            "y": 514,
+            "w": 420
+          },
+          {
+            "alt": "Forge Collective letterhead",
+            "x": 5664,
+            "y": 634,
+            "w": 400
+          },
+          {
+            "alt": "Halcyon Press product photography",
+            "x": 6096,
+            "y": 864,
+            "w": 240
+          },
+          {
+            "alt": "Drift Studio poster design",
+            "x": 6384,
+            "y": 424,
+            "w": 560
+          },
+          {
+            "alt": "Northlight Studio mobile app",
+            "x": 7004,
+            "y": 594,
+            "w": 320
+          },
+          {
+            "alt": "Meridian Architects monogram detail",
+            "x": 7364,
+            "y": 674,
+            "w": 300
+          },
+          {
+            "alt": "Halcyon Press book cover",
+            "x": 7692,
+            "y": 604,
+            "w": 420
+          },
+          {
+            "alt": "Aura Wellness iconography set",
+            "x": 8168,
+            "y": 424,
+            "w": 400
+          },
+          {
+            "alt": "Forge Collective brand pattern",
+            "x": 8604,
+            "y": 644,
+            "w": 240
+          },
+          {
+            "alt": "Ember & Co print collateral",
+            "x": 8924,
+            "y": 584,
+            "w": 560
+          },
+          {
+            "alt": "Stillwater Journal typography specimen",
+            "x": 9516,
+            "y": 764,
+            "w": 320
+          },
+          {
+            "alt": "Drift Studio brand elements",
+            "x": 9884,
+            "y": 424,
+            "w": 300
+          }
+        ],
+        "sticky": [
+          {
+            "tag": "DIV",
+            "cls": "sticky top-0 h-dvh w-full overflow-hidden bg-secondary",
+            "top": 344
+          }
+        ]
+      },
+      {
+        "y": 1400,
+        "height": 11909,
+        "images": [
+          {
+            "alt": "Northlight Studio brand composition",
+            "x": -449.37860107421875,
+            "y": 170,
+            "w": 420
+          },
+          {
+            "alt": "Meridian Architects typography detail",
+            "x": 10.62139892578125,
+            "y": 80,
+            "w": 400
+          },
+          {
+            "alt": "Ember & Co logo on textured paper",
+            "x": 438.62139892578125,
+            "y": 520,
+            "w": 240
+          },
+          {
+            "alt": "Stillwater Journal stationery suite",
+            "x": 734.6213989257812,
+            "y": 240,
+            "w": 560
+          },
+          {
+            "alt": "Aura Wellness digital interface",
+            "x": 1330.621337890625,
+            "y": 80,
+            "w": 320
+          },
+          {
+            "alt": "Forge Collective packaging detail",
+            "x": 1730.621337890625,
+            "y": 330,
+            "w": 300
+          },
+          {
+            "alt": "Halcyon Press brand guidelines",
+            "x": 2062.621337890625,
+            "y": 260,
+            "w": 420
+          },
+          {
+            "alt": "Drift Studio environmental signage",
+            "x": 2530.621337890625,
+            "y": 290,
+            "w": 400
+          },
+          {
+            "alt": "Northlight Studio color palette",
+            "x": 2990.621337890625,
+            "y": 80,
+            "w": 240
+          },
+          {
+            "alt": "Meridian Architects business cards",
+            "x": 3270.621337890625,
+            "y": 240,
+            "w": 560
+          },
+          {
+            "alt": "Stillwater Journal editorial layout",
+            "x": 3858.621337890625,
+            "y": 420,
+            "w": 320
+          },
+          {
+            "alt": "Ember & Co texture exploration",
+            "x": 4234.62158203125,
+            "y": 80,
+            "w": 300
+          },
+          {
+            "alt": "Aura Wellness website design",
+            "x": 4570.62158203125,
+            "y": 170,
+            "w": 420
+          },
+          {
+            "alt": "Forge Collective letterhead",
+            "x": 5070.62158203125,
+            "y": 290,
+            "w": 400
+          },
+          {
+            "alt": "Halcyon Press product photography",
+            "x": 5502.62158203125,
+            "y": 520,
+            "w": 240
+          },
+          {
+            "alt": "Drift Studio poster design",
+            "x": 5790.62158203125,
+            "y": 80,
+            "w": 560
+          },
+          {
+            "alt": "Northlight Studio mobile app",
+            "x": 6410.62158203125,
+            "y": 250,
+            "w": 320
+          },
+          {
+            "alt": "Meridian Architects monogram detail",
+            "x": 6770.62158203125,
+            "y": 330,
+            "w": 300
+          },
+          {
+            "alt": "Halcyon Press book cover",
+            "x": 7098.62158203125,
+            "y": 260,
+            "w": 420
+          },
+          {
+            "alt": "Aura Wellness iconography set",
+            "x": 7574.62158203125,
+            "y": 80,
+            "w": 400
+          },
+          {
+            "alt": "Forge Collective brand pattern",
+            "x": 8010.62158203125,
+            "y": 300,
+            "w": 240
+          },
+          {
+            "alt": "Ember & Co print collateral",
+            "x": 8330.62109375,
+            "y": 240,
+            "w": 560
+          },
+          {
+            "alt": "Stillwater Journal typography specimen",
+            "x": 8922.62109375,
+            "y": 420,
+            "w": 320
+          },
+          {
+            "alt": "Drift Studio brand elements",
+            "x": 9290.62109375,
+            "y": 80,
+            "w": 300
+          }
+        ],
+        "sticky": [
+          {
+            "tag": "DIV",
+            "cls": "sticky top-0 h-dvh w-full overflow-hidden bg-secondary",
+            "top": 0
+          }
+        ]
+      },
+      {
+        "y": 2100,
+        "height": 11909,
+        "images": [
+          {
+            "alt": "Northlight Studio brand composition",
+            "x": -1616.1341552734375,
+            "y": 170,
+            "w": 420
+          },
+          {
+            "alt": "Meridian Architects typography detail",
+            "x": -1156.1341552734375,
+            "y": 80,
+            "w": 400
+          },
+          {
+            "alt": "Ember & Co logo on textured paper",
+            "x": -728.1341552734375,
+            "y": 520,
+            "w": 240
+          },
+          {
+            "alt": "Stillwater Journal stationery suite",
+            "x": -432.1341552734375,
+            "y": 240,
+            "w": 560
+          },
+          {
+            "alt": "Aura Wellness digital interface",
+            "x": 163.8658447265625,
+            "y": 80,
+            "w": 320
+          },
+          {
+            "alt": "Forge Collective packaging detail",
+            "x": 563.8658447265625,
+            "y": 330,
+            "w": 300
+          },
+          {
+            "alt": "Halcyon Press brand guidelines",
+            "x": 895.8658447265625,
+            "y": 260,
+            "w": 420
+          },
+          {
+            "alt": "Drift Studio environmental signage",
+            "x": 1363.8658447265625,
+            "y": 290,
+            "w": 400
+          },
+          {
+            "alt": "Northlight Studio color palette",
+            "x": 1823.8658447265625,
+            "y": 80,
+            "w": 240
+          },
+          {
+            "alt": "Meridian Architects business cards",
+            "x": 2103.86572265625,
+            "y": 240,
+            "w": 560
+          },
+          {
+            "alt": "Stillwater Journal editorial layout",
+            "x": 2691.86572265625,
+            "y": 420,
+            "w": 320
+          },
+          {
+            "alt": "Ember & Co texture exploration",
+            "x": 3067.86572265625,
+            "y": 80,
+            "w": 300
+          },
+          {
+            "alt": "Aura Wellness website design",
+            "x": 3403.86572265625,
+            "y": 170,
+            "w": 420
+          },
+          {
+            "alt": "Forge Collective letterhead",
+            "x": 3903.86572265625,
+            "y": 290,
+            "w": 400
+          },
+          {
+            "alt": "Halcyon Press product photography",
+            "x": 4335.86572265625,
+            "y": 520,
+            "w": 240
+          },
+          {
+            "alt": "Drift Studio poster design",
+            "x": 4623.86572265625,
+            "y": 80,
+            "w": 560
+          },
+          {
+            "alt": "Northlight Studio mobile app",
+            "x": 5243.86572265625,
+            "y": 250,
+            "w": 320
+          },
+          {
+            "alt": "Meridian Architects monogram detail",
+            "x": 5603.86572265625,
+            "y": 330,
+            "w": 300
+          },
+          {
+            "alt": "Halcyon Press book cover",
+            "x": 5931.86572265625,
+            "y": 260,
+            "w": 420
+          },
+          {
+            "alt": "Aura Wellness iconography set",
+            "x": 6407.86572265625,
+            "y": 80,
+            "w": 400
+          },
+          {
+            "alt": "Forge Collective brand pattern",
+            "x": 6843.86572265625,
+            "y": 300,
+            "w": 240
+          },
+          {
+            "alt": "Ember & Co print collateral",
+            "x": 7163.86572265625,
+            "y": 240,
+            "w": 560
+          },
+          {
+            "alt": "Stillwater Journal typography specimen",
+            "x": 7755.86572265625,
+            "y": 420,
+            "w": 320
+          },
+          {
+            "alt": "Drift Studio brand elements",
+            "x": 8123.86572265625,
+            "y": 80,
+            "w": 300
+          }
+        ],
+        "sticky": [
+          {
+            "tag": "DIV",
+            "cls": "sticky top-0 h-dvh w-full overflow-hidden bg-secondary",
+            "top": 0
+          }
+        ]
+      },
+      {
+        "y": 2800,
+        "height": 11909,
+        "images": [
+          {
+            "alt": "Northlight Studio brand composition",
+            "x": -2782.889892578125,
+            "y": 170,
+            "w": 420
+          },
+          {
+            "alt": "Meridian Architects typography detail",
+            "x": -2322.889892578125,
+            "y": 80,
+            "w": 400
+          },
+          {
+            "alt": "Ember & Co logo on textured paper",
+            "x": -1894.889892578125,
+            "y": 520,
+            "w": 240
+          },
+          {
+            "alt": "Stillwater Journal stationery suite",
+            "x": -1598.889892578125,
+            "y": 240,
+            "w": 560
+          },
+          {
+            "alt": "Aura Wellness digital interface",
+            "x": -1002.889892578125,
+            "y": 80,
+            "w": 320
+          },
+          {
+            "alt": "Forge Collective packaging detail",
+            "x": -602.889892578125,
+            "y": 330,
+            "w": 300
+          },
+          {
+            "alt": "Halcyon Press brand guidelines",
+            "x": -270.889892578125,
+            "y": 260,
+            "w": 420
+          },
+          {
+            "alt": "Drift Studio environmental signage",
+            "x": 197.110107421875,
+            "y": 290,
+            "w": 400
+          },
+          {
+            "alt": "Northlight Studio color palette",
+            "x": 657.110107421875,
+            "y": 80,
+            "w": 240
+          },
+          {
+            "alt": "Meridian Architects business cards",
+            "x": 937.110107421875,
+            "y": 240,
+            "w": 560
+          },
+          {
+            "alt": "Stillwater Journal editorial layout",
+            "x": 1525.110107421875,
+            "y": 420,
+            "w": 320
+          },
+          {
+            "alt": "Ember & Co texture exploration",
+            "x": 1901.110107421875,
+            "y": 80,
+            "w": 300
+          },
+          {
+            "alt": "Aura Wellness website design",
+            "x": 2237.110107421875,
+            "y": 170,
+            "w": 420
+          },
+          {
+            "alt": "Forge Collective letterhead",
+            "x": 2737.110107421875,
+            "y": 290,
+            "w": 400
+          },
+          {
+            "alt": "Halcyon Press product photography",
+            "x": 3169.110107421875,
+            "y": 520,
+            "w": 240
+          },
+          {
+            "alt": "Drift Studio poster design",
+            "x": 3457.110107421875,
+            "y": 80,
+            "w": 560
+          },
+          {
+            "alt": "Northlight Studio mobile app",
+            "x": 4077.110107421875,
+            "y": 250,
+            "w": 320
+          },
+          {
+            "alt": "Meridian Architects monogram detail",
+            "x": 4437.1103515625,
+            "y": 330,
+            "w": 300
+          },
+          {
+            "alt": "Halcyon Press book cover",
+            "x": 4765.1103515625,
+            "y": 260,
+            "w": 420
+          },
+          {
+            "alt": "Aura Wellness iconography set",
+            "x": 5241.1103515625,
+            "y": 80,
+            "w": 400
+          },
+          {
+            "alt": "Forge Collective brand pattern",
+            "x": 5677.1103515625,
+            "y": 300,
+            "w": 240
+          },
+          {
+            "alt": "Ember & Co print collateral",
+            "x": 5997.1103515625,
+            "y": 240,
+            "w": 560
+          },
+          {
+            "alt": "Stillwater Journal typography specimen",
+            "x": 6589.1103515625,
+            "y": 420,
+            "w": 320
+          },
+          {
+            "alt": "Drift Studio brand elements",
+            "x": 6957.1103515625,
+            "y": 80,
+            "w": 300
+          }
+        ],
+        "sticky": [
+          {
+            "tag": "DIV",
+            "cls": "sticky top-0 h-dvh w-full overflow-hidden bg-secondary",
+            "top": 0
+          }
+        ]
+      },
+      {
+        "y": 3500,
+        "height": 11909,
+        "images": [
+          {
+            "alt": "Northlight Studio brand composition",
+            "x": -3949.6455078125,
+            "y": 170,
+            "w": 420
+          },
+          {
+            "alt": "Meridian Architects typography detail",
+            "x": -3489.6455078125,
+            "y": 80,
+            "w": 400
+          },
+          {
+            "alt": "Ember & Co logo on textured paper",
+            "x": -3061.6455078125,
+            "y": 520,
+            "w": 240
+          },
+          {
+            "alt": "Stillwater Journal stationery suite",
+            "x": -2765.6455078125,
+            "y": 240,
+            "w": 560
+          },
+          {
+            "alt": "Aura Wellness digital interface",
+            "x": -2169.6455078125,
+            "y": 80,
+            "w": 320
+          },
+          {
+            "alt": "Forge Collective packaging detail",
+            "x": -1769.6455078125,
+            "y": 330,
+            "w": 300
+          },
+          {
+            "alt": "Halcyon Press brand guidelines",
+            "x": -1437.6455078125,
+            "y": 260,
+            "w": 420
+          },
+          {
+            "alt": "Drift Studio environmental signage",
+            "x": -969.6455078125,
+            "y": 290,
+            "w": 400
+          },
+          {
+            "alt": "Northlight Studio color palette",
+            "x": -509.6455078125,
+            "y": 80,
+            "w": 240
+          },
+          {
+            "alt": "Meridian Architects business cards",
+            "x": -229.6455078125,
+            "y": 240,
+            "w": 560
+          },
+          {
+            "alt": "Stillwater Journal editorial layout",
+            "x": 358.3544921875,
+            "y": 420,
+            "w": 320
+          },
+          {
+            "alt": "Ember & Co texture exploration",
+            "x": 734.3544921875,
+            "y": 80,
+            "w": 300
+          },
+          {
+            "alt": "Aura Wellness website design",
+            "x": 1070.3544921875,
+            "y": 170,
+            "w": 420
+          },
+          {
+            "alt": "Forge Collective letterhead",
+            "x": 1570.3544921875,
+            "y": 290,
+            "w": 400
+          },
+          {
+            "alt": "Halcyon Press product photography",
+            "x": 2002.3544921875,
+            "y": 520,
+            "w": 240
+          },
+          {
+            "alt": "Drift Studio poster design",
+            "x": 2290.3544921875,
+            "y": 80,
+            "w": 560
+          },
+          {
+            "alt": "Northlight Studio mobile app",
+            "x": 2910.3544921875,
+            "y": 250,
+            "w": 320
+          },
+          {
+            "alt": "Meridian Architects monogram detail",
+            "x": 3270.3544921875,
+            "y": 330,
+            "w": 300
+          },
+          {
+            "alt": "Halcyon Press book cover",
+            "x": 3598.3544921875,
+            "y": 260,
+            "w": 420
+          },
+          {
+            "alt": "Aura Wellness iconography set",
+            "x": 4074.3544921875,
+            "y": 80,
+            "w": 400
+          },
+          {
+            "alt": "Forge Collective brand pattern",
+            "x": 4510.3544921875,
+            "y": 300,
+            "w": 240
+          },
+          {
+            "alt": "Ember & Co print collateral",
+            "x": 4830.3544921875,
+            "y": 240,
+            "w": 560
+          },
+          {
+            "alt": "Stillwater Journal typography specimen",
+            "x": 5422.3544921875,
+            "y": 420,
+            "w": 320
+          },
+          {
+            "alt": "Drift Studio brand elements",
+            "x": 5790.3544921875,
+            "y": 80,
+            "w": 300
+          }
+        ],
+        "sticky": [
+          {
+            "tag": "DIV",
+            "cls": "sticky top-0 h-dvh w-full overflow-hidden bg-secondary",
+            "top": 0
+          }
+        ]
+      }
+    ],
+    "errors": [],
+    "text": "Skip to main content\nElena Vance\nWork\nAbout\nServices\nContact\n\nDESIGN & BRAND STRATEGY\n\nDesigner crafting brands with intention and restraint.\n\nI help ambitious brands find their voice through strategic thinking and considered design. Based in New York.\n\nView Selected Work\nSkip gallery\nSELECTED WORK\nNorthlight Studio\nMeridian Architects\nEmber & Co\nStillwater Journal\nAura Wellness\nForge Collective\nHalcyon Press\nDrift Studio\nNorthlight Studio\nMeridian Architects\nStillwater Journal\nEmber & Co\nAura Wellness\nForge Collective\nHalcyon Press\nDrift Studio\nNorthlight Studio\nMeridian Architects\nHalcyon Press\nAura Wellness\nForge Collective\nEmber & Co\nStillwater Journal\nDrift Studio\nScroll to explore\n\nSELECTED WORK\n\nProjects\nView Project\nNorthlight Studio\nBRAND IDENTITY\n2024\nView Project\nMeridian Architects\nVISUAL SYSTEM\n2024\nView Project\nEmber & Co\nBRAND REFRESH\n2023\nView Project\nStillwater Journal\nEDITORIAL DESIGN\n2023\nView All Projects\n\nABOUT\n\n\"Good design is invisible. It solves problems without drawing attention to itself.\"\n\nWith over a decade of experience working with brands across industries, I bring a strategic approach to every project. My work is rooted in the belief that the best brands are built on clarity, consistency, and restraint.\n\nLearn more about my approach\n\nSERVICES\n\nWhat I Do\nBrand Strategy\n\nPositioning and narrative frameworks that create lasting differentiation.\n\nVisual Identity\n\nDistinctive design systems built on strategic foundations.\n\nArt Direction\n\nCreative guidance that brings brand visions to life with precision.\n\nView All Services\nLet's create something meaningful.\n\nCurrently accepting new projects for Q1 2025. I'd love to hear about what you're building.\n\nGet an Estimate\nElena Vance\n\nDesigner and brand strategist crafting distinctive identities with intention and restraint.\n\nNAVIGATION\nWork\nAbout\nServices\nContact\nCONNECT\nInstagram\nLinkedIn\nTwitter\n\n© 2026 Elena Vance. All rights reserved.\n\nNew York, NY\n\nEdit with",
+    "galleryBounds": {
+      "top": 1044,
+      "height": 6146
+    },
+    "exit": {
+      "x": 80,
+      "y": 896.390625,
+      "width": 768,
+      "height": 48
+    },
+    "afterClick": "Skip to main content\nElena Vance\nWork\nAbout\nServices\nContact\n\nOVERVIEW\n\nNorthlight Studio\n\nA comprehensive brand identity for a boutique creative studio specializing in architectural visualization. The identity balances sophistication with approachability, using restrained typography and a warm, natural palette.\n\nTHE CHALLENGE\n\nNorthlight needed an identity that would resonate with high-end architectural firms while remaining accessible to emerging practices. The challenge was to create something timeless yet contemporary.\n\nTHE SOLUTION\n\nWe developed a typographic-led identity system anchored by custom lettering that echoes the precision of architectural draftsmanship. The warm, neutral palette brings humanity to the technical nature of their work.\n\nCLIENT\n\nNorthlight Studio\n\nINDUSTRY\n\nCreative Agency\n\nSERVICES\n\nBrand Strategy\nVisual Identity\nBrand Guidelines\n\nYEAR\n\n2024\n\nNEXT PROJECT\n\nMeridian Architects\nBack to all projects\nElena Vance\n\nDesigner and brand strategist crafting distinctive identities with intention and restraint.\n\nNAVIGATION\nWork\nAbout\nServices\nContact\nCONNECT\nInstagram\nLinkedIn\nTwitter\n\n© 2026 Elena Vance. All rights reserved.\n\nNew York, NY\n\nEdit with"
+  },
+  "mobile": {
+    "samples": [
+      {
+        "y": 0,
+        "height": 12641,
+        "images": [
+          {
+            "alt": "Elena Vance - Designer",
+            "x": 24,
+            "y": 160,
+            "w": 342
+          }
+        ],
+        "sticky": [
+          {
+            "tag": "DIV",
+            "cls": "sticky top-0 h-dvh w-full overflow-hidden bg-secondary",
+            "top": 998.6875
+          }
+        ]
+      },
+      {
+        "y": 700,
+        "height": 12641,
+        "images": [
+          {
+            "alt": "Northlight Studio brand composition",
+            "x": 80,
+            "y": 440.6875,
+            "w": 420
+          },
+          {
+            "alt": "Meridian Architects typography detail",
+            "x": 540,
+            "y": 378.6875,
+            "w": 400
+          },
+          {
+            "alt": "Ember & Co logo on textured paper",
+            "x": 968,
+            "y": 762.6875,
+            "w": 240
+          },
+          {
+            "alt": "Stillwater Journal stationery suite",
+            "x": 1264,
+            "y": 510.6875,
+            "w": 560
+          },
+          {
+            "alt": "Aura Wellness digital interface",
+            "x": 1860,
+            "y": 378.6875,
+            "w": 320
+          },
+          {
+            "alt": "Forge Collective packaging detail",
+            "x": 2260,
+            "y": 600.6875,
+            "w": 300
+          },
+          {
+            "alt": "Halcyon Press brand guidelines",
+            "x": 2592,
+            "y": 502.6875,
+            "w": 420
+          },
+          {
+            "alt": "Drift Studio environmental signage",
+            "x": 3060,
+            "y": 560.6875,
+            "w": 400
+          },
+          {
+            "alt": "Northlight Studio color palette",
+            "x": 3520,
+            "y": 378.6875,
+            "w": 240
+          },
+          {
+            "alt": "Meridian Architects business cards",
+            "x": 3800,
+            "y": 510.6875,
+            "w": 560
+          },
+          {
+            "alt": "Stillwater Journal editorial layout",
+            "x": 4388,
+            "y": 662.6875,
+            "w": 320
+          },
+          {
+            "alt": "Ember & Co texture exploration",
+            "x": 4764,
+            "y": 378.6875,
+            "w": 300
+          },
+          {
+            "alt": "Aura Wellness website design",
+            "x": 5100,
+            "y": 440.6875,
+            "w": 420
+          },
+          {
+            "alt": "Forge Collective letterhead",
+            "x": 5600,
+            "y": 560.6875,
+            "w": 400
+          },
+          {
+            "alt": "Halcyon Press product photography",
+            "x": 6032,
+            "y": 762.6875,
+            "w": 240
+          },
+          {
+            "alt": "Drift Studio poster design",
+            "x": 6320,
+            "y": 378.6875,
+            "w": 560
+          },
+          {
+            "alt": "Northlight Studio mobile app",
+            "x": 6940,
+            "y": 520.6875,
+            "w": 320
+          },
+          {
+            "alt": "Meridian Architects monogram detail",
+            "x": 7300,
+            "y": 600.6875,
+            "w": 300
+          },
+          {
+            "alt": "Halcyon Press book cover",
+            "x": 7628,
+            "y": 502.6875,
+            "w": 420
+          },
+          {
+            "alt": "Aura Wellness iconography set",
+            "x": 8104,
+            "y": 378.6875,
+            "w": 400
+          },
+          {
+            "alt": "Forge Collective brand pattern",
+            "x": 8540,
+            "y": 570.6875,
+            "w": 240
+          },
+          {
+            "alt": "Ember & Co print collateral",
+            "x": 8860,
+            "y": 510.6875,
+            "w": 560
+          },
+          {
+            "alt": "Stillwater Journal typography specimen",
+            "x": 9452,
+            "y": 662.6875,
+            "w": 320
+          },
+          {
+            "alt": "Drift Studio brand elements",
+            "x": 9820,
+            "y": 378.6875,
+            "w": 300
+          }
+        ],
+        "sticky": [
+          {
+            "tag": "DIV",
+            "cls": "sticky top-0 h-dvh w-full overflow-hidden bg-secondary",
+            "top": 298.6875
+          }
+        ]
+      },
+      {
+        "y": 1400,
+        "height": 12641,
+        "images": [
+          {
+            "alt": "Northlight Studio brand composition",
+            "x": -588.8541870117188,
+            "y": 142,
+            "w": 420
+          },
+          {
+            "alt": "Meridian Architects typography detail",
+            "x": -128.85418701171875,
+            "y": 80,
+            "w": 400
+          },
+          {
+            "alt": "Ember & Co logo on textured paper",
+            "x": 299.14581298828125,
+            "y": 464,
+            "w": 240
+          },
+          {
+            "alt": "Stillwater Journal stationery suite",
+            "x": 595.1458129882812,
+            "y": 212,
+            "w": 560
+          },
+          {
+            "alt": "Aura Wellness digital interface",
+            "x": 1191.145751953125,
+            "y": 80,
+            "w": 320
+          },
+          {
+            "alt": "Forge Collective packaging detail",
+            "x": 1591.145751953125,
+            "y": 302,
+            "w": 300
+          },
+          {
+            "alt": "Halcyon Press brand guidelines",
+            "x": 1923.145751953125,
+            "y": 204,
+            "w": 420
+          },
+          {
+            "alt": "Drift Studio environmental signage",
+            "x": 2391.145751953125,
+            "y": 262,
+            "w": 400
+          },
+          {
+            "alt": "Northlight Studio color palette",
+            "x": 2851.145751953125,
+            "y": 80,
+            "w": 240
+          },
+          {
+            "alt": "Meridian Architects business cards",
+            "x": 3131.145751953125,
+            "y": 212,
+            "w": 560
+          },
+          {
+            "alt": "Stillwater Journal editorial layout",
+            "x": 3719.145751953125,
+            "y": 364,
+            "w": 320
+          },
+          {
+            "alt": "Ember & Co texture exploration",
+            "x": 4095.145751953125,
+            "y": 80,
+            "w": 300
+          },
+          {
+            "alt": "Aura Wellness website design",
+            "x": 4431.14599609375,
+            "y": 142,
+            "w": 420
+          },
+          {
+            "alt": "Forge Collective letterhead",
+            "x": 4931.14599609375,
+            "y": 262,
+            "w": 400
+          },
+          {
+            "alt": "Halcyon Press product photography",
+            "x": 5363.14599609375,
+            "y": 464,
+            "w": 240
+          },
+          {
+            "alt": "Drift Studio poster design",
+            "x": 5651.14599609375,
+            "y": 80,
+            "w": 560
+          },
+          {
+            "alt": "Northlight Studio mobile app",
+            "x": 6271.14599609375,
+            "y": 222,
+            "w": 320
+          },
+          {
+            "alt": "Meridian Architects monogram detail",
+            "x": 6631.14599609375,
+            "y": 302,
+            "w": 300
+          },
+          {
+            "alt": "Halcyon Press book cover",
+            "x": 6959.14599609375,
+            "y": 204,
+            "w": 420
+          },
+          {
+            "alt": "Aura Wellness iconography set",
+            "x": 7435.14599609375,
+            "y": 80,
+            "w": 400
+          },
+          {
+            "alt": "Forge Collective brand pattern",
+            "x": 7871.14599609375,
+            "y": 272,
+            "w": 240
+          },
+          {
+            "alt": "Ember & Co print collateral",
+            "x": 8191.14599609375,
+            "y": 212,
+            "w": 560
+          },
+          {
+            "alt": "Stillwater Journal typography specimen",
+            "x": 8783.1455078125,
+            "y": 364,
+            "w": 320
+          },
+          {
+            "alt": "Drift Studio brand elements",
+            "x": 9151.1455078125,
+            "y": 80,
+            "w": 300
+          }
+        ],
+        "sticky": [
+          {
+            "tag": "DIV",
+            "cls": "sticky top-0 h-dvh w-full overflow-hidden bg-secondary",
+            "top": 0
+          }
+        ]
+      },
+      {
+        "y": 2100,
+        "height": 12641,
+        "images": [
+          {
+            "alt": "Northlight Studio brand composition",
+            "x": -1755.5208740234375,
+            "y": 142,
+            "w": 420
+          },
+          {
+            "alt": "Meridian Architects typography detail",
+            "x": -1295.5208740234375,
+            "y": 80,
+            "w": 400
+          },
+          {
+            "alt": "Ember & Co logo on textured paper",
+            "x": -867.5208740234375,
+            "y": 464,
+            "w": 240
+          },
+          {
+            "alt": "Stillwater Journal stationery suite",
+            "x": -571.5208740234375,
+            "y": 212,
+            "w": 560
+          },
+          {
+            "alt": "Aura Wellness digital interface",
+            "x": 24.4791259765625,
+            "y": 80,
+            "w": 320
+          },
+          {
+            "alt": "Forge Collective packaging detail",
+            "x": 424.4791259765625,
+            "y": 302,
+            "w": 300
+          },
+          {
+            "alt": "Halcyon Press brand guidelines",
+            "x": 756.4791259765625,
+            "y": 204,
+            "w": 420
+          },
+          {
+            "alt": "Drift Studio environmental signage",
+            "x": 1224.4791259765625,
+            "y": 262,
+            "w": 400
+          },
+          {
+            "alt": "Northlight Studio color palette",
+            "x": 1684.4791259765625,
+            "y": 80,
+            "w": 240
+          },
+          {
+            "alt": "Meridian Architects business cards",
+            "x": 1964.4791259765625,
+            "y": 212,
+            "w": 560
+          },
+          {
+            "alt": "Stillwater Journal editorial layout",
+            "x": 2552.47900390625,
+            "y": 364,
+            "w": 320
+          },
+          {
+            "alt": "Ember & Co texture exploration",
+            "x": 2928.47900390625,
+            "y": 80,
+            "w": 300
+          },
+          {
+            "alt": "Aura Wellness website design",
+            "x": 3264.47900390625,
+            "y": 142,
+            "w": 420
+          },
+          {
+            "alt": "Forge Collective letterhead",
+            "x": 3764.47900390625,
+            "y": 262,
+            "w": 400
+          },
+          {
+            "alt": "Halcyon Press product photography",
+            "x": 4196.47900390625,
+            "y": 464,
+            "w": 240
+          },
+          {
+            "alt": "Drift Studio poster design",
+            "x": 4484.47900390625,
+            "y": 80,
+            "w": 560
+          },
+          {
+            "alt": "Northlight Studio mobile app",
+            "x": 5104.47900390625,
+            "y": 222,
+            "w": 320
+          },
+          {
+            "alt": "Meridian Architects monogram detail",
+            "x": 5464.47900390625,
+            "y": 302,
+            "w": 300
+          },
+          {
+            "alt": "Halcyon Press book cover",
+            "x": 5792.47900390625,
+            "y": 204,
+            "w": 420
+          },
+          {
+            "alt": "Aura Wellness iconography set",
+            "x": 6268.47900390625,
+            "y": 80,
+            "w": 400
+          },
+          {
+            "alt": "Forge Collective brand pattern",
+            "x": 6704.47900390625,
+            "y": 272,
+            "w": 240
+          },
+          {
+            "alt": "Ember & Co print collateral",
+            "x": 7024.47900390625,
+            "y": 212,
+            "w": 560
+          },
+          {
+            "alt": "Stillwater Journal typography specimen",
+            "x": 7616.47900390625,
+            "y": 364,
+            "w": 320
+          },
+          {
+            "alt": "Drift Studio brand elements",
+            "x": 7984.47900390625,
+            "y": 80,
+            "w": 300
+          }
+        ],
+        "sticky": [
+          {
+            "tag": "DIV",
+            "cls": "sticky top-0 h-dvh w-full overflow-hidden bg-secondary",
+            "top": 0
+          }
+        ]
+      },
+      {
+        "y": 2800,
+        "height": 12641,
+        "images": [
+          {
+            "alt": "Northlight Studio brand composition",
+            "x": -2922.1875,
+            "y": 142,
+            "w": 420
+          },
+          {
+            "alt": "Meridian Architects typography detail",
+            "x": -2462.1875,
+            "y": 80,
+            "w": 400
+          },
+          {
+            "alt": "Ember & Co logo on textured paper",
+            "x": -2034.1875,
+            "y": 464,
+            "w": 240
+          },
+          {
+            "alt": "Stillwater Journal stationery suite",
+            "x": -1738.1875,
+            "y": 212,
+            "w": 560
+          },
+          {
+            "alt": "Aura Wellness digital interface",
+            "x": -1142.1875,
+            "y": 80,
+            "w": 320
+          },
+          {
+            "alt": "Forge Collective packaging detail",
+            "x": -742.1875,
+            "y": 302,
+            "w": 300
+          },
+          {
+            "alt": "Halcyon Press brand guidelines",
+            "x": -410.1875,
+            "y": 204,
+            "w": 420
+          },
+          {
+            "alt": "Drift Studio environmental signage",
+            "x": 57.8125,
+            "y": 262,
+            "w": 400
+          },
+          {
+            "alt": "Northlight Studio color palette",
+            "x": 517.8125,
+            "y": 80,
+            "w": 240
+          },
+          {
+            "alt": "Meridian Architects business cards",
+            "x": 797.8125,
+            "y": 212,
+            "w": 560
+          },
+          {
+            "alt": "Stillwater Journal editorial layout",
+            "x": 1385.8125,
+            "y": 364,
+            "w": 320
+          },
+          {
+            "alt": "Ember & Co texture exploration",
+            "x": 1761.8125,
+            "y": 80,
+            "w": 300
+          },
+          {
+            "alt": "Aura Wellness website design",
+            "x": 2097.8125,
+            "y": 142,
+            "w": 420
+          },
+          {
+            "alt": "Forge Collective letterhead",
+            "x": 2597.8125,
+            "y": 262,
+            "w": 400
+          },
+          {
+            "alt": "Halcyon Press product photography",
+            "x": 3029.8125,
+            "y": 464,
+            "w": 240
+          },
+          {
+            "alt": "Drift Studio poster design",
+            "x": 3317.8125,
+            "y": 80,
+            "w": 560
+          },
+          {
+            "alt": "Northlight Studio mobile app",
+            "x": 3937.8125,
+            "y": 222,
+            "w": 320
+          },
+          {
+            "alt": "Meridian Architects monogram detail",
+            "x": 4297.8125,
+            "y": 302,
+            "w": 300
+          },
+          {
+            "alt": "Halcyon Press book cover",
+            "x": 4625.8125,
+            "y": 204,
+            "w": 420
+          },
+          {
+            "alt": "Aura Wellness iconography set",
+            "x": 5101.8125,
+            "y": 80,
+            "w": 400
+          },
+          {
+            "alt": "Forge Collective brand pattern",
+            "x": 5537.8125,
+            "y": 272,
+            "w": 240
+          },
+          {
+            "alt": "Ember & Co print collateral",
+            "x": 5857.8125,
+            "y": 212,
+            "w": 560
+          },
+          {
+            "alt": "Stillwater Journal typography specimen",
+            "x": 6449.8125,
+            "y": 364,
+            "w": 320
+          },
+          {
+            "alt": "Drift Studio brand elements",
+            "x": 6817.8125,
+            "y": 80,
+            "w": 300
+          }
+        ],
+        "sticky": [
+          {
+            "tag": "DIV",
+            "cls": "sticky top-0 h-dvh w-full overflow-hidden bg-secondary",
+            "top": 0
+          }
+        ]
+      },
+      {
+        "y": 3500,
+        "height": 12641,
+        "images": [
+          {
+            "alt": "Northlight Studio brand composition",
+            "x": -4088.85400390625,
+            "y": 142,
+            "w": 420
+          },
+          {
+            "alt": "Meridian Architects typography detail",
+            "x": -3628.85400390625,
+            "y": 80,
+            "w": 400
+          },
+          {
+            "alt": "Ember & Co logo on textured paper",
+            "x": -3200.85400390625,
+            "y": 464,
+            "w": 240
+          },
+          {
+            "alt": "Stillwater Journal stationery suite",
+            "x": -2904.85400390625,
+            "y": 212,
+            "w": 560
+          },
+          {
+            "alt": "Aura Wellness digital interface",
+            "x": -2308.85400390625,
+            "y": 80,
+            "w": 320
+          },
+          {
+            "alt": "Forge Collective packaging detail",
+            "x": -1908.85400390625,
+            "y": 302,
+            "w": 300
+          },
+          {
+            "alt": "Halcyon Press brand guidelines",
+            "x": -1576.85400390625,
+            "y": 204,
+            "w": 420
+          },
+          {
+            "alt": "Drift Studio environmental signage",
+            "x": -1108.85400390625,
+            "y": 262,
+            "w": 400
+          },
+          {
+            "alt": "Northlight Studio color palette",
+            "x": -648.85400390625,
+            "y": 80,
+            "w": 240
+          },
+          {
+            "alt": "Meridian Architects business cards",
+            "x": -368.85400390625,
+            "y": 212,
+            "w": 560
+          },
+          {
+            "alt": "Stillwater Journal editorial layout",
+            "x": 219.14599609375,
+            "y": 364,
+            "w": 320
+          },
+          {
+            "alt": "Ember & Co texture exploration",
+            "x": 595.14599609375,
+            "y": 80,
+            "w": 300
+          },
+          {
+            "alt": "Aura Wellness website design",
+            "x": 931.14599609375,
+            "y": 142,
+            "w": 420
+          },
+          {
+            "alt": "Forge Collective letterhead",
+            "x": 1431.14599609375,
+            "y": 262,
+            "w": 400
+          },
+          {
+            "alt": "Halcyon Press product photography",
+            "x": 1863.14599609375,
+            "y": 464,
+            "w": 240
+          },
+          {
+            "alt": "Drift Studio poster design",
+            "x": 2151.14599609375,
+            "y": 80,
+            "w": 560
+          },
+          {
+            "alt": "Northlight Studio mobile app",
+            "x": 2771.14599609375,
+            "y": 222,
+            "w": 320
+          },
+          {
+            "alt": "Meridian Architects monogram detail",
+            "x": 3131.14599609375,
+            "y": 302,
+            "w": 300
+          },
+          {
+            "alt": "Halcyon Press book cover",
+            "x": 3459.14599609375,
+            "y": 204,
+            "w": 420
+          },
+          {
+            "alt": "Aura Wellness iconography set",
+            "x": 3935.14599609375,
+            "y": 80,
+            "w": 400
+          },
+          {
+            "alt": "Forge Collective brand pattern",
+            "x": 4371.14599609375,
+            "y": 272,
+            "w": 240
+          },
+          {
+            "alt": "Ember & Co print collateral",
+            "x": 4691.14599609375,
+            "y": 212,
+            "w": 560
+          },
+          {
+            "alt": "Stillwater Journal typography specimen",
+            "x": 5283.14599609375,
+            "y": 364,
+            "w": 320
+          },
+          {
+            "alt": "Drift Studio brand elements",
+            "x": 5651.14599609375,
+            "y": 80,
+            "w": 300
+          }
+        ],
+        "sticky": [
+          {
+            "tag": "DIV",
+            "cls": "sticky top-0 h-dvh w-full overflow-hidden bg-secondary",
+            "top": 0
+          }
+        ]
+      }
+    ],
+    "errors": [],
+    "text": "Skip to main content\nElena Vance\nElena Vance\nWork\nAbout\nServices\nContact\nInstagram\nLinkedIn\n\nDESIGN & BRAND STRATEGY\n\nDesigner crafting brands with intention and restraint.\n\nI help ambitious brands find their voice through strategic thinking and considered design. Based in New York.\n\nView Selected Work\nSkip gallery\nSELECTED WORK\nNorthlight Studio\nMeridian Architects\nEmber & Co\nStillwater Journal\nAura Wellness\nForge Collective\nHalcyon Press\nDrift Studio\nNorthlight Studio\nMeridian Architects\nStillwater Journal\nEmber & Co\nAura Wellness\nForge Collective\nHalcyon Press\nDrift Studio\nNorthlight Studio\nMeridian Architects\nHalcyon Press\nAura Wellness\nForge Collective\nEmber & Co\nStillwater Journal\nDrift Studio\nScroll to explore\n\nSELECTED WORK\n\nProjects\nView Project\nNorthlight Studio\nBRAND IDENTITY\n2024\nView Project\nMeridian Architects\nVISUAL SYSTEM\n2024\nView Project\nEmber & Co\nBRAND REFRESH\n2023\nView Project\nStillwater Journal\nEDITORIAL DESIGN\n2023\nView All Projects\n\nABOUT\n\n\"Good design is invisible. It solves problems without drawing attention to itself.\"\n\nWith over a decade of experience working with brands across industries, I bring a strategic approach to every project. My work is rooted in the belief that the best brands are built on clarity, consistency, and restraint.\n\nLearn more about my approach\n\nSERVICES\n\nWhat I Do\nBrand Strategy\n\nPositioning and narrative frameworks that create lasting differentiation.\n\nVisual Identity\n\nDistinctive design systems built on strategic foundations.\n\nArt Direction\n\nCreative guidance that brings brand visions to life with precision.\n\nView All Services\nLet's create something meaningful.\n\nCurrently accepting new projects for Q1 2025. I'd love to hear about what you're building.\n\nGet an Estimate\nElena Vance\n\nDesigner and brand strategist crafting distinctive identities with intention and restraint.\n\nNAVIGATION\nWork\nAbout\nServices\nContact\nCONNECT\nInstagram\nLinkedIn\nTwitter\n\n© 2026 Elena Vance. All rights reserved.\n\nNew York, NY\n\nEdit with",
+    "galleryBounds": {
+      "top": 998.6875,
+      "height": 6682
+    },
+    "exit": {
+      "x": 24,
+      "y": 739.6888427734375,
+      "width": 342,
+      "height": 34.5
+    },
+    "afterClick": "Skip to main content\nElena Vance\nElena Vance\nWork\nAbout\nServices\nContact\nInstagram\nLinkedIn\n\nOVERVIEW\n\nNorthlight Studio\n\nA comprehensive brand identity for a boutique creative studio specializing in architectural visualization. The identity balances sophistication with approachability, using restrained typography and a warm, natural palette.\n\nTHE CHALLENGE\n\nNorthlight needed an identity that would resonate with high-end architectural firms while remaining accessible to emerging practices. The challenge was to create something timeless yet contemporary.\n\nTHE SOLUTION\n\nWe developed a typographic-led identity system anchored by custom lettering that echoes the precision of architectural draftsmanship. The warm, neutral palette brings humanity to the technical nature of their work.\n\nCLIENT\n\nNorthlight Studio\n\nINDUSTRY\n\nCreative Agency\n\nSERVICES\n\nBrand Strategy\nVisual Identity\nBrand Guidelines\n\nYEAR\n\n2024\n\nNEXT PROJECT\n\nMeridian Architects\nBack to all projects\nElena Vance\n\nDesigner and brand strategist crafting distinctive identities with intention and restraint.\n\nNAVIGATION\nWork\nAbout\nServices\nContact\nCONNECT\nInstagram\nLinkedIn\nTwitter\n\n© 2026 Elena Vance. All rights reserved.\n\nNew York, NY\n\nEdit with"
+  }
+}

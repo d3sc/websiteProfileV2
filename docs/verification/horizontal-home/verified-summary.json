@@ -1,0 +1,64 @@
+{
+  "acceptance-results.json": {
+    "stats": {
+      "startTime": "2026-11-27T03:39:06.967Z",
+      "duration": 579180.567,
+      "expected": 73,
+      "skipped": 3,
+      "unexpected": 0,
+      "flaky": 0
+    },
+    "diagnostic_count": 76,
+    "errors": [],
+    "versions": [
+      "156.0.8078.4"
+    ],
+    "axe_attachments": 52,
+    "axe_incomplete": [
+      "color-contrast",
+      "{'id': 'color-contrast', 'impact': 'serious'}"
+    ]
+  },
+  "final-responsive-results.json": {
+    "stats": {
+      "startTime": "2026-11-27T03:51:19.123Z",
+      "duration": 85517.50600000001,
+      "expected": 14,
+      "skipped": 6,
+      "unexpected": 0,
+      "flaky": 0
+    },
+    "diagnostic_count": 20,
+    "errors": [],
+    "versions": [
+      "156.0.8078.4"
+    ],
+    "axe_attachments": 0,
+    "axe_incomplete": []
+  },
+  "final-home-results.json": {
+    "stats": {
+      "startTime": "2026-11-27T03:57:46.800Z",
+      "duration": 116747.613,
+      "expected": 14,
+      "skipped": 6,
+      "unexpected": 0,
+      "flaky": 0
+    },
+    "diagnostic_count": 20,
+    "errors": [],
+    "versions": [
+      "156.0.8078.4"
+    ]
+  },
+  "final_build_assets": [
+    {
+      "path": "dist/assets/index-CslnGjng.css",
+      "bytes": 35684
+    },
+    {
+      "path": "dist/assets/index-Ce69U8tT.js",
+      "bytes": 274997
+    }
+  ]
+}

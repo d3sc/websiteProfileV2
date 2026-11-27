@@ -13,10 +13,18 @@ export function ProjectGallery({
   images,
   title,
   locale,
+  viewerOnly = false,
+  openAt,
+  caseStudyHref,
+  onViewerClose,
 }: {
   images: ProjectImage[];
   title: string;
   locale: Locale;
+  viewerOnly?: boolean;
+  openAt?: { index: number; opener: HTMLElement };
+  caseStudyHref?: string;
+  onViewerClose?: () => void;
 }) {
   const t = galleryCopy[locale];
   const [active, setActive] = useState(0);
@@ -31,18 +39,29 @@ export function ProjectGallery({
   const uid = useId();
   const image = images[active];
   const multiple = images.length > 1;
+  useEffect(() => {
+    if (!openAt) return;
+    setActive(Math.max(0, Math.min(images.length - 1, openAt.index)));
+    setZoom(false);
+    setOpen(true);
+  }, [openAt]);
 
   useEffect(() => {
     if (!open || !dialog.current) return;
     const modal = dialog.current;
+    const returnTo = openAt?.opener ?? opener.current;
+    const returnPosition = { left: window.scrollX, top: window.scrollY };
     const previousOverflow = document.body.style.overflow;
     document.body.style.overflow = "hidden";
     modal.showModal();
     closeButton.current?.focus();
     return () => {
+      onViewerClose?.();
       modal.close();
       document.body.style.overflow = previousOverflow;
-      opener.current?.focus({ preventScroll: true });
+      returnTo?.focus({ preventScroll: true });
+      if (viewerOnly && returnTo?.isConnected)
+        window.scrollTo({ ...returnPosition, behavior: "instant" });
     };
   }, [open]);
   useEffect(() => {
@@ -56,7 +75,7 @@ export function ProjectGallery({
     if (event.key !== "Tab") return;
     const controls = Array.from(
       event.currentTarget.querySelectorAll<HTMLElement>(
-        'button:not([disabled]), [tabindex="0"]',
+        'button:not([disabled]), a[href], [tabindex="0"]',
       ),
     );
     if (!controls.length) return;
@@ -106,123 +125,128 @@ export function ProjectGallery({
   return (
     <section
       className="project-gallery"
+      style={viewerOnly ? { display: "contents" } : undefined}
       aria-label={`${t.gallery}: ${title}`}
       onKeyDown={keyboard}
     >
-      <div className="gallery-heading">
-        <p className="eyebrow">
-          {t.gallery} / {title}
-        </p>
-        <span className="mono">{t.crop}</span>
-      </div>
-      <div
-        className="gallery-stage"
-        style={{ aspectRatio: String(ratio) }}
-        onTouchStart={touchStart}
-        onTouchEnd={touchEnd}
-        onTouchCancel={() => {
-          swipe.current = null;
-        }}
-      >
-        <button
-          ref={opener}
-          className="gallery-enlarge"
-          aria-label={`${t.enlarge}: ${image.label}`}
-          aria-haspopup="dialog"
-          onClick={() => {
-            if (Date.now() - swipedAt.current > 400) {
-              setZoom(false);
-              setOpen(true);
-            }
-          }}
-        >
-          {failed[image.src] ? (
-            <span>{t.missing}</span>
-          ) : (
-            <img
-              key={image.src}
-              className="gallery-slide"
-              src={image.src}
-              srcSet={image.srcSet}
-              sizes="(max-width: 700px) 100vw, 1200px"
-              width={image.width}
-              height={image.height}
-              alt={image.alt}
-              decoding="async"
-              loading="eager"
-              onError={() =>
-                setFailed((prev) => ({ ...prev, [image.src]: true }))
-              }
-            />
-          )}
-          <span className="enlarge-label">
-            {t.enlarge} <span aria-hidden="true">↗</span>
-          </span>
-        </button>
-      </div>
-      <div className="gallery-bar">
-        <div className="gallery-caption">
-          <p>{image.caption}</p>
-          <small>{multiple ? t.hint : t.singleHint}</small>
-        </div>
-        <div className="gallery-controls">
-          {multiple && (
-            <button
-              type="button"
-              aria-label={t.previous}
-              onClick={() => select(active - 1)}
-            >
-              ←
-            </button>
-          )}
-          <span
-            className="mono gallery-count"
-            role="status"
-            aria-live="polite"
-            aria-atomic="true"
+      {!viewerOnly && (
+        <>
+          <div className="gallery-heading">
+            <p className="eyebrow">
+              {t.gallery} / {title}
+            </p>
+            <span className="mono">{t.crop}</span>
+          </div>
+          <div
+            className="gallery-stage"
+            style={{ aspectRatio: String(ratio) }}
+            onTouchStart={touchStart}
+            onTouchEnd={touchEnd}
+            onTouchCancel={() => {
+              swipe.current = null;
+            }}
           >
-            {count}
-            <span className="sr-only"> — {image.label}</span>
-          </span>
-          {multiple && (
             <button
-              type="button"
-              aria-label={t.next}
-              onClick={() => select(active + 1)}
+              ref={opener}
+              className="gallery-enlarge"
+              aria-label={`${t.enlarge}: ${image.label}`}
+              aria-haspopup="dialog"
+              onClick={() => {
+                if (Date.now() - swipedAt.current > 400) {
+                  setZoom(false);
+                  setOpen(true);
+                }
+              }}
             >
-              →
-            </button>
-          )}
-        </div>
-      </div>
-      {multiple && (
-        <div
-          className="gallery-thumbnails"
-          role="group"
-          aria-label={t.thumbnails}
-        >
-          {images.map((shot, i) => (
-            <button
-              key={shot.src}
-              aria-pressed={active === i}
-              aria-label={`${i + 1}. ${shot.label}`}
-              onClick={() => select(i)}
-            >
-              <img
-                src={shot.src}
-                srcSet={shot.srcSet}
-                sizes="160px"
-                width={shot.width}
-                height={shot.height}
-                alt=""
-                loading="lazy"
-              />
-              <span>
-                <span className="mono">0{i + 1}</span> {shot.label}
+              {failed[image.src] ? (
+                <span>{t.missing}</span>
+              ) : (
+                <img
+                  key={image.src}
+                  className="gallery-slide"
+                  src={image.src}
+                  srcSet={image.srcSet}
+                  sizes="(max-width: 700px) 100vw, 1200px"
+                  width={image.width}
+                  height={image.height}
+                  alt={image.alt}
+                  decoding="async"
+                  loading="eager"
+                  onError={() =>
+                    setFailed((prev) => ({ ...prev, [image.src]: true }))
+                  }
+                />
+              )}
+              <span className="enlarge-label">
+                {t.enlarge} <span aria-hidden="true">↗</span>
               </span>
             </button>
-          ))}
-        </div>
+          </div>
+          <div className="gallery-bar">
+            <div className="gallery-caption">
+              <p>{image.caption}</p>
+              <small>{multiple ? t.hint : t.singleHint}</small>
+            </div>
+            <div className="gallery-controls">
+              {multiple && (
+                <button
+                  type="button"
+                  aria-label={t.previous}
+                  onClick={() => select(active - 1)}
+                >
+                  ←
+                </button>
+              )}
+              <span
+                className="mono gallery-count"
+                role="status"
+                aria-live="polite"
+                aria-atomic="true"
+              >
+                {count}
+                <span className="sr-only"> — {image.label}</span>
+              </span>
+              {multiple && (
+                <button
+                  type="button"
+                  aria-label={t.next}
+                  onClick={() => select(active + 1)}
+                >
+                  →
+                </button>
+              )}
+            </div>
+          </div>
+          {multiple && (
+            <div
+              className="gallery-thumbnails"
+              role="group"
+              aria-label={t.thumbnails}
+            >
+              {images.map((shot, i) => (
+                <button
+                  key={shot.src}
+                  aria-pressed={active === i}
+                  aria-label={`${i + 1}. ${shot.label}`}
+                  onClick={() => select(i)}
+                >
+                  <img
+                    src={shot.src}
+                    srcSet={shot.srcSet}
+                    sizes="160px"
+                    width={shot.width}
+                    height={shot.height}
+                    alt=""
+                    loading="lazy"
+                  />
+                  <span>
+                    <span className="mono">0{i + 1}</span> {shot.label}
+                  </span>
+                </button>
+              ))}
+            </div>
+          )}
+        </>
       )}
       <dialog
         ref={dialog}
@@ -244,6 +268,11 @@ export function ProjectGallery({
               <h2 id={`${uid}-title`}>
                 {title} <span className="mono">{count}</span>
               </h2>
+              {caseStudyHref && (
+                <a className="text-link" href={caseStudyHref}>
+                  {locale === "id" ? "Catatan proyek" : "Case study"} ↗
+                </a>
+              )}
               <button
                 className="lightbox-zoom"
                 aria-pressed={zoom}
