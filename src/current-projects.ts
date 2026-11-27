@@ -211,6 +211,36 @@ const entries: Entry[] = [
     image: "proxmox-home-lab.webp",
   },
   {
+    slug: "vc-website-client",
+    title: "VC Website Client",
+    category: "Web App",
+    stack: ["React", "TypeScript", "Node.js", "Express", "tRPC", "MySQL", "Tailwind CSS", "PHP", "WordPress"],
+    summary: [
+      "Aplikasi web untuk klien VC yang saya kembangkan secara full-stack, mulai dari antarmuka pengguna hingga API dan basis data.",
+      "A web application I developed for VC, covering the user interface, API, and database.",
+    ],
+    problem: [
+      "Kebutuhan klien perlu diterjemahkan menjadi alur penggunaan yang jelas, termasuk bagaimana pengguna memasukkan, melihat, dan memperbarui data melalui aplikasi.",
+      "The client’s requirements needed to translate into clear workflows for entering, viewing, and updating data in the application.",
+    ],
+    contribution: [
+      "Saya membangun antarmuka dengan React dan TypeScript, lalu menghubungkannya ke backend Node.js dan Express melalui tRPC. Saya menggunakan MySQL untuk menyimpan data aplikasi.",
+      "I built the interface with React and TypeScript and connected it to a Node.js and Express backend through tRPC. I used MySQL to store the application data.",
+    ],
+    statusLabel: [
+      "Proyek klien · Pengembangan full-stack",
+      "Client project · Full-stack development",
+    ],
+    status: [
+      "Pekerjaan saya pada proyek VC mencakup pengembangan frontend, integrasi API, dan pengelolaan data sesuai kebutuhan klien.",
+      "My work on the VC project covers frontend development, API integration, and data management based on the client’s requirements.",
+    ],
+    visual: ["VC / CLIENT WEBSITE", "REACT / TYPESCRIPT / tRPC"],
+    image: "vc-website-client.webp",
+  },
+
+
+  {
     slug: "lms-ujian-online",
     title: "LMS Ujian Online",
     category: "Web App",

@@ -95,6 +95,32 @@ const shots: Record<string, Shot[]> = {
       ],
     },
   ],
+ "vc-website-client": [
+    {
+      asset: "vc-website-client",
+      label: ["Website VC 1 · Laravel & WordPress", "VC Website 1 · Laravel & WordPress"],
+      caption: [
+        "Website pertama yang saya kembangkan untuk klien VC menggunakan framework Laravel dan WordPress.",
+        "The first website I built for VC using the Laravel PHP framework and WordPress.",
+      ],
+    },
+    {
+      asset: "vc-website-client-2",
+      label: ["Website VC 2 · PHP native", "VC Website 2 · Vanilla PHP"],
+      caption: [
+        "Untuk website kedua klien VC, saya menulis logika aplikasi langsung dengan PHP native.",
+        "For VC’s second website, I wrote the application logic directly in PHP.",
+      ],
+    },
+    {
+      asset: "vc-website-client-3",
+      label: ["Website VC 3 · PHP native", "VC Website 3 · Vanilla PHP"],
+      caption: [
+        "Website ketiga yang saya kembangkan untuk klien VC juga menggunakan PHP native.",
+        "I also used vanilla PHP to build the third website for VC.",
+      ],
+    },
+  ],
   "lms-ujian-online": [
     {
       asset: "lms-ujian-online",

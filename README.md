@@ -1,4 +1,4 @@
-# Ikbar Rabbani Purwanto — Developer Field Notes
+# Ikbar Rabbani Purwanto - Developer Field Notes
 
 React 19 + TypeScript + Vite portfolio. Positioning: **Full-Stack Developer · Linux & Self-Hosting**. Indonesian by default, optional English; charcoal/off-white/electric-lime editorial design and an optional light theme. No added runtime dependencies.
 

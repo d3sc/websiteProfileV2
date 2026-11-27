@@ -204,7 +204,7 @@ export function ProjectGallery({
                 aria-atomic="true"
               >
                 {count}
-                <span className="sr-only"> — {image.label}</span>
+                <span className="sr-only"> - {image.label}</span>
               </span>
               {multiple && (
                 <button

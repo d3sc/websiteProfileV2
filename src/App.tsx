@@ -87,7 +87,7 @@ function Visual({
       src={image.src}
       srcSet={image.srcSet}
       sizes="(max-width: 700px) 100vw, (max-width: 1100px) 60vw, 800px"
-      alt={`${project.title} — ${image.alt}`}
+      alt={`${project.title} - ${image.alt}`}
       width={image.width}
       height={image.height}
       loading={eager ? "eager" : "lazy"}
@@ -154,7 +154,7 @@ export default function App() {
       route.kind === "detail"
         ? allProjects[locale].find((p) => p.slug === route.slug)
         : undefined;
-    document.title = `${project?.title ?? (route.kind === "projects" ? t.work : route.kind === "notfound" ? t.notFoundTitle : t.home)} — ${profileName}`;
+    document.title = `${project?.title ?? (route.kind === "projects" ? t.work : route.kind === "notfound" ? t.notFoundTitle : t.home)} - ${profileName}`;
     const id = route.kind === "home" ? route.section : undefined;
     {
       const target = id ? document.getElementById(id) : main.current;
@@ -413,7 +413,7 @@ function Home({ t, locale }: { t: Text; locale: Locale }) {
             </a>
           </div>
           <div className="hero-footnote mono">
-            <span>01 — PERSONAL PORTFOLIO</span>
+            <span>01 - PERSONAL PORTFOLIO</span>
             <span>BACKEND / LINUX / AUTOMATION</span>
           </div>
         </div>
@@ -560,7 +560,7 @@ function ProjectCard({
       </a>
       <div className="card-body">
         <p className="eyebrow">
-          /{p.id} — {p.category}
+          /{p.id} - {p.category}
         </p>
         <h3>
           <a href={routeHref(`/projects/${p.slug}`)}>{p.title}</a>
