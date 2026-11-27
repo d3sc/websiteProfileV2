@@ -15,17 +15,19 @@ test("current positioning, linked skills, other work and honest verification cop
     "IT Programmer dan mahasiswa S1 Manajemen Informatika",
   );
   await expect(page).toHaveTitle(new RegExp(profileName));
-  await expect(page.locator(".preview-stage img")).toHaveCount(3);
+  await expect(page.locator(".preview-stage img")).toHaveCount(5);
   await expect(page.getByRole("tab")).toHaveText([
-    "01VPS Manager↗",
-    "02Proxmox Home Lab↗",
-    "03LMS Ujian Online↗",
+    "01Zentra Digital Solution↗",
+    "02MIA CRM↗",
+    "03MIA Training↗",
+    "04MIA Absensi↗",
+    "05MIA Admin↗",
   ]);
   await expect(page.locator("#project-index .home-project-row h3")).toHaveText(
     projects.id.map((p) => p.title + " ↗"),
   );
   await expect(page.locator("#other-projects .home-project-row h3")).toHaveText(
-    ["Helpdesk Ticketing ↗", "Trading Analysis Dashboard ↗"],
+    projects.id.slice(5).map((p) => p.title + " ↗"),
   );
   for (const p of projects.id) {
     const card = page.locator("#project-index .home-project-row").filter({
@@ -42,14 +44,16 @@ test("current positioning, linked skills, other work and honest verification cop
     new RegExp(firstHref!.replace(/[.*+?^${}()|[\]\\]/g, "\\$&") + "$"),
   );
   await expect(page.locator(".project-problem")).toContainText(
-    projects.id[0].problem!,
+    projects.id.find((p) => firstHref!.endsWith(p.slug))!.problem!,
   );
   for (const p of projects.id) {
     await page.goto(`/#/projects/${p.slug}`);
     await expect(page.locator(".project-verification")).toContainText(
       p.status!,
     );
-    await expect(page.locator('.detail a[target="_blank"]')).toHaveCount(0);
+    await expect(page.locator('.detail a[target="_blank"]')).toHaveCount(
+      p.externalUrl ? 1 : 0,
+    );
   }
   await page.goto("/");
   await page.getByRole("button", { name: "Ganti bahasa" }).click();

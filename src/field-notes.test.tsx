@@ -21,7 +21,7 @@ it("lets visitors select a hero project with keyboard and updates the preview li
     within(screen.getByRole("tabpanel"))
       .getByRole("link", { name: /Lihat detail/ })
       .getAttribute("href"),
-  ).toBe("#/projects/proxmox-home-lab");
+  ).toBe("#/projects/mia-crm");
 });
 it("keeps placeholder entries out of the public work selection", () => {
   render(<App />);

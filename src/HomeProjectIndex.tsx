@@ -17,7 +17,7 @@ export function HomeProjectIndex({ locale }: { locale: Locale }) {
         </div>
         <p>{t.projectIntro}</p>
       </div>
-      {[projects[locale].slice(0, 3), projects[locale].slice(3)].map(
+      {[projects[locale].slice(0, 5), projects[locale].slice(5)].map(
         (group, i) => (
           <div
             id={i ? "other-projects" : undefined}

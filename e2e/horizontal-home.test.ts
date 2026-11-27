@@ -141,7 +141,9 @@ test("horizontal homepage: native wheel pin/reverse/release or swipe track and a
     await expect
       .poll(async () => (await page.locator("#project-index").boundingBox())!.y)
       .toBeLessThan(page.viewportSize()!.height);
-    expect((await geometry(page)).stickyTop).toBeLessThan(initial.header - 50);
+    await expect
+      .poll(async () => (await geometry(page)).stickyTop)
+      .toBeLessThan(initial.header - 50);
     await page.setViewportSize({ width: 1280, height: 800 });
     await expect
       .poll(async () => {
@@ -157,7 +159,7 @@ test("horizontal homepage: native wheel pin/reverse/release or swipe track and a
     await expect
       .poll(async () => (await geometry(page)).left)
       .toBeGreaterThan(120);
-    await expect(page.locator(".rail-arrows")).toContainText("2 / 7");
+    await expect(page.locator(".rail-arrows")).toContainText("2 / 12");
     await page
       .getByRole("button", { name: "Screenshot sebelumnya", exact: true })
       .click();
@@ -184,7 +186,7 @@ test("horizontal homepage: native wheel pin/reverse/release or swipe track and a
   await overflow(page);
   await page.locator(".rail-skip").click();
   await expect(page.locator("#project-index")).toBeFocused();
-  await expect(page.locator(".home-project-row")).toHaveCount(5);
+  await expect(page.locator(".home-project-row")).toHaveCount(10);
   await overflow(page);
 });
 
@@ -193,9 +195,13 @@ test("homepage viewer opens exact second screenshot and returns focus and positi
 }, info) => {
   await page.goto("/");
   await page.evaluate(() => document.fonts.ready);
-  const opener = page.locator(".rail-image").nth(1);
+  const opener = page.getByRole("button", {
+    name: "VPS Manager — Detail ringkasan",
+    exact: true,
+  });
   await opener.focus();
   await expect(opener).toBeFocused();
+  await opener.scrollIntoViewIfNeeded();
   // Let the browser's native smooth focus-scroll finish before recording the position.
   await page.waitForTimeout(500);
   const before = await geometry(page);
@@ -244,7 +250,12 @@ test("homepage viewer opens exact second screenshot and returns focus and positi
   expect(Math.abs(after.left - before.left)).toBeLessThan(2);
   // Continue keyboard-only through an off-screen entry, then activate without a pointer.
   await page.keyboard.press("Tab");
-  await expect(page.locator(".rail-image").nth(2)).toBeFocused();
+  await expect(
+    page.getByRole("button", {
+      name: "Proxmox Home Lab — Konsol administrasi",
+      exact: true,
+    }),
+  ).toBeFocused();
   await page.keyboard.press("Enter");
   await expect(dialog).toBeVisible();
   await expect(dialog.locator("h2")).toContainText("Proxmox Home Lab 1 / 1");
@@ -315,7 +326,7 @@ test("homepage static reduced motion, both themes/locales, image dimensions and 
     animations: "disabled",
   });
   await page.locator(".home-project-row h3 a").first().click();
-  await expect(page).toHaveURL(/#\/projects\/vps-manager$/);
+  await expect(page).toHaveURL(/#\/projects\/zentra-digital-solution$/);
   await expect(page.locator(".project-gallery")).toBeVisible();
   // The new homepage palette must not leak into the existing case-study page.
   expect(

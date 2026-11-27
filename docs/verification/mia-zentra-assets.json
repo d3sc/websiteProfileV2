@@ -1,0 +1,67 @@
+{
+  "zentra-digital-solution": {
+    "source": "zentradigitalsolution.png",
+    "sha256": "2c688683a9706932428105d0203f6a9081c035d183d7580ff14d8bba1325185d",
+    "cover": "zentra-digital-solution.webp",
+    "privacy": "Reviewed: public business homepage.",
+    "redactions": [],
+    "width": 1794,
+    "height": 929,
+    "widths": [
+      480,
+      960
+    ]
+  },
+  "mia-crm": {
+    "source": "mia-CRM.png",
+    "sha256": "3eb0eaf529b5e5acb48efc10ad3423653251d707686afb60d9ac6e347484d0d0",
+    "cover": "mia-crm.webp",
+    "privacy": "Reviewed: empty login fields, no private records or credentials visible.",
+    "redactions": [],
+    "width": 1787,
+    "height": 934,
+    "widths": [
+      480,
+      960
+    ]
+  },
+  "mia-training": {
+    "source": "mia-training.png",
+    "sha256": "2bc54b40812c679bc14107565e578cc1fce9a7b8b2428835376968d8fddac811",
+    "cover": "mia-training.webp",
+    "privacy": "Reviewed: empty login fields, no private records or credentials visible.",
+    "redactions": [],
+    "width": 1794,
+    "height": 932,
+    "widths": [
+      480,
+      960
+    ]
+  },
+  "mia-absensi": {
+    "source": "mia-absensi.png",
+    "sha256": "234b317b72875e59a33146df248f7071fbee0b8bcc01811449885721390c7258",
+    "cover": "mia-absensi.webp",
+    "privacy": "Reviewed: empty login fields, no private records or credentials visible.",
+    "redactions": [],
+    "width": 1794,
+    "height": 934,
+    "widths": [
+      480,
+      960
+    ]
+  },
+  "mia-admin": {
+    "source": "mia-admin.png",
+    "sha256": "ab3ea4b5cc30dded09c8e6cbe6fc8355e634c43418c40ed31f3e24a1d5c50098",
+    "cover": "mia-admin.webp",
+    "privacy": "Reviewed: empty login fields, no private records or credentials visible.",
+    "redactions": [],
+    "width": 1792,
+    "height": 930,
+    "widths": [
+      480,
+      960
+    ]
+  }
+}

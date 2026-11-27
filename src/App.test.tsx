@@ -14,9 +14,9 @@ describe("routed portfolio", () => {
     await u.click(screen.getByRole("link", { name: "Proyek" }));
     expect(location.hash).toBe("#/projects");
     await u.click(screen.getAllByRole("link", { name: /Lihat detail/ })[0]);
-    expect(location.hash).toBe("#/projects/vps-manager");
+    expect(location.hash).toBe("#/projects/zentra-digital-solution");
     expect(screen.getByRole("heading", { level: 1 }).textContent).toBe(
-      "VPS Manager.",
+      "Zentra Digital Solution.",
     );
   });
   it("switches locale and preserves theme controls", async () => {

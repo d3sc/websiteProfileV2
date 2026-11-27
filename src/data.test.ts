@@ -4,12 +4,14 @@ import { readRoute } from "./router";
 describe("portfolio source integrity", () => {
   it("preserves the actual six archived entries and only assigns available screenshots", () => {
     for (const locale of ["id", "en"] as const) {
-      expect(projects[locale]).toHaveLength(5);
+      expect(projects[locale]).toHaveLength(10);
       expect(archivedProjects[locale]).toHaveLength(6);
-      expect(new Set(allProjects[locale].map((p) => p.slug)).size).toBe(11);
+      expect(new Set(allProjects[locale].map((p) => p.slug)).size).toBe(16);
       expect(archivedProjects[locale].filter((p) => p.image)).toHaveLength(5);
-      expect(projects[locale].filter((p) => p.image)).toHaveLength(4);
-      expect(projects[locale].some((p) => p.externalUrl)).toBe(false);
+      expect(projects[locale].filter((p) => p.image)).toHaveLength(9);
+      expect(
+        projects[locale].filter((p) => p.externalUrl).map((p) => p.externalUrl),
+      ).toEqual(["https://zentradigitalsolution.my.id/"]);
       for (const p of allProjects[locale]) {
         expect(p.title).not.toMatch(/Sample/);
         if (p.externalUrl) expect(p.externalUrl).toMatch(/^https:\/\//);

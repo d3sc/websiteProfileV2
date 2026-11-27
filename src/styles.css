@@ -440,6 +440,9 @@ h3 {
   color: var(--accent);
   min-height: 32px;
 }
+.preview-caption .text-link + .text-link {
+  margin-left: 20px;
+}
 .project-tabs {
   display: flex;
   flex-direction: column;

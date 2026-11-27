@@ -272,7 +272,7 @@ export default function App() {
 }
 function HeroProjects({ t, locale }: { t: Text; locale: Locale }) {
   const [active, setActive] = useState(0);
-  const featured = projects[locale].slice(0, 3);
+  const featured = projects[locale].slice(0, 5);
   const refs = useRef<(HTMLButtonElement | null)[]>([]);
   function keydown(event: KeyboardEvent<HTMLButtonElement>, index: number) {
     let next = index;
@@ -311,13 +311,19 @@ function HeroProjects({ t, locale }: { t: Text; locale: Locale }) {
             </div>
             <div className="preview-caption">
               <span className="mono">
-                {categoryLabels[locale][p.category]} / {p.stack[0]}
+                {categoryLabels[locale][p.category]}
+                {p.stack[0] ? ` / ${p.stack[0]}` : ""}
               </span>
               <h2>{p.title}</h2>
               <p>{p.summary}</p>
               <a className="text-link" href={routeHref(`/projects/${p.slug}`)}>
                 {t.details} <span aria-hidden="true">↗</span>
               </a>
+              {p.externalUrl && (
+                <External href={p.externalUrl} t={t}>
+                  {locale === "id" ? "Kunjungi website" : "Visit website"}
+                </External>
+              )}
             </div>
           </div>
         ))}
@@ -711,21 +717,23 @@ function Detail({
           <h2>{p.title}</h2>
           <p>{p.contribution}</p>
         </section>
-        <section>
-          <p className="eyebrow">02 / {t.stack}</p>
-          <Tags project={p} />
-          {p.externalUrl && (
-            <External
-              href={p.externalUrl}
-              t={t}
-              className={p.note ? "button secondary" : "button primary"}
-            >
-              {p.externalLabel}
-              {p.note ? " · " + (t === copy.id ? "arsip" : "archive") : ""}
-            </External>
-          )}
-          {p.note && <p className="link-note">{p.note}</p>}
-        </section>
+        {(p.stack.length > 0 || p.externalUrl || p.note) && (
+          <section>
+            {p.stack.length > 0 && <p className="eyebrow">02 / {t.stack}</p>}
+            <Tags project={p} />
+            {p.externalUrl && (
+              <External
+                href={p.externalUrl}
+                t={t}
+                className={p.note ? "button secondary" : "button primary"}
+              >
+                {p.externalLabel}
+                {p.note ? " · " + (t === copy.id ? "arsip" : "archive") : ""}
+              </External>
+            )}
+            {p.note && <p className="link-note">{p.note}</p>}
+          </section>
+        )}
       </div>
       <p className="source-note">{t.detailNote}</p>
     </article>

@@ -102,5 +102,45 @@
       480,
       960
     ]
+  },
+  "zentra-digital-solution": {
+    "width": 1794,
+    "height": 929,
+    "widths": [
+      480,
+      960
+    ]
+  },
+  "mia-crm": {
+    "width": 1787,
+    "height": 934,
+    "widths": [
+      480,
+      960
+    ]
+  },
+  "mia-training": {
+    "width": 1794,
+    "height": 932,
+    "widths": [
+      480,
+      960
+    ]
+  },
+  "mia-absensi": {
+    "width": 1794,
+    "height": 934,
+    "widths": [
+      480,
+      960
+    ]
+  },
+  "mia-admin": {
+    "width": 1792,
+    "height": 930,
+    "widths": [
+      480,
+      960
+    ]
   }
 }

@@ -67,17 +67,36 @@ test("native PageDown/PageUp and partially visible screenshot return position", 
     const s = document.querySelector(".scroll-gallery")!,
       h = document.querySelector<HTMLElement>(".site-header")!.offsetHeight,
       t = document.querySelector<HTMLElement>(".rail-track")!,
-      second = t.children[1] as HTMLElement;
+      second = t.children[6] as HTMLElement;
     scrollTo({
       top:
-        s.getBoundingClientRect().top + scrollY - h + second.offsetLeft + 100,
+        s.getBoundingClientRect().top + scrollY - h + second.offsetLeft + 200,
       behavior: "instant",
     });
   });
-  const second = page.locator(".rail-image").nth(1);
+  const second = page.getByRole("button", {
+    name: "VPS Manager — Detail ringkasan",
+    exact: true,
+  });
   await expect
     .poll(async () => (await second.boundingBox())!.x)
     .toBeLessThan(-50);
+  // PageUp animates natively; wait for scroll and rail paint to settle before
+  // recording the position that the viewer must restore.
+  await page.evaluate(
+    () =>
+      new Promise<void>((resolve) => {
+        let last = scrollY,
+          stable = 0;
+        const settle = () => {
+          stable = scrollY === last ? stable + 1 : 0;
+          last = scrollY;
+          if (stable >= 6) resolve();
+          else requestAnimationFrame(settle);
+        };
+        requestAnimationFrame(settle);
+      }),
+  );
   const before = { y: await page.evaluate(() => scrollY), x: await x() };
   const box = (await second.boundingBox())!;
   await page.mouse.click(100, box.y + 20);

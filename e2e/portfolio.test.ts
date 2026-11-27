@@ -81,32 +81,36 @@ test("hero selection: click, keyboard, wrap, focus, links and no autoplay", asyn
   await noOverflow(page);
   const tabs = page.getByRole("tab");
   await expect(tabs.first()).toHaveAttribute("aria-selected", "true");
-  await expect(page.getByRole("tabpanel")).toContainText("VPS Manager");
+  await expect(page.getByRole("tabpanel")).toContainText(
+    "Zentra Digital Solution",
+  );
   if (test.info().project.use.hasTouch) await tabs.nth(1).tap();
   else await tabs.nth(1).click();
-  await expect(page.getByRole("tabpanel")).toContainText("Proxmox Home Lab");
+  await expect(page.getByRole("tabpanel")).toContainText("MIA CRM");
   await expect(page.getByRole("tabpanel").getByRole("link")).toHaveAttribute(
     "href",
-    "#/projects/proxmox-home-lab",
+    "#/projects/mia-crm",
   );
   await page.keyboard.press("ArrowRight");
   await expect(tabs.nth(2)).toBeFocused();
   await expect(tabs.nth(2)).toHaveAttribute("aria-selected", "true");
+  await page.keyboard.press("End");
+  await expect(tabs.last()).toBeFocused();
   await page.keyboard.press("ArrowRight");
   await expect(tabs.first()).toBeFocused();
   await page.keyboard.press("End");
-  await expect(tabs.nth(2)).toBeFocused();
+  await expect(tabs.last()).toBeFocused();
   await page.keyboard.press("Home");
   await expect(tabs.first()).toBeFocused();
   await page.keyboard.press("ArrowLeft");
-  await expect(tabs.nth(2)).toBeFocused();
+  await expect(tabs.last()).toBeFocused();
   await page.waitForTimeout(900);
-  await expect(tabs.nth(2)).toHaveAttribute("aria-selected", "true");
+  await expect(tabs.last()).toHaveAttribute("aria-selected", "true");
   await page.getByRole("tabpanel").getByRole("link").click();
-  await expect(page).toHaveURL(/lms-ujian-online$/);
+  await expect(page).toHaveURL(/mia-admin$/);
   await expect(page.locator("main")).toBeFocused();
   await expect(page.getByRole("heading", { level: 1 })).toContainText(
-    "LMS Ujian Online",
+    "MIA Admin",
   );
   await noOverflow(page);
 });
@@ -123,7 +127,7 @@ for (const locale of ["id", "en"] as const)
       await noOverflow(page);
       await navigate(page, t.work);
       await expect(page).toHaveURL(/#\/projects$/);
-      await expect(page.locator(".project-card")).toHaveCount(11);
+      await expect(page.locator(".project-card")).toHaveCount(16);
       await expect(page.locator("#primary-nav a[aria-current]")).toContainText(
         t.work,
       );
@@ -267,7 +271,7 @@ test("preferences persist, reduced motion and observer/storage failure remain us
   await expect(page.getByRole("tab").first()).toBeVisible();
   await expect(page.locator("#selected-projects")).toHaveCSS("opacity", "1");
   await page.getByRole("tab").nth(1).click();
-  await expect(page.getByRole("tabpanel")).toContainText("Proxmox Home Lab");
+  await expect(page.getByRole("tabpanel")).toContainText("MIA CRM");
   await noOverflow(page);
 });
 test("unknown, malformed and legacy sample URLs do not crash", async ({

@@ -17,6 +17,56 @@ interface Shot {
   caption: Description;
 }
 const shots: Record<string, Shot[]> = {
+  "zentra-digital-solution": [
+    {
+      asset: "zentra-digital-solution",
+      label: ["Beranda bisnis", "Business homepage"],
+      caption: [
+        "Beranda Zentra Digital Solution dengan pengenalan layanan website, navigasi bisnis, dan ilustrasi infrastruktur digital.",
+        "Zentra Digital Solution homepage with website services, business navigation, and a digital infrastructure illustration.",
+      ],
+    },
+  ],
+  "mia-crm": [
+    {
+      asset: "mia-crm",
+      label: ["Login CRM", "CRM login"],
+      caption: [
+        "Halaman login CRM dengan tab Employee dan Admin; tab Admin dipilih dan kolom kredensial kosong.",
+        "CRM login page with Employee and Admin tabs; Admin is selected and the credential fields are empty.",
+      ],
+    },
+  ],
+  "mia-training": [
+    {
+      asset: "mia-training",
+      label: ["Login pelatihan", "Training login"],
+      caption: [
+        "Halaman login berlogo MIA Training dengan kolom username dan password kosong serta foto ilustrasi kegiatan belajar.",
+        "MIA Training branded login page with empty username and password fields and a learning-themed photograph.",
+      ],
+    },
+  ],
+  "mia-absensi": [
+    {
+      asset: "mia-absensi",
+      label: ["Login absensi", "Attendance login"],
+      caption: [
+        "Halaman login Absensi dengan logo PT. Mitra Inti Antarbangsa dan kolom username serta password kosong.",
+        "Attendance login page with PT. Mitra Inti Antarbangsa branding and empty username and password fields.",
+      ],
+    },
+  ],
+  "mia-admin": [
+    {
+      asset: "mia-admin",
+      label: ["Login administrasi", "Administration login"],
+      caption: [
+        "Halaman login berlogo MIA Admin dengan kolom username dan password kosong. Alur administrasi di dalam aplikasi tidak ditampilkan.",
+        "MIA Admin branded login page with empty username and password fields. Administrative workflows inside the application are not shown.",
+      ],
+    },
+  ],
   "vps-manager": [
     {
       asset: "vps-manager",

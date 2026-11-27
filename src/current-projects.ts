@@ -15,8 +15,137 @@ interface Entry {
   status: Localized;
   visual: string[];
   image: string;
+  externalUrl?: string;
+  externalLabel?: string;
 }
 const entries: Entry[] = [
+  {
+    slug: "zentra-digital-solution",
+    title: "Zentra Digital Solution",
+    category: "Web App",
+    stack: [],
+    summary: [
+      "Website bisnis saya untuk memperkenalkan Zentra Digital Solution dan layanan digital yang saya tawarkan.",
+      "My business website introducing Zentra Digital Solution and the digital services I offer.",
+    ],
+    problem: [
+      "Memperkenalkan bisnis dan layanan digital saya kepada calon klien.",
+      "Introducing my business and digital services to prospective clients.",
+    ],
+    contribution: [
+      "Mengembangkan website bisnis Zentra Digital Solution.",
+      "Developed the Zentra Digital Solution business website.",
+    ],
+    statusLabel: ["Website bisnis", "Business website"],
+    status: [
+      "Screenshot menampilkan beranda dengan pengenalan layanan website dan navigasi bisnis.",
+      "The screenshot shows the homepage with website services and business navigation.",
+    ],
+    visual: ["ZENTRA / DIGITAL SERVICES"],
+    image: "zentra-digital-solution.webp",
+    externalUrl: "https://zentradigitalsolution.my.id/",
+    externalLabel: "Website",
+  },
+  {
+    slug: "mia-crm",
+    title: "MIA CRM",
+    category: "Web App",
+    stack: [],
+    summary: [
+      "Aplikasi CRM untuk membantu tim MIA mengelola informasi pelanggan.",
+      "A CRM application that helps the MIA team manage customer information.",
+    ],
+    problem: [
+      "Mendukung pengelolaan informasi pelanggan oleh tim MIA.",
+      "Supporting customer information management for the MIA team.",
+    ],
+    contribution: [
+      "Mengembangkan aplikasi CRM internal untuk tim MIA.",
+      "Developed an internal CRM application for the MIA team.",
+    ],
+    statusLabel: ["Aplikasi internal", "Internal application"],
+    status: [
+      "Screenshot yang tersedia hanya menampilkan halaman login dengan pilihan Employee dan Admin; alur data pelanggan tidak ditampilkan.",
+      "The available screenshot only shows the login page with Employee and Admin tabs; customer data workflows are not shown.",
+    ],
+    visual: ["MIA / CRM"],
+    image: "mia-crm.webp",
+  },
+  {
+    slug: "mia-training",
+    title: "MIA Training",
+    category: "Web App",
+    stack: [],
+    summary: [
+      "Aplikasi pelatihan internal untuk mendukung kegiatan pembelajaran tim MIA.",
+      "An internal training application supporting learning activities for the MIA team.",
+    ],
+    problem: [
+      "Mendukung kegiatan pelatihan dan pembelajaran internal tim MIA.",
+      "Supporting internal training and learning for the MIA team.",
+    ],
+    contribution: [
+      "Mengembangkan aplikasi pelatihan internal MIA.",
+      "Developed MIA's internal training application.",
+    ],
+    statusLabel: ["Aplikasi internal", "Internal application"],
+    status: [
+      "Screenshot yang tersedia menampilkan halaman login MIA Training; materi dan alur pelatihan tidak ditampilkan.",
+      "The available screenshot shows the MIA Training login page; training materials and workflows are not shown.",
+    ],
+    visual: ["MIA / TRAINING"],
+    image: "mia-training.webp",
+  },
+  {
+    slug: "mia-absensi",
+    title: "MIA Absensi",
+    category: "Web App",
+    stack: [],
+    summary: [
+      "Aplikasi internal MIA untuk mencatat dan memantau kehadiran karyawan.",
+      "An internal MIA application for recording and monitoring employee attendance.",
+    ],
+    problem: [
+      "Mendukung pencatatan dan pemantauan kehadiran karyawan MIA.",
+      "Supporting employee attendance recording and monitoring at MIA.",
+    ],
+    contribution: [
+      "Mengembangkan aplikasi absensi internal MIA.",
+      "Developed MIA's internal attendance application.",
+    ],
+    statusLabel: ["Aplikasi internal", "Internal application"],
+    status: [
+      "Screenshot yang tersedia menampilkan halaman login absensi; data karyawan dan catatan kehadiran tidak ditampilkan.",
+      "The available screenshot shows the attendance login page; employee data and attendance records are not shown.",
+    ],
+    visual: ["MIA / ATTENDANCE"],
+    image: "mia-absensi.webp",
+  },
+  {
+    slug: "mia-admin",
+    title: "MIA Admin",
+    category: "Web App",
+    stack: [],
+    summary: [
+      "Panel administrasi untuk mendukung pekerjaan operasional internal MIA.",
+      "An administration panel supporting MIA's internal operational work.",
+    ],
+    problem: [
+      "Mendukung pekerjaan administrasi operasional internal MIA.",
+      "Supporting MIA's internal operational administration.",
+    ],
+    contribution: [
+      "Mengembangkan panel administrasi internal MIA.",
+      "Developed MIA's internal administration panel.",
+    ],
+    statusLabel: ["Aplikasi internal", "Internal application"],
+    status: [
+      "Screenshot yang tersedia hanya menampilkan halaman login MIA Admin. Alur administrasi tertentu belum terlihat.",
+      "The available screenshot only shows the MIA Admin login page. Specific administrative workflows are not visible.",
+    ],
+    visual: ["MIA / ADMIN"],
+    image: "mia-admin.webp",
+  },
   {
     slug: "vps-manager",
     title: "VPS Manager",

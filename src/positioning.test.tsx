@@ -30,33 +30,37 @@ it("uses the updated full name, first-person bio and four project-linked skill g
     3,
   );
 });
-it("orders hero and featured projects as VPS, Proxmox and LMS with correct detail destinations", async () => {
+it("orders the five new hero projects with correct detail destinations", async () => {
   const u = userEvent.setup();
   render(<App />);
   const tabs = screen.getAllByRole("tab");
   expect(tabs.map((t) => t.textContent)).toEqual([
-    "01VPS Manager↗",
-    "02Proxmox Home Lab↗",
-    "03LMS Ujian Online↗",
+    "01Zentra Digital Solution↗",
+    "02MIA CRM↗",
+    "03MIA Training↗",
+    "04MIA Absensi↗",
+    "05MIA Admin↗",
   ]);
   for (const [index, slug] of [
-    "vps-manager",
-    "proxmox-home-lab",
-    "lms-ujian-online",
+    "zentra-digital-solution",
+    "mia-crm",
+    "mia-training",
+    "mia-absensi",
+    "mia-admin",
   ].entries()) {
     await u.click(tabs[index]);
     expect(
       within(screen.getByRole("tabpanel"))
-        .getByRole("link")
+        .getByRole("link", { name: /Lihat detail/ })
         .getAttribute("href"),
     ).toBe(`#/projects/${slug}`);
   }
   expect(
     document.querySelectorAll("#project-index .home-project-row"),
-  ).toHaveLength(5);
+  ).toHaveLength(10);
   expect(
     document.querySelectorAll("#other-projects .home-project-row"),
-  ).toHaveLength(2);
+  ).toHaveLength(5);
 });
 it("shows scoped evidence and no made-up external links on every new detail", () => {
   for (const p of projects.id) {
@@ -65,15 +69,20 @@ it("shows scoped evidence and no made-up external links on every new detail", ()
     render(<App />);
     expect(
       document.querySelectorAll('.detail a[target="_blank"]'),
-    ).toHaveLength(0);
+    ).toHaveLength(p.externalUrl ? 1 : 0);
     expect(document.querySelector(".project-verification")).not.toBeNull();
     expect(document.querySelector(".detail-body")?.textContent).toContain(
       p.contribution,
     );
   }
 });
-it("publishes only the five supplied projects as current work", () => {
+it("prepends the five supplied projects and preserves older work", () => {
   expect(projects.id.map((p) => p.title)).toEqual([
+    "Zentra Digital Solution",
+    "MIA CRM",
+    "MIA Training",
+    "MIA Absensi",
+    "MIA Admin",
     "VPS Manager",
     "Proxmox Home Lab",
     "LMS Ujian Online",
