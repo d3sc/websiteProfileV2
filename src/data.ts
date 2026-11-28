@@ -219,6 +219,14 @@ export const skills = [
       "trading-analysis-dashboard",
     ],
   },
+  {
+    title: { id: "AI Tools", en: "Artificial Intelligence Tools" },
+    tools:
+      "Hermes Agent · 9Router · Graphify · Opencode · Antigrafity",
+    projects: [
+      "Few Projects"
+    ],
+  },
 ];
 export const copy = {
   id: {
@@ -235,7 +243,7 @@ export const copy = {
     cta: "Lihat Proyek",
     contactCta: "Hubungi Saya",
     intro:
-      "Saya membangun aplikasi web untuk kebutuhan operasional: layanan VPS, ujian online, dan ticketing. Fokus saya backend, otomasi, dan aplikasi di server Linux.",
+      "Saya adalah pengembang web fullstack dengan fokus pada backend, otomasi, dan pengelolaan server Linux. Saya berpengalaman dalam pemeliharaan projek legacy perusahaan, mengembangkan antarmuka, merancang API dan basis data, serta menangani deployment dan pemeliharaan aplikasi.",
     role: "Full-Stack Developer · Linux & Self-Hosting",
     select: "Pilih proyek",
     selected: "Proyek pilihan",
@@ -251,7 +259,7 @@ export const copy = {
     noImage: "Catatan proyek · bukan screenshot",
     aboutTitle: "Dari aplikasi,\nke server sendiri.",
     aboutText:
-      "Saya Ikbar Rabbani Purwanto, seorang IT Programmer dan mahasiswa S1 Manajemen Informatika. Saya membangun aplikasi web untuk pengelolaan layanan VPS, ujian online, dan ticketing.",
+      "Saya Ikbar Rabbani Purwanto, seorang IT Programmer dan mahasiswa S1 Manajemen Informatika. Saya adalah pengembang web full-stack dengan fokus pada backend, otomasi, dan pengelolaan server Linux. Saya berpengalaman dalam pemeliharaan projek legacy perusahaan, mengembangkan antarmuka, merancang API dan basis data, serta menangani deployment dan pemeliharaan aplikasi.",
     experience: "Linux & Self-Hosting",
     experienceText:
       "Saya mengelola lab Proxmox pribadi untuk deployment, pemisahan jaringan VM, dan akses jarak jauh. Minat utama saya adalah backend, otomasi, dan pengelolaan aplikasi di server Linux.",
@@ -297,7 +305,7 @@ export const copy = {
     cta: "View Projects",
     contactCta: "Contact Me",
     intro:
-      "I build web applications for everyday operations: VPS services, online exams, and ticketing. My focus is backend development, automation, and applications on Linux servers.",
+      "I’m a full-stack web developer focused on backend development, automation, and Linux server administration. I've experience with legacy company projects, build user interfaces, design APIs and databases, and handle application deployment and maintenance.",
     role: "Full-Stack Developer · Linux & Self-Hosting",
     select: "Choose a project",
     selected: "Selected work",
@@ -313,7 +321,7 @@ export const copy = {
     noImage: "Project notes · not a screenshot",
     aboutTitle: "From applications,\nto my own servers.",
     aboutText:
-      "I’m Ikbar Rabbani Purwanto, an IT Programmer and an undergraduate student in Information Management. I build web applications for VPS service management, online exams, and ticketing.",
+      "I’m Ikbar Rabbani Purwanto, an IT Programmer and an undergraduate student in Information Management. I’m a full-stack web developer focused on backend development, automation, and Linux server administration. I've experience with legacy company projects, build user interfaces, design APIs and databases, and handle application deployment and maintenance.",
     experience: "Linux & Self-Hosting",
     experienceText:
       "I manage a personal Proxmox lab for deployment, VM network separation, and remote access. My main interests are backend development, automation, and running applications on Linux servers.",

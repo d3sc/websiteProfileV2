@@ -189,7 +189,7 @@ export function ScrollShowcase({ locale }: { locale: Locale }) {
                   <button
                     className="rail-image"
                     aria-haspopup="dialog"
-                    aria-label={`${project.title} — ${image.label}`}
+                    aria-label={`${project.title} - ${image.label}`}
                     onFocus={(e) => {
                       if (
                         !restoring.current &&

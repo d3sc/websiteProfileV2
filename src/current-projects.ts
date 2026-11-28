@@ -29,12 +29,12 @@ const entries: Entry[] = [
       "My business website introducing Zentra Digital Solution and the digital services I offer.",
     ],
     problem: [
-      "Memperkenalkan bisnis dan layanan digital saya kepada calon klien.",
+      "Memperkenalkan bisnis dan layanan digital saya kepada calon klien. Zentra Digital Solutions adalah perusahaan layanan digital yang berfokus pada pembuatan website berkualitas tinggi untuk bisnis lokal dan internasional. kami siap menghadirkan solusi web yang tidak hanya menarik secara visual, tetapi juga efektif dalam meningkatkan kehadiran online bisnis Anda.",
       "Introducing my business and digital services to prospective clients.",
     ],
     contribution: [
-      "Mengembangkan website bisnis Zentra Digital Solution.",
-      "Developed the Zentra Digital Solution business website.",
+      "Seseorang yang mengembangkan website bisnis Zentra Digital Solution.",
+      "A person who developed the Zentra Digital Solution business website.",
     ],
     statusLabel: ["Website bisnis", "Business website"],
     status: [
@@ -52,18 +52,18 @@ const entries: Entry[] = [
     category: "Web App",
     stack: [],
     summary: [
-      "Aplikasi CRM untuk membantu tim MIA mengelola informasi pelanggan.",
-      "A CRM application that helps the MIA team manage customer information.",
+      "Aplikasi CRM untuk membantu tim MIA mengelola informasi leads pelanggan.",
+      "A CRM application that helps the MIA team manage customer leads information.",
     ],
     problem: [
-      "Mendukung pengelolaan informasi pelanggan oleh tim MIA.",
-      "Supporting customer information management for the MIA team.",
+      "team management dapat memantau dan mengelola informasi pelanggan dengan lebih efisien dan tidak mengerjakan nya secara manual.",
+      "This allows the management team to monitor and manage customer information more efficiently without manual handling.",
     ],
     contribution: [
-      "Mengembangkan aplikasi CRM internal untuk tim MIA.",
-      "Developed an internal CRM application for the MIA team.",
+      "Saya mengembangkan dan mengelola alur data pelanggan untuk tim MIA, termasuk pencatatan, pemantauan, dan pengelolaan informasi leads pelanggan. ",
+      "I developed and managed customer data workflows for the MIA team, including recording, monitoring, and managing customer leads information. ",
     ],
-    statusLabel: ["Aplikasi internal", "Internal application"],
+    statusLabel: ["Aplikasi Legacy Perusahaan", "Legacy Company Application"],
     status: [
       "Screenshot yang tersedia hanya menampilkan halaman login dengan pilihan Employee dan Admin; alur data pelanggan tidak ditampilkan.",
       "The available screenshot only shows the login page with Employee and Admin tabs; customer data workflows are not shown.",
@@ -77,18 +77,18 @@ const entries: Entry[] = [
     category: "Web App",
     stack: [],
     summary: [
-      "Aplikasi pelatihan internal untuk mendukung kegiatan pembelajaran tim MIA.",
-      "An internal training application supporting learning activities for the MIA team.",
+      "Aplikasi pelatihan internal untuk mendukung kegiatan perekrutan tim MIA.",
+      "An internal training application supporting recruitment activities for the MIA team.",
     ],
     problem: [
-      "Mendukung kegiatan pelatihan dan pembelajaran internal tim MIA.",
-      "Supporting internal training and learning for the MIA team.",
+      "Program ini mendukung kegiatan pelatihan atau perekrutan kandidat yang ingin bergabung ke internal tim MIA dengan melakukan beberapa test.",
+      "This program supports training or recruitment activities for candidates who want to join the internal MIA team by taking several tests.",
     ],
     contribution: [
       "Mengembangkan aplikasi pelatihan internal MIA.",
       "Developed MIA's internal training application.",
     ],
-    statusLabel: ["Aplikasi internal", "Internal application"],
+    statusLabel: ["Aplikasi Legacy Perusahaan", "Legacy Company Application"],
     status: [
       "Screenshot yang tersedia menampilkan halaman login MIA Training; materi dan alur pelatihan tidak ditampilkan.",
       "The available screenshot shows the MIA Training login page; training materials and workflows are not shown.",
@@ -102,7 +102,7 @@ const entries: Entry[] = [
     category: "Web App",
     stack: [],
     summary: [
-      "Aplikasi internal MIA untuk mencatat dan memantau kehadiran karyawan.",
+      "Aplikasi Legacy Perusahaan MIA untuk mencatat dan memantau kehadiran karyawan.",
       "An internal MIA application for recording and monitoring employee attendance.",
     ],
     problem: [
@@ -113,7 +113,7 @@ const entries: Entry[] = [
       "Mengembangkan aplikasi absensi internal MIA.",
       "Developed MIA's internal attendance application.",
     ],
-    statusLabel: ["Aplikasi internal", "Internal application"],
+    statusLabel: ["Aplikasi Legacy Perusahaan", "Legacy Company Application"],
     status: [
       "Screenshot yang tersedia menampilkan halaman login absensi; data karyawan dan catatan kehadiran tidak ditampilkan.",
       "The available screenshot shows the attendance login page; employee data and attendance records are not shown.",
@@ -138,13 +138,47 @@ const entries: Entry[] = [
       "Mengembangkan panel administrasi internal MIA.",
       "Developed MIA's internal administration panel.",
     ],
-    statusLabel: ["Aplikasi internal", "Internal application"],
+    statusLabel: ["Aplikasi Legacy Perusahaan", "Legacy Company Application"],
     status: [
       "Screenshot yang tersedia hanya menampilkan halaman login MIA Admin. Alur administrasi tertentu belum terlihat.",
       "The available screenshot only shows the MIA Admin login page. Specific administrative workflows are not visible.",
     ],
     visual: ["MIA / ADMIN"],
     image: "mia-admin.webp",
+  },
+  {
+    slug: "vehigo",
+    title: "Vehigo - Vehicle Management",
+    category: "Web App",
+    stack: [
+      "laravel",
+      "PHP",
+      "Mysql",
+      "Nginx",
+      "Docker Compose",
+    ],
+    summary: [
+      "Log setiap pergantian oli, servis, dan perbaikan di semua kendaraan Anda. Jangan pernah melewatkan perawatan lagi, riwayat lengkap Anda, selalu di tangan.",
+      "Log every oil change, service, and repair across all your vehicles. Never miss maintenance again, your complete history, always at hand.",
+    ],
+    problem: [
+      "Saya membutuhkan satu tempat untuk memantau semua kendaraan saya, termasuk riwayat servis dan perawatan, agar tidak melewatkan jadwal perawatan.",
+      "I needed one place to track all my vehicles, including service and maintenance history, to avoid missing scheduled maintenance.",
+    ],
+    contribution: [
+      "Saya membangun alur pengelolaan kendaraan, servis, dan perawatan. Di halaman riwayat, saya menambahkan penjaga urutan request agar respons, error, dan status loading dari request lama tidak menimpa data terbaru.",
+      "I built vehicle, service, and maintenance management workflows. In the history view, I added request sequencing so stale responses, errors, and loading completions cannot overwrite the latest state.",
+    ],
+    statusLabel: [
+      "Riwayat teruji · notifikasi mock",
+      "History tested · notifications mocked",
+    ],
+    status: [
+      "Regresi latest-request-wins tercatat lulus pada tes frontend. Pengaturan notifikasi juga diuji dengan mock; catatan integrasi dan browser memakai PostgreSQL terisolasi serta provider HTTP mock. Bukti pengiriman aktual ke provider atau penerima belum tersedia dalam audit ini.",
+      "The latest-request-wins frontend regression has a recorded pass. Notification settings were tested with mocks; integration and browser records use isolated PostgreSQL and mocked provider HTTP. Actual provider submission or recipient delivery is not established by this audit.",
+    ],
+    visual: ["CUSTOMERS / SERVICES", "LOG / REMINDERS"],
+    image: "vehigo.webp",
   },
   {
     slug: "vps-manager",

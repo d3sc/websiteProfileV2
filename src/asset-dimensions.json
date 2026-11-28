@@ -127,6 +127,38 @@
       960
     ]
   },
+  "vehigo": {
+    "width": 1787,
+    "height": 926,
+    "widths": [
+      480,
+      960
+    ]
+  },
+  "vehigo-2": {
+    "width": 1787,
+    "height": 926,
+    "widths": [
+      480,
+      960
+    ]
+  },
+  "vehigo-3": {
+    "width": 1787,
+    "height": 926,
+    "widths": [
+      480,
+      960
+    ]
+  },
+  "vehigo-4": {
+    "width": 1787,
+    "height": 926,
+    "widths": [
+      480,
+      960
+    ]
+  },
   "zentra-digital-solution": {
     "width": 1794,
     "height": 929,
@@ -144,6 +176,14 @@
     ]
   },
   "mia-training": {
+    "width": 1794,
+    "height": 932,
+    "widths": [
+      480,
+      960
+    ]
+  },
+  "mia-training-2": {
     "width": 1794,
     "height": 932,
     "widths": [

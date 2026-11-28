@@ -46,6 +46,14 @@ const shots: Record<string, Shot[]> = {
         "MIA Training branded login page with empty username and password fields and a learning-themed photograph.",
       ],
     },
+    {
+      asset: "mia-training-2",
+      label: ["Login pelatihan", "Training login"],
+      caption: [
+        "Halaman dashboard utama pada MIA Training. Dan kandidat dapat melakukan tes online dengan beberapa menu tes yang tersedia.",
+        "MIA Training branded dashboard page with available online tests and candidate registration options.",
+      ],
+    },
   ],
   "mia-absensi": [
     {
@@ -78,6 +86,40 @@ const shots: Record<string, Shot[]> = {
     },
     {
       asset: "vps-manager-metrics",
+      label: ["Detail ringkasan", "Summary close-up"],
+      caption: [
+        "Potongan screenshot yang sama: ringkasan pelanggan, layanan aktif, jatuh tempo, dan pembayaran. Bukan layar tambahan.",
+        "Crop of the same screenshot: customers, active services, due dates, and payments. Not an additional screen.",
+      ],
+    },
+  ],
+  "vehigo": [
+    {
+      asset: "vehigo",
+      label: ["Dashboard layanan", "Service dashboard"],
+      caption: [
+        "Dashboard pelanggan, layanan, dan pembayaran. Identitas pelanggan pada panel aktivitas ditutup permanen; angka adalah isi screenshot, bukan klaim dampak.",
+        "Customers, services, and payments dashboard. Customer identities in the activity panel are permanently redacted; displayed figures are screenshot content, not impact claims.",
+      ],
+    },
+    {
+      asset: "vehigo-2",
+      label: ["Detail ringkasan", "Summary close-up"],
+      caption: [
+        "Potongan screenshot yang sama: ringkasan pelanggan, layanan aktif, jatuh tempo, dan pembayaran. Bukan layar tambahan.",
+        "Crop of the same screenshot: customers, active services, due dates, and payments. Not an additional screen.",
+      ],
+    },
+    {
+      asset: "vehigo-3",
+      label: ["Detail ringkasan", "Summary close-up"],
+      caption: [
+        "Potongan screenshot yang sama: ringkasan pelanggan, layanan aktif, jatuh tempo, dan pembayaran. Bukan layar tambahan.",
+        "Crop of the same screenshot: customers, active services, due dates, and payments. Not an additional screen.",
+      ],
+    },
+    {
+      asset: "vehigo-4",
       label: ["Detail ringkasan", "Summary close-up"],
       caption: [
         "Potongan screenshot yang sama: ringkasan pelanggan, layanan aktif, jatuh tempo, dan pembayaran. Bukan layar tambahan.",
